@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b302n6pq0hkk1"]
+
+[ext_resource type="Texture2D" uid="uid://rpdjh6s3x3m2" path="res://Assets/Red Background.png" id="1_bmhs3"]
+[ext_resource type="PackedScene" uid="uid://cdelwfcqrerqr" path="res://Objects/object_paint-roller.tscn" id="2_3iac0"]
+[ext_resource type="PackedScene" uid="uid://c24fwjqh5gyhv" path="res://Objects/object_paint-palette.tscn" id="3_cj1wk"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Placeholder Background" type="Sprite2D" parent="."]
+position = Vector2(970, 535)
+scale = Vector2(1.04818, 1.0537)
+texture = ExtResource("1_bmhs3")
+
+[node name="object_paint-roller" parent="." instance=ExtResource("2_3iac0")]
+position = Vector2(459, 256)
+
+[node name="object_paint-palette" parent="." instance=ExtResource("3_cj1wk")]
+position = Vector2(863, 441)

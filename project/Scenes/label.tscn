@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://b34mh8hldrslj"]
+
+[sub_resource type="GDScript" id="GDScript_bw5k4"]
+script/source = "extends Timer
+
+var ms = 0
+var s = 0
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if ms > 9:
+		s+=1
+		ms=0
+	
+	set_text(str(s))
+	
+"
+
+[node name="Label" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Timer" type="Timer" parent="."]
+script = SubResource("GDScript_bw5k4")
