@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://b302n6pq0hkk1"]
+[gd_scene load_steps=6 format=3 uid="uid://b302n6pq0hkk1"]
 
 [ext_resource type="Texture2D" uid="uid://rpdjh6s3x3m2" path="res://Assets/Red Background.png" id="1_bmhs3"]
-[ext_resource type="PackedScene" uid="uid://cdelwfcqrerqr" path="res://Objects/object_paint-roller.tscn" id="2_3iac0"]
-[ext_resource type="PackedScene" uid="uid://c24fwjqh5gyhv" path="res://Objects/object_paint-palette.tscn" id="3_cj1wk"]
+[ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Objects/object.tscn" id="2_pjc2w"]
+[ext_resource type="Texture2D" uid="uid://cy5vw6cu2lipg" path="res://Assets/Sprites/Objects/genericItem_color_027.png" id="3_nb4jn"]
+[ext_resource type="Texture2D" uid="uid://b3huc1rs1ypq3" path="res://Assets/Sprites/Objects/genericItem_color_014.png" id="4_k48be"]
+[ext_resource type="Texture2D" uid="uid://1ttv3avrttbb" path="res://Assets/Sprites/Objects/genericItem_color_031.png" id="5_p4ni0"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -11,8 +13,26 @@ position = Vector2(970, 535)
 scale = Vector2(1.04818, 1.0537)
 texture = ExtResource("1_bmhs3")
 
-[node name="object_paint-roller" parent="." instance=ExtResource("2_3iac0")]
-position = Vector2(459, 256)
+[node name="object" parent="." instance=ExtResource("2_pjc2w")]
+offset_left = 328.0
+offset_top = 352.0
+offset_right = 328.0
+offset_bottom = 352.0
+texture_normal = ExtResource("3_nb4jn")
+clickable_name = "Paint Brush"
 
-[node name="object_paint-palette" parent="." instance=ExtResource("3_cj1wk")]
-position = Vector2(863, 441)
+[node name="object2" parent="." instance=ExtResource("2_pjc2w")]
+offset_left = 666.0
+offset_top = 404.0
+offset_right = 666.0
+offset_bottom = 404.0
+texture_normal = ExtResource("4_k48be")
+clickable_name = "Paint Roller"
+
+[node name="object3" parent="." instance=ExtResource("2_pjc2w")]
+offset_left = 1068.0
+offset_top = 290.0
+offset_right = 1184.0
+offset_bottom = 386.0
+texture_normal = ExtResource("5_p4ni0")
+clickable_name = "Paint Palette"
