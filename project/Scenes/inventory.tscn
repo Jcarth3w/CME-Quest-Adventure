@@ -1,5 +1,17 @@
-[gd_scene format=3 uid="uid://vkq3eq2tcj2l"]
+[gd_scene load_steps=2 format=3 uid="uid://vkq3eq2tcj2l"]
+
+[ext_resource type="Script" path="res://Scenes/inventory.gd" id="1_o5cdc"]
 
 [node name="Inventory" type="ColorRect"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 300.0
+offset_bottom = 100.0
+script = ExtResource("1_o5cdc")
+
+[node name="Item1" type="Sprite2D" parent="."]
+position = Vector2(50, 50)
+
+[node name="Item2" type="Sprite2D" parent="."]
+position = Vector2(150, 50)
+
+[node name="Item3" type="Sprite2D" parent="."]
+position = Vector2(250, 50)
