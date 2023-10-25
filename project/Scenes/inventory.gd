@@ -1,4 +1,4 @@
-extends ColorRect
+class_name Inventory extends ColorRect
 
 var items = []
 var current_item := 1
