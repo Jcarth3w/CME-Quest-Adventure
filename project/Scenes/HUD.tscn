@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://c2x6nmlhmqg5h"]
+[gd_scene load_steps=2 format=3 uid="uid://c2x6nmlhmqg5h"]
+
+[ext_resource type="PackedScene" uid="uid://vkq3eq2tcj2l" path="res://Scenes/inventory.tscn" id="1_jwv6u"]
 
 [node name="HUD" type="Node2D"]
 
@@ -23,3 +25,9 @@ text = "Objective"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="Inventory" parent="." instance=ExtResource("1_jwv6u")]
+offset_left = 722.0
+offset_top = 14.0
+offset_right = 1022.0
+offset_bottom = 114.0

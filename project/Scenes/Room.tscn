@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b302n6pq0hkk1"]
+[gd_scene load_steps=7 format=3 uid="uid://b302n6pq0hkk1"]
 
 [ext_resource type="Texture2D" uid="uid://rpdjh6s3x3m2" path="res://Assets/Red Background.png" id="1_bmhs3"]
 [ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Objects/object.tscn" id="2_pjc2w"]
 [ext_resource type="Texture2D" uid="uid://cy5vw6cu2lipg" path="res://Assets/Sprites/Objects/genericItem_color_027.png" id="3_nb4jn"]
 [ext_resource type="Texture2D" uid="uid://b3huc1rs1ypq3" path="res://Assets/Sprites/Objects/genericItem_color_014.png" id="4_k48be"]
 [ext_resource type="Texture2D" uid="uid://1ttv3avrttbb" path="res://Assets/Sprites/Objects/genericItem_color_031.png" id="5_p4ni0"]
+[ext_resource type="PackedScene" uid="uid://c2x6nmlhmqg5h" path="res://Scenes/HUD.tscn" id="6_s07r0"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -36,3 +37,5 @@ offset_right = 1184.0
 offset_bottom = 386.0
 texture_normal = ExtResource("5_p4ni0")
 clickable_name = "Paint Palette"
+
+[node name="HUD" parent="." instance=ExtResource("6_s07r0")]
