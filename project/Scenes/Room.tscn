@@ -18,21 +18,21 @@ offset_left = 328.0
 offset_top = 352.0
 offset_right = 328.0
 offset_bottom = 352.0
-texture_normal = ExtResource("3_nb4jn")
 clickable_name = "Paint Brush"
+clickable_sprite = ExtResource("3_nb4jn")
 
 [node name="object2" parent="." instance=ExtResource("2_pjc2w")]
 offset_left = 666.0
 offset_top = 404.0
 offset_right = 666.0
 offset_bottom = 404.0
-texture_normal = ExtResource("4_k48be")
 clickable_name = "Paint Roller"
+clickable_sprite = ExtResource("4_k48be")
 
 [node name="object3" parent="." instance=ExtResource("2_pjc2w")]
 offset_left = 1068.0
 offset_top = 290.0
 offset_right = 1184.0
 offset_bottom = 386.0
-texture_normal = ExtResource("5_p4ni0")
 clickable_name = "Paint Palette"
+clickable_sprite = ExtResource("5_p4ni0")
