@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://c2x6nmlhmqg5h"]
+[gd_scene load_steps=2 format=3 uid="uid://c2x6nmlhmqg5h"]
+
+[ext_resource type="PackedScene" uid="uid://c42tbugwn1rvm" path="res://Scenes/timer.tscn" id="1_xoov4"]
 
 [node name="HUD" type="Node2D"]
 
@@ -23,3 +25,9 @@ text = "Objective"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="Timer" parent="." instance=ExtResource("1_xoov4")]
+
+[node name="Label" type="Label" parent="Timer"]
+offset_right = 40.0
+offset_bottom = 23.0
