@@ -5,4 +5,5 @@
 [node name="object" type="TextureButton"]
 script = ExtResource("1_ko4ml")
 
+[connection signal="clicked" from="." to="." method="_on_clicked"]
 [connection signal="pressed" from="." to="." method="_on_pressed"]
