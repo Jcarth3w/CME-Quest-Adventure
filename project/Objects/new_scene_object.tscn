@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c277udblc3vo7"]
+
+[ext_resource type="Script" path="res://Objects/New_Scene_Object.gd" id="1_j4s8b"]
+
+[node name="New_Scene_Object" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_j4s8b")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
