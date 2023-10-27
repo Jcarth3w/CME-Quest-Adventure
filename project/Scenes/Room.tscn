@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b302n6pq0hkk1"]
+[gd_scene load_steps=12 format=3 uid="uid://b302n6pq0hkk1"]
 
 [ext_resource type="Texture2D" uid="uid://rpdjh6s3x3m2" path="res://Assets/Red Background.png" id="1_bmhs3"]
 [ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Objects/object.tscn" id="2_pjc2w"]
@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://1ttv3avrttbb" path="res://Assets/Sprites/Objects/genericItem_color_031.png" id="5_p4ni0"]
 [ext_resource type="PackedScene" uid="uid://c2x6nmlhmqg5h" path="res://Scenes/HUD.tscn" id="6_wblct"]
 [ext_resource type="PackedScene" uid="uid://vkq3eq2tcj2l" path="res://Scenes/inventory.tscn" id="7_gy3uc"]
+[ext_resource type="PackedScene" uid="uid://c277udblc3vo7" path="res://Objects/new_scene_object.tscn" id="8_je1k2"]
+[ext_resource type="Texture2D" uid="uid://evnmlo6fgm68" path="res://Assets/Sprites/Objects/genericItem_color_017.png" id="9_job75"]
+[ext_resource type="Script" path="res://Objects/Movement_Object.gd" id="10_u6dd1"]
+[ext_resource type="Texture2D" uid="uid://kepextb17v5c" path="res://Assets/Sprites/Objects/genericItem_color_020.png" id="11_fxb8e"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -47,6 +51,26 @@ offset_left = 828.0
 offset_top = 8.0
 offset_right = 1128.0
 offset_bottom = 108.0
+
+[node name="Movement_Object" parent="." instance=ExtResource("8_je1k2")]
+offset_left = 159.0
+offset_top = 295.0
+offset_right = 257.0
+offset_bottom = 447.0
+script = ExtResource("10_u6dd1")
+clickable_name = "Saw"
+clickable_sprite = ExtResource("9_job75")
+Xcoordinate = 600
+Ycoordinate = 600
+
+[node name="New_Scene_Object" parent="." instance=ExtResource("8_je1k2")]
+offset_left = 488.0
+offset_top = 342.0
+offset_right = 582.0
+offset_bottom = 470.0
+clickable_name = "Axe"
+clickable_sprite = ExtResource("11_fxb8e")
+scene_path = "res://Scenes/Background Node.tscn"
 
 [connection signal="clicked" from="object" to="Inventory" method="_on_object_clicked"]
 [connection signal="clicked" from="object2" to="Inventory" method="_on_object_2_clicked"]
