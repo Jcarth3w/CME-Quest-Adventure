@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bktm7timdd302"]
+
+[ext_resource type="Script" path="res://Scenes/Movement_Object.gd" id="1_ifui7"]
+
+[node name="Movement_Object" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ifui7")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
