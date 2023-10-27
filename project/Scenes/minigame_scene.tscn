@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8thm74f46n18"]
+
+[ext_resource type="Texture2D" uid="uid://d38mc3wg28p6w" path="res://Assets/Blue Background.png" id="1_mdnng"]
+
+[node name="Minigame_Scene" type="Node2D"]
+
+[node name="BlueBackground" type="Sprite2D" parent="."]
+position = Vector2(961.5, 541.5)
+scale = Vector2(8.55556, 4.80444)
+texture = ExtResource("1_mdnng")
