@@ -1,4 +1,4 @@
-class_name Inventory extends ColorRect
+class_name Inventory extends Node
 
 var items = []
 var current_item := 1
@@ -28,3 +28,15 @@ func add_item_image(sprite_path):
 	else:
 		$Item3.texture = sprite_path
 	current_item += 1
+
+
+func _on_object_clicked(c_name, c_sprite):
+	add_item(c_name, c_sprite)
+
+
+func _on_object_2_clicked(c2_name, c2_sprite):
+	add_item(c2_name, c2_sprite)
+
+
+func _on_object_3_clicked(c3_name, c3_sprite):
+	add_item(c3_name, c3_sprite)

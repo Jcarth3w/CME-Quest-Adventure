@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b302n6pq0hkk1"]
+[gd_scene load_steps=8 format=3 uid="uid://b302n6pq0hkk1"]
 
 [ext_resource type="Texture2D" uid="uid://rpdjh6s3x3m2" path="res://Assets/Red Background.png" id="1_bmhs3"]
 [ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Objects/object.tscn" id="2_pjc2w"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b3huc1rs1ypq3" path="res://Assets/Sprites/Objects/genericItem_color_014.png" id="4_k48be"]
 [ext_resource type="Texture2D" uid="uid://1ttv3avrttbb" path="res://Assets/Sprites/Objects/genericItem_color_031.png" id="5_p4ni0"]
 [ext_resource type="PackedScene" uid="uid://c2x6nmlhmqg5h" path="res://Scenes/HUD.tscn" id="6_wblct"]
+[ext_resource type="PackedScene" uid="uid://vkq3eq2tcj2l" path="res://Scenes/inventory.tscn" id="7_gy3uc"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -40,3 +41,13 @@ clickable_sprite = ExtResource("5_p4ni0")
 
 [node name="HUD" parent="." instance=ExtResource("6_wblct")]
 position = Vector2(10, -6)
+
+[node name="Inventory" parent="." instance=ExtResource("7_gy3uc")]
+offset_left = 828.0
+offset_top = 8.0
+offset_right = 1128.0
+offset_bottom = 108.0
+
+[connection signal="clicked" from="object" to="Inventory" method="_on_object_clicked"]
+[connection signal="clicked" from="object2" to="Inventory" method="_on_object_2_clicked"]
+[connection signal="clicked" from="object3" to="Inventory" method="_on_object_3_clicked"]

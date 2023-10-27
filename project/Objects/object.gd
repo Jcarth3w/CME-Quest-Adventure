@@ -16,9 +16,8 @@ func _ready():
 
 func _on_pressed():
 	print("Pressed " + clickable_name)
-	clicked.emit()
+	clicked.emit(clickable_name, clickable_sprite)
 	queue_free()
 
 
-func _on_clicked():
-	inventory.add_item(clickable_name, clickable_sprite.resource_path)
+
