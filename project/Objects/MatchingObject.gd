@@ -12,6 +12,7 @@ var other_image8 = preload("res://Assets/Sprites/Objects/genericItem_color_014.p
 var isFlipped = false
 var isMatched = false
 var cardImage : Texture
+var previous_flipped_card = null
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Card4.texture = other_image1
@@ -49,7 +50,11 @@ func check_match(card):
 			card.isMatched = true
 		else:
 			# Delay before flipping back unmatched cards
-			await
+			$Timer.wait_time = 1.0
+			$Timer.start()
+			previous_flipped_card.reset()
+			card.reset()
+			
 		# Reset the previous flipped card
 		previous_flipped_card = null
 	else:

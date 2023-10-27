@@ -4,7 +4,33 @@
 [ext_resource type="Script" path="res://Scenes/MatchGameManager.gd" id="1_uero3"]
 [ext_resource type="Texture2D" uid="uid://c1wco3n84fkda" path="res://Assets/Sprites/Objects/genericItem_color_037.png" id="2_6ujdn"]
 [ext_resource type="Script" path="res://Objects/MatchingObject.gd" id="3_oaq8o"]
-[ext_resource type="Script" path="res://Objects/Matching2.gd" id="4_bwj8b"]
+
+[sub_resource type="GDScript" id="GDScript_acngd"]
+script/source = "extends Sprite2D
+
+signal clicked
+var other_image2 = preload(\"res://Assets/Sprites/Objects/genericItem_color_008.png\")
+var clickable_sprite : Texture
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func _input(event):
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if get_rect().has_point(to_local(event.position)):
+			self.set_texture(other_image2)
+			clicked.emit(clickable_sprite)
+		
+		
+		
+			
+"
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_uero3")
@@ -37,7 +63,7 @@ texture = ExtResource("2_6ujdn")
 position = Vector2(1075, 274)
 scale = Vector2(1.80682, 1.4299)
 texture = ExtResource("2_6ujdn")
-script = ExtResource("4_bwj8b")
+script = SubResource("GDScript_acngd")
 
 [node name="Card4" type="Sprite2D" parent="."]
 position = Vector2(1457, 263)
