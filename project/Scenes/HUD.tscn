@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c2x6nmlhmqg5h"]
+[gd_scene load_steps=3 format=3 uid="uid://c2x6nmlhmqg5h"]
 
 [ext_resource type="PackedScene" uid="uid://c42tbugwn1rvm" path="res://Scenes/timer.tscn" id="1_xoov4"]
+[ext_resource type="PackedScene" uid="uid://vkq3eq2tcj2l" path="res://Scenes/inventory.tscn" id="2_76pll"]
 
 [node name="HUD" type="Node2D"]
 
@@ -29,5 +30,13 @@ metadata/_edit_use_anchors_ = true
 [node name="Timer" parent="." instance=ExtResource("1_xoov4")]
 
 [node name="Label" type="Label" parent="Timer"]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 1760.0
+offset_top = 48.0
+offset_right = 1800.0
+offset_bottom = 71.0
+
+[node name="Inventory" parent="." instance=ExtResource("2_76pll")]
+offset_left = 796.0
+offset_top = 14.0
+offset_right = 1096.0
+offset_bottom = 114.0
