@@ -27,9 +27,12 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Timer" parent="." instance=ExtResource("1_xoov4")]
+wait_time = 1.0
+autostart = true
 
 [node name="Label" type="Label" parent="Timer"]
 offset_left = 1760.0
 offset_top = 48.0
 offset_right = 1800.0
 offset_bottom = 71.0
+text = "Time: 0"
