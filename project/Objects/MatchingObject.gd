@@ -1,21 +1,16 @@
 extends Sprite2D
 
 signal clicked
-var other_image1 = preload("res://Assets/Sprites/Objects/genericItem_color_007.png")
-var other_image2 = preload("res://Assets/Sprites/Objects/genericItem_color_008.png")
-var other_image3 = preload("res://Assets/Sprites/Objects/genericItem_color_009.png")
-var other_image4 = preload("res://Assets/Sprites/Objects/genericItem_color_010.png")
-var other_image5 = preload("res://Assets/Sprites/Objects/genericItem_color_011.png")
-var other_image6 = preload("res://Assets/Sprites/Objects/genericItem_color_012.png")
-var other_image7 = preload("res://Assets/Sprites/Objects/genericItem_color_013.png")
-var other_image8 = preload("res://Assets/Sprites/Objects/genericItem_color_014.png")
+
+@onready var parent = get_tree().get_root().get_node("MiniGame")
 var isFlipped = false
-var isMatched = false
-var cardImage : Texture
-var previous_flipped_card = null
+var numbersOfClicks = 0
+
+@export var cardImage : Texture
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Card4.texture = other_image1
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -23,45 +18,23 @@ func _process(delta):
 	pass
 	
 func _input(event):
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		if get_rect().has_point(to_local(event.position)):
-			self.set_texture(other_image1)
-			clicked.emit(cardImage)
+	if parent.flipped_count < 2:
+		if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+			if get_rect().has_point(to_local(event.position)):
+				set_texture(cardImage)
+				print(parent)
+				parent.flipped_count += 1
+				print(str(parent.flipped_count))
+				_on_card_pressed()
+				clicked.emit(isFlipped)
 			
 
 func _on_card_pressed():
-	if not isFlipped and not isMatched:
+	if not isFlipped:
 		isFlipped = true
-		$TextureRect.visible = true
-		check_match(self)
-		
+
 		
 func reset():
 	isFlipped = false
-	isMatched = false
-	$TextureRect.visible = false
+	set_texture(preload("res://Assets/Sprites/Objects/genericItem_color_037.png"))
 	
-	
-	
-func check_match(card):
-	if previous_flipped_card and previous_flipped_card != card:
-		if previous_flipped_card.cardImage == card.cardImage:
-			previous_flipped_card.isMatched = true
-			card.isMatched = true
-		else:
-			# Delay before flipping back unmatched cards
-			$Timer.wait_time = 1.0
-			$Timer.start()
-			previous_flipped_card.reset()
-			card.reset()
-			
-		# Reset the previous flipped card
-		previous_flipped_card = null
-	else:
-		previous_flipped_card = card
-		
-		
-
-func _not_matching(base_sprite):
-	
-	self.set_texture(base_sprite)

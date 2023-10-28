@@ -1,9 +1,9 @@
 extends Node2D
 
-
 var cards : Array
 var flipped_count = 0
 signal not_matching
+var checkPairMatching = false
 var base_image = preload("res://Assets/Sprites/Objects/genericItem_color_037.png")
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,13 +12,13 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	check_win_condition()
 
 
 func check_win_condition():
-	for card in cards:
-		if not card.isMatched:
-			return
+	if flipped_count == 2:
+		await get_tree().create_timer(1.0).timeout
+		flipped_count = 0
 		
 		
 		
