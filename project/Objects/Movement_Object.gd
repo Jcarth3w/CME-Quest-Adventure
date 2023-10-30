@@ -11,3 +11,4 @@ func _ready():
 func _on_pressed():
 	self.position.x = Xcoordinate
 	self.position.y = Ycoordinate
+

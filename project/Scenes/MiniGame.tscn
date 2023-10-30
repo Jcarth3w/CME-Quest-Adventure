@@ -1,0 +1,130 @@
+[gd_scene load_steps=8 format=3 uid="uid://ckueucjs1nwf3"]
+
+[ext_resource type="Texture2D" uid="uid://rpdjh6s3x3m2" path="res://Assets/Red Background.png" id="1_t7jdb"]
+[ext_resource type="Script" path="res://Scenes/MatchGameManager.gd" id="1_uero3"]
+[ext_resource type="Texture2D" uid="uid://c1wco3n84fkda" path="res://Assets/Sprites/Objects/genericItem_color_037.png" id="2_6ujdn"]
+[ext_resource type="Script" path="res://Scenes/Pair.gd" id="3_mqnir"]
+[ext_resource type="Script" path="res://Objects/MatchingObject.gd" id="3_oaq8o"]
+[ext_resource type="Texture2D" uid="uid://c15mt6j8pobst" path="res://Assets/Sprites/Objects/genericItem_color_005.png" id="6_mex1g"]
+[ext_resource type="Texture2D" uid="uid://blleha1bjvx56" path="res://Assets/Sprites/Objects/genericItem_color_011.png" id="7_1ekqu"]
+
+[node name="MiniGame" type="Node2D"]
+script = ExtResource("1_uero3")
+
+[node name="RedBackground" type="Sprite2D" parent="."]
+position = Vector2(953, 543)
+scale = Vector2(1, 1.00185)
+texture = ExtResource("1_t7jdb")
+
+[node name="Label" type="Label" parent="RedBackground"]
+offset_left = -308.0
+offset_top = -493.0
+offset_right = 197.0
+offset_bottom = -389.0
+theme_override_font_sizes/font_size = 54
+text = "Find it"
+horizontal_alignment = 1
+
+[node name="Pair 1" type="Node2D" parent="." node_paths=PackedStringArray("card1", "card2")]
+position = Vector2(435, 290)
+scale = Vector2(2.23457, 1.58279)
+script = ExtResource("3_mqnir")
+card1 = NodePath("Card 1")
+card2 = NodePath("Card 2")
+
+[node name="Card 1" type="Sprite2D" parent="Pair 1"]
+position = Vector2(0, -1.89539)
+scale = Vector2(1, 1)
+texture = ExtResource("2_6ujdn")
+script = ExtResource("3_oaq8o")
+cardImage = ExtResource("6_mex1g")
+
+[node name="Card 2" type="Sprite2D" parent="Pair 1"]
+position = Vector2(127.094, -6.31795)
+scale = Vector2(0.808576, 0.90173)
+texture = ExtResource("2_6ujdn")
+script = ExtResource("3_oaq8o")
+cardImage = ExtResource("6_mex1g")
+
+[node name="Pair 2" type="Node2D" parent="." node_paths=PackedStringArray("card1", "card2")]
+position = Vector2(719, 280)
+scale = Vector2(1.80682, 1.42725)
+script = ExtResource("3_mqnir")
+card1 = NodePath("Card 3")
+card2 = NodePath("Card4")
+
+[node name="Card 3" type="Sprite2D" parent="Pair 2"]
+position = Vector2(197.031, -4.20389)
+scale = Vector2(1, 1.00186)
+texture = ExtResource("2_6ujdn")
+script = ExtResource("3_oaq8o")
+cardImage = ExtResource("7_1ekqu")
+
+[node name="Card4" type="Sprite2D" parent="Pair 2"]
+position = Vector2(408.452, -11.911)
+scale = Vector2(1, 0.996308)
+texture = ExtResource("2_6ujdn")
+script = ExtResource("3_oaq8o")
+cardImage = ExtResource("7_1ekqu")
+
+[node name="Card 5" type="Sprite2D" parent="."]
+position = Vector2(413.321, 490.133)
+scale = Vector2(1.80682, 1.42462)
+texture = ExtResource("2_6ujdn")
+script = ExtResource("3_oaq8o")
+
+[node name="Card 6" type="Sprite2D" parent="."]
+position = Vector2(698.321, 499.133)
+scale = Vector2(1.80682, 1.42725)
+texture = ExtResource("2_6ujdn")
+script = ExtResource("3_oaq8o")
+
+[node name="Card 7" type="Sprite2D" parent="."]
+position = Vector2(1066, 473)
+scale = Vector2(2.30456, 1.52987)
+texture = ExtResource("2_6ujdn")
+
+[node name="Card 8" type="Sprite2D" parent="."]
+position = Vector2(1423.32, 486.133)
+scale = Vector2(2.30456, 1.52705)
+texture = ExtResource("2_6ujdn")
+
+[node name="Card 9" type="Sprite2D" parent="."]
+position = Vector2(410.321, 734.133)
+scale = Vector2(1.80682, 1.41935)
+texture = ExtResource("2_6ujdn")
+
+[node name="Card 10" type="Sprite2D" parent="."]
+position = Vector2(711.321, 717.133)
+scale = Vector2(1.80682, 1.42198)
+texture = ExtResource("2_6ujdn")
+
+[node name="Card 11" type="Sprite2D" parent="."]
+position = Vector2(1071.32, 699.133)
+scale = Vector2(2.30456, 1.52422)
+texture = ExtResource("2_6ujdn")
+
+[node name="Card 12" type="Sprite2D" parent="."]
+position = Vector2(1411.32, 730.133)
+scale = Vector2(1.80682, 1.42462)
+texture = ExtResource("2_6ujdn")
+
+[node name="Card 13" type="Sprite2D" parent="."]
+position = Vector2(390.321, 966.133)
+scale = Vector2(2.23457, 1.57987)
+texture = ExtResource("2_6ujdn")
+
+[node name="Card 14" type="Sprite2D" parent="."]
+position = Vector2(702.321, 965.133)
+scale = Vector2(1.80682, 1.42462)
+texture = ExtResource("2_6ujdn")
+
+[node name="Card 15" type="Sprite2D" parent="."]
+position = Vector2(1057.32, 964.133)
+scale = Vector2(2.89366, 1.81128)
+texture = ExtResource("2_6ujdn")
+
+[node name="Card 16" type="Sprite2D" parent="."]
+position = Vector2(1397.32, 969.133)
+scale = Vector2(1.80682, 1.42198)
+texture = ExtResource("2_6ujdn")
