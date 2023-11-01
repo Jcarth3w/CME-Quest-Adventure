@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://b302n6pq0hkk1"]
 
 [ext_resource type="Texture2D" uid="uid://rpdjh6s3x3m2" path="res://Assets/Red Background.png" id="1_bmhs3"]
-[ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Objects/object.tscn" id="2_pjc2w"]
+[ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Objects/pickup.tscn" id="2_pjc2w"]
 [ext_resource type="Texture2D" uid="uid://cy5vw6cu2lipg" path="res://Assets/Sprites/Objects/genericItem_color_027.png" id="3_nb4jn"]
 [ext_resource type="Texture2D" uid="uid://b3huc1rs1ypq3" path="res://Assets/Sprites/Objects/genericItem_color_014.png" id="4_k48be"]
 [ext_resource type="Texture2D" uid="uid://1ttv3avrttbb" path="res://Assets/Sprites/Objects/genericItem_color_031.png" id="5_p4ni0"]
@@ -43,15 +43,6 @@ offset_bottom = 386.0
 clickable_name = "Paint Palette"
 clickable_sprite = ExtResource("5_p4ni0")
 
-[node name="HUD" parent="." instance=ExtResource("6_wblct")]
-position = Vector2(10, -6)
-
-[node name="Inventory" parent="." instance=ExtResource("7_gy3uc")]
-offset_left = 828.0
-offset_top = 8.0
-offset_right = 1128.0
-offset_bottom = 108.0
-
 [node name="Movement_Object" parent="." instance=ExtResource("8_je1k2")]
 offset_left = 159.0
 offset_top = 295.0
@@ -70,7 +61,16 @@ offset_right = 582.0
 offset_bottom = 470.0
 clickable_name = "Axe"
 clickable_sprite = ExtResource("11_fxb8e")
-scene_path = "res://Scenes/Background Node.tscn"
+scene_path = "res://Scenes/DeskMiniGame.tscn"
+
+[node name="HUD" parent="." instance=ExtResource("6_wblct")]
+position = Vector2(10, -6)
+
+[node name="Inventory" parent="." instance=ExtResource("7_gy3uc")]
+offset_left = 828.0
+offset_top = 8.0
+offset_right = 1128.0
+offset_bottom = 108.0
 
 [connection signal="clicked" from="object" to="Inventory" method="_on_object_clicked"]
 [connection signal="clicked" from="object2" to="Inventory" method="_on_object_2_clicked"]
