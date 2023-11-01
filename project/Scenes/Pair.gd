@@ -6,21 +6,17 @@ extends Node2D
 
 var isFlipped = false
 var isMatched = false
-var cardImage : Texture
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if parent.flipped_count == 2:
+func _process(_delta):
+	if parent.checkPairMatching == true:
 		checkPair()
+	print(isMatched)
 
 func checkPair():
 	if card1.isFlipped == true && card2.isFlipped == true:
 		isMatched = true
-		print(str(isMatched))
 	else:
 		card1.reset()
 		card2.reset()
