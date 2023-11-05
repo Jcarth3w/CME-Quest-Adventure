@@ -1,21 +1,37 @@
-extends Sprite2D
+extends TextureButton
 
-# Called when the node enters the scene tree for the first time.
+@onready var clipBoard = get_tree().get_root().get_node("ShredderMiniGame/ClipBoard")
+var startPosition
+var startRotation
+var startScale
+
 func _ready():
-	pass # Replace with function body.
+	startPosition = global_position 
+	startRotation = rotation_degrees
+	startScale = scale
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
 
+func checkClipBoard():
+	if clipBoard.shreds.size() < 3:
+		return true
+	else:
+		return false
+		
+	
+func _on_pressed():
+	if clipBoard.shreds.find(self) == -1:
+		clipBoard.addShred(self)
+		
+func resetShred():
+	global_position = startPosition
+	rotation_degrees = startRotation
+	scale = startScale
+	
+	
+	
+	
 
-func _input(event):
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-			if get_rect().has_point(to_local(event.position)):
-				self.position.x = 138
-				self.position.y = 241
-				self.scale.x = 0.51
-				self.scale.y = 1.49
-				self.rotation_degrees = 0
