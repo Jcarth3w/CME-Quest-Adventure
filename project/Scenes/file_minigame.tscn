@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdtol8suwnlv7"]
+
+[ext_resource type="Script" path="res://Scenes/FileMinigameManager.gd" id="1_tykt2"]
+[ext_resource type="Texture2D" uid="uid://rpdjh6s3x3m2" path="res://Assets/Red Background.png" id="2_l0fac"]
+[ext_resource type="Texture2D" uid="uid://dsnsfqmlp3nx8" path="res://Assets/Sprites/Objects/genericItem_color_036.png" id="3_qc687"]
+[ext_resource type="Script" path="res://Scenes/File.gd" id="4_lq85p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_js1u7"]
+font_size = 30
+
+[node name="FileMinigame" type="Node2D"]
+script = ExtResource("1_tykt2")
+
+[node name="RedBackground" type="Sprite2D" parent="."]
+position = Vector2(965, 554.5)
+scale = Vector2(1.09896, 1.13056)
+texture = ExtResource("2_l0fac")
+
+[node name="File1" type="TextureButton" parent="."]
+offset_left = 797.0
+offset_top = 473.0
+offset_right = 891.0
+offset_bottom = 571.0
+texture_normal = ExtResource("3_qc687")
+script = ExtResource("4_lq85p")
+clickable_name = "File1"
+
+[node name="Label" type="Label" parent="File1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.761
+anchor_top = -3.25
+anchor_right = 1.761
+anchor_bottom = -3.25
+offset_left = -193.534
+offset_top = -151.5
+offset_right = 193.466
+offset_bottom = 151.5
+text = "Find the promotional Folder"
+label_settings = SubResource("LabelSettings_js1u7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="File2" type="TextureButton" parent="."]
+offset_left = 1090.0
+offset_top = 469.0
+offset_right = 1184.0
+offset_bottom = 567.0
+texture_normal = ExtResource("3_qc687")
+script = ExtResource("4_lq85p")
+clickable_name = "File2"
+
+[node name="Label" type="Label" parent="File2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 11.723
+anchor_top = -4.243
+anchor_right = 11.723
+anchor_bottom = -3.445
+offset_left = -39.962
+offset_top = 285.814
+offset_right = 0.0379639
+offset_bottom = 233.61
+text = "Hello"
+
+[connection signal="pressed" from="File1" to="File1" method="_on_pressed"]
+[connection signal="pressed" from="File2" to="File2" method="_on_pressed"]
