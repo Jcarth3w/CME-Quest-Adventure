@@ -1,10 +1,8 @@
 extends TextureButton
 
 
-signal clicked
-
-
-@onready var inventory : Inventory
+@onready var room = get_tree().get_root().get_node("Room")
+@onready var inventory = room.get_node("Inventory")
 
 @export var clickable_name : String
 @export var clickable_sprite : Texture
@@ -15,8 +13,7 @@ func _ready():
 
 
 func _on_pressed():
-	print("Pressed " + clickable_name)
-	clicked.emit(clickable_name, clickable_sprite)
+	inventory.add_item(clickable_name, clickable_sprite)
 	queue_free()
 
 

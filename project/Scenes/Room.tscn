@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://Objects/Movement_Object.gd" id="10_u6dd1"]
 [ext_resource type="Texture2D" uid="uid://kepextb17v5c" path="res://Assets/Sprites/Objects/genericItem_color_020.png" id="11_fxb8e"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Room" type="Node2D"]
 
 [node name="Placeholder Background" type="Sprite2D" parent="."]
 position = Vector2(970, 535)
@@ -71,7 +71,3 @@ offset_left = 828.0
 offset_top = 8.0
 offset_right = 1128.0
 offset_bottom = 108.0
-
-[connection signal="clicked" from="object" to="Inventory" method="_on_object_clicked"]
-[connection signal="clicked" from="object2" to="Inventory" method="_on_object_2_clicked"]
-[connection signal="clicked" from="object3" to="Inventory" method="_on_object_3_clicked"]
