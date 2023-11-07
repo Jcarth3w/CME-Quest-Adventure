@@ -1,13 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://c2x6nmlhmqg5h"]
+[gd_scene load_steps=3 format=3 uid="uid://c2x6nmlhmqg5h"]
 
 [ext_resource type="PackedScene" uid="uid://c42tbugwn1rvm" path="res://Scenes/timer.tscn" id="1_xoov4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f47q1"]
+font_size = 32
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
 
 [node name="HUD" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1921.0
 offset_bottom = 126.0
-color = Color(0.988235, 0.643137, 1, 0.231373)
+color = Color(0.803922, 0.760784, 0.756863, 0.568627)
 
 [node name="Label" type="Label" parent="ColorRect"]
 layout_mode = 1
@@ -31,8 +36,11 @@ wait_time = 1.0
 autostart = true
 
 [node name="Label" type="Label" parent="Timer"]
-offset_left = 1760.0
-offset_top = 48.0
-offset_right = 1800.0
-offset_bottom = 71.0
+anchors_preset = -1
+anchor_left = 0.895833
+anchor_top = 0.0361111
+anchor_right = 0.953646
+anchor_bottom = 0.0805556
 text = "Time: 0"
+label_settings = SubResource("LabelSettings_f47q1")
+metadata/_edit_use_anchors_ = true
