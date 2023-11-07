@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://b302n6pq0hkk1"]
+[gd_scene load_steps=13 format=3 uid="uid://b302n6pq0hkk1"]
 
+[ext_resource type="Script" path="res://Scenes/room.gd" id="1_22206"]
 [ext_resource type="Texture2D" uid="uid://rpdjh6s3x3m2" path="res://Assets/Red Background.png" id="1_bmhs3"]
 [ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Objects/pickup.tscn" id="2_pjc2w"]
 [ext_resource type="Texture2D" uid="uid://cy5vw6cu2lipg" path="res://Assets/Sprites/Objects/genericItem_color_027.png" id="3_nb4jn"]
@@ -13,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://kepextb17v5c" path="res://Assets/Sprites/Objects/genericItem_color_020.png" id="11_fxb8e"]
 
 [node name="Room" type="Node2D"]
+script = ExtResource("1_22206")
 
 [node name="Placeholder Background" type="Sprite2D" parent="."]
 position = Vector2(970, 535)
@@ -61,7 +63,7 @@ offset_right = 582.0
 offset_bottom = 470.0
 clickable_name = "Axe"
 clickable_sprite = ExtResource("11_fxb8e")
-scene_path = "res://Scenes/DeskMiniGame.tscn"
+scene_path = "res://Scenes/file_minigame.tscn"
 
 [node name="HUD" parent="." instance=ExtResource("6_wblct")]
 position = Vector2(10, -6)

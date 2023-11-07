@@ -16,52 +16,112 @@ position = Vector2(965, 554.5)
 scale = Vector2(1.09896, 1.13056)
 texture = ExtResource("2_l0fac")
 
-[node name="File1" type="TextureButton" parent="."]
-offset_left = 797.0
-offset_top = 473.0
-offset_right = 891.0
-offset_bottom = 571.0
-texture_normal = ExtResource("3_qc687")
-script = ExtResource("4_lq85p")
-clickable_name = "File1"
+[node name="Previous" type="Button" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 147.0
+offset_top = 470.0
+offset_right = 301.0
+offset_bottom = 530.0
+grow_vertical = 2
+text = "PREVIOUS"
 
-[node name="Label" type="Label" parent="File1"]
-layout_mode = 1
+[node name="Next" type="Button" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1667.0
+offset_top = 470.0
+offset_right = 1821.0
+offset_bottom = 530.0
+grow_vertical = 2
+text = "NEXT"
+
+[node name="Check" type="Label" parent="."]
 anchors_preset = -1
-anchor_left = 1.761
+anchor_left = 1.0
 anchor_top = -3.25
-anchor_right = 1.761
+anchor_right = 1.0
 anchor_bottom = -3.25
-offset_left = -193.534
-offset_top = -151.5
-offset_right = 193.466
-offset_bottom = 151.5
+offset_left = 781.0
+offset_top = -12.0
+offset_right = 1185.0
+offset_bottom = 291.0
 text = "Find the promotional Folder"
 label_settings = SubResource("LabelSettings_js1u7")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="File2" type="TextureButton" parent="."]
-offset_left = 1090.0
-offset_top = 469.0
-offset_right = 1184.0
-offset_bottom = 567.0
-texture_normal = ExtResource("3_qc687")
-script = ExtResource("4_lq85p")
-clickable_name = "File2"
-
-[node name="Label" type="Label" parent="File2"]
-layout_mode = 1
+[node name="FileName" type="Label" parent="."]
 anchors_preset = -1
 anchor_left = 11.723
 anchor_top = -4.243
 anchor_right = 11.723
 anchor_bottom = -3.445
-offset_left = -39.962
-offset_top = 285.814
-offset_right = 0.0379639
-offset_bottom = 233.61
-text = "Hello"
+offset_left = 928.0
+offset_top = 298.0
+offset_right = 968.0
+offset_bottom = 324.0
 
+[node name="File1" type="TextureButton" parent="."]
+offset_left = 914.0
+offset_top = 455.0
+offset_right = 1008.0
+offset_bottom = 553.0
+texture_normal = ExtResource("3_qc687")
+script = ExtResource("4_lq85p")
+clickable_name = "File1"
+
+[node name="File2" type="TextureButton" parent="."]
+offset_left = -134.0
+offset_top = 428.0
+offset_right = -40.0
+offset_bottom = 526.0
+texture_normal = ExtResource("3_qc687")
+script = ExtResource("4_lq85p")
+clickable_name = "File2"
+
+[node name="File3" type="TextureButton" parent="."]
+offset_left = -122.0
+offset_top = 435.0
+offset_right = -28.0
+offset_bottom = 533.0
+texture_normal = ExtResource("3_qc687")
+script = ExtResource("4_lq85p")
+clickable_name = "File3"
+
+[node name="File4" type="TextureButton" parent="."]
+offset_left = -130.0
+offset_top = 422.0
+offset_right = -36.0
+offset_bottom = 520.0
+texture_normal = ExtResource("3_qc687")
+script = ExtResource("4_lq85p")
+clickable_name = "File4"
+
+[node name="File5" type="TextureButton" parent="."]
+offset_left = -133.0
+offset_top = 415.0
+offset_right = -39.0
+offset_bottom = 513.0
+texture_normal = ExtResource("3_qc687")
+script = ExtResource("4_lq85p")
+clickable_name = "File5"
+
+[node name="OffLeft" type="Marker2D" parent="."]
+position = Vector2(314, 888)
+
+[node name="OffRight" type="Marker2D" parent="."]
+position = Vector2(1564, 884)
+
+[node name="Center" type="Marker2D" parent="."]
+position = Vector2(943, 465)
+
+[connection signal="pressed" from="Previous" to="." method="_on_previous_pressed"]
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="File1" to="File1" method="_on_pressed"]
 [connection signal="pressed" from="File2" to="File2" method="_on_pressed"]
+[connection signal="pressed" from="File3" to="File3" method="_on_pressed"]
+[connection signal="pressed" from="File4" to="File4" method="_on_pressed"]
+[connection signal="pressed" from="File5" to="File5" method="_on_pressed"]

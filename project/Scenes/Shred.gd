@@ -1,6 +1,6 @@
 extends TextureButton
 
-@onready var clipBoard = get_tree().get_root().get_node("ShredderMiniGame/ClipBoard")
+@onready var clipBoard = get_tree().get_root().get_node("Room/ShredderMiniGame/ClipBoard")
 var startPosition
 var startRotation
 var startScale
@@ -9,10 +9,6 @@ func _ready():
 	startPosition = global_position 
 	startRotation = rotation_degrees
 	startScale = scale
-
-
-func _process(delta):
-	pass
 
 
 func checkClipBoard():

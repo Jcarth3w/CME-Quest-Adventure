@@ -1,22 +1,14 @@
 extends TextureButton
 
-@onready var clipBoard = get_tree().get_root().get_node("ShredderMiniGame/ClipBoard")
-
-
-func _ready():
-	pass # Replace with function body.
-
-
-func _process(delta):
-	pass
-
-
+@onready var clipBoard = get_tree().get_root().get_node("Room/ShredderMiniGame/ClipBoard")
+@onready var room = get_tree().get_root().get_node("Room")
 
 
 func _on_pressed():
 	if clipBoard.checkWin():
 		$Label.text = "You win!"
 		await get_tree().create_timer(1).timeout
-		get_tree().change_scene_to_file("res://Scenes/Room.tscn")
+		room.state = "active"
+		owner.queue_free()
 		
 	
