@@ -1,29 +1,36 @@
 extends Node2D
 
-var FunctionActive = false
-
+@onready var files = [$File1, $File2, $File3, $File4, $File5]
+var current_file = 0
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	if FunctionActive == false:
-		check_win()
 
-func check_win():
-	if $File1/Label.text == "File1":
-		FunctionActive = true
+func check_win(file_name):
+	if file_name == "File4":
 		Win()
-	if $File2/Label.text == "File2":
-		FunctionActive = true
+	else:
 		DisplayIncorrect()
 
 func Win():
-	$File1/Label.text = "Congratulations!"
+	$Check.text = "Congratulations!"
 	await get_tree().create_timer(3).timeout
 	get_tree().change_scene_to_file("res://Scenes/Room.tscn")
-	FunctionActive = false
+	
 
 func DisplayIncorrect():
-	$File1/Label.text = "Incorrect."
-	$File2/Label.text = "2"
+	$Check.text = "Incorrect."
 	await get_tree().create_timer(2).timeout
-	$File1/Label.text = "Find the promotional Folder"
-	FunctionActive = false
+	$Check.text = "Find the promotional Folder"
+
+
+func _on_previous_pressed():
+	if current_file > 0:
+		files[current_file].global_position = $OffLeft.global_position
+		files[current_file - 1].global_position = $Center.global_position
+		current_file -= 1
+
+
+func _on_next_pressed():
+	if current_file < 4:
+		files[current_file].global_position = $OffRight.global_position
+		files[current_file + 1].global_position = $Center.global_position
+		current_file += 1
