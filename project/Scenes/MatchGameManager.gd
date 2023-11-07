@@ -4,6 +4,7 @@ var flipped_count = 0
 var checkPairMatching = false
 var isTimerStarted = false
 
+@onready var room = get_tree().get_root().get_node("Room")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -27,7 +28,8 @@ func check_win():
 func win():
 	$RedBackground/Label.text = "You win!"
 	await get_tree().create_timer(1.5).timeout
-	get_tree().change_scene_to_file("res://Scenes/Room.tscn")
+	room.state = "active"
+	queue_free()
 
 
 

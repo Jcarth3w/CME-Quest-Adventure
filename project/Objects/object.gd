@@ -8,13 +8,15 @@ extends TextureButton
 @export var clickable_sprite : Texture
 
 
+
 func _ready():
 	texture_normal = clickable_sprite
 
 
 func _on_pressed():
-	inventory.add_item(clickable_name, clickable_sprite)
-	queue_free()
+	if room.state == "active":
+		inventory.add_item(clickable_name, clickable_sprite)
+		queue_free()
 
 
 

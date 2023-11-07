@@ -141,6 +141,7 @@ texture_normal = ExtResource("4_smkob")
 script = ExtResource("7_xy86g")
 
 [node name="Label" type="Label" parent="CheckBttn"]
+layout_mode = 0
 offset_left = -7.57895
 offset_top = 38.0869
 offset_right = 39.421

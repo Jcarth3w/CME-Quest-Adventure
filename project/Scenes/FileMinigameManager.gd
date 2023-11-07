@@ -1,6 +1,8 @@
 extends Node2D
 
 @onready var files = [$File1, $File2, $File3, $File4, $File5]
+@onready var room = get_tree().get_root().get_node("Room")
+
 var current_file = 0
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
@@ -13,7 +15,8 @@ func check_win(file_name):
 func Win():
 	$Check.text = "Congratulations!"
 	await get_tree().create_timer(3).timeout
-	get_tree().change_scene_to_file("res://Scenes/Room.tscn")
+	room.state = "active"
+	queue_free()
 	
 
 func DisplayIncorrect():

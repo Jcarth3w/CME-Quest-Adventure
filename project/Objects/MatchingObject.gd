@@ -1,7 +1,7 @@
 extends Sprite2D
 
 
-@onready var parent = get_tree().get_root().get_node("MiniGame")
+@onready var parent = get_tree().get_root().get_node("Room/MiniGame")
 var isFlipped = false
 
 @export var cardImage : Texture

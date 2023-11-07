@@ -1,6 +1,6 @@
 extends TextureButton
 
-@onready var parent = get_tree().get_root().get_node("FileMinigame")
+@onready var parent = get_tree().get_root().get_node("Room/FileMinigame")
 @export var clickable_name : String
 
 
