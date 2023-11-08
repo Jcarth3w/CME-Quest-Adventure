@@ -26,7 +26,7 @@ func check_win():
 			win()
 
 func win():
-	$RedBackground/Label.text = "You win!"
+	$Label.text = "You win!"
 	await get_tree().create_timer(1.5).timeout
 	room.state = "active"
 	queue_free()

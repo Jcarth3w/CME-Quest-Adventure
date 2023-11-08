@@ -1,72 +1,86 @@
-[gd_scene load_steps=13 format=3 uid="uid://b302n6pq0hkk1"]
+[gd_scene load_steps=12 format=3 uid="uid://b302n6pq0hkk1"]
 
 [ext_resource type="Script" path="res://Scenes/room.gd" id="1_22206"]
-[ext_resource type="Texture2D" uid="uid://rpdjh6s3x3m2" path="res://Assets/Red Background.png" id="1_bmhs3"]
+[ext_resource type="Texture2D" uid="uid://bkomnkytheji1" path="res://Assets/RoomBackground.png" id="2_bb0ow"]
 [ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Objects/pickup.tscn" id="2_pjc2w"]
-[ext_resource type="Texture2D" uid="uid://cy5vw6cu2lipg" path="res://Assets/Sprites/Objects/genericItem_color_027.png" id="3_nb4jn"]
-[ext_resource type="Texture2D" uid="uid://b3huc1rs1ypq3" path="res://Assets/Sprites/Objects/genericItem_color_014.png" id="4_k48be"]
-[ext_resource type="Texture2D" uid="uid://1ttv3avrttbb" path="res://Assets/Sprites/Objects/genericItem_color_031.png" id="5_p4ni0"]
+[ext_resource type="Texture2D" uid="uid://dqunufa6yvb80" path="res://Assets/Sprites/Objects/genericItem_color_032.png" id="4_5llip"]
+[ext_resource type="Texture2D" uid="uid://dmk5t8pvwdjl3" path="res://Assets/Sprites/Objects/genericItem_color_145.png" id="6_l7bs2"]
 [ext_resource type="PackedScene" uid="uid://c2x6nmlhmqg5h" path="res://Scenes/HUD.tscn" id="6_wblct"]
 [ext_resource type="PackedScene" uid="uid://vkq3eq2tcj2l" path="res://Scenes/inventory.tscn" id="7_gy3uc"]
 [ext_resource type="PackedScene" uid="uid://pn2l6ln2hl3j" path="res://Objects/new_scene_object.tscn" id="8_je1k2"]
-[ext_resource type="Texture2D" uid="uid://evnmlo6fgm68" path="res://Assets/Sprites/Objects/genericItem_color_017.png" id="9_job75"]
+[ext_resource type="Texture2D" uid="uid://bn3kp4ijyl0oa" path="res://Assets/filecabinet.jpg" id="10_2w5ac"]
 [ext_resource type="Script" path="res://Objects/Movement_Object.gd" id="10_u6dd1"]
-[ext_resource type="Texture2D" uid="uid://kepextb17v5c" path="res://Assets/Sprites/Objects/genericItem_color_020.png" id="11_fxb8e"]
+[ext_resource type="Texture2D" uid="uid://qlv0nihgqda2" path="res://Assets/papershredder.png" id="11_tn7ff"]
 
 [node name="Room" type="Node2D"]
 script = ExtResource("1_22206")
 
 [node name="Placeholder Background" type="Sprite2D" parent="."]
-position = Vector2(970, 535)
-scale = Vector2(1.04818, 1.0537)
-texture = ExtResource("1_bmhs3")
+position = Vector2(960, 540)
+scale = Vector2(1.66222, 1.66852)
+texture = ExtResource("2_bb0ow")
 
 [node name="object" parent="." instance=ExtResource("2_pjc2w")]
-offset_left = 328.0
-offset_top = 352.0
-offset_right = 328.0
-offset_bottom = 352.0
+offset_left = 46.0
+offset_top = 762.0
+offset_right = 162.0
+offset_bottom = 874.0
+texture_normal = ExtResource("4_5llip")
 clickable_name = "Paint Brush"
-clickable_sprite = ExtResource("3_nb4jn")
+clickable_sprite = ExtResource("4_5llip")
 
 [node name="object2" parent="." instance=ExtResource("2_pjc2w")]
-offset_left = 666.0
-offset_top = 404.0
-offset_right = 666.0
-offset_bottom = 404.0
+offset_left = 841.0
+offset_top = 332.0
+offset_right = 957.0
+offset_bottom = 444.0
+texture_normal = ExtResource("4_5llip")
 clickable_name = "Paint Roller"
-clickable_sprite = ExtResource("4_k48be")
+clickable_sprite = ExtResource("4_5llip")
 
 [node name="object3" parent="." instance=ExtResource("2_pjc2w")]
-offset_left = 1068.0
-offset_top = 290.0
-offset_right = 1184.0
-offset_bottom = 386.0
+offset_left = 502.0
+offset_top = 704.0
+offset_right = 618.0
+offset_bottom = 816.0
+texture_normal = ExtResource("4_5llip")
 clickable_name = "Paint Palette"
-clickable_sprite = ExtResource("5_p4ni0")
+clickable_sprite = ExtResource("4_5llip")
 
 [node name="Movement_Object" parent="." instance=ExtResource("8_je1k2")]
-offset_left = 159.0
-offset_top = 295.0
-offset_right = 257.0
-offset_bottom = 447.0
+offset_left = 1053.0
+offset_top = 606.0
+offset_right = 1208.0
+offset_bottom = 758.0
+scale = Vector2(1.70869, 1.90695)
+texture_normal = ExtResource("6_l7bs2")
 script = ExtResource("10_u6dd1")
 clickable_name = "Saw"
-clickable_sprite = ExtResource("9_job75")
+clickable_sprite = ExtResource("6_l7bs2")
 Xcoordinate = 600
 Ycoordinate = 600
 
 [node name="New_Scene_Object" parent="." instance=ExtResource("8_je1k2")]
-offset_left = 488.0
-offset_top = 342.0
-offset_right = 582.0
-offset_bottom = 470.0
+offset_left = 1607.0
+offset_top = 230.0
+offset_right = 1863.0
+offset_bottom = 841.0
+texture_normal = ExtResource("10_2w5ac")
 clickable_name = "Axe"
-clickable_sprite = ExtResource("11_fxb8e")
+clickable_sprite = ExtResource("10_2w5ac")
 scene_path = "res://Scenes/file_minigame.tscn"
 
+[node name="New_Scene_Object2" parent="." instance=ExtResource("8_je1k2")]
+offset_left = 1371.0
+offset_top = 657.0
+offset_right = 2006.0
+offset_bottom = 1269.0
+scale = Vector2(0.293043, 0.280447)
+texture_normal = ExtResource("11_tn7ff")
+clickable_sprite = ExtResource("11_tn7ff")
+scene_path = "res://Scenes/ShredderMiniGame.tscn"
+
 [node name="HUD" parent="." instance=ExtResource("6_wblct")]
-position = Vector2(10, -6)
 
 [node name="Inventory" parent="." instance=ExtResource("7_gy3uc")]
 offset_left = 828.0
