@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qlv0nihgqda2"
-path="res://.godot/imported/papershredder.png-1422f10807eecc71eafda5aa84382860.ctex"
+uid="uid://18telq4wmu2"
+path="res://.godot/imported/desk.png-6f390f138471cef9db3004d02b4bc42a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/papershredder.png"
-dest_files=["res://.godot/imported/papershredder.png-1422f10807eecc71eafda5aa84382860.ctex"]
+source_file="res://Assets/desk.png"
+dest_files=["res://.godot/imported/desk.png-6f390f138471cef9db3004d02b4bc42a.ctex"]
 
 [params]
 
