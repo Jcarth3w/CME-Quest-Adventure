@@ -1,20 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdtol8suwnlv7"]
+[gd_scene load_steps=5 format=3 uid="uid://bdtol8suwnlv7"]
 
 [ext_resource type="Script" path="res://Scenes/FileMinigameManager.gd" id="1_tykt2"]
-[ext_resource type="Texture2D" uid="uid://rpdjh6s3x3m2" path="res://Assets/Red Background.png" id="2_l0fac"]
 [ext_resource type="Texture2D" uid="uid://dsnsfqmlp3nx8" path="res://Assets/Sprites/Objects/genericItem_color_036.png" id="3_qc687"]
 [ext_resource type="Script" path="res://Scenes/File.gd" id="4_lq85p"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_js1u7"]
-font_size = 30
+font_size = 50
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
 
 [node name="FileMinigame" type="Node2D"]
 script = ExtResource("1_tykt2")
 
-[node name="RedBackground" type="Sprite2D" parent="."]
-position = Vector2(965, 554.5)
-scale = Vector2(1.09896, 1.13056)
-texture = ExtResource("2_l0fac")
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+color = Color(0.420561, 0.414643, 0.755414, 1)
 
 [node name="Previous" type="Button" parent="."]
 anchors_preset = 4
@@ -44,10 +44,10 @@ anchor_left = 1.0
 anchor_top = -3.25
 anchor_right = 1.0
 anchor_bottom = -3.25
-offset_left = 781.0
-offset_top = -12.0
-offset_right = 1185.0
-offset_bottom = 291.0
+offset_left = 603.0
+offset_top = -29.0
+offset_right = 1284.0
+offset_bottom = 274.0
 text = "Find the promotional Folder"
 label_settings = SubResource("LabelSettings_js1u7")
 horizontal_alignment = 1
@@ -59,10 +59,10 @@ anchor_left = 11.723
 anchor_top = -4.243
 anchor_right = 11.723
 anchor_bottom = -3.445
-offset_left = 928.0
-offset_top = 298.0
-offset_right = 968.0
-offset_bottom = 324.0
+offset_left = 1971.0
+offset_top = 261.0
+offset_right = 2088.0
+offset_bottom = 304.0
 
 [node name="File1" type="TextureButton" parent="."]
 offset_left = 914.0

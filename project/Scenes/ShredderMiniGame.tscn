@@ -1,6 +1,5 @@
 [gd_scene load_steps=8 format=3 uid="uid://cs0rndg84v7q0"]
 
-[ext_resource type="Texture2D" uid="uid://rpdjh6s3x3m2" path="res://Assets/Red Background.png" id="1_1gxbn"]
 [ext_resource type="Texture2D" uid="uid://wjox7l8cx5c4" path="res://Assets/Sprites/Objects/genericItem_color_141.png" id="2_ptm7d"]
 [ext_resource type="Script" path="res://Scenes/Clip board.gd" id="3_rochj"]
 [ext_resource type="Script" path="res://Scenes/Shred.gd" id="4_e4n14"]
@@ -8,12 +7,18 @@
 [ext_resource type="Texture2D" uid="uid://dcm6p18p7lslf" path="res://Assets/Sprites/Objects/genericItem_color_160.png" id="4_smkob"]
 [ext_resource type="Script" path="res://Scenes/CheckBttn.gd" id="7_xy86g"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_j01bn"]
+font_size = 50
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
 [node name="ShredderMiniGame" type="Node2D"]
 
-[node name="RedBackground" type="Sprite2D" parent="."]
-position = Vector2(957, 546)
-scale = Vector2(1.04062, 1.04352)
-texture = ExtResource("1_1gxbn")
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.0784314, 0.709804, 0.192157, 1)
 
 [node name="Label" type="Label" parent="."]
 offset_left = 620.0
@@ -22,6 +27,7 @@ offset_right = 1237.0
 offset_bottom = 122.0
 theme_override_font_sizes/font_size = 45
 text = "Find pieces of the document"
+label_settings = SubResource("LabelSettings_j01bn")
 horizontal_alignment = 1
 
 [node name="ClipBoard" type="Sprite2D" parent="." node_paths=PackedStringArray("winningCombo")]
@@ -79,10 +85,10 @@ script = ExtResource("4_e4n14")
 
 [node name="Shred 4" type="TextureButton" parent="."]
 z_index = 4
-offset_left = 653.0
-offset_top = 368.0
-offset_right = 741.0
-offset_bottom = 492.0
+offset_left = 540.401
+offset_top = 659.581
+offset_right = 628.401
+offset_bottom = 783.581
 rotation = -0.753436
 scale = Vector2(0.568182, 3.66129)
 texture_normal = ExtResource("4_gorp7")
@@ -90,10 +96,10 @@ script = ExtResource("4_e4n14")
 
 [node name="Shred 5" type="TextureButton" parent="."]
 z_index = 3
-offset_left = 618.0
-offset_top = 148.0
-offset_right = 706.0
-offset_bottom = 272.0
+offset_left = 505.401
+offset_top = 439.581
+offset_right = 593.401
+offset_bottom = 563.581
 rotation = -0.454467
 scale = Vector2(0.511364, 4.90323)
 texture_normal = ExtResource("4_gorp7")
@@ -101,10 +107,10 @@ script = ExtResource("4_e4n14")
 
 [node name="Shred 6" type="TextureButton" parent="."]
 z_index = 2
-offset_left = 743.0
-offset_top = 759.0
-offset_right = 831.0
-offset_bottom = 883.0
+offset_left = 630.401
+offset_top = 1050.58
+offset_right = 718.401
+offset_bottom = 1174.58
 rotation = 3.27105
 scale = Vector2(0.511364, 5.70968)
 texture_normal = ExtResource("4_gorp7")
@@ -112,20 +118,20 @@ script = ExtResource("4_e4n14")
 
 [node name="Shred 7" type="TextureButton" parent="."]
 z_index = 1
-offset_left = 854.0
-offset_top = 170.0
-offset_right = 942.0
-offset_bottom = 294.0
+offset_left = 741.401
+offset_top = 461.581
+offset_right = 829.401
+offset_bottom = 585.581
 rotation = 0.677643
 scale = Vector2(0.488636, 5.20178)
 texture_normal = ExtResource("4_gorp7")
 script = ExtResource("4_e4n14")
 
 [node name="Shred 8" type="TextureButton" parent="."]
-offset_left = 818.0
-offset_top = 542.0
-offset_right = 818.0
-offset_bottom = 542.0
+offset_left = 705.401
+offset_top = 833.581
+offset_right = 793.401
+offset_bottom = 957.581
 rotation = 2.89367
 scale = Vector2(0.568182, 4.33065)
 texture_normal = ExtResource("4_gorp7")
