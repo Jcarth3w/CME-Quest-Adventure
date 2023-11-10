@@ -4,18 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://bkomnkytheji1" path="res://Assets/RoomBackground.png" id="2_bb0ow"]
 [ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Objects/pickup.tscn" id="2_pjc2w"]
 [ext_resource type="Texture2D" uid="uid://dqunufa6yvb80" path="res://Assets/Sprites/Objects/genericItem_color_032.png" id="4_5llip"]
-[ext_resource type="Texture2D" uid="uid://dmk5t8pvwdjl3" path="res://Assets/Sprites/Objects/genericItem_color_145.png" id="6_l7bs2"]
+[ext_resource type="Texture2D" uid="uid://18telq4wmu2" path="res://Assets/Desk.png" id="6_21ieq"]
 [ext_resource type="PackedScene" uid="uid://c2x6nmlhmqg5h" path="res://Scenes/HUD.tscn" id="6_wblct"]
 [ext_resource type="PackedScene" uid="uid://vkq3eq2tcj2l" path="res://Scenes/inventory.tscn" id="7_gy3uc"]
 [ext_resource type="PackedScene" uid="uid://pn2l6ln2hl3j" path="res://Objects/new_scene_object.tscn" id="8_je1k2"]
 [ext_resource type="Texture2D" uid="uid://qlv0nihgqda2" path="res://Assets/Sprites/Objects/papershredder.png" id="9_l1cvl"]
 [ext_resource type="Texture2D" uid="uid://bn3kp4ijyl0oa" path="res://Assets/filecabinet.jpg" id="10_2w5ac"]
 [ext_resource type="Script" path="res://Objects/Movement_Object.gd" id="10_u6dd1"]
+[ext_resource type="Texture2D" uid="uid://k7tyhsc5hvsx" path="res://Assets/Chair.png" id="12_0w1me"]
 [ext_resource type="Texture2D" uid="uid://cl762eqmgfevr" path="res://Assets/images.png" id="12_3okd8"]
 [ext_resource type="Texture2D" uid="uid://3p3ki1geaqsh" path="res://Assets/trash.jpg" id="12_m1pbj"]
-[ext_resource type="Texture2D" uid="uid://18telq4wmu2" path="res://Assets/desk.png" id="13_irshf"]
 [ext_resource type="PackedScene" uid="uid://rksr0yf3cfrd" path="res://Objects/Movement_Object.tscn" id="14_rvr23"]
-[ext_resource type="Texture2D" uid="uid://k7tyhsc5hvsx" path="res://Assets/chair.png" id="15_ki7hi"]
+[ext_resource type="Texture2D" uid="uid://cpfslkjfr1qn8" path="res://Assets/Flower.png" id="15_tfc22"]
 [ext_resource type="Texture2D" uid="uid://cismfjd8mnbpa" path="res://Assets/whiteboard.png" id="16_tq111"]
 [ext_resource type="Texture2D" uid="uid://7dh6xy1cyylg" path="res://Assets/tissues.png" id="17_iavhs"]
 
@@ -27,50 +27,87 @@ position = Vector2(960, 540)
 scale = Vector2(1.66222, 1.66852)
 texture = ExtResource("2_bb0ow")
 
+[node name="HUD" parent="." instance=ExtResource("6_wblct")]
+
+[node name="Images" type="Sprite2D" parent="."]
+position = Vector2(801, 308)
+texture = ExtResource("12_3okd8")
+
+[node name="Trash" type="Sprite2D" parent="."]
+position = Vector2(683, 737)
+texture = ExtResource("12_m1pbj")
+
+[node name="Desk" type="Sprite2D" parent="."]
+position = Vector2(331, 708)
+scale = Vector2(1.4014, 1.19863)
+texture = ExtResource("6_21ieq")
+
+[node name="Tissues" type="Sprite2D" parent="."]
+position = Vector2(1697, 283)
+scale = Vector2(0.654867, 0.477578)
+texture = ExtResource("17_iavhs")
+
+[node name="Inventory" parent="." instance=ExtResource("7_gy3uc")]
+offset_left = 700.0
+offset_top = 14.0
+offset_right = 1300.0
+offset_bottom = 114.0
+
 [node name="object" parent="." instance=ExtResource("2_pjc2w")]
-offset_left = 27.0
-offset_top = 736.0
-offset_right = 143.0
-offset_bottom = 848.0
+offset_left = 159.0
+offset_top = 798.0
+offset_right = 275.0
+offset_bottom = 910.0
 texture_normal = ExtResource("4_5llip")
 clickable_name = "Paint Brush"
 clickable_sprite = ExtResource("4_5llip")
 
 [node name="object2" parent="." instance=ExtResource("2_pjc2w")]
-offset_left = 699.0
-offset_top = 398.0
-offset_right = 815.0
-offset_bottom = 510.0
+offset_left = 663.0
+offset_top = 624.0
+offset_right = 779.0
+offset_bottom = 736.0
 texture_normal = ExtResource("4_5llip")
 clickable_name = "Paint Roller"
 clickable_sprite = ExtResource("4_5llip")
 
 [node name="object3" parent="." instance=ExtResource("2_pjc2w")]
-offset_left = 530.0
-offset_top = 569.0
-offset_right = 646.0
-offset_bottom = 681.0
+offset_left = 835.0
+offset_top = 358.0
+offset_right = 951.0
+offset_bottom = 470.0
 texture_normal = ExtResource("4_5llip")
 clickable_name = "Paint Palette"
 clickable_sprite = ExtResource("4_5llip")
 
 [node name="Movement_Object" parent="." instance=ExtResource("8_je1k2")]
-offset_left = 1053.0
-offset_top = 606.0
-offset_right = 1208.0
-offset_bottom = 758.0
-scale = Vector2(1.70869, 1.90695)
-texture_normal = ExtResource("6_l7bs2")
+offset_left = 1158.0
+offset_top = 451.0
+offset_right = 1294.0
+offset_bottom = 799.0
+scale = Vector2(1.19971, 1.1379)
+texture_normal = ExtResource("15_tfc22")
 script = ExtResource("10_u6dd1")
-clickable_sprite = ExtResource("6_l7bs2")
+clickable_sprite = ExtResource("15_tfc22")
 Xcoordinate = 980
 Ycoordinate = 606
 
+[node name="Movement_Object2" parent="." instance=ExtResource("14_rvr23")]
+offset_left = 234.0
+offset_top = 553.0
+offset_right = 459.0
+offset_bottom = 901.0
+texture_normal = ExtResource("12_0w1me")
+clickable_sprite = ExtResource("12_0w1me")
+Xcoordinate = 150
+Ycoordinate = 647
+
 [node name="New_Scene_Object" parent="." instance=ExtResource("8_je1k2")]
-offset_left = 1605.0
-offset_top = 258.0
-offset_right = 1861.0
-offset_bottom = 869.0
+offset_left = 1621.0
+offset_top = 336.0
+offset_right = 1877.0
+offset_bottom = 947.0
+scale = Vector2(0.948463, 0.81468)
 texture_normal = ExtResource("10_2w5ac")
 clickable_name = "Axe"
 clickable_sprite = ExtResource("10_2w5ac")
@@ -86,79 +123,17 @@ texture_normal = ExtResource("9_l1cvl")
 clickable_sprite = ExtResource("9_l1cvl")
 scene_path = "res://Scenes/ShredderMiniGame.tscn"
 
-[node name="HUD" parent="." instance=ExtResource("6_wblct")]
-
-[node name="Images" type="Sprite2D" parent="."]
-position = Vector2(682, 317)
-texture = ExtResource("12_3okd8")
-
-[node name="Trash" type="Sprite2D" parent="."]
-position = Vector2(710, 748)
-texture = ExtResource("12_m1pbj")
-
-[node name="Desk" type="Sprite2D" parent="."]
-position = Vector2(298, 714)
-scale = Vector2(1.73556, 1.49111)
-texture = ExtResource("13_irshf")
-
-[node name="Movement_Object2" parent="." instance=ExtResource("14_rvr23")]
-offset_left = 200.0
-offset_top = 647.0
-offset_right = 425.0
-offset_bottom = 872.0
-texture_normal = ExtResource("15_ki7hi")
-clickable_sprite = ExtResource("15_ki7hi")
-Xcoordinate = 150
-Ycoordinate = 647
-
 [node name="New_Scene_Object3" parent="." instance=ExtResource("8_je1k2")]
-offset_left = 123.0
-offset_top = 657.0
-offset_right = 472.0
-offset_bottom = 691.0
+offset_left = 74.0
+offset_top = 593.0
+offset_right = 598.0
+offset_bottom = 627.0
 scene_path = "res://Scenes/DeskMiniGame.tscn"
 
-[node name="Tissues" type="Sprite2D" parent="."]
-position = Vector2(1683, 206)
-scale = Vector2(0.654867, 0.477578)
-texture = ExtResource("17_iavhs")
-
 [node name="New_Scene_Object4" parent="." instance=ExtResource("8_je1k2")]
-offset_left = 168.0
-offset_top = 226.0
-offset_right = 437.0
-offset_bottom = 419.0
+offset_left = 70.0
+offset_top = 89.0
+offset_right = 570.0
+offset_bottom = 589.0
 texture_normal = ExtResource("16_tq111")
-
-[node name="object4" parent="." instance=ExtResource("2_pjc2w")]
-offset_left = 1365.0
-offset_top = 398.0
-offset_right = 1481.0
-offset_bottom = 510.0
-texture_normal = ExtResource("4_5llip")
-clickable_name = "Paint Palette"
-clickable_sprite = ExtResource("4_5llip")
-
-[node name="object5" parent="." instance=ExtResource("2_pjc2w")]
-offset_left = 963.0
-offset_top = 252.0
-offset_right = 1079.0
-offset_bottom = 364.0
-texture_normal = ExtResource("4_5llip")
-clickable_name = "Paint Palette"
-clickable_sprite = ExtResource("4_5llip")
-
-[node name="object6" parent="." instance=ExtResource("2_pjc2w")]
-offset_left = 1181.0
-offset_top = 297.0
-offset_right = 1297.0
-offset_bottom = 409.0
-texture_normal = ExtResource("4_5llip")
-clickable_name = "Paint Palette"
-clickable_sprite = ExtResource("4_5llip")
-
-[node name="Inventory" parent="." instance=ExtResource("7_gy3uc")]
-offset_left = 700.0
-offset_top = 14.0
-offset_right = 1300.0
-offset_bottom = 114.0
+clickable_sprite = ExtResource("16_tq111")
