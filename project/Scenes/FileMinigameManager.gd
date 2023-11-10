@@ -1,4 +1,4 @@
-extends Node2D
+extends MiniGame
 
 @onready var files = [$File1, $File2, $File3, $File4, $File5]
 @onready var room = get_tree().get_root().get_node("Room")
@@ -16,6 +16,7 @@ func Win():
 	$Check.text = "Congratulations!"
 	await get_tree().create_timer(3).timeout
 	room.state = "active"
+	finished.emit()
 	queue_free()
 	
 

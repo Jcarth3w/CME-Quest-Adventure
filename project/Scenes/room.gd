@@ -5,3 +5,10 @@ var state := ""
 func _ready():
 	state = "active"
 
+func _check_win():
+	if $Inventory.items.size() == 6:
+		$HUD/ColorRect/Label.text = "You win!"
+		$HUD/Timer.stop()
+		
+func _process(delta):
+	_check_win()

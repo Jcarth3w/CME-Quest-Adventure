@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://cs0rndg84v7q0"]
 
+[ext_resource type="Script" path="res://Scenes/ShredderMiniGame.gd" id="1_51bei"]
 [ext_resource type="Texture2D" uid="uid://wjox7l8cx5c4" path="res://Assets/Sprites/Objects/genericItem_color_141.png" id="2_ptm7d"]
 [ext_resource type="Script" path="res://Scenes/Clip board.gd" id="3_rochj"]
 [ext_resource type="Script" path="res://Scenes/Shred.gd" id="4_e4n14"]
 [ext_resource type="Texture2D" uid="uid://c1wco3n84fkda" path="res://Assets/Sprites/Objects/genericItem_color_037.png" id="4_gorp7"]
 [ext_resource type="Texture2D" uid="uid://dcm6p18p7lslf" path="res://Assets/Sprites/Objects/genericItem_color_160.png" id="4_smkob"]
-[ext_resource type="Script" path="res://Scenes/CheckBttn.gd" id="7_xy86g"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_j01bn"]
 font_size = 50
@@ -13,6 +13,7 @@ outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
 [node name="ShredderMiniGame" type="Node2D"]
+script = ExtResource("1_51bei")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(1920, 1080)
@@ -144,7 +145,6 @@ offset_right = 146.0
 offset_bottom = 441.0
 scale = Vector2(2.11111, 1.91667)
 texture_normal = ExtResource("4_smkob")
-script = ExtResource("7_xy86g")
 
 [node name="Label" type="Label" parent="CheckBttn"]
 layout_mode = 0
@@ -163,4 +163,4 @@ horizontal_alignment = 1
 [connection signal="pressed" from="Shred 6" to="Shred 6" method="_on_pressed"]
 [connection signal="pressed" from="Shred 7" to="Shred 7" method="_on_pressed"]
 [connection signal="pressed" from="Shred 8" to="Shred 8" method="_on_pressed"]
-[connection signal="pressed" from="CheckBttn" to="CheckBttn" method="_on_pressed"]
+[connection signal="pressed" from="CheckBttn" to="." method="_on_check_bttn_pressed"]
