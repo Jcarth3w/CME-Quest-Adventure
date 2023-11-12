@@ -10,5 +10,5 @@ func _check_win():
 		$HUD/ColorRect/Label.text = "You win!"
 		$HUD/Timer.stop()
 		
-func _process(delta):
+func _process(_delta):
 	_check_win()
