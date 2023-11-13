@@ -12,7 +12,6 @@ var isMatched = false
 func _process(_delta):
 	if parent.checkPairMatching == true:
 		checkPair()
-	print(isMatched)
 
 func checkPair():
 	if card1.isFlipped == true && card2.isFlipped == true:
