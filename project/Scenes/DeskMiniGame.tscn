@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://ckueucjs1nwf3"]
 
 [ext_resource type="Script" path="res://Scenes/MatchGameManager.gd" id="1_uero3"]
-[ext_resource type="Texture2D" uid="uid://c1wco3n84fkda" path="res://Assets/Sprites/Objects/genericItem_color_037.png" id="2_6ujdn"]
+[ext_resource type="Texture2D" uid="uid://cbcx08btklchr" path="res://Assets/Unknown_paper.png" id="3_c2np6"]
 [ext_resource type="Script" path="res://Scenes/Pair.gd" id="3_mqnir"]
 [ext_resource type="Script" path="res://Objects/MatchingObject.gd" id="3_oaq8o"]
 [ext_resource type="Texture2D" uid="uid://c15mt6j8pobst" path="res://Assets/Sprites/Objects/genericItem_color_005.png" id="6_mex1g"]
@@ -47,15 +47,16 @@ card1 = NodePath("Card 1")
 card2 = NodePath("Card 2")
 
 [node name="Card 1" type="Sprite2D" parent="Pair 1"]
-position = Vector2(0, -1.89539)
-texture = ExtResource("2_6ujdn")
+position = Vector2(-5.37018, -10.1087)
+scale = Vector2(0.421, 0.5)
+texture = ExtResource("3_c2np6")
 script = ExtResource("3_oaq8o")
 cardImage = ExtResource("6_mex1g")
 
 [node name="Card 2" type="Sprite2D" parent="Pair 1"]
 position = Vector2(127.094, -6.31795)
-scale = Vector2(0.808576, 0.90173)
-texture = ExtResource("2_6ujdn")
+scale = Vector2(0.449, 0.5)
+texture = ExtResource("3_c2np6")
 script = ExtResource("3_oaq8o")
 cardImage = ExtResource("6_mex1g")
 
@@ -68,15 +69,15 @@ card2 = NodePath("Card4")
 
 [node name="Card 3" type="Sprite2D" parent="Pair 2"]
 position = Vector2(197.031, -4.20389)
-scale = Vector2(1, 1.00186)
-texture = ExtResource("2_6ujdn")
+scale = Vector2(0.499, 0.5)
+texture = ExtResource("3_c2np6")
 script = ExtResource("3_oaq8o")
 cardImage = ExtResource("7_1ekqu")
 
 [node name="Card4" type="Sprite2D" parent="Pair 2"]
 position = Vector2(408.452, -11.911)
-scale = Vector2(1, 0.996308)
-texture = ExtResource("2_6ujdn")
+scale = Vector2(0.502, 0.5)
+texture = ExtResource("3_c2np6")
 script = ExtResource("3_oaq8o")
 cardImage = ExtResource("7_1ekqu")
 
@@ -87,15 +88,15 @@ card2 = NodePath("Card 6")
 
 [node name="Card 5" type="Sprite2D" parent="Pair3"]
 position = Vector2(413.321, 490.133)
-scale = Vector2(1.80682, 1.42462)
-texture = ExtResource("2_6ujdn")
+scale = Vector2(0.635, 0.5)
+texture = ExtResource("3_c2np6")
 script = ExtResource("3_oaq8o")
 cardImage = ExtResource("8_6e26g")
 
 [node name="Card 6" type="Sprite2D" parent="Pair3"]
 position = Vector2(698.321, 499.133)
-scale = Vector2(1.80682, 1.42725)
-texture = ExtResource("2_6ujdn")
+scale = Vector2(0.633, 0.5)
+texture = ExtResource("3_c2np6")
 script = ExtResource("3_oaq8o")
 cardImage = ExtResource("8_6e26g")
 
@@ -106,15 +107,15 @@ card2 = NodePath("Card 8")
 
 [node name="Card 7" type="Sprite2D" parent="Pair4"]
 position = Vector2(1066, 473)
-scale = Vector2(2.30456, 1.52987)
-texture = ExtResource("2_6ujdn")
+scale = Vector2(0.753, 0.5)
+texture = ExtResource("3_c2np6")
 script = ExtResource("3_oaq8o")
 cardImage = ExtResource("9_7fxkw")
 
 [node name="Card 8" type="Sprite2D" parent="Pair4"]
 position = Vector2(1423.32, 486.133)
-scale = Vector2(2.30456, 1.52705)
-texture = ExtResource("2_6ujdn")
+scale = Vector2(0.755, 0.5)
+texture = ExtResource("3_c2np6")
 script = ExtResource("3_oaq8o")
 cardImage = ExtResource("9_7fxkw")
 
@@ -125,15 +126,15 @@ card2 = NodePath("Card 10")
 
 [node name="Card 9" type="Sprite2D" parent="Pair5"]
 position = Vector2(410.321, 734.133)
-scale = Vector2(1.80682, 1.41935)
-texture = ExtResource("2_6ujdn")
+scale = Vector2(0.636, 0.5)
+texture = ExtResource("3_c2np6")
 script = ExtResource("3_oaq8o")
 cardImage = ExtResource("9_kjbow")
 
 [node name="Card 10" type="Sprite2D" parent="Pair5"]
 position = Vector2(711.321, 717.133)
-scale = Vector2(1.80682, 1.42198)
-texture = ExtResource("2_6ujdn")
+scale = Vector2(0.636, 0.5)
+texture = ExtResource("3_c2np6")
 script = ExtResource("3_oaq8o")
 cardImage = ExtResource("9_kjbow")
 
@@ -144,15 +145,15 @@ card2 = NodePath("Card 12")
 
 [node name="Card 11" type="Sprite2D" parent="Pair6"]
 position = Vector2(1071.32, 699.133)
-scale = Vector2(2.30456, 1.52422)
-texture = ExtResource("2_6ujdn")
+scale = Vector2(0.755, 0.5)
+texture = ExtResource("3_c2np6")
 script = ExtResource("3_oaq8o")
 cardImage = ExtResource("11_m3g64")
 
 [node name="Card 12" type="Sprite2D" parent="Pair6"]
 position = Vector2(1411.32, 730.133)
-scale = Vector2(1.80682, 1.42462)
-texture = ExtResource("2_6ujdn")
+scale = Vector2(0.635, 0.5)
+texture = ExtResource("3_c2np6")
 script = ExtResource("3_oaq8o")
 cardImage = ExtResource("11_m3g64")
 
@@ -163,15 +164,15 @@ card2 = NodePath("Card 14")
 
 [node name="Card 13" type="Sprite2D" parent="Pair7"]
 position = Vector2(390.321, 966.133)
-scale = Vector2(2.23457, 1.57987)
-texture = ExtResource("2_6ujdn")
+scale = Vector2(0.708, 0.5)
+texture = ExtResource("3_c2np6")
 script = ExtResource("3_oaq8o")
 cardImage = ExtResource("12_k6j4v")
 
 [node name="Card 14" type="Sprite2D" parent="Pair7"]
 position = Vector2(702.321, 965.133)
-scale = Vector2(1.80682, 1.42462)
-texture = ExtResource("2_6ujdn")
+scale = Vector2(0.635, 0.5)
+texture = ExtResource("3_c2np6")
 script = ExtResource("3_oaq8o")
 cardImage = ExtResource("12_k6j4v")
 
@@ -182,15 +183,15 @@ card2 = NodePath("Card 16")
 
 [node name="Card 15" type="Sprite2D" parent="Pair8"]
 position = Vector2(1057.32, 964.133)
-scale = Vector2(2.89366, 1.81128)
-texture = ExtResource("2_6ujdn")
+scale = Vector2(0.799, 0.5)
+texture = ExtResource("3_c2np6")
 script = ExtResource("3_oaq8o")
 cardImage = ExtResource("13_f87xp")
 
 [node name="Card 16" type="Sprite2D" parent="Pair8"]
 position = Vector2(1397.32, 969.133)
-scale = Vector2(1.80682, 1.42198)
-texture = ExtResource("2_6ujdn")
+scale = Vector2(0.636, 0.5)
+texture = ExtResource("3_c2np6")
 script = ExtResource("3_oaq8o")
 cardImage = ExtResource("13_f87xp")
 

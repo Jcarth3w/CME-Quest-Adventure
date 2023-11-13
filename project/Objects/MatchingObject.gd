@@ -25,5 +25,5 @@ func _on_card_pressed():
 
 func reset():
 	isFlipped = false
-	set_texture(preload("res://Assets/Sprites/Objects/genericItem_color_037.png"))
+	set_texture(preload("res://Assets/Unknown_paper.png"))
 

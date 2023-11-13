@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bkomnkytheji1" path="res://Assets/RoomBackground.png" id="2_bb0ow"]
 [ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Objects/pickup.tscn" id="2_pjc2w"]
 [ext_resource type="Texture2D" uid="uid://dqunufa6yvb80" path="res://Assets/Sprites/Objects/genericItem_color_032.png" id="4_5llip"]
+[ext_resource type="Texture2D" uid="uid://pw4djtjf42ux" path="res://Assets/Calendar.png" id="4_qs0eq"]
 [ext_resource type="Texture2D" uid="uid://ihqucqebj6dc" path="res://Assets/Trash_can.png" id="5_nq2e7"]
 [ext_resource type="Texture2D" uid="uid://18telq4wmu2" path="res://Assets/desk.png" id="6_21ieq"]
 [ext_resource type="PackedScene" uid="uid://c2x6nmlhmqg5h" path="res://Scenes/HUD.tscn" id="6_wblct"]
@@ -14,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://bn3kp4ijyl0oa" path="res://Assets/filecabinet.jpg" id="10_2w5ac"]
 [ext_resource type="Script" path="res://Objects/Movement_Object.gd" id="10_u6dd1"]
 [ext_resource type="Texture2D" uid="uid://k7tyhsc5hvsx" path="res://Assets/chair.png" id="12_0w1me"]
-[ext_resource type="Texture2D" uid="uid://cl762eqmgfevr" path="res://Assets/images.png" id="12_3okd8"]
 [ext_resource type="PackedScene" uid="uid://rksr0yf3cfrd" path="res://Objects/Movement_Object.tscn" id="14_rvr23"]
 [ext_resource type="Texture2D" uid="uid://cpfslkjfr1qn8" path="res://Assets/Flower.png" id="15_tfc22"]
 [ext_resource type="Texture2D" uid="uid://7dh6xy1cyylg" path="res://Assets/tissues.png" id="17_iavhs"]
@@ -30,8 +30,9 @@ texture = ExtResource("2_bb0ow")
 [node name="HUD" parent="." instance=ExtResource("6_wblct")]
 
 [node name="Images" type="Sprite2D" parent="."]
-position = Vector2(801, 308)
-texture = ExtResource("12_3okd8")
+position = Vector2(746, 258)
+scale = Vector2(0.343489, 0.346535)
+texture = ExtResource("4_qs0eq")
 
 [node name="Trash" type="Sprite2D" parent="."]
 position = Vector2(689, 739)
@@ -44,8 +45,8 @@ scale = Vector2(1.4014, 1.19863)
 texture = ExtResource("6_21ieq")
 
 [node name="Tissues" type="Sprite2D" parent="."]
-position = Vector2(1697, 283)
-scale = Vector2(0.654867, 0.477578)
+position = Vector2(1741, 270)
+scale = Vector2(0.383744, 0.346015)
 texture = ExtResource("17_iavhs")
 
 [node name="WhiteBoard" type="Sprite2D" parent="."]
@@ -77,10 +78,10 @@ clickable_name = "Paint Roller"
 clickable_sprite = ExtResource("4_5llip")
 
 [node name="object3" parent="." instance=ExtResource("2_pjc2w")]
-offset_left = 852.0
-offset_top = 339.0
-offset_right = 968.0
-offset_bottom = 451.0
+offset_left = 786.0
+offset_top = 315.0
+offset_right = 902.0
+offset_bottom = 427.0
 texture_normal = ExtResource("4_5llip")
 clickable_name = "Paint Palette"
 clickable_sprite = ExtResource("4_5llip")

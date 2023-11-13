@@ -11,7 +11,7 @@ func addShred(shred):
 		currentShred += 1
 		shreds.append(shred)
 		shred.rotation_degrees = 0
-		shred.scale = Vector2(.5, 2)
+		shred.scale = Vector2(1, .5)
 		if currentShred == 1:
 			shred.global_position = $Check1.global_position
 		if currentShred == 2:
