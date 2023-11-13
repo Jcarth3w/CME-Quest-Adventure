@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://18telq4wmu2" path="res://Assets/desk.png" id="6_21ieq"]
 [ext_resource type="PackedScene" uid="uid://c2x6nmlhmqg5h" path="res://Scenes/HUD.tscn" id="6_wblct"]
 [ext_resource type="PackedScene" uid="uid://vkq3eq2tcj2l" path="res://Scenes/inventory.tscn" id="7_gy3uc"]
+[ext_resource type="Texture2D" uid="uid://bihv8ad0n5y0p" path="res://Assets/Resized_whiteboard.png" id="8_jblsr"]
 [ext_resource type="PackedScene" uid="uid://pn2l6ln2hl3j" path="res://Objects/new_scene_object.tscn" id="8_je1k2"]
 [ext_resource type="Texture2D" uid="uid://qlv0nihgqda2" path="res://Assets/Sprites/Objects/papershredder.png" id="9_l1cvl"]
 [ext_resource type="Texture2D" uid="uid://bn3kp4ijyl0oa" path="res://Assets/filecabinet.jpg" id="10_2w5ac"]
@@ -16,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://cl762eqmgfevr" path="res://Assets/images.png" id="12_3okd8"]
 [ext_resource type="PackedScene" uid="uid://rksr0yf3cfrd" path="res://Objects/Movement_Object.tscn" id="14_rvr23"]
 [ext_resource type="Texture2D" uid="uid://cpfslkjfr1qn8" path="res://Assets/Flower.png" id="15_tfc22"]
-[ext_resource type="Texture2D" uid="uid://cismfjd8mnbpa" path="res://Assets/whiteboard.png" id="16_tq111"]
 [ext_resource type="Texture2D" uid="uid://7dh6xy1cyylg" path="res://Assets/tissues.png" id="17_iavhs"]
 
 [node name="Room" type="Node2D"]
@@ -47,6 +47,10 @@ texture = ExtResource("6_21ieq")
 position = Vector2(1697, 283)
 scale = Vector2(0.654867, 0.477578)
 texture = ExtResource("17_iavhs")
+
+[node name="WhiteBoard" type="Sprite2D" parent="."]
+position = Vector2(303, 338)
+texture = ExtResource("8_jblsr")
 
 [node name="Inventory" parent="." instance=ExtResource("7_gy3uc")]
 offset_left = 700.0
@@ -131,13 +135,6 @@ offset_right = 598.0
 offset_bottom = 629.0
 scene_path = "res://Scenes/DeskMiniGame.tscn"
 mini_game_prize = NodePath("../object6")
-
-[node name="New_Scene_Object4" parent="." instance=ExtResource("8_je1k2")]
-offset_left = 70.0
-offset_top = 89.0
-offset_right = 570.0
-offset_bottom = 589.0
-texture_normal = ExtResource("16_tq111")
 
 [node name="object4" parent="." instance=ExtResource("2_pjc2w")]
 offset_left = -273.0
