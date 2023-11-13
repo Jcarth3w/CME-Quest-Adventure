@@ -14,10 +14,11 @@ func _ready():
 func _on_pressed():
 	if room.state == "active" and finished == false:
 		var scene = load(scene_path)
-		var scene_inst = scene.instantiate()
-		room.add_child(scene_inst)
-		scene_inst.finished.connect(_on_finished)
-		room.state = "inactive"
+		if scene != null:
+			var scene_inst = scene.instantiate()
+			room.add_child(scene_inst)
+			scene_inst.finished.connect(_on_finished)
+			room.state = "inactive"
 		
 func _on_finished():
 	finished = true
