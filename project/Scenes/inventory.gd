@@ -9,21 +9,21 @@ func add_item(item_name, sprite_path):
 	add_item_image(sprite_path)
 
 
-func remove_item(item_name):
-	var x = items.find(item_name)
-	if x == 0:
-		$Item1.texture = null
-	elif x == 1:
-		$Item2.texture = null
-	elif x == 2:
-		$Item3.texture = null
-	elif x == 3:
-		$Item4.texture == null
-	elif x == 4:
-		$Item5.texture == null
-	else:
-		$Item6.texture = null
-	items.erase(item_name)
+#func remove_item(item_name):
+#	var x = items.find(item_name)
+#	if x == 0:
+#		$Item1.texture = null
+#	elif x == 1:
+#		$Item2.texture = null
+#	elif x == 2:
+#		$Item3.texture = null
+#	elif x == 3:
+#		$Item4.texture == null
+#	elif x == 4:
+#		$Item5.texture == null
+#	else:
+#		$Item6.texture = null
+#	items.erase(item_name)
 	
 
 func add_item_image(sprite_path):
