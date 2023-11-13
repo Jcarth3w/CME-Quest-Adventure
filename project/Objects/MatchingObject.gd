@@ -14,7 +14,6 @@ func _input(event):
 				set_texture(cardImage)
 				if isFlipped == false:
 					parent.flipped_count += 1
-				print(parent.flipped_count)
 				_on_card_pressed()
 
 
