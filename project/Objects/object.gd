@@ -1,22 +1,19 @@
 class_name Pickup
-extends TextureButton
+extends Clickable
 
-
-@onready var room = get_tree().get_root().get_node("Room")
-@onready var inventory = room.get_node("Inventory")
-
-@export var clickable_name : String
-@export var clickable_sprite : Texture
-
+var inventory
 
 
 func _ready():
-	texture_normal = clickable_sprite
+	if owner.has_node("Inventory"):
+		inventory = owner.get_node("Inventory")
+	else:
+		print("Pickup Error: I expected there to be an inventory")
 
 
 func _on_pressed():
-	if room.state == "active":
-		inventory.add_item(clickable_name, clickable_sprite)
+	if state == "active":
+		inventory.add_item(name, texture_normal)
 		queue_free()
 
 
