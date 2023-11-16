@@ -19,6 +19,7 @@ func _process(_delta):
 	if Input.is_action_just_pressed("menu"):
 		var menu_inst = menu.instantiate()
 		add_child(menu_inst)
+		menu_inst.resume.connect(_on_menu_resume)
 		pause_game()
 	
 
@@ -37,3 +38,7 @@ func resume_game():
 	for child in get_children():
 		if child.has_method("resume"):
 			child.resume()
+
+func _on_menu_resume():
+	resume_game()
+
