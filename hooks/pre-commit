@@ -1,0 +1,10 @@
+#!/bin/sh
+if gdlint .
+then
+    echo "gdlint passed"
+else
+    cat <<\EOF
+gdlint found issues. Commit aborted.
+EOF
+    exit 1
+fi
