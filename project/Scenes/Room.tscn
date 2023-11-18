@@ -24,7 +24,7 @@ script = ExtResource("1_0dam4")
 
 [node name="Placeholder Background" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
-scale = Vector2(1.66222, 1.66852)
+scale = Vector2(1.6684, 1.66852)
 texture = ExtResource("2_bb0ow")
 
 [node name="HUD" parent="." instance=ExtResource("6_wblct")]
@@ -54,16 +54,16 @@ position = Vector2(303, 338)
 texture = ExtResource("8_jblsr")
 
 [node name="Inventory" parent="." instance=ExtResource("7_gy3uc")]
-offset_left = 700.0
+offset_left = 650.0
 offset_top = 14.0
-offset_right = 1300.0
+offset_right = 1250.0
 offset_bottom = 114.0
 
 [node name="object" parent="." instance=ExtResource("2_pjc2w")]
-offset_left = 159.0
-offset_top = 798.0
-offset_right = 275.0
-offset_bottom = 910.0
+offset_left = 346.0
+offset_top = 765.0
+offset_right = 462.0
+offset_bottom = 877.0
 texture_normal = ExtResource("4_5llip")
 
 [node name="object2" parent="." instance=ExtResource("2_pjc2w")]
