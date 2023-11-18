@@ -1,0 +1,156 @@
+[gd_scene load_steps=19 format=3 uid="uid://b302n6pq0hkk1"]
+
+[ext_resource type="Script" path="res://Scenes/room1.gd" id="1_0dam4"]
+[ext_resource type="Texture2D" uid="uid://bkomnkytheji1" path="res://Assets/RoomBackground.png" id="2_bb0ow"]
+[ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Objects/pickup.tscn" id="2_pjc2w"]
+[ext_resource type="Texture2D" uid="uid://dqunufa6yvb80" path="res://Assets/Sprites/Objects/genericItem_color_032.png" id="4_5llip"]
+[ext_resource type="Texture2D" uid="uid://pw4djtjf42ux" path="res://Assets/Calendar.png" id="4_qs0eq"]
+[ext_resource type="Texture2D" uid="uid://ihqucqebj6dc" path="res://Assets/Trash_can.png" id="5_nq2e7"]
+[ext_resource type="Texture2D" uid="uid://18telq4wmu2" path="res://Assets/desk.png" id="6_21ieq"]
+[ext_resource type="PackedScene" uid="uid://c2x6nmlhmqg5h" path="res://Scenes/HUD.tscn" id="6_wblct"]
+[ext_resource type="PackedScene" uid="uid://vkq3eq2tcj2l" path="res://Scenes/inventory.tscn" id="7_gy3uc"]
+[ext_resource type="Texture2D" uid="uid://bihv8ad0n5y0p" path="res://Assets/Resized_whiteboard.png" id="8_jblsr"]
+[ext_resource type="PackedScene" uid="uid://pn2l6ln2hl3j" path="res://Objects/new_scene_object.tscn" id="8_je1k2"]
+[ext_resource type="Texture2D" uid="uid://qlv0nihgqda2" path="res://Assets/Sprites/Objects/papershredder.png" id="9_l1cvl"]
+[ext_resource type="Texture2D" uid="uid://bn3kp4ijyl0oa" path="res://Assets/filecabinet.jpg" id="10_2w5ac"]
+[ext_resource type="Script" path="res://Objects/Movement_Object.gd" id="10_u6dd1"]
+[ext_resource type="Texture2D" uid="uid://k7tyhsc5hvsx" path="res://Assets/chair.png" id="12_0w1me"]
+[ext_resource type="PackedScene" uid="uid://rksr0yf3cfrd" path="res://Objects/Movement_Object.tscn" id="14_rvr23"]
+[ext_resource type="Texture2D" uid="uid://cpfslkjfr1qn8" path="res://Assets/Flower.png" id="15_tfc22"]
+[ext_resource type="Texture2D" uid="uid://7dh6xy1cyylg" path="res://Assets/tissues.png" id="17_iavhs"]
+
+[node name="Room" type="Node2D"]
+script = ExtResource("1_0dam4")
+
+[node name="Placeholder Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(1.66222, 1.66852)
+texture = ExtResource("2_bb0ow")
+
+[node name="HUD" parent="." instance=ExtResource("6_wblct")]
+
+[node name="Images" type="Sprite2D" parent="."]
+position = Vector2(746, 258)
+scale = Vector2(0.343489, 0.346535)
+texture = ExtResource("4_qs0eq")
+
+[node name="Trash" type="Sprite2D" parent="."]
+position = Vector2(689, 739)
+scale = Vector2(1.39864, 1.239)
+texture = ExtResource("5_nq2e7")
+
+[node name="Desk" type="Sprite2D" parent="."]
+position = Vector2(331, 708)
+scale = Vector2(1.4014, 1.19863)
+texture = ExtResource("6_21ieq")
+
+[node name="Tissues" type="Sprite2D" parent="."]
+position = Vector2(1741, 270)
+scale = Vector2(0.383744, 0.346015)
+texture = ExtResource("17_iavhs")
+
+[node name="WhiteBoard" type="Sprite2D" parent="."]
+position = Vector2(303, 338)
+texture = ExtResource("8_jblsr")
+
+[node name="Inventory" parent="." instance=ExtResource("7_gy3uc")]
+offset_left = 700.0
+offset_top = 14.0
+offset_right = 1300.0
+offset_bottom = 114.0
+
+[node name="object" parent="." instance=ExtResource("2_pjc2w")]
+offset_left = 159.0
+offset_top = 798.0
+offset_right = 275.0
+offset_bottom = 910.0
+texture_normal = ExtResource("4_5llip")
+clickable_name = "Paint Brush"
+clickable_sprite = ExtResource("4_5llip")
+
+[node name="object2" parent="." instance=ExtResource("2_pjc2w")]
+offset_left = 642.0
+offset_top = 607.0
+offset_right = 758.0
+offset_bottom = 719.0
+texture_normal = ExtResource("4_5llip")
+clickable_name = "Paint Roller"
+clickable_sprite = ExtResource("4_5llip")
+
+[node name="object3" parent="." instance=ExtResource("2_pjc2w")]
+offset_left = 786.0
+offset_top = 315.0
+offset_right = 902.0
+offset_bottom = 427.0
+texture_normal = ExtResource("4_5llip")
+clickable_name = "Paint Palette"
+clickable_sprite = ExtResource("4_5llip")
+
+[node name="Movement_Object" parent="." instance=ExtResource("8_je1k2")]
+offset_left = 1158.0
+offset_top = 451.0
+offset_right = 1294.0
+offset_bottom = 799.0
+scale = Vector2(1.19971, 1.1379)
+texture_normal = ExtResource("15_tfc22")
+script = ExtResource("10_u6dd1")
+clickable_name = ""
+clickable_sprite = ExtResource("15_tfc22")
+Xcoordinate = 980
+Ycoordinate = 606
+
+[node name="Movement_Object2" parent="." instance=ExtResource("14_rvr23")]
+offset_left = 234.0
+offset_top = 553.0
+offset_right = 459.0
+offset_bottom = 901.0
+texture_normal = ExtResource("12_0w1me")
+clickable_sprite = ExtResource("12_0w1me")
+Xcoordinate = 150
+Ycoordinate = 647
+
+[node name="New_Scene_Object" parent="." node_paths=PackedStringArray("mini_game_prize") instance=ExtResource("8_je1k2")]
+offset_left = 1621.0
+offset_top = 336.0
+offset_right = 1877.0
+offset_bottom = 947.0
+scale = Vector2(0.948463, 0.81468)
+texture_normal = ExtResource("10_2w5ac")
+scene_path = "res://Scenes/file_minigame.tscn"
+mini_game_prize = NodePath("../object4")
+
+[node name="New_Scene_Object2" parent="." node_paths=PackedStringArray("mini_game_prize") instance=ExtResource("8_je1k2")]
+offset_left = 1371.0
+offset_top = 657.0
+offset_right = 2006.0
+offset_bottom = 1269.0
+scale = Vector2(0.293043, 0.280447)
+texture_normal = ExtResource("9_l1cvl")
+scene_path = "res://Scenes/ShredderMiniGame.tscn"
+mini_game_prize = NodePath("../object5")
+
+[node name="New_Scene_Object3" parent="." node_paths=PackedStringArray("mini_game_prize") instance=ExtResource("8_je1k2")]
+offset_left = 74.0
+offset_top = 595.0
+offset_right = 598.0
+offset_bottom = 629.0
+scene_path = "res://Scenes/DeskMiniGame.tscn"
+mini_game_prize = NodePath("../object6")
+
+[node name="object4" parent="." instance=ExtResource("2_pjc2w")]
+offset_left = -273.0
+offset_top = 747.0
+offset_right = -273.0
+offset_bottom = 747.0
+
+[node name="object5" parent="." instance=ExtResource("2_pjc2w")]
+offset_left = -286.0
+offset_top = 872.0
+offset_right = -286.0
+offset_bottom = 872.0
+
+[node name="object6" parent="." instance=ExtResource("2_pjc2w")]
+offset_left = -292.0
+offset_top = 972.0
+offset_right = -292.0
+offset_bottom = 972.0

@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2x6nmlhmqg5h"]
+
+[ext_resource type="PackedScene" uid="uid://c42tbugwn1rvm" path="res://Scenes/gui/timer.tscn" id="1_xoov4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h4tor"]
+font_size = 34
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_f47q1"]
+font_size = 32
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="HUD" type="Node2D"]
+
+[node name="MainRect" type="ColorRect" parent="."]
+offset_left = -1.0
+offset_right = 1921.0
+offset_bottom = 131.0
+color = Color(0, 0, 0, 1)
+
+[node name="WhiteRect" type="ColorRect" parent="."]
+offset_right = 1921.0
+offset_bottom = 126.0
+color = Color(0.737255, 0, 0.203922, 1)
+
+[node name="TimerRect" type="ColorRect" parent="WhiteRect"]
+layout_mode = 0
+offset_top = 31.0
+offset_right = 1921.0
+offset_bottom = 96.0
+color = Color(0, 0, 0, 0.223529)
+
+[node name="Label" type="Label" parent="WhiteRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0348777
+anchor_top = -0.0634921
+anchor_right = 0.282665
+anchor_bottom = 0.865079
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 97
+text = "Find the promotional materials"
+label_settings = SubResource("LabelSettings_h4tor")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" parent="." instance=ExtResource("1_xoov4")]
+wait_time = 1.0
+autostart = true
+
+[node name="Label" type="Label" parent="Timer"]
+anchors_preset = -1
+anchor_left = 0.783
+anchor_top = 0.038
+anchor_right = 0.841
+anchor_bottom = 0.083
+offset_left = 0.639893
+offset_top = -0.0399971
+offset_right = 0.279907
+offset_bottom = 0.359993
+text = "Time: 0"
+label_settings = SubResource("LabelSettings_f47q1")
+metadata/_edit_use_anchors_ = true

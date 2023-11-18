@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://pn2l6ln2hl3j"]
+
+[ext_resource type="Script" path="res://Clickables/new_scene/New_Scene_Object.gd" id="1_j4s8b"]
+
+[node name="New_Scene_Object" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_j4s8b")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
