@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  godot:
+    build:
+      context: .
+      dockerfile: ./Dockerfile  # Path to your Dockerfile containing Godot setup
+    volumes:
+      - .:/usr/src/app/project  # Mount the local Godot project
+    command: ["godot", "--path", "/usr/src/app/project", "--no-window"]  # Run Godot with the specific project
