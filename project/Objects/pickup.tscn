@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://db6kx103okwhb"]
-
-[ext_resource type="Script" path="res://Objects/object.gd" id="1_ko4ml"]
-
-[node name="object" type="TextureButton"]
-script = ExtResource("1_ko4ml")
-
-[connection signal="pressed" from="." to="." method="_on_pressed"]
