@@ -90,8 +90,8 @@ texture_normal = ExtResource("15_tfc22")
 script = ExtResource("10_u6dd1")
 clickable_name = ""
 clickable_sprite = ExtResource("15_tfc22")
-Xcoordinate = 980
-Ycoordinate = 606
+x_coordinate = 0
+y_coordinate = 0
 
 [node name="Chair" parent="." instance=ExtResource("14_rvr23")]
 offset_left = 234.0
@@ -100,8 +100,6 @@ offset_right = 459.0
 offset_bottom = 901.0
 texture_normal = ExtResource("12_0w1me")
 clickable_sprite = ExtResource("12_0w1me")
-Xcoordinate = 150
-Ycoordinate = 647
 
 [node name="FileCabinet" parent="." node_paths=PackedStringArray("mini_game_prize") instance=ExtResource("8_je1k2")]
 offset_left = 1621.0

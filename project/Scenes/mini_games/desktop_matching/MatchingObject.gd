@@ -1,23 +1,21 @@
 extends Sprite2D
 
+@export var card_image : Texture
+@export var hide_image : Texture
 
-var isFlipped = false
+var is_flipped = false
 
-@export var cardImage : Texture
-@export var hideImage : Texture
-	
-	
-func _input(event):
+
+func _input(event) -> void:
 	if owner.checkPairMatching == false:
 		if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			if get_rect().has_point(to_local(event.position)):
-				set_texture(cardImage)
-				if isFlipped == false:
+				set_texture(card_image)
+				if is_flipped == false:
 					owner.flipped_count += 1
-					isFlipped = true
+					is_flipped = true
 
 
-func reset():
-	isFlipped = false
-	set_texture(hideImage)
-
+func reset() -> void:
+	is_flipped = false
+	set_texture(hide_image)
