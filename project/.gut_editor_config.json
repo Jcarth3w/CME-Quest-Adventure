@@ -3,7 +3,7 @@
  "compact_mode": false,
  "config_file": "res://.gutconfig.json",
  "dirs": [
-  "res://tests"
+  "res://Tests/Unit"
  ],
  "disable_colors": false,
  "double_strategy": 1,
@@ -34,7 +34,7 @@
  "post_run_script": "",
  "pre_run_script": "",
  "prefix": "",
- "selected": null,
+ "selected": "inventory_test.gd",
  "should_exit": false,
  "should_exit_on_success": false,
  "should_maximize": false,
