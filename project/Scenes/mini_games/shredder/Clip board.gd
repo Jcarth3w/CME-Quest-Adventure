@@ -1,35 +1,36 @@
 extends Sprite2D
 
-const maxShreds = 3
+@export var winning_combo: Array[TextureButton]
+
+var max_shreds = 3
 var shreds = []
-var currentShred = 0
-@export var winningCombo: Array [TextureButton]
+var current_shred = 0
 
 
-func addShred(shred):
-	if currentShred < maxShreds:
-		currentShred += 1
+func add_shred(shred) -> void:
+	if current_shred < max_shreds:
+		current_shred += 1
 		shreds.append(shred)
 		shred.rotation_degrees = 0
 		shred.scale = Vector2(1, .5)
-		if currentShred == 1:
+		if current_shred == 1:
 			shred.global_position = $Check1.global_position
-		if currentShred == 2:
+		if current_shred == 2:
 			shred.global_position = $Check2.global_position
-		if currentShred == 3:
+		if current_shred == 3:
 			shred.global_position = $Check3.global_position
 
-func checkWin():
-	if shreds == winningCombo:
-		return true
-	else:
-		resetShreds()
-		return false
 
-func resetShreds():
-	shreds[0].resetShred()
-	shreds[1].resetShred()
-	shreds[2].resetShred()
+func check_win() -> bool:
+	if shreds == winning_combo:
+		return true
+	reset_shreds()
+	return false
+
+
+func reset_shreds() -> void:
+	shreds[0].reset_shreds()
+	shreds[1].reset_shreds()
+	shreds[2].reset_shreds()
 	shreds.clear()
-	currentShred = 0
-	
+	current_shred = 0

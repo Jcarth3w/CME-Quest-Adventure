@@ -7,20 +7,24 @@ var menu_spawned = false
 var hud
 # Called when the node enters the scene tree for the first time.
 
-func _ready():
+
+func _ready() -> void:
 	for child in get_children():
 		if child is NewSceneClickable:
 			child.scene_changed.connect(_on_scene_change)
-	
+
 	for child in get_children():
 		if child.name == "HUD":
 			hud = child
 
-func check_win():
+
+func check_win() -> void:
 	pass
-		
-func _process(_delta):
+
+
+func _process(_delta) -> void:
 	check_win()
+
 
 	if Input.is_action_just_pressed("menu"):
 		if menu_spawned == false:
@@ -30,27 +34,28 @@ func _process(_delta):
 			pause_game()
 			hud.get_node("Timer").stop()
 			menu_spawned = true
-			
-	
 
-func _on_scene_change(command):
+
+func _on_scene_change(command) -> void:
 	if command == "pause":
 		pause_game()
 	else:
 		resume_game()
 
-func pause_game():
+
+func pause_game() -> void:
 	for child in get_children():
 		if child.has_method("pause"):
 			child.pause()
 
-func resume_game():
+
+func resume_game() -> void:
 	for child in get_children():
 		if child.has_method("resume"):
 			child.resume()
 
-func _on_menu_resume():
+
+func _on_menu_resume() -> void:
 	hud.get_node("Timer").start()
 	menu_spawned = false
 	resume_game()
-
