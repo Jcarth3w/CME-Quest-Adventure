@@ -20,11 +20,12 @@ func addShred(shred):
 			shred.global_position = $Check3.global_position
 
 func checkWin():
-	if shreds == winningCombo:
-		return true
-	else:
-		resetShreds()
-		return false
+	if shreds.size() == 3:
+		if shreds == winningCombo:
+			return true
+		else:
+			resetShreds()
+			return false
 
 func resetShreds():
 	shreds[0].resetShred()

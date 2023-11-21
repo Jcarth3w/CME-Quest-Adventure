@@ -11,15 +11,12 @@ func _process(_delta):
 	check_win()
 	check_pair()
 
-
-
 func check_pair():
 	if flipped_count == 2 and checkPairMatching == false:
 		checkPairMatching = true
 		if isTimerStarted == false:
 			$CheckPairTimer.start()
 		flipped_count = 0
-
 
 func check_win():
 	if winning_pair.isMatched == true:
@@ -30,8 +27,6 @@ func win():
 	await get_tree().create_timer(1.5).timeout
 	finished.emit()
 	queue_free()
-
-
 
 func _on_timer_timeout():
 	checkPairMatching = false

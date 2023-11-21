@@ -1,11 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://x1cxbdtve8eh"]
+[gd_scene load_steps=9 format=3 uid="uid://x1cxbdtve8eh"]
 
+[ext_resource type="Script" path="res://Scenes/rooms/room.gd" id="1_nq3g1"]
 [ext_resource type="PackedScene" uid="uid://rksr0yf3cfrd" path="res://Clickables/movement/Movement_Object.tscn" id="1_xte3c"]
 [ext_resource type="Texture2D" uid="uid://bo6owma52kh4u" path="res://Assets/Sprites/generic_items/genericItem_color_001.png" id="2_byr8h"]
 [ext_resource type="PackedScene" uid="uid://vkq3eq2tcj2l" path="res://Scenes/gui/inventory.tscn" id="2_rk77h"]
 [ext_resource type="PackedScene" uid="uid://pn2l6ln2hl3j" path="res://Clickables/new_scene/new_scene_object.tscn" id="4_6gx4v"]
+[ext_resource type="Texture2D" uid="uid://ytuunfigl51e" path="res://Assets/Sprites/generic_items/genericItem_color_002.png" id="5_d2ivu"]
+[ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Clickables/pickup/pickup.tscn" id="5_ouvw5"]
+[ext_resource type="PackedScene" uid="uid://c2x6nmlhmqg5h" path="res://Scenes/gui/HUD.tscn" id="5_shyar"]
 
 [node name="TestRoom" type="Node2D"]
+script = ExtResource("1_nq3g1")
 
 [node name="TestMoveable" parent="." instance=ExtResource("1_xte3c")]
 offset_left = 695.0
@@ -13,8 +18,16 @@ offset_top = 218.0
 offset_right = 857.0
 offset_bottom = 312.0
 texture_normal = ExtResource("2_byr8h")
-clickable_sprite = ExtResource("2_byr8h")
-
-[node name="Inventory" parent="." instance=ExtResource("2_rk77h")]
 
 [node name="TestNewScene" parent="." instance=ExtResource("4_6gx4v")]
+
+[node name="TestPickup" parent="." instance=ExtResource("5_ouvw5")]
+offset_left = 373.0
+offset_top = 289.0
+offset_right = 373.0
+offset_bottom = 289.0
+texture_normal = ExtResource("5_d2ivu")
+
+[node name="TestHUD" parent="." instance=ExtResource("5_shyar")]
+
+[node name="Inventory" parent="." instance=ExtResource("2_rk77h")]
