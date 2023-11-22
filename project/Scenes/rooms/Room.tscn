@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://pw4djtjf42ux" path="res://Assets/Sprites/room_1_custom_placeholders/Calendar.png" id="4_qs0eq"]
 [ext_resource type="Texture2D" uid="uid://ihqucqebj6dc" path="res://Assets/Sprites/room_1_custom_placeholders/Trash_can.png" id="5_nq2e7"]
 [ext_resource type="Texture2D" uid="uid://18telq4wmu2" path="res://Assets/Sprites/room_1_custom_placeholders/desk.png" id="6_21ieq"]
-[ext_resource type="PackedScene" uid="uid://c2x6nmlhmqg5h" path="res://Scenes/gui/HUD.tscn" id="6_wblct"]
+[ext_resource type="PackedScene" uid="uid://b8xl3wqxn7v5d" path="res://Scenes/gui/HUD.tscn" id="6_wblct"]
 [ext_resource type="PackedScene" uid="uid://vkq3eq2tcj2l" path="res://Scenes/gui/inventory.tscn" id="7_gy3uc"]
 [ext_resource type="Texture2D" uid="uid://bihv8ad0n5y0p" path="res://Assets/Sprites/room_1_custom_placeholders/Resized_whiteboard.png" id="8_jblsr"]
 [ext_resource type="PackedScene" uid="uid://pn2l6ln2hl3j" path="res://Clickables/new_scene/new_scene_object.tscn" id="8_je1k2"]
@@ -88,8 +88,6 @@ offset_bottom = 799.0
 scale = Vector2(1.19971, 1.1379)
 texture_normal = ExtResource("15_tfc22")
 script = ExtResource("10_u6dd1")
-clickable_name = ""
-clickable_sprite = ExtResource("15_tfc22")
 Xcoordinate = 980
 Ycoordinate = 606
 
@@ -99,7 +97,6 @@ offset_top = 553.0
 offset_right = 459.0
 offset_bottom = 901.0
 texture_normal = ExtResource("12_0w1me")
-clickable_sprite = ExtResource("12_0w1me")
 Xcoordinate = 150
 Ycoordinate = 647
 
