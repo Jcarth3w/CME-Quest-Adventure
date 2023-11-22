@@ -1,28 +1,32 @@
 extends MiniGame
 
-@onready var files = [$File1, $File2, $File3, $File4, $File5]
+var files 
 
 var current_file = 0
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 
-func check_win(file_name):
-	if file_name == "File4":
-		Win()
-	else:
-		DisplayIncorrect()
+func _ready():
+	files = [$File1, $File2, $File3, $File4, $File5]
+	for file in files:
+		if file.name == "File1":
+			file.global_position = $Center.global_position
+		else:
+			file.global_position = $OffLeft.global_position
+		
+		file.pressed.connect(on_file_press.bind(file))
+		
 
-func Win():
-	$Check.text = "Congratulations!"
-	await get_tree().create_timer(1).timeout
-	finished.emit()
-	queue_free()
+func on_file_press(file):
+	if file.global_position == $Center.global_position:
+		if file.name == "File4":
+			$Check.text = "Congratulations!"
+			await get_tree().create_timer(1).timeout
+			finished.emit()
+			queue_free()
+		else:
+			$Check.text = "Incorrect."
+			await get_tree().create_timer(1).timeout
+			$Check.text = "Find the promotional Folder"
 	
-
-func DisplayIncorrect():
-	$Check.text = "Incorrect."
-	await get_tree().create_timer(1).timeout
-	$Check.text = "Find the promotional Folder"
-
 
 func _on_previous_pressed():
 	if current_file > 0:

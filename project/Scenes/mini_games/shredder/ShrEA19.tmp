@@ -44,7 +44,7 @@ rotation = 0.242072
 scale = Vector2(2.6129, 4.46109)
 texture = ExtResource("2_ptm7d")
 script = ExtResource("3_rochj")
-winning_combo = [NodePath("../Shred 1"), NodePath("../Shred 2"), null]
+winning_combo = [NodePath("../Shred 1"), NodePath("../Shred 2"), NodePath("../Shred 3")]
 
 [node name="Check1" type="Marker2D" parent="ClipBoard"]
 position = Vector2(-75.8809, -16.8568)

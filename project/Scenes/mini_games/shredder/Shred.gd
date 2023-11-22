@@ -1,31 +1,20 @@
 extends TextureButton
 
 @onready var clipBoard = $"../ClipBoard"
-var startPosition
-var startRotation
-var startScale
+var start_position
+var start_rotation
+var start_scale
 
 func _ready():
-	startPosition = global_position 
-	startRotation = rotation_degrees
-	startScale = scale
+	start_position = global_position 
+	start_rotation = rotation_degrees
+	start_scale = scale
 
 
-func checkClipBoard():
-	if clipBoard.shreds.size() < 3:
-		return true
-	else:
-		return false
-		
-	
-func _on_pressed():
-	if clipBoard.shreds.find(self) == -1:
-		clipBoard.addShred(self)
-		
-func resetShred():
-	global_position = startPosition
-	rotation_degrees = startRotation
-	scale = startScale
+func reset_shred():
+	global_position = start_position
+	rotation_degrees = start_rotation
+	scale = start_scale
 	
 	
 	
