@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2x6nmlhmqg5h"]
+[gd_scene load_steps=4 format=3 uid="uid://b8xl3wqxn7v5d"]
 
 [ext_resource type="PackedScene" uid="uid://c42tbugwn1rvm" path="res://Scenes/gui/timer.tscn" id="1_xoov4"]
 
