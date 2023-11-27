@@ -1,7 +1,7 @@
 extends Clickable
 
-@export var Xcoordinate : int
-@export var Ycoordinate : int
+@export var x_coordinate : int
+@export var y_coordinate : int
 var start_x
 var start_y
 var moved = false
@@ -12,8 +12,8 @@ func _ready():
 
 func _on_pressed():
 	if state == "active" and not moved:
-		self.position.x = Xcoordinate
-		self.position.y = Ycoordinate
+		self.position.x = x_coordinate
+		self.position.y = y_coordinate
 		moved = true
 	elif state == "active" and moved:
 		self.position.x = start_x

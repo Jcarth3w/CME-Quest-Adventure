@@ -1,4 +1,5 @@
-class_name Inventory extends Node
+class_name Inventory
+extends Node
 
 var items = []
 var current_item := 1
@@ -24,7 +25,7 @@ func add_item(item_name, sprite_path):
 #	else:
 #		$Item6.texture = null
 #	items.erase(item_name)
-	
+
 
 func add_item_image(sprite_path):
 	if current_item == 1:

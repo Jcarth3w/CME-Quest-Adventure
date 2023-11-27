@@ -19,11 +19,12 @@ func _on_pressed():
 			owner.add_child(scene_inst)
 			scene_inst.finished.connect(_on_finished)
 			scene_changed.emit("pause")
-		
+
+
 func _on_finished():
 	scene_changed.emit("resume")
 	finished = true
-	if mini_game_prize != null: 
+	if mini_game_prize != null:
 		mini_game_prize.inventory.add_item(mini_game_prize.name, mini_game_prize.texture_normal)
 	else:
 		pass

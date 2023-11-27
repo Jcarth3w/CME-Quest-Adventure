@@ -1,11 +1,9 @@
 extends Timer
 
-
 var seconds = 0;
 var ten_seconds = 0;
 var minutes = 0;
 var ten_minutes = 0;
-
 
 
 func _on_timeout():
@@ -19,6 +17,5 @@ func _on_timeout():
 	if minutes == 10:
 		ten_minutes += 1
 		minutes = 0
-	
-		
+
 	$Label.text = "Time: " + str(ten_minutes) + str(minutes) + ":" + str(ten_seconds) + str(seconds)

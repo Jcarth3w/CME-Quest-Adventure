@@ -1,12 +1,14 @@
 extends TextureButton
 
-@onready var clipBoard = $"../ClipBoard"
 var start_position
 var start_rotation
 var start_scale
 
+@onready var clip_board = $"../ClipBoard"
+
+
 func _ready():
-	start_position = global_position 
+	start_position = global_position
 	start_rotation = rotation_degrees
 	start_scale = scale
 

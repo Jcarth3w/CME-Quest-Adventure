@@ -1,8 +1,8 @@
 extends MiniGame
 
-var files 
-
+var files
 var current_file = 0
+
 
 func _ready():
 	files = [$File1, $File2, $File3, $File4, $File5]
@@ -11,9 +11,9 @@ func _ready():
 			file.global_position = $Center.global_position
 		else:
 			file.global_position = $OffLeft.global_position
-		
+
 		file.pressed.connect(on_file_press.bind(file))
-		
+
 
 func on_file_press(file):
 	if file.global_position == $Center.global_position:
@@ -26,7 +26,7 @@ func on_file_press(file):
 			$Check.text = "Incorrect."
 			await get_tree().create_timer(1).timeout
 			$Check.text = "Find the promotional Folder"
-	
+
 
 func _on_previous_pressed():
 	if current_file > 0:

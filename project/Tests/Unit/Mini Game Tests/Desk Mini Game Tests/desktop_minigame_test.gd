@@ -16,14 +16,14 @@ func test_check_pair_false():
 
 func test_check_pair_true():
 	test_mini.flipped_count = 2
-	test_mini.checkPairMatching = false
+	test_mini.check_pair_matching = false
 	test_mini.check_pair()
 	assert_eq(test_mini.get_node("CheckPairTimer").is_stopped(), false)
 
 
 func test_on_timeout():
 	test_mini._on_timer_timeout()
-	assert_eq(test_mini.checkPairMatching, false)
+	assert_eq(test_mini.check_pair_matching, false)
 	assert_eq(test_mini.isTimerStarted, false)
 
 
