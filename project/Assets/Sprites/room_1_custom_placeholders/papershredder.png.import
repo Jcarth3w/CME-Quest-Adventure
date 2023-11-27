@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qlv0nihgqda2"
-path="res://.godot/imported/papershredder.png-515e621a84005c5e1bc88341eee6db69.ctex"
+path="res://.godot/imported/papershredder.png-82bc9b12f5a2f39d946761b36aa5f841.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/generic_items/papershredder.png"
-dest_files=["res://.godot/imported/papershredder.png-515e621a84005c5e1bc88341eee6db69.ctex"]
+source_file="res://Assets/Sprites/room_1_custom_placeholders/papershredder.png"
+dest_files=["res://.godot/imported/papershredder.png-82bc9b12f5a2f39d946761b36aa5f841.ctex"]
 
 [params]
 

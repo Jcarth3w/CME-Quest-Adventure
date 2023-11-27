@@ -11,13 +11,13 @@
 [ext_resource type="PackedScene" uid="uid://vkq3eq2tcj2l" path="res://Scenes/gui/inventory.tscn" id="7_gy3uc"]
 [ext_resource type="Texture2D" uid="uid://bihv8ad0n5y0p" path="res://Assets/Sprites/room_1_custom_placeholders/Resized_whiteboard.png" id="8_jblsr"]
 [ext_resource type="PackedScene" uid="uid://pn2l6ln2hl3j" path="res://Clickables/new_scene/new_scene_object.tscn" id="8_je1k2"]
-[ext_resource type="Texture2D" uid="uid://qlv0nihgqda2" path="res://Assets/Sprites/generic_items/papershredder.png" id="9_l1cvl"]
 [ext_resource type="Texture2D" uid="uid://bn3kp4ijyl0oa" path="res://Assets/Sprites/room_1_custom_placeholders/filecabinet.jpg" id="10_2w5ac"]
 [ext_resource type="Script" path="res://Clickables/movement/Movement_Object.gd" id="10_u6dd1"]
 [ext_resource type="Texture2D" uid="uid://k7tyhsc5hvsx" path="res://Assets/Sprites/room_1_custom_placeholders/chair.png" id="12_0w1me"]
 [ext_resource type="PackedScene" uid="uid://rksr0yf3cfrd" path="res://Clickables/movement/Movement_Object.tscn" id="14_rvr23"]
 [ext_resource type="Texture2D" uid="uid://cpfslkjfr1qn8" path="res://Assets/Sprites/room_1_custom_placeholders/Flower.png" id="15_tfc22"]
 [ext_resource type="Texture2D" uid="uid://7dh6xy1cyylg" path="res://Assets/Sprites/room_1_custom_placeholders/tissues.png" id="17_iavhs"]
+[ext_resource type="Texture2D" uid="uid://qlv0nihgqda2" path="res://Assets/Sprites/room_1_custom_placeholders/papershredder.png" id="18_ql263"]
 
 [node name="Room" type="Node2D"]
 script = ExtResource("1_dbjvq")
@@ -116,7 +116,7 @@ offset_top = 657.0
 offset_right = 2006.0
 offset_bottom = 1269.0
 scale = Vector2(0.293043, 0.280447)
-texture_normal = ExtResource("9_l1cvl")
+texture_normal = ExtResource("18_ql263")
 scene_path = "res://Scenes/mini_games/shredder/ShredderMiniGame.tscn"
 mini_game_prize = NodePath("../MiniGamePrize2")
 
