@@ -7,12 +7,13 @@ var test_mini: Node2D
 func before_all() -> void:
 	test_mini = test_mini_preload.instantiate()
 	get_tree().root.add_child(test_mini)
-	
-	
+
+
 func test_check_pair_false():
 	test_mini.flipped_count = 1
 	test_mini.check_pair()
 	assert_eq(test_mini.get_node("CheckPairTimer").is_stopped(), true)
+
 
 func test_check_pair_true():
 	test_mini.flipped_count = 2

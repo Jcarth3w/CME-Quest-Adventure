@@ -4,8 +4,7 @@ extends Sprite2D
 
 var shreds = []
 var current_shred = 0
-
-const max_shreds = 3
+var max_shreds = 3
 
 
 func add_shred(shred):
@@ -26,9 +25,8 @@ func check_win():
 	if shreds.size() == 3:
 		if shreds == winning_combo:
 			return true
-		else:
-			reset_shreds()
-			return false
+		reset_shreds()
+		return false
 
 
 func reset_shreds():

@@ -11,7 +11,6 @@ func before_all() -> void:
 	test_pair = test_mini.get_node("Pair 1")
 
 
-
 func test_check_pair_false():
 	test_pair.checkPair()
 	assert_eq(test_pair.isMatched, false)
