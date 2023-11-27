@@ -15,23 +15,15 @@ func _ready():
 	for child in get_children():
 		if child.name == "HUD":
 			hud = child
+	
+	hud.resume.connect(_on_menu_resume)
+	hud.pause.connect(pause_game)
 
 func check_win():
 	pass
 		
 func _process(_delta):
 	check_win()
-
-	if Input.is_action_just_pressed("menu"):
-		if menu_spawned == false:
-			var menu_inst = menu.instantiate()
-			add_child(menu_inst)
-			menu_inst.resume.connect(_on_menu_resume)
-			pause_game()
-			hud.get_node("Timer").stop()
-			menu_spawned = true
-			
-	
 
 func _on_scene_change(command):
 	if command == "pause":
