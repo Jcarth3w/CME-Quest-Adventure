@@ -10,7 +10,7 @@ func on_shred_press(shred):
 		$ClipBoard.add_shred(shred)
 
 func _on_check_bttn_pressed():
-	if $ClipBoard.checkWin():
+	if $ClipBoard.check_win():
 		$CheckBttn/Label.text = "You win!"
 		await get_tree().create_timer(1).timeout
 		finished.emit()

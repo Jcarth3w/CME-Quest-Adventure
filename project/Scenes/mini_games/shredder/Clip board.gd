@@ -19,7 +19,7 @@ func add_shred(shred):
 		if current_shred == 3:
 			shred.global_position = $Check3.global_position
 
-func checkWin():
+func check_win():
 	if shreds.size() == 3:
 		if shreds == winning_combo:
 			return true

@@ -15,8 +15,3 @@ func reset_shred():
 	global_position = start_position
 	rotation_degrees = start_rotation
 	scale = start_scale
-	
-	
-	
-	
-
