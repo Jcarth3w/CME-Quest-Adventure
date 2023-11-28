@@ -23,7 +23,7 @@ func test_check_pair_true():
 
 
 func test_on_timeout():
-	test_mini._on_timer_timeout()
+	test_mini.timer_timeout()
 	assert_eq(test_mini.check_pair_matching, false)
 	assert_eq(test_mini.is_timer_started, false)
 

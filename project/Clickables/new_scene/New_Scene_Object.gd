@@ -13,6 +13,9 @@ func _ready() -> void:
 
 
 func _on_pressed() -> void:
+	pressed()
+
+func pressed():
 	if state == "active" and finished == false:
 		var scene = load(scene_path)
 		if scene != null:
@@ -20,7 +23,6 @@ func _on_pressed() -> void:
 			owner.add_child(scene_inst)
 			scene_inst.finished.connect(_on_finished)
 			scene_changed.emit("pause")
-
 
 
 func _on_finished() -> void:

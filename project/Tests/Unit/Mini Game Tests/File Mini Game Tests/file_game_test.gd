@@ -10,14 +10,14 @@ func before_all() -> void:
 
 
 func test_next_button():
-	test_mini._on_next_pressed()
+	test_mini.next_pressed()
 	assert_eq(test_mini.files[test_mini.current_file - 1].global_position, test_mini.get_node("OffRight").global_position)
 	assert_eq(test_mini.files[test_mini.current_file].global_position, test_mini.get_node("Center").global_position)
 	assert_eq(test_mini.current_file, 1)
 
 
 func test_prev_button():
-	test_mini._on_previous_pressed()
+	test_mini.previous_pressed()
 	assert_eq(test_mini.files[test_mini.current_file + 1].global_position, test_mini.get_node("OffLeft").global_position)
 	assert_eq(test_mini.files[test_mini.current_file].global_position, test_mini.get_node("Center").global_position)
 	assert_eq(test_mini.current_file, 0)

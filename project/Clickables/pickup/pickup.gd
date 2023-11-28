@@ -15,3 +15,9 @@ func _on_pressed() -> void:
 	if state == "active":
 		inventory.add_item(name, texture_normal)
 		queue_free()
+
+
+func pressed():
+	if state == "active":
+		inventory.add_item(name, texture_normal)
+		queue_free()

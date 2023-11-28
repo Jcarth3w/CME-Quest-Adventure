@@ -13,5 +13,5 @@ func test_movement_object():
 	var moveable = test_room.get_node("TestMoveable")
 	moveable.x_coordinate = 200
 	moveable.y_coordinate = 200
-	moveable._on_pressed()
+	moveable.pressed()
 	assert_eq(moveable.global_position, Vector2(200, 200))

@@ -12,6 +12,6 @@ func before_all() -> void:
 
 
 func test_pickup():
-	pickup._on_pressed()
+	pickup.pressed()
 	await yield_frames(1) #test is too fast
 	assert_eq(test_room.has_node("TestPickup"), false)

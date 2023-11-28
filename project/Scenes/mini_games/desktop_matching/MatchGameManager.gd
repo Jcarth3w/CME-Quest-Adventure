@@ -32,5 +32,9 @@ func win() -> void:
 
 
 func _on_timer_timeout() -> void:
+	timer_timeout()
+
+
+func timer_timeout():
 	check_pair_matching = false
 	is_timer_started = false

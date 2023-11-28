@@ -15,6 +15,10 @@ func _ready():
 
 
 func _on_pressed() -> void:
+	pressed()
+
+
+func pressed():
 	if state == "active" and not moved:
 		self.position.x = x_coordinate
 		self.position.y = y_coordinate
