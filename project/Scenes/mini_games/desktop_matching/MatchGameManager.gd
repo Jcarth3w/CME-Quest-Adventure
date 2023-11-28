@@ -21,7 +21,7 @@ func check_pair() -> void:
 
 
 func check_win() -> void:
-	if winning_pair.isMatched == true:
+	if winning_pair.is_matched == true:
 			win()
 
 func win() -> void:
