@@ -8,6 +8,9 @@ var ten_minutes = 0;
 
 
 func _on_timeout():
+	update_label()
+
+func update_label():
 	seconds += 1
 	if seconds == 10:
 		ten_seconds += 1

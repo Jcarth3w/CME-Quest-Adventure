@@ -16,5 +16,5 @@ func test_on_shred_press():
 
 func test_on_check_bttn_pressed():
 	test_mini.get_node("ClipBoard").shreds = test_mini.get_node("ClipBoard").winning_combo
-	test_mini._on_check_bttn_pressed()
+	test_mini.check_bttn_pressed()
 	assert_eq(test_mini.get_node("CheckBttn/Label").text, "You win!")

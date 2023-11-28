@@ -12,5 +12,5 @@ func before_all() -> void:
 
 
 func test_timer():
-	timer._on_timeout()
+	timer.update_label()
 	assert_eq(timer.seconds, 1)
