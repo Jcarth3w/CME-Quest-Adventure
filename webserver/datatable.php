@@ -1,6 +1,6 @@
 <?php
     echo "<table>";
-    echo "<tr><th>Id</th><th>Username</th><th>Score</th><th>Time</th><th>CreatedAt</th></tr>";
+    echo "<tr><th>Id</th><th>Scenario</th><th>Username</th><th>Time</th><th>Finished</th><th>CreatedAt</th></tr>";
 
     class TableRows extends RecursiveIteratorIterator {
         function __construct($it) {
