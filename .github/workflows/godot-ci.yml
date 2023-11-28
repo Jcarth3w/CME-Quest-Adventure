@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
@@ -22,6 +22,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      # Build? then test?
       - name: Run Tests
         run: godot --headless -d -s --path project addons/gut/gut_cmdln.gd -gdir=res://tests/ -ginclude_subdirs=true -gprefix="" -gsuffix="_test.gd" -gexit
