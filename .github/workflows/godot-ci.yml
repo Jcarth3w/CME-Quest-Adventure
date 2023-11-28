@@ -1,0 +1,26 @@
+name: 'Test Project'
+
+env:
+  GODOT_VERSION: 4.1.1 # Remember to manually set image to this version below.
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    container:
+      image: barichello/godot-ci:4.1.1
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Run Tests
+        run: godot --headless -d -s --path project addons/gut/gut_cmdln.gd -gdir=res://tests/ -ginclude_subdirs=true -gprefix="" -gsuffix="_test.gd" -gexit
