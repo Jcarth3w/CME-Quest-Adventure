@@ -5,9 +5,9 @@ var menu = preload("res://Scenes/gui/in_game_menu.tscn")
 var state := "active"
 var menu_spawned = false
 var hud
-# Called when the node enters the scene tree for the first time.
 
-func _ready():
+
+func _ready() -> void:
 	for child in get_children():
 		if child is NewSceneClickable:
 			child.scene_changed.connect(_on_scene_change)
@@ -15,6 +15,7 @@ func _ready():
 	for child in get_children():
 		if child.name == "HUD":
 			hud = child
+
 
 	hud.resume.connect(_on_menu_resume)
 	hud.pause.connect(pause_game)
@@ -28,26 +29,26 @@ func _process(_delta):
 	check_win()
 
 
-func _on_scene_change(command):
+func _on_scene_change(command) -> void:
 	if command == "pause":
 		pause_game()
 	else:
 		resume_game()
 
 
-func pause_game():
+func pause_game() -> void:
 	for child in get_children():
 		if child.has_method("pause"):
 			child.pause()
 
 
-func resume_game():
+func resume_game() -> void:
 	for child in get_children():
 		if child.has_method("resume"):
 			child.resume()
 
 
-func _on_menu_resume():
+func _on_menu_resume() -> void:
 	hud.get_node("Timer").start()
 	menu_spawned = false
 	resume_game()

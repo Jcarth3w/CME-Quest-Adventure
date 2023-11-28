@@ -1,5 +1,6 @@
 extends MiniGame
 
+
 var files
 var current_file = 0
 
@@ -28,14 +29,14 @@ func on_file_press(file):
 			$Check.text = "Find the promotional Folder"
 
 
-func _on_previous_pressed():
+func _on_previous_pressed() -> void:
 	if current_file > 0:
 		files[current_file].global_position = $OffLeft.global_position
 		files[current_file - 1].global_position = $Center.global_position
 		current_file -= 1
 
 
-func _on_next_pressed():
+func _on_next_pressed() -> void:
 	if current_file < 4:
 		files[current_file].global_position = $OffRight.global_position
 		files[current_file + 1].global_position = $Center.global_position

@@ -4,8 +4,8 @@ var start_position
 var start_rotation
 var start_scale
 
-@onready var clip_board = $"../ClipBoard"
 
+@onready var clip_board = $"../ClipBoard"
 
 func _ready():
 	start_position = global_position

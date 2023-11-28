@@ -6,14 +6,12 @@ extends Node2D
 var is_matched = false
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	if owner.check_pair_matching == true:
+func _process(_delta) -> void:
+	if owner.checkPairMatching == true:
 		check_pair()
 
-
-func check_pair():
-	if card_1.isFlipped == true && card_2.isFlipped == true:
+func check_pair() -> void:
+	if card1.isFlipped == true && card2.isFlipped == true:
 		is_matched = true
 	else:
 		card_1.reset()

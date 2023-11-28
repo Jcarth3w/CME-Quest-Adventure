@@ -1,17 +1,18 @@
 class_name NewSceneClickable
 extends Clickable
 
-
 signal scene_changed
 @export var scene_path: String
 @export var mini_game_prize: Pickup
 var finished = false
 
-func _ready():
+
+func _ready() -> void:
 	if mini_game_prize == null:
 		print("NewScene: I expected a mini game prize")
 
-func _on_pressed():
+
+func _on_pressed() -> void:
 	if state == "active" and finished == false:
 		var scene = load(scene_path)
 		if scene != null:
@@ -21,7 +22,8 @@ func _on_pressed():
 			scene_changed.emit("pause")
 
 
-func _on_finished():
+
+func _on_finished() -> void:
 	scene_changed.emit("resume")
 	finished = true
 	if mini_game_prize != null:

@@ -3,6 +3,7 @@ extends Sprite2D
 @export var card_image : Texture
 @export var hide_image : Texture
 
+
 var is_flipped = false
 
 

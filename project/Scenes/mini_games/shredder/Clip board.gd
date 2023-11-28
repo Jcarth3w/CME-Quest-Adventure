@@ -2,12 +2,12 @@ extends Sprite2D
 
 @export var winning_combo: Array[TextureButton]
 
+var max_shreds = 3
 var shreds = []
 var current_shred = 0
-var max_shreds = 3
 
 
-func add_shred(shred):
+func add_shred(shred) -> void:
 	if current_shred < max_shreds:
 		current_shred += 1
 		shreds.append(shred)
@@ -21,17 +21,17 @@ func add_shred(shred):
 			shred.global_position = $Check3.global_position
 
 
-func check_win():
-	if shreds.size() == 3:
-		if shreds == winning_combo:
-			return true
-		reset_shreds()
-		return false
+
+func check_win() -> bool:
+	if shreds == winning_combo:
+		return true
+	reset_shreds()
+	return false
 
 
-func reset_shreds():
-	shreds[0].reset_shred()
-	shreds[1].reset_shred()
-	shreds[2].reset_shred()
+func reset_shreds() -> void:
+	shreds[0].reset_shreds()
+	shreds[1].reset_shreds()
+	shreds[2].reset_shreds()
 	shreds.clear()
 	current_shred = 0
