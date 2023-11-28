@@ -103,8 +103,3 @@ position = Vector2(893, 425)
 
 [connection signal="pressed" from="Previous" to="." method="_on_previous_pressed"]
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
-[connection signal="pressed" from="File1" to="File1" method="_on_pressed"]
-[connection signal="pressed" from="File2" to="File2" method="_on_pressed"]
-[connection signal="pressed" from="File3" to="File3" method="_on_pressed"]
-[connection signal="pressed" from="File4" to="File4" method="_on_pressed"]
-[connection signal="pressed" from="File5" to="File5" method="_on_pressed"]
