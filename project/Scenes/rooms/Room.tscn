@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://rksr0yf3cfrd" path="res://Clickables/movement/Movement_Object.tscn" id="14_rvr23"]
 [ext_resource type="Texture2D" uid="uid://cpfslkjfr1qn8" path="res://Assets/Sprites/room_1_custom_placeholders/Flower.png" id="15_tfc22"]
 [ext_resource type="Texture2D" uid="uid://7dh6xy1cyylg" path="res://Assets/Sprites/room_1_custom_placeholders/tissues.png" id="17_iavhs"]
-[ext_resource type="Texture2D" uid="uid://qlv0nihgqda2" path="res://Assets/Sprites/room_1_custom_placeholders/papershredder.png" id="18_ql263"]
+[ext_resource type="Texture2D" uid="uid://4vloe2o85w0c" path="res://Assets/Sprites/room_1_custom_placeholders/papershredder.png" id="18_lm3ui"]
 
 [node name="Room" type="Node2D"]
 script = ExtResource("1_dbjvq")
@@ -81,24 +81,24 @@ offset_bottom = 427.0
 texture_normal = ExtResource("4_5llip")
 
 [node name="Flower" parent="." instance=ExtResource("8_je1k2")]
-offset_left = 1158.0
-offset_top = 451.0
-offset_right = 1294.0
-offset_bottom = 799.0
+offset_left = 1142.0
+offset_top = 471.0
+offset_right = 1278.0
+offset_bottom = 819.0
 scale = Vector2(1.19971, 1.1379)
 texture_normal = ExtResource("15_tfc22")
 script = ExtResource("10_u6dd1")
-Xcoordinate = 980
-Ycoordinate = 606
+x_coordinate = 1010
+y_coordinate = 543
 
 [node name="Chair" parent="." instance=ExtResource("14_rvr23")]
-offset_left = 234.0
-offset_top = 553.0
-offset_right = 459.0
-offset_bottom = 901.0
+offset_left = 214.0
+offset_top = 541.0
+offset_right = 439.0
+offset_bottom = 889.0
 texture_normal = ExtResource("12_0w1me")
-Xcoordinate = 150
-Ycoordinate = 647
+x_coordinate = 118
+y_coordinate = 557
 
 [node name="FileCabinet" parent="." node_paths=PackedStringArray("mini_game_prize") instance=ExtResource("8_je1k2")]
 offset_left = 1621.0
@@ -113,10 +113,10 @@ mini_game_prize = NodePath("../MiniGamePrize1")
 [node name="PaperShredder" parent="." node_paths=PackedStringArray("mini_game_prize") instance=ExtResource("8_je1k2")]
 offset_left = 1371.0
 offset_top = 657.0
-offset_right = 2006.0
-offset_bottom = 1269.0
-scale = Vector2(0.293043, 0.280447)
-texture_normal = ExtResource("18_ql263")
+offset_right = 2611.0
+offset_bottom = 1854.0
+scale = Vector2(0.172647, 0.162982)
+texture_normal = ExtResource("18_lm3ui")
 scene_path = "res://Scenes/mini_games/shredder/ShredderMiniGame.tscn"
 mini_game_prize = NodePath("../MiniGamePrize2")
 

@@ -11,7 +11,7 @@ func before_all() -> void:
 
 func test_movement_object():
 	var moveable = test_room.get_node("TestMoveable")
-	moveable.Xcoordinate = 200
-	moveable.Ycoordinate = 200
+	moveable.x_coordinate = 200
+	moveable.y_coordinate = 200
 	moveable._on_pressed()
 	assert_eq(moveable.global_position, Vector2(200, 200))

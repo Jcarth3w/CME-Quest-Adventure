@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dy51fa3t4j81g"]
 
-[ext_resource type="Script" path="res://Scenario_menu.gd" id="1_ax4fx"]
+[ext_resource type="Script" path="res://Scenes/gui/scenario_menu.gd" id="1_ax4fx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lsamv"]
 font_size = 52

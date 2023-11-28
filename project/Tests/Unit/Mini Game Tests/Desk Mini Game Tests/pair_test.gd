@@ -12,12 +12,12 @@ func before_all() -> void:
 
 
 func test_check_pair_false():
-	test_pair.checkPair()
-	assert_eq(test_pair.isMatched, false)
+	test_pair.check_pair()
+	assert_eq(test_pair.is_matched, false)
 
 
 func test_check_pair_true():
-	test_pair.card1.isFlipped = true
-	test_pair.card2.isFlipped = true
-	test_pair.checkPair()
-	assert_eq(test_pair.isMatched, true)
+	test_pair.card_1.is_flipped = true
+	test_pair.card_2.is_flipped = true
+	test_pair.check_pair()
+	assert_eq(test_pair.is_matched, true)

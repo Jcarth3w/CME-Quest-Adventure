@@ -28,6 +28,6 @@ offset_right = 373.0
 offset_bottom = 289.0
 texture_normal = ExtResource("5_d2ivu")
 
-[node name="TestHUD" parent="." instance=ExtResource("5_shyar")]
+[node name="HUD" parent="." instance=ExtResource("5_shyar")]
 
 [node name="Inventory" parent="." instance=ExtResource("2_rk77h")]

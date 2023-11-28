@@ -13,11 +13,11 @@ func before_all() -> void:
 
 func test_reset():
 	test_card.reset()
-	assert_eq(test_card.isFlipped, false)
-	assert_eq(test_card.texture, test_card.hideImage)
+	assert_eq(test_card.is_flipped, false)
+	assert_eq(test_card.texture, test_card.hide_image)
 
 
 func test_flip():
 	test_card.flip()
-	assert_eq(test_card.isFlipped, true)
-	assert_eq(test_card.texture, test_card.cardImage)
+	assert_eq(test_card.is_flipped, true)
+	assert_eq(test_card.texture, test_card.card_image)

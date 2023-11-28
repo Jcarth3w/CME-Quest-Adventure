@@ -5,13 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://cbcx08btklchr" path="res://Assets/Sprites/room_1_custom_placeholders/Unknown_paper.png" id="3_o21xa"]
 [ext_resource type="Script" path="res://Scenes/mini_games/desktop_matching/MatchingObject.gd" id="4_nsjif"]
 [ext_resource type="Texture2D" uid="uid://c15mt6j8pobst" path="res://Assets/Sprites/generic_items/genericItem_color_005.png" id="5_fdj5v"]
-[ext_resource type="Texture2D" uid="uid://blleha1bjvx56" path="res://Assets/Sprites/generic_items/genericItem_color_011.png" id="6_m7qbn"]
-[ext_resource type="Texture2D" uid="uid://q7157uq5j0sy" path="res://Assets/Sprites/generic_items/genericItem_color_008.png" id="7_5nblc"]
-[ext_resource type="Texture2D" uid="uid://bo6owma52kh4u" path="res://Assets/Sprites/generic_items/genericItem_color_001.png" id="8_c5lvs"]
+[ext_resource type="Texture2D" uid="uid://ytuunfigl51e" path="res://Assets/Sprites/generic_items/genericItem_color_002.png" id="5_wlnu6"]
+[ext_resource type="Texture2D" uid="uid://ciwlkhjal53fw" path="res://Assets/Sprites/generic_items/genericItem_color_003.png" id="6_fyt4m"]
+[ext_resource type="Texture2D" uid="uid://d2jkjc2gxd0c3" path="res://Assets/Sprites/generic_items/genericItem_color_007.png" id="8_0srml"]
 [ext_resource type="Texture2D" uid="uid://dqunufa6yvb80" path="res://Assets/Sprites/generic_items/genericItem_color_032.png" id="9_v3eyn"]
-[ext_resource type="Texture2D" uid="uid://bj6dpto663fl0" path="res://Assets/Sprites/generic_items/genericItem_color_021.png" id="10_5snw2"]
-[ext_resource type="Texture2D" uid="uid://bmr6b1vuwqfr3" path="res://Assets/Sprites/generic_items/genericItem_color_022.png" id="11_sd88i"]
-[ext_resource type="Texture2D" uid="uid://di7kgfyltw5id" path="res://Assets/Sprites/generic_items/genericItem_color_030.png" id="12_ulhy0"]
+[ext_resource type="Texture2D" uid="uid://rqcubyw14bh7" path="res://Assets/Sprites/generic_items/genericItem_color_051.png" id="10_a7al7"]
+[ext_resource type="Texture2D" uid="uid://c2bx2c7fc4a18" path="res://Assets/Sprites/generic_items/genericItem_color_058.png" id="11_gwyyy"]
+[ext_resource type="Texture2D" uid="uid://dtx22o7apq7c5" path="res://Assets/Sprites/generic_items/genericItem_color_073.png" id="12_23j8c"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_o70vy"]
 font_size = 64
@@ -40,177 +40,177 @@ grow_horizontal = 2
 text = "Find the promo materials"
 label_settings = SubResource("LabelSettings_o70vy")
 
-[node name="Pair 1" type="Node2D" parent="." node_paths=PackedStringArray("card1", "card2")]
+[node name="Pair 1" type="Node2D" parent="." node_paths=PackedStringArray("card_1", "card_2")]
 position = Vector2(435, 290)
 scale = Vector2(2.23457, 1.58279)
 script = ExtResource("2_lge7s")
-card1 = NodePath("Card 1")
-card2 = NodePath("Card 2")
+card_1 = NodePath("Card 1")
+card_2 = NodePath("Card 2")
 
 [node name="Card 1" type="Sprite2D" parent="Pair 1"]
 position = Vector2(-5.37018, -10.1087)
 scale = Vector2(0.421, 0.5)
 texture = ExtResource("3_o21xa")
 script = ExtResource("4_nsjif")
-cardImage = ExtResource("5_fdj5v")
-hideImage = ExtResource("3_o21xa")
+card_image = ExtResource("5_wlnu6")
+hide_image = ExtResource("3_o21xa")
 
 [node name="Card 2" type="Sprite2D" parent="Pair 1"]
 position = Vector2(127.094, -6.31795)
 scale = Vector2(0.449, 0.5)
 texture = ExtResource("3_o21xa")
 script = ExtResource("4_nsjif")
-cardImage = ExtResource("5_fdj5v")
-hideImage = ExtResource("3_o21xa")
+card_image = ExtResource("5_wlnu6")
+hide_image = ExtResource("3_o21xa")
 
-[node name="Pair 2" type="Node2D" parent="." node_paths=PackedStringArray("card1", "card2")]
+[node name="Pair 2" type="Node2D" parent="." node_paths=PackedStringArray("card_1", "card_2")]
 position = Vector2(719, 280)
 scale = Vector2(1.80682, 1.42725)
 script = ExtResource("2_lge7s")
-card1 = NodePath("Card 3")
-card2 = NodePath("Card4")
+card_1 = NodePath("Card 3")
+card_2 = NodePath("Card4")
 
 [node name="Card 3" type="Sprite2D" parent="Pair 2"]
 position = Vector2(197.031, -4.20389)
 scale = Vector2(0.499, 0.5)
 texture = ExtResource("3_o21xa")
 script = ExtResource("4_nsjif")
-cardImage = ExtResource("6_m7qbn")
-hideImage = ExtResource("3_o21xa")
+card_image = ExtResource("6_fyt4m")
+hide_image = ExtResource("3_o21xa")
 
 [node name="Card4" type="Sprite2D" parent="Pair 2"]
 position = Vector2(408.452, -11.911)
 scale = Vector2(0.502, 0.5)
 texture = ExtResource("3_o21xa")
 script = ExtResource("4_nsjif")
-cardImage = ExtResource("6_m7qbn")
-hideImage = ExtResource("3_o21xa")
+card_image = ExtResource("6_fyt4m")
+hide_image = ExtResource("3_o21xa")
 
-[node name="Pair3" type="Node2D" parent="." node_paths=PackedStringArray("card1", "card2")]
+[node name="Pair3" type="Node2D" parent="." node_paths=PackedStringArray("card_1", "card_2")]
 script = ExtResource("2_lge7s")
-card1 = NodePath("Card 5")
-card2 = NodePath("Card 6")
+card_1 = NodePath("Card 5")
+card_2 = NodePath("Card 6")
 
 [node name="Card 5" type="Sprite2D" parent="Pair3"]
 position = Vector2(413.321, 490.133)
 scale = Vector2(0.635, 0.5)
 texture = ExtResource("3_o21xa")
 script = ExtResource("4_nsjif")
-cardImage = ExtResource("7_5nblc")
-hideImage = ExtResource("3_o21xa")
+card_image = ExtResource("5_fdj5v")
+hide_image = ExtResource("3_o21xa")
 
 [node name="Card 6" type="Sprite2D" parent="Pair3"]
 position = Vector2(698.321, 499.133)
 scale = Vector2(0.633, 0.5)
 texture = ExtResource("3_o21xa")
 script = ExtResource("4_nsjif")
-cardImage = ExtResource("7_5nblc")
-hideImage = ExtResource("3_o21xa")
+card_image = ExtResource("5_fdj5v")
+hide_image = ExtResource("3_o21xa")
 
-[node name="Pair4" type="Node2D" parent="." node_paths=PackedStringArray("card1", "card2")]
+[node name="Pair4" type="Node2D" parent="." node_paths=PackedStringArray("card_1", "card_2")]
 script = ExtResource("2_lge7s")
-card1 = NodePath("Card 7")
-card2 = NodePath("Card 8")
+card_1 = NodePath("Card 7")
+card_2 = NodePath("Card 8")
 
 [node name="Card 7" type="Sprite2D" parent="Pair4"]
 position = Vector2(1066, 473)
 scale = Vector2(0.753, 0.5)
 texture = ExtResource("3_o21xa")
 script = ExtResource("4_nsjif")
-cardImage = ExtResource("8_c5lvs")
-hideImage = ExtResource("3_o21xa")
+card_image = ExtResource("8_0srml")
+hide_image = ExtResource("3_o21xa")
 
 [node name="Card 8" type="Sprite2D" parent="Pair4"]
 position = Vector2(1423.32, 486.133)
 scale = Vector2(0.755, 0.5)
 texture = ExtResource("3_o21xa")
 script = ExtResource("4_nsjif")
-cardImage = ExtResource("8_c5lvs")
-hideImage = ExtResource("3_o21xa")
+card_image = ExtResource("8_0srml")
+hide_image = ExtResource("3_o21xa")
 
-[node name="Pair5" type="Node2D" parent="." node_paths=PackedStringArray("card1", "card2")]
+[node name="Pair5" type="Node2D" parent="." node_paths=PackedStringArray("card_1", "card_2")]
 script = ExtResource("2_lge7s")
-card1 = NodePath("Card 9")
-card2 = NodePath("Card 10")
+card_1 = NodePath("Card 9")
+card_2 = NodePath("Card 10")
 
 [node name="Card 9" type="Sprite2D" parent="Pair5"]
 position = Vector2(410.321, 734.133)
 scale = Vector2(0.636, 0.5)
 texture = ExtResource("3_o21xa")
 script = ExtResource("4_nsjif")
-cardImage = ExtResource("9_v3eyn")
-hideImage = ExtResource("3_o21xa")
+card_image = ExtResource("9_v3eyn")
+hide_image = ExtResource("3_o21xa")
 
 [node name="Card 10" type="Sprite2D" parent="Pair5"]
 position = Vector2(711.321, 717.133)
 scale = Vector2(0.636, 0.5)
 texture = ExtResource("3_o21xa")
 script = ExtResource("4_nsjif")
-cardImage = ExtResource("9_v3eyn")
-hideImage = ExtResource("3_o21xa")
+card_image = ExtResource("9_v3eyn")
+hide_image = ExtResource("3_o21xa")
 
-[node name="Pair6" type="Node2D" parent="." node_paths=PackedStringArray("card1", "card2")]
+[node name="Pair6" type="Node2D" parent="." node_paths=PackedStringArray("card_1", "card_2")]
 script = ExtResource("2_lge7s")
-card1 = NodePath("Card 11")
-card2 = NodePath("Card 12")
+card_1 = NodePath("Card 11")
+card_2 = NodePath("Card 12")
 
 [node name="Card 11" type="Sprite2D" parent="Pair6"]
 position = Vector2(1071.32, 699.133)
 scale = Vector2(0.755, 0.5)
 texture = ExtResource("3_o21xa")
 script = ExtResource("4_nsjif")
-cardImage = ExtResource("10_5snw2")
-hideImage = ExtResource("3_o21xa")
+card_image = ExtResource("10_a7al7")
+hide_image = ExtResource("3_o21xa")
 
 [node name="Card 12" type="Sprite2D" parent="Pair6"]
 position = Vector2(1411.32, 730.133)
 scale = Vector2(0.635, 0.5)
 texture = ExtResource("3_o21xa")
 script = ExtResource("4_nsjif")
-cardImage = ExtResource("10_5snw2")
-hideImage = ExtResource("3_o21xa")
+card_image = ExtResource("10_a7al7")
+hide_image = ExtResource("3_o21xa")
 
-[node name="Pair7" type="Node2D" parent="." node_paths=PackedStringArray("card1", "card2")]
+[node name="Pair7" type="Node2D" parent="." node_paths=PackedStringArray("card_1", "card_2")]
 script = ExtResource("2_lge7s")
-card1 = NodePath("Card 13")
-card2 = NodePath("Card 14")
+card_1 = NodePath("Card 13")
+card_2 = NodePath("Card 14")
 
 [node name="Card 13" type="Sprite2D" parent="Pair7"]
 position = Vector2(390.321, 966.133)
 scale = Vector2(0.708, 0.5)
 texture = ExtResource("3_o21xa")
 script = ExtResource("4_nsjif")
-cardImage = ExtResource("11_sd88i")
-hideImage = ExtResource("3_o21xa")
+card_image = ExtResource("11_gwyyy")
+hide_image = ExtResource("3_o21xa")
 
 [node name="Card 14" type="Sprite2D" parent="Pair7"]
 position = Vector2(702.321, 965.133)
 scale = Vector2(0.635, 0.5)
 texture = ExtResource("3_o21xa")
 script = ExtResource("4_nsjif")
-cardImage = ExtResource("11_sd88i")
-hideImage = ExtResource("3_o21xa")
+card_image = ExtResource("11_gwyyy")
+hide_image = ExtResource("3_o21xa")
 
-[node name="Pair8" type="Node2D" parent="." node_paths=PackedStringArray("card1", "card2")]
+[node name="Pair8" type="Node2D" parent="." node_paths=PackedStringArray("card_1", "card_2")]
 script = ExtResource("2_lge7s")
-card1 = NodePath("Card 15")
-card2 = NodePath("Card 16")
+card_1 = NodePath("Card 15")
+card_2 = NodePath("Card 16")
 
 [node name="Card 15" type="Sprite2D" parent="Pair8"]
 position = Vector2(1057.32, 964.133)
 scale = Vector2(0.799, 0.5)
 texture = ExtResource("3_o21xa")
 script = ExtResource("4_nsjif")
-cardImage = ExtResource("12_ulhy0")
-hideImage = ExtResource("3_o21xa")
+card_image = ExtResource("12_23j8c")
+hide_image = ExtResource("3_o21xa")
 
 [node name="Card 16" type="Sprite2D" parent="Pair8"]
 position = Vector2(1397.32, 969.133)
 scale = Vector2(0.636, 0.5)
 texture = ExtResource("3_o21xa")
 script = ExtResource("4_nsjif")
-cardImage = ExtResource("12_ulhy0")
-hideImage = ExtResource("3_o21xa")
+card_image = ExtResource("12_23j8c")
+hide_image = ExtResource("3_o21xa")
 
 [node name="CheckPairTimer" type="Timer" parent="."]
 wait_time = 0.8
