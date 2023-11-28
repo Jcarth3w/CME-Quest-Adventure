@@ -1,7 +1,6 @@
 extends Clickable
 
-@export var clickable_name : String
-@export var clickable_sprite : Texture
+
 @export var x_coordinate : int
 @export var y_coordinate : int
 
@@ -10,8 +9,7 @@ var start_y
 var moved = false
 
 
-func _ready() -> void:
-	texture_normal = clickable_sprite
+func _ready():
 	start_x = global_position.x
 	start_y = global_position.y
 

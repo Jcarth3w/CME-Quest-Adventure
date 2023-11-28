@@ -21,6 +21,7 @@ func add_shred(shred) -> void:
 			shred.global_position = $Check3.global_position
 
 
+
 func check_win() -> bool:
 	if shreds == winning_combo:
 		return true

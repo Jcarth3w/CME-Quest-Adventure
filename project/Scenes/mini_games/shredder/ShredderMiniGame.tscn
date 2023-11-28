@@ -3,16 +3,16 @@
 [ext_resource type="Script" path="res://Scenes/mini_games/shredder/ShredderMiniGame.gd" id="1_51bei"]
 [ext_resource type="Texture2D" uid="uid://wjox7l8cx5c4" path="res://Assets/Sprites/generic_items/genericItem_color_141.png" id="2_ptm7d"]
 [ext_resource type="Script" path="res://Scenes/mini_games/shredder/Clip board.gd" id="3_rochj"]
-[ext_resource type="Texture2D" uid="uid://ea3idyn2pse7" path="res://Assets/PaperReg.png" id="4_6a764"]
+[ext_resource type="Texture2D" uid="uid://ea3idyn2pse7" path="res://Assets/Sprites/room_1_custom_placeholders/PaperReg.png" id="4_6a764"]
 [ext_resource type="Script" path="res://Scenes/mini_games/shredder/Shred.gd" id="4_e4n14"]
 [ext_resource type="Texture2D" uid="uid://dcm6p18p7lslf" path="res://Assets/Sprites/generic_items/genericItem_color_160.png" id="4_smkob"]
-[ext_resource type="Texture2D" uid="uid://bm178bucru5c3" path="res://Assets/PaperIstra.png" id="6_squqo"]
-[ext_resource type="Texture2D" uid="uid://cqnprxanaj8xk" path="res://Assets/Papertion.png" id="7_6moph"]
-[ext_resource type="Texture2D" uid="uid://cvfowmbihv100" path="res://Assets/WrongPaper1.png" id="8_ck2q6"]
-[ext_resource type="Texture2D" uid="uid://cr8f3w5tfwkru" path="res://Assets/WrongPaper2.png" id="9_o3rdi"]
-[ext_resource type="Texture2D" uid="uid://kddw2eyutlhd" path="res://Assets/Wrongpaper3.png" id="10_th7a5"]
-[ext_resource type="Texture2D" uid="uid://coqy5g3l5jkhq" path="res://Assets/Wrongpaper5.png" id="11_rtk6o"]
-[ext_resource type="Texture2D" uid="uid://c2eijailvc6fo" path="res://Assets/Wrongpaper4.png" id="12_vf57k"]
+[ext_resource type="Texture2D" uid="uid://bm178bucru5c3" path="res://Assets/Sprites/room_1_custom_placeholders/PaperIstra.png" id="6_squqo"]
+[ext_resource type="Texture2D" uid="uid://cqnprxanaj8xk" path="res://Assets/Sprites/room_1_custom_placeholders/Papertion.png" id="7_6moph"]
+[ext_resource type="Texture2D" uid="uid://cvfowmbihv100" path="res://Assets/Sprites/room_1_custom_placeholders/WrongPaper1.png" id="8_ck2q6"]
+[ext_resource type="Texture2D" uid="uid://cr8f3w5tfwkru" path="res://Assets/Sprites/room_1_custom_placeholders/WrongPaper2.png" id="9_o3rdi"]
+[ext_resource type="Texture2D" uid="uid://kddw2eyutlhd" path="res://Assets/Sprites/room_1_custom_placeholders/Wrongpaper3.png" id="10_th7a5"]
+[ext_resource type="Texture2D" uid="uid://coqy5g3l5jkhq" path="res://Assets/Sprites/room_1_custom_placeholders/Wrongpaper5.png" id="11_rtk6o"]
+[ext_resource type="Texture2D" uid="uid://c2eijailvc6fo" path="res://Assets/Sprites/room_1_custom_placeholders/Wrongpaper4.png" id="12_vf57k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_j01bn"]
 font_size = 50
@@ -38,13 +38,13 @@ text = "Find pieces of the document"
 label_settings = SubResource("LabelSettings_j01bn")
 horizontal_alignment = 1
 
-[node name="ClipBoard" type="Sprite2D" parent="." node_paths=PackedStringArray("winningCombo")]
+[node name="ClipBoard" type="Sprite2D" parent="." node_paths=PackedStringArray("winning_combo")]
 position = Vector2(243, 322)
 rotation = 0.242072
 scale = Vector2(2.6129, 4.46109)
 texture = ExtResource("2_ptm7d")
 script = ExtResource("3_rochj")
-winningCombo = [NodePath("../Shred 1"), NodePath("../Shred 2"), NodePath("../Shred 3")]
+winning_combo = [NodePath("../Shred 1"), NodePath("../Shred 2"), null]
 
 [node name="Check1" type="Marker2D" parent="ClipBoard"]
 position = Vector2(-75.8809, -16.8568)
@@ -147,12 +147,4 @@ offset_bottom = 64.0869
 text = "Check"
 horizontal_alignment = 1
 
-[connection signal="pressed" from="Shred 1" to="Shred 1" method="_on_pressed"]
-[connection signal="pressed" from="Shred 2" to="Shred 2" method="_on_pressed"]
-[connection signal="pressed" from="Shred 3" to="Shred 3" method="_on_pressed"]
-[connection signal="pressed" from="Shred 4" to="Shred 4" method="_on_pressed"]
-[connection signal="pressed" from="Shred 5" to="Shred 5" method="_on_pressed"]
-[connection signal="pressed" from="Shred 6" to="Shred 6" method="_on_pressed"]
-[connection signal="pressed" from="Shred 7" to="Shred 7" method="_on_pressed"]
-[connection signal="pressed" from="Shred 8" to="Shred 8" method="_on_pressed"]
 [connection signal="pressed" from="CheckBttn" to="." method="_on_check_bttn_pressed"]

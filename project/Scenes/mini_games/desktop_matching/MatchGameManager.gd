@@ -31,8 +31,6 @@ func win() -> void:
 	queue_free()
 
 
-
 func _on_timer_timeout() -> void:
 	check_pair_matching = false
 	is_timer_started = false
-

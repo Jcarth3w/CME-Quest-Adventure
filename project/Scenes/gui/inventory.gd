@@ -41,3 +41,7 @@ func add_item_image(sprite_path) -> void:
 	else:
 		$Item6.texture = sprite_path
 	current_item += 1
+
+
+func _on_pressed():
+	pass # Replace with function body.
