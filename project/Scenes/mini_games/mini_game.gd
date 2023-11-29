@@ -1,4 +1,4 @@
 class_name MiniGame
-extends Node
+extends Node2D
 
 signal finished
