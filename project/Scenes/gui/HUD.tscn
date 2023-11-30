@@ -90,6 +90,5 @@ texture_normal = ExtResource("4_q42xa")
 
 [node name="InGameMenu" parent="." instance=ExtResource("5_u1xjj")]
 visible = false
-script = null
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

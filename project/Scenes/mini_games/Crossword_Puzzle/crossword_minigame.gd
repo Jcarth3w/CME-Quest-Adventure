@@ -16,12 +16,12 @@ func _ready():
 		if word in answers:
 			answers.get(word).modulate = Color(0, 0, 0)
 			answers.erase(word)
-	print(load_state())
 
 
 func check_completed():
-	var completed_words = load_state().split("\n")
-	completed = completed_words
+	if FileAccess.file_exists("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt"):
+		var completed_words = load_state().split("\n")
+		completed = completed_words
 
 
 func _on_exit_button_pressed():
