@@ -9,6 +9,8 @@ func _ready() -> void:
 
 
 func _on_button_pressed() -> void:
+	var file = FileAccess.open("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt", FileAccess.WRITE)
+	file.store_string("")
 	get_tree().quit()
 
 

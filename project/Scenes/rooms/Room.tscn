@@ -153,6 +153,7 @@ offset_right = 513.0
 offset_bottom = 481.0
 texture_normal = ExtResource("8_jblsr")
 script = ExtResource("18_mfent")
+scene_path = "res://Scenes/static_scene/whiteboard.tscn"
 
 [connection signal="pressed" from="WhiteBoard" to="." method="_on_white_board_pressed"]
 [connection signal="pressed" from="WhiteBoard" to="WhiteBoard" method="_on_pressed"]

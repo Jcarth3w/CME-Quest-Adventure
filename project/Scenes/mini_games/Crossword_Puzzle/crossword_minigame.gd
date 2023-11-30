@@ -1,6 +1,8 @@
 extends MiniGame
 
 var answers: Dictionary = {}
+var completed = []
+#var resource_script = preload("res://Scenes/mini_games/Crossword_Puzzle/save_puzzle.gd").new()
 
 
 func _ready():
@@ -9,10 +11,22 @@ func _ready():
 	answers["cognitivism"] = $Word3
 	answers["constructivism"] = $Word4
 	answers["experiential learning"] = $Word5
+	check_completed()
+	for word in completed:
+		if word in answers:
+			answers.get(word).modulate = Color(0, 0, 0)
+			answers.erase(word)
+	print(load_state())
+
+
+func check_completed():
+	var completed_words = load_state().split("\n")
+	completed = completed_words
 
 
 func _on_exit_button_pressed():
-	visible = false
+	save_state(completed)
+	queue_free()
 
 
 func _on_check_button_pressed():
@@ -25,7 +39,9 @@ func check_answer():
 		# answers.get($UserText.text).visible = true
 		answers.get($UserText.text).modulate = Color(0, 0, 0)
 		answers.erase($UserText.text)
-		print(answers.size())
+		completed.append($UserText.text)
+		#resource_script.add_word($UserText.text)
+		#print(resource_script.saved_answers)
 	$UserText.clear()
 
 
@@ -34,3 +50,14 @@ func check_win():
 		print("You win!")
 		return true
 
+
+func save_state(key):
+	var save_file = FileAccess.open("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt", FileAccess.WRITE)
+	for word in key:
+		save_file.store_string(word + "\n")
+	save_file.close()
+
+
+func load_state():
+	var save_file = FileAccess.open("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt", FileAccess.READ)
+	return save_file.get_as_text()
