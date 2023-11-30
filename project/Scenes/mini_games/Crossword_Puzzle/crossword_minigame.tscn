@@ -5,7 +5,6 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_gqysk"]
 font_size = 40
-font_color = Color(0, 0, 0, 1)
 
 [node name="Crossword_Minigame" type="Node2D"]
 script = ExtResource("1_2buhs")
@@ -17,7 +16,6 @@ offset_bottom = 1080.0
 color = Color(0.694118, 0.431373, 0.431373, 1)
 
 [node name="Word1" type="Label" parent="."]
-visible = false
 offset_left = 281.0
 offset_top = 164.0
 offset_right = 588.0
@@ -26,7 +24,6 @@ text = "andragogy"
 label_settings = SubResource("LabelSettings_gqysk")
 
 [node name="Word2" type="Label" parent="."]
-visible = false
 offset_left = 287.0
 offset_top = 267.0
 offset_right = 594.0
@@ -35,7 +32,6 @@ text = "social learning"
 label_settings = SubResource("LabelSettings_gqysk")
 
 [node name="Word3" type="Label" parent="."]
-visible = false
 offset_left = 289.0
 offset_top = 411.0
 offset_right = 596.0
@@ -44,7 +40,6 @@ text = "cognitivism"
 label_settings = SubResource("LabelSettings_gqysk")
 
 [node name="Word4" type="Label" parent="."]
-visible = false
 offset_left = 288.0
 offset_top = 532.0
 offset_right = 595.0
@@ -53,7 +48,6 @@ text = "constructivism"
 label_settings = SubResource("LabelSettings_gqysk")
 
 [node name="Word5" type="Label" parent="."]
-visible = false
 offset_left = 285.0
 offset_top = 677.0
 offset_right = 682.0

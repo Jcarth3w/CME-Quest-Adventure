@@ -1,0 +1,95 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpvf4ept6b30c"]
+
+[ext_resource type="FontFile" uid="uid://dnyj0jirojhk1" path="res://PermanentMarker-Regular.ttf" id="1_damfi"]
+[ext_resource type="Script" path="res://Scenes/static_scene/whiteboard.gd" id="1_j8hbk"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4e7se"]
+blend_mode = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_lcrqc"]
+font = ExtResource("1_damfi")
+font_size = 43
+font_color = Color(0, 0, 0, 1)
+
+[node name="Whiteboard" type="CanvasLayer"]
+layer = 4
+script = ExtResource("1_j8hbk")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -784.0
+offset_top = -451.0
+offset_right = 784.0
+offset_bottom = 451.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.556863, 0.556863, 0.556863, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -764.5
+offset_top = -434.0
+offset_right = 764.5
+offset_bottom = 434.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+material = SubResource("CanvasItemMaterial_4e7se")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -767.0
+offset_top = 411.0
+offset_right = 868.0
+offset_bottom = 1313.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.938971, 0.030303)
+color = Color(0.607843, 0.607843, 0.607843, 1)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -727.5
+offset_top = -380.5
+offset_right = 727.5
+offset_bottom = 380.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "1. The method and practice of teaching adult learners; 
+adult education.
+2. A theory which proposes that new behaviors can be acquired by 
+observing and imitating others
+3. A theoretical framework for understanding the mind that gained
+ credence in the 1950s.
+
+1. The theory that says learners construct knowledge rather than just
+ passively take in information
+2. The process of learning by doing
+
+"
+label_settings = SubResource("LabelSettings_lcrqc")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 1449.0
+offset_top = 160.0
+offset_right = 1623.0
+offset_bottom = 242.0
+text = "Exit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

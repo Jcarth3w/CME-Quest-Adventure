@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b302n6pq0hkk1"]
+[gd_scene load_steps=20 format=3 uid="uid://b302n6pq0hkk1"]
 
 [ext_resource type="Script" path="res://Scenes/rooms/room1.gd" id="1_dbjvq"]
 [ext_resource type="Texture2D" uid="uid://bkomnkytheji1" path="res://Assets/Sprites/room_1_custom_placeholders/RoomBackground.png" id="2_bb0ow"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cpfslkjfr1qn8" path="res://Assets/Sprites/room_1_custom_placeholders/Flower.png" id="15_tfc22"]
 [ext_resource type="Texture2D" uid="uid://7dh6xy1cyylg" path="res://Assets/Sprites/room_1_custom_placeholders/tissues.png" id="17_iavhs"]
 [ext_resource type="Texture2D" uid="uid://4vloe2o85w0c" path="res://Assets/Sprites/room_1_custom_placeholders/papershredder.png" id="18_lm3ui"]
+[ext_resource type="Script" path="res://Scenes/rooms/WhiteBoardButton.gd" id="18_mfent"]
 
 [node name="Room" type="Node2D"]
 script = ExtResource("1_dbjvq")
@@ -48,10 +49,6 @@ texture = ExtResource("6_21ieq")
 position = Vector2(1741, 270)
 scale = Vector2(0.383744, 0.346015)
 texture = ExtResource("17_iavhs")
-
-[node name="WhiteBoard" type="Sprite2D" parent="."]
-position = Vector2(303, 338)
-texture = ExtResource("8_jblsr")
 
 [node name="Inventory" parent="." instance=ExtResource("7_gy3uc")]
 offset_left = 650.0
@@ -148,3 +145,15 @@ offset_top = 972.0
 offset_right = -292.0
 offset_bottom = 972.0
 texture_normal = ExtResource("4_5llip")
+
+[node name="WhiteBoard" type="TextureButton" parent="."]
+offset_left = 128.0
+offset_top = 184.0
+offset_right = 513.0
+offset_bottom = 481.0
+texture_normal = ExtResource("8_jblsr")
+script = ExtResource("18_mfent")
+
+[connection signal="pressed" from="WhiteBoard" to="." method="_on_white_board_pressed"]
+[connection signal="pressed" from="WhiteBoard" to="WhiteBoard" method="_on_pressed"]
+[connection signal="resume" from="WhiteBoard" to="." method="_on_white_board_resume"]
