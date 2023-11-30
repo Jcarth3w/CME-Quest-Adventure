@@ -1,7 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://ck7p0h0yl242b"]
+[gd_scene load_steps=9 format=3 uid="uid://ck7p0h0yl242b"]
 
 [ext_resource type="Script" path="res://Scenes/mini_games/Crossword_Puzzle/crossword_minigame.gd" id="1_2buhs"]
 [ext_resource type="Texture2D" uid="uid://dcm6p18p7lslf" path="res://Assets/Sprites/generic_items/genericItem_color_160.png" id="2_u0irq"]
+[ext_resource type="Texture2D" uid="uid://ccei2f1iopui6" path="res://Assets/Crossword_Assets/Andragogy.png" id="3_j7o30"]
+[ext_resource type="Texture2D" uid="uid://tbxv0y71tunf" path="res://Assets/Crossword_Assets/Constructivism.png" id="4_wlmub"]
+[ext_resource type="Texture2D" uid="uid://c0xlsuc3xgob7" path="res://Assets/Crossword_Assets/Cognitivism.png" id="5_flse2"]
+[ext_resource type="Texture2D" uid="uid://b5j2o4fvsusb1" path="res://Assets/Crossword_Assets/Experiential_Learning_.png" id="6_iyd71"]
+[ext_resource type="Texture2D" uid="uid://bt16jy3rwsnji" path="res://Assets/Crossword_Assets/Social_Learning.png" id="7_a6isc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_gqysk"]
 font_size = 40
@@ -80,6 +85,31 @@ offset_bottom = 1024.0
 placeholder_text = "Answer Here"
 alignment = 1
 max_length = 21
+
+[node name="Andragogy" type="Sprite2D" parent="."]
+position = Vector2(1004.8, 244.8)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_j7o30")
+
+[node name="Constructivism" type="Sprite2D" parent="."]
+position = Vector2(1268.8, 506.8)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_wlmub")
+
+[node name="Cognitivism" type="Sprite2D" parent="."]
+position = Vector2(1484.8, 242.8)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_flse2")
+
+[node name="ExperientialLearning" type="Sprite2D" parent="."]
+position = Vector2(961.8, 486.8)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("6_iyd71")
+
+[node name="SocialLearning" type="Sprite2D" parent="."]
+position = Vector2(1052.8, 608.8)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_a6isc")
 
 [connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
