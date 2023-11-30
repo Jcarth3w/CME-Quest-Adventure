@@ -17,3 +17,11 @@ func test_check_answer_correct():
 	test_mini.get_node("UserText").text = "andragogy"
 	test_mini.check_answer()
 	assert_eq(test_mini.get_node("Word1").visible, true)
+	
+func test_check_fail():
+	assert_eq(test_mini.check_win(), null)
+
+func test_check_win():
+	test_mini.answers.clear()
+	assert_eq(test_mini.check_win(), true)
+	
