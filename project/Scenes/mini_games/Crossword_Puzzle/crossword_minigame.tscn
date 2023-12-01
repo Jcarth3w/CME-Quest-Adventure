@@ -1,59 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://ck7p0h0yl242b"]
+[gd_scene load_steps=9 format=3 uid="uid://ck7p0h0yl242b"]
 
 [ext_resource type="Script" path="res://Scenes/mini_games/Crossword_Puzzle/crossword_minigame.gd" id="1_2buhs"]
 [ext_resource type="Texture2D" uid="uid://dcm6p18p7lslf" path="res://Assets/Sprites/generic_items/genericItem_color_160.png" id="2_u0irq"]
+[ext_resource type="Texture2D" uid="uid://u7sc0sv2fhxo" path="res://Assets/Crossword_Assets/Andragogy_Empty.png" id="3_kn8gq"]
+[ext_resource type="Texture2D" uid="uid://d3stlj5vd25u" path="res://Assets/Crossword_Assets/Constructivism_Empty.png" id="4_mtr4n"]
+[ext_resource type="Texture2D" uid="uid://gx0omo1aenxk" path="res://Assets/Crossword_Assets/Cognitivism_Empty.png" id="5_kru86"]
+[ext_resource type="Texture2D" uid="uid://cac2ihisxm2am" path="res://Assets/Crossword_Assets/Experiential_Learning_Empty.png" id="6_ch56w"]
+[ext_resource type="Texture2D" uid="uid://bpdotjt2n6qk1" path="res://Assets/Crossword_Assets/Social_Learning_Empty.png" id="7_t6d1h"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_gqysk"]
-font_size = 40
+[sub_resource type="LabelSettings" id="LabelSettings_biiq2"]
+font_size = 42
 
 [node name="Crossword_Minigame" type="Node2D"]
 script = ExtResource("1_2buhs")
 
 [node name="Temp_Background" type="ColorRect" parent="."]
-offset_top = 1.0
-offset_right = 1922.0
-offset_bottom = 1080.0
+offset_left = -3.0
+offset_right = 1919.0
+offset_bottom = 1079.0
 color = Color(0.694118, 0.431373, 0.431373, 1)
-
-[node name="Word1" type="Label" parent="."]
-offset_left = 281.0
-offset_top = 164.0
-offset_right = 588.0
-offset_bottom = 233.0
-text = "andragogy"
-label_settings = SubResource("LabelSettings_gqysk")
-
-[node name="Word2" type="Label" parent="."]
-offset_left = 287.0
-offset_top = 267.0
-offset_right = 594.0
-offset_bottom = 336.0
-text = "social learning"
-label_settings = SubResource("LabelSettings_gqysk")
-
-[node name="Word3" type="Label" parent="."]
-offset_left = 289.0
-offset_top = 411.0
-offset_right = 596.0
-offset_bottom = 480.0
-text = "cognitivism"
-label_settings = SubResource("LabelSettings_gqysk")
-
-[node name="Word4" type="Label" parent="."]
-offset_left = 288.0
-offset_top = 532.0
-offset_right = 595.0
-offset_bottom = 601.0
-text = "constructivism"
-label_settings = SubResource("LabelSettings_gqysk")
-
-[node name="Word5" type="Label" parent="."]
-offset_left = 285.0
-offset_top = 677.0
-offset_right = 682.0
-offset_bottom = 746.0
-text = "experiential learning"
-label_settings = SubResource("LabelSettings_gqysk")
 
 [node name="CheckButton" type="TextureButton" parent="."]
 offset_left = 1184.0
@@ -80,6 +45,39 @@ offset_bottom = 1024.0
 placeholder_text = "Answer Here"
 alignment = 1
 max_length = 21
+
+[node name="Andragogy" type="Sprite2D" parent="."]
+position = Vector2(1009.8, 244.8)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_kn8gq")
+
+[node name="Constructivism" type="Sprite2D" parent="."]
+position = Vector2(1268.8, 506.8)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_mtr4n")
+
+[node name="Cognitivism" type="Sprite2D" parent="."]
+position = Vector2(1484.8, 242.8)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_kru86")
+
+[node name="ExperientialLearning" type="Sprite2D" parent="."]
+position = Vector2(966.8, 486.8)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("6_ch56w")
+
+[node name="SocialLearning" type="Sprite2D" parent="."]
+position = Vector2(1052.8, 608.8)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_t6d1h")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 132.0
+offset_top = 55.0
+offset_right = 298.0
+offset_bottom = 146.0
+text = "WHAT ARE THE WORDS??"
+label_settings = SubResource("LabelSettings_biiq2")
 
 [connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

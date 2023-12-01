@@ -1,18 +1,36 @@
 extends MiniGame
 
 var answers: Dictionary = {}
+var completed = []
+var answer_obj = {
+	"term": "andragogy",
+	"path": "res://Assets/Crossword_Assets/Andragogy.png"
+}
+#var resource_script = preload("res://Scenes/mini_games/Crossword_Puzzle/save_puzzle.gd").new()
 
 
 func _ready():
-	answers["andragogy"] = $Word1
-	answers["social learning"] = $Word2
-	answers["cognitivism"] = $Word3
-	answers["constructivism"] = $Word4
-	answers["experiential learning"] = $Word5
+	answers["andragogy"] = $Andragogy
+	answers["social learning"] = $SocialLearning
+	answers["cognitivism"] = $Cognitivism
+	answers["constructivism"] = $Constructivism
+	answers["experiential learning"] = $ExperientialLearning
+	check_completed()
+	for word in completed:
+		if word in answers:
+			answers.get(word).texture = load("res://Assets/Crossword_Assets/" + word + ".png")
+			answers.erase(word)
+
+
+func check_completed():
+	if FileAccess.file_exists("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt"):
+		var completed_words = load_state().split("\n")
+		completed = completed_words
 
 
 func _on_exit_button_pressed():
-	visible = false
+	save_state(completed)
+	queue_free()
 
 
 func _on_check_button_pressed():
@@ -22,15 +40,28 @@ func _on_check_button_pressed():
 
 func check_answer():
 	if $UserText.text in answers: 
-		# answers.get($UserText.text).visible = true
-		answers.get($UserText.text).modulate = Color(0, 0, 0)
+		print("res://Assets/Crossword_Assets/" + $UserText.text.capitalize() + ".png")
+		answers.get($UserText.text).texture = load("res://Assets/Crossword_Assets/" + $UserText.text.capitalize() + ".png")
 		answers.erase($UserText.text)
-		print(answers.size())
+		completed.append($UserText.text)
 	$UserText.clear()
 
 
 func check_win():
 	if answers.size() == 0:
-		print("You win!")
-		return true
+		$Label.text = "You win!"
+		await get_tree().create_timer(1.5).timeout
+		finished.emit()
+		queue_free()
 
+
+func save_state(key):
+	var save_file = FileAccess.open("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt", FileAccess.WRITE)
+	for word in key:
+		save_file.store_string(word + "\n") 
+	save_file.close()
+
+
+func load_state():
+	var save_file = FileAccess.open("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt", FileAccess.READ)
+	return save_file.get_as_text()
