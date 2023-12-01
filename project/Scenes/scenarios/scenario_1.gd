@@ -2,7 +2,7 @@ extends Node2D
 
 var current_room = 1
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	$Room2.pause_game()
 	$Room2.visible = false
@@ -20,6 +20,14 @@ func enter_room(room_number):
 		$Room.pause_game()
 		$Room2.visible = true
 		$Room2.resume_game()
+
+
+func check_unlock():
+	if $Room.check_win():
+		$HUD.empty_inventory()
+		$HUD.add_item("Folder", load("res://Assets/Sprites/room_1_custom_placeholders/Promo_file.png"))
+		$HUD/RoomMenu/Room2.visible = true
+		$HUD/WhiteRect/Label.text = "Find the adult learning resources"
 
 
 func pause_room():

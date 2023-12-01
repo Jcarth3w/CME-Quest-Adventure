@@ -1,12 +1,8 @@
 extends MiniGame
 
+
 var answers: Dictionary = {}
 var completed = []
-var answer_obj = {
-	"term": "andragogy",
-	"path": "res://Assets/Crossword_Assets/Andragogy.png"
-}
-#var resource_script = preload("res://Scenes/mini_games/Crossword_Puzzle/save_puzzle.gd").new()
 
 
 func _ready():
@@ -30,6 +26,7 @@ func check_completed():
 
 func _on_exit_button_pressed():
 	save_state(completed)
+	get_tree().get_root().get_node("Scenario1").get_node("Room2").resume_game()
 	queue_free()
 
 

@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://dxurrur4fkonu"]
 
 [ext_resource type="Script" path="res://Scenes/rooms/room_2.gd" id="1_ubila"]
-[ext_resource type="Texture2D" uid="uid://ytuunfigl51e" path="res://Assets/Sprites/generic_items/genericItem_color_002.png" id="2_ofyfl"]
+[ext_resource type="Texture2D" uid="uid://cbcx08btklchr" path="res://Assets/Sprites/room_1_custom_placeholders/Unknown_paper.png" id="2_74e56"]
 [ext_resource type="Script" path="res://Clickables/pickup/pickup.gd" id="3_s0qje"]
 [ext_resource type="Script" path="res://Clickables/new_scene/New_Scene_Object.gd" id="4_3ac61"]
-[ext_resource type="Texture2D" uid="uid://bnfsb4xujmpxk" path="res://Assets/Sprites/generic_items/genericItem_color_006.png" id="4_kft78"]
-[ext_resource type="Texture2D" uid="uid://d2jkjc2gxd0c3" path="res://Assets/Sprites/generic_items/genericItem_color_007.png" id="5_gdupb"]
 [ext_resource type="Texture2D" uid="uid://dqunufa6yvb80" path="res://Assets/Sprites/generic_items/genericItem_color_032.png" id="6_b6ws3"]
+[ext_resource type="PackedScene" uid="uid://c7brg2hyybb7t" path="res://Clickables/static_scene_btn/static_scene_button.tscn" id="7_nlnrm"]
+[ext_resource type="Texture2D" uid="uid://bn3kp4ijyl0oa" path="res://Assets/Sprites/room_1_custom_placeholders/filecabinet.jpg" id="8_y2axu"]
 [ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Clickables/pickup/pickup.tscn" id="9_blg0f"]
 
 [node name="Room2" type="Node2D"]
@@ -20,37 +20,19 @@ offset_bottom = 1083.0
 color = Color(0.34902, 0.537255, 0.654902, 1)
 
 [node name="Crossword_Button" type="TextureButton" parent="." node_paths=PackedStringArray("mini_game_prize")]
-offset_left = 891.0
-offset_top = 708.0
-offset_right = 1011.0
-offset_bottom = 818.0
-texture_normal = ExtResource("2_ofyfl")
+offset_left = 833.0
+offset_top = 380.0
+offset_right = 1021.0
+offset_bottom = 605.0
+texture_normal = ExtResource("2_74e56")
 script = ExtResource("4_3ac61")
 scene_path = "res://Scenes/mini_games/Crossword_Puzzle/crossword_minigame.tscn"
 mini_game_prize = NodePath("../prize")
 
-[node name="Bookcase1_Button" type="TextureButton" parent="."]
-offset_left = 464.0
-offset_top = 511.0
-offset_right = 560.0
-offset_bottom = 595.0
-texture_normal = ExtResource("4_kft78")
-script = ExtResource("4_3ac61")
-scene_path = "res://Scenes/mini_games/desktop_matching/DeskMiniGame.tscn"
-
-[node name="Bookcase2_Button" type="TextureButton" parent="."]
-offset_left = 1404.0
-offset_top = 498.0
-offset_right = 1464.0
-offset_bottom = 593.0
-texture_normal = ExtResource("5_gdupb")
-script = ExtResource("4_3ac61")
-scene_path = "res://Scenes/mini_games/desktop_matching/DeskMiniGame.tscn"
-
 [node name="Key_Button" type="TextureButton" parent="."]
-offset_left = 876.0
+offset_left = 2075.0
 offset_top = 289.0
-offset_right = 992.0
+offset_right = 2191.0
 offset_bottom = 401.0
 texture_normal = ExtResource("6_b6ws3")
 script = ExtResource("3_s0qje")
@@ -62,7 +44,13 @@ offset_right = -140.0
 offset_bottom = 252.0
 texture_normal = ExtResource("6_b6ws3")
 
+[node name="StaticSceneButton" parent="." instance=ExtResource("7_nlnrm")]
+offset_left = 1330.0
+offset_top = 227.0
+offset_right = 1589.0
+offset_bottom = 838.0
+texture_normal = ExtResource("8_y2axu")
+scene_path = "res://Scenes/static_scene/crossword_answers.tscn"
+
 [connection signal="pressed" from="Crossword_Button" to="Crossword_Button" method="_on_pressed"]
-[connection signal="pressed" from="Bookcase1_Button" to="Bookcase1_Button" method="_on_pressed"]
-[connection signal="pressed" from="Bookcase2_Button" to="Bookcase2_Button" method="_on_pressed"]
 [connection signal="pressed" from="Key_Button" to="Key_Button" method="_on_pressed"]

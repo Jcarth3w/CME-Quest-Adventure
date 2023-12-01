@@ -30,10 +30,10 @@ texture_normal = ExtResource("2_u0irq")
 
 [node name="ExitButton" type="TextureButton" parent="."]
 modulate = Color(1, 0, 0, 1)
-offset_left = 1811.0
-offset_top = 47.0
-offset_right = 1849.0
-offset_bottom = 87.0
+offset_left = 1757.0
+offset_top = 195.0
+offset_right = 1795.0
+offset_bottom = 235.0
 scale = Vector2(1.79705, 1.83249)
 texture_normal = ExtResource("2_u0irq")
 
@@ -47,35 +47,35 @@ alignment = 1
 max_length = 21
 
 [node name="Andragogy" type="Sprite2D" parent="."]
-position = Vector2(1009.8, 244.8)
+position = Vector2(682.2, 339.8)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_kn8gq")
 
 [node name="Constructivism" type="Sprite2D" parent="."]
-position = Vector2(1268.8, 506.8)
+position = Vector2(941.2, 601.8)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("4_mtr4n")
 
 [node name="Cognitivism" type="Sprite2D" parent="."]
-position = Vector2(1484.8, 242.8)
+position = Vector2(1157.2, 337.8)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("5_kru86")
 
 [node name="ExperientialLearning" type="Sprite2D" parent="."]
-position = Vector2(966.8, 486.8)
+position = Vector2(639.2, 581.8)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("6_ch56w")
 
 [node name="SocialLearning" type="Sprite2D" parent="."]
-position = Vector2(1052.8, 608.8)
+position = Vector2(725.2, 703.8)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("7_t6d1h")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 132.0
-offset_top = 55.0
-offset_right = 298.0
-offset_bottom = 146.0
+offset_left = 24.0
+offset_top = 185.0
+offset_right = 530.0
+offset_bottom = 276.0
 text = "WHAT ARE THE WORDS??"
 label_settings = SubResource("LabelSettings_biiq2")
 
