@@ -14,6 +14,7 @@ func _ready():
 	$InGameMenu.get_node("scenario").pressed.connect(_on_scenario_pressed)
 	$RoomMenu.get_node("Room1").pressed.connect(_on_room1_pressed)
 	$RoomMenu.get_node("Room2").pressed.connect(_on_room2_pressed)
+	$RoomMenu.get_node("Room2").visible = false
 	
 
 func add_item_image(sprite_path) -> void:
@@ -30,7 +31,15 @@ func add_item_image(sprite_path) -> void:
 	else:
 		$Inventory/Item6.texture = sprite_path
 	current_item += 1
+	owner.check_unlock()
 
+
+func empty_inventory():
+	current_item = 1
+	for item in $Inventory.get_children():
+		if item is Sprite2D:
+			item.texture = null
+	items.clear()
 
 func add_item(item_name, sprite_path) -> void:
 	items.append(item_name)
@@ -39,8 +48,9 @@ func add_item(item_name, sprite_path) -> void:
 
 func _on_menu_button_pressed():
 		owner.pause_room()
-		$InGameMenu.visible = true
-		$Timer.stop()
+		if $RoomMenu.visible == false:
+			$Timer.stop()
+			$InGameMenu.visible = true
 
 
 func _on_quit_pressed():
@@ -64,8 +74,8 @@ func _on_scenario_pressed():
 
 func _on_map_button_pressed():
 	owner.pause_room()
-	$RoomMenu.visible = true
-	$Timer.stop()
+	if $InGameMenu.visible == false:
+			$RoomMenu.visible = true
 
 
 func _on_room1_pressed():

@@ -14,10 +14,6 @@ func check_win():
 	pass
 
 
-func _process(_delta):
-	check_win()
-
-
 func _on_scene_change(command) -> void:
 	if command == "pause":
 		pause_game()

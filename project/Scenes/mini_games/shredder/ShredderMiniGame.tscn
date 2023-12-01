@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cs0rndg84v7q0"]
+[gd_scene load_steps=14 format=3 uid="uid://cs0rndg84v7q0"]
 
 [ext_resource type="Script" path="res://Scenes/mini_games/shredder/ShredderMiniGame.gd" id="1_51bei"]
 [ext_resource type="Texture2D" uid="uid://wjox7l8cx5c4" path="res://Assets/Sprites/generic_items/genericItem_color_141.png" id="2_ptm7d"]
@@ -14,11 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://coqy5g3l5jkhq" path="res://Assets/Sprites/room_1_custom_placeholders/Wrongpaper5.png" id="11_rtk6o"]
 [ext_resource type="Texture2D" uid="uid://c2eijailvc6fo" path="res://Assets/Sprites/room_1_custom_placeholders/Wrongpaper4.png" id="12_vf57k"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_j01bn"]
-font_size = 50
-outline_size = 5
-outline_color = Color(0, 0, 0, 1)
-
 [node name="ShredderMiniGame" type="Node2D"]
 script = ExtResource("1_51bei")
 
@@ -28,18 +23,8 @@ offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0.0784314, 0.709804, 0.192157, 1)
 
-[node name="Label" type="Label" parent="."]
-offset_left = 620.0
-offset_top = 28.0
-offset_right = 1237.0
-offset_bottom = 122.0
-theme_override_font_sizes/font_size = 45
-text = "Find pieces of the document"
-label_settings = SubResource("LabelSettings_j01bn")
-horizontal_alignment = 1
-
 [node name="ClipBoard" type="Sprite2D" parent="." node_paths=PackedStringArray("winning_combo")]
-position = Vector2(243, 322)
+position = Vector2(231, 403)
 rotation = 0.242072
 scale = Vector2(2.6129, 4.46109)
 texture = ExtResource("2_ptm7d")
@@ -59,73 +44,73 @@ position = Vector2(13.5045, -27.813)
 scale = Vector2(0.5, 0.5)
 
 [node name="Shred 1" type="TextureButton" parent="."]
-offset_left = 1531.12
-offset_top = 328.369
-offset_right = 1718.12
-offset_bottom = 1161.37
+offset_left = 1492.12
+offset_top = 343.37
+offset_right = 1679.12
+offset_bottom = 1176.37
 rotation = 0.866083
 texture_normal = ExtResource("4_6a764")
 script = ExtResource("4_e4n14")
 
 [node name="Shred 2" type="TextureButton" parent="."]
-offset_left = 1547.12
-offset_top = 300.369
-offset_right = 1734.12
-offset_bottom = 1133.37
+offset_left = 1508.12
+offset_top = 315.37
+offset_right = 1695.12
+offset_bottom = 1148.37
 rotation = -0.320482
 texture_normal = ExtResource("6_squqo")
 script = ExtResource("4_e4n14")
 
 [node name="Shred 3" type="TextureButton" parent="."]
-offset_left = 1128.0
-offset_top = 1030.0
-offset_right = 1315.0
-offset_bottom = 1863.0
+offset_left = 1089.0
+offset_top = 1045.0
+offset_right = 1276.0
+offset_bottom = 1878.0
 rotation = -1.62383
 texture_normal = ExtResource("7_6moph")
 script = ExtResource("4_e4n14")
 
 [node name="Shred 4" type="TextureButton" parent="."]
-offset_left = 494.117
-offset_top = 232.369
-offset_right = 681.117
-offset_bottom = 1065.37
+offset_left = 455.117
+offset_top = 247.37
+offset_right = 642.117
+offset_bottom = 1080.37
 rotation = -0.753436
 texture_normal = ExtResource("8_ck2q6")
 script = ExtResource("4_e4n14")
 
 [node name="Shred 5" type="TextureButton" parent="."]
-offset_left = 431.117
-offset_top = 344.369
-offset_right = 618.117
-offset_bottom = 1177.37
+offset_left = 392.117
+offset_top = 359.37
+offset_right = 579.117
+offset_bottom = 1192.37
 rotation = -0.454467
 texture_normal = ExtResource("9_o3rdi")
 script = ExtResource("4_e4n14")
 
 [node name="Shred 6" type="TextureButton" parent="."]
-offset_left = 518.117
-offset_top = 837.369
-offset_right = 705.117
-offset_bottom = 1670.37
+offset_left = 479.117
+offset_top = 852.37
+offset_right = 666.117
+offset_bottom = 1685.37
 rotation = 3.72453
 texture_normal = ExtResource("10_th7a5")
 script = ExtResource("4_e4n14")
 
 [node name="Shred 7" type="TextureButton" parent="."]
-offset_left = 1001.12
-offset_top = 196.369
-offset_right = 1188.12
-offset_bottom = 1029.37
+offset_left = 962.12
+offset_top = 211.37
+offset_right = 1149.12
+offset_bottom = 1044.37
 rotation = 0.677643
 texture_normal = ExtResource("12_vf57k")
 script = ExtResource("4_e4n14")
 
 [node name="Shred 8" type="TextureButton" parent="."]
-offset_left = 1121.12
-offset_top = 852.369
-offset_right = 1308.12
-offset_bottom = 1685.37
+offset_left = 1082.12
+offset_top = 867.37
+offset_right = 1269.12
+offset_bottom = 1700.37
 rotation = 2.30034
 texture_normal = ExtResource("11_rtk6o")
 script = ExtResource("4_e4n14")

@@ -79,10 +79,10 @@ x_coordinate = 1010
 y_coordinate = 543
 
 [node name="Chair" parent="." instance=ExtResource("14_rvr23")]
-offset_left = 214.0
-offset_top = 541.0
-offset_right = 439.0
-offset_bottom = 889.0
+offset_left = 242.0
+offset_top = 551.0
+offset_right = 467.0
+offset_bottom = 899.0
 texture_normal = ExtResource("12_0w1me")
 x_coordinate = 118
 y_coordinate = 557
