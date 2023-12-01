@@ -29,6 +29,6 @@ func _on_finished() -> void:
 	scene_changed.emit("resume")
 	finished = true
 	if mini_game_prize != null:
-		mini_game_prize.inventory.add_item(mini_game_prize.name, mini_game_prize.texture_normal)
+		mini_game_prize.pressed()
 	else:
 		pass

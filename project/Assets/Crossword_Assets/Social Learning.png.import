@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5j2o4fvsusb1"
-path="res://.godot/imported/Experiential_Learning_.png-425913327a69edf2800c74ed9a4baa95.ctex"
+uid="uid://bt16jy3rwsnji"
+path="res://.godot/imported/Social Learning.png-1c3a948152b2a17da8882d6e4563936a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Crossword_Assets/Experiential_Learning_.png"
-dest_files=["res://.godot/imported/Experiential_Learning_.png-425913327a69edf2800c74ed9a4baa95.ctex"]
+source_file="res://Assets/Crossword_Assets/Social Learning.png"
+dest_files=["res://.godot/imported/Social Learning.png-1c3a948152b2a17da8882d6e4563936a.ctex"]
 
 [params]
 

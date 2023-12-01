@@ -1,17 +1,18 @@
-extends TextureButton
+extends Clickable
 
-signal resume
+
 @export var scene_path : String
 
-
-func _process(_delta):
-	if not has_node("whiteboard") :
-		resume.emit()
-
 func _on_pressed():
-	spawn_scene()
+	if state == "active":
+		spawn_scene()
 
 func spawn_scene():
 	var scene_load = load(scene_path)
 	var scene = scene_load.instantiate()
+	scene.finished.connect(_on_finished)
 	add_child(scene)
+	owner.pause_game()
+
+func _on_finished():
+	owner.resume_game()
