@@ -1,14 +1,16 @@
 extends GutTest
 
-var test_room_preload = preload("res://Tests/TestRoom.tscn")
-var test_room: Node2D
+var test_scenario_preload = preload("res://Tests/TestScenario.tscn")
+var test_scenario: Node2D
+var hud
 var timer
 
 
 func before_all() -> void:
-	test_room = test_room_preload.instantiate()
-	get_tree().root.add_child(test_room)
-	timer = test_room.get_node("HUD/Timer")
+	test_scenario = test_scenario_preload.instantiate()
+	get_tree().root.add_child(test_scenario)
+	hud = test_scenario.get_node("HUD")
+	timer = hud.get_node("Timer")
 
 
 func test_timer():

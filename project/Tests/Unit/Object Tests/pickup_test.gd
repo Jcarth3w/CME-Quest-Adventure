@@ -1,13 +1,15 @@
 extends GutTest
 
-var test_room_preload = preload("res://Tests/TestRoom.tscn")
+var test_scenario_preload = preload("res://Tests/TestScenario.tscn")
+var test_scenario: Node2D
 var test_room: Node2D
 var pickup
 
 
 func before_all() -> void:
-	test_room = test_room_preload.instantiate()
+	test_scenario = test_scenario_preload.instantiate()
 	get_tree().root.add_child(test_room)
+	test_room = test_scenario.get_node("Room")
 	pickup = test_room.get_node("TestPickup")
 
 
