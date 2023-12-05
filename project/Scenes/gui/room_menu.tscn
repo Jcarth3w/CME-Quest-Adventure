@@ -38,10 +38,10 @@ label_settings = SubResource("LabelSettings_6adl1")
 metadata/_edit_use_anchors_ = true
 
 [node name="Room1" type="TextureButton" parent="."]
-offset_left = 824.0
-offset_top = 541.0
-offset_right = 887.0
-offset_bottom = 606.0
+offset_left = 813.0
+offset_top = 536.0
+offset_right = 876.0
+offset_bottom = 601.0
 texture_normal = ExtResource("1_s6ykq")
 flip_h = true
 

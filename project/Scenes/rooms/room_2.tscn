@@ -21,12 +21,14 @@ offset_bottom = 1080.0
 color = Color(0.745098, 0.909804, 0.882353, 1)
 
 [node name="BackgroundSplitter" type="ColorRect" parent="Background wall"]
+layout_mode = 0
 offset_top = 723.0
 offset_right = 1920.0
 offset_bottom = 771.0
 color = Color(0.294118, 0.486275, 0.498039, 1)
 
 [node name="BackgroundFloor" type="ColorRect" parent="Background wall/BackgroundSplitter"]
+layout_mode = 0
 offset_top = 48.0
 offset_right = 1920.0
 offset_bottom = 360.0

@@ -78,6 +78,14 @@ script = ExtResource("10_u6dd1")
 x_coordinate = 1010
 y_coordinate = 543
 
+[node name="DeskGame" parent="." node_paths=PackedStringArray("mini_game_prize") instance=ExtResource("8_je1k2")]
+offset_left = 74.0
+offset_top = 595.0
+offset_right = 598.0
+offset_bottom = 702.0
+scene_path = "res://Scenes/mini_games/desktop_matching/DeskMiniGame.tscn"
+mini_game_prize = NodePath("../MiniGamePrize3")
+
 [node name="Chair" parent="." instance=ExtResource("14_rvr23")]
 offset_left = 242.0
 offset_top = 551.0
@@ -106,14 +114,6 @@ scale = Vector2(0.172647, 0.162982)
 texture_normal = ExtResource("18_lm3ui")
 scene_path = "res://Scenes/mini_games/shredder/ShredderMiniGame.tscn"
 mini_game_prize = NodePath("../MiniGamePrize2")
-
-[node name="DeskGame" parent="." node_paths=PackedStringArray("mini_game_prize") instance=ExtResource("8_je1k2")]
-offset_left = 74.0
-offset_top = 595.0
-offset_right = 598.0
-offset_bottom = 629.0
-scene_path = "res://Scenes/mini_games/desktop_matching/DeskMiniGame.tscn"
-mini_game_prize = NodePath("../MiniGamePrize3")
 
 [node name="MiniGamePrize1" parent="." instance=ExtResource("2_pjc2w")]
 offset_left = -273.0
