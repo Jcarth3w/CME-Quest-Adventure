@@ -1,10 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://dpvf4ept6b30c"]
+[gd_scene load_steps=7 format=3 uid="uid://dpvf4ept6b30c"]
 
 [ext_resource type="FontFile" uid="uid://dnyj0jirojhk1" path="res://PermanentMarker-Regular.ttf" id="1_damfi"]
 [ext_resource type="Script" path="res://Scenes/static_scene/whiteboard.gd" id="1_j8hbk"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4e7se"]
 blend_mode = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_343dc"]
+font = ExtResource("1_damfi")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mmmt0"]
+font = ExtResource("1_damfi")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_lcrqc"]
 font = ExtResource("1_damfi")
@@ -58,7 +68,23 @@ grow_vertical = 2
 scale = Vector2(0.938971, 0.030303)
 color = Color(0.607843, 0.607843, 0.607843, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="Vertical" type="Label" parent="."]
+offset_left = 221.0
+offset_top = 627.0
+offset_right = 353.0
+offset_bottom = 674.0
+text = "Vertical"
+label_settings = SubResource("LabelSettings_343dc")
+
+[node name="Horizontal" type="Label" parent="."]
+offset_left = 215.0
+offset_top = 118.0
+offset_right = 380.0
+offset_bottom = 165.0
+text = "Horizontal"
+label_settings = SubResource("LabelSettings_mmmt0")
+
+[node name="Clues" type="Label" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -76,6 +102,7 @@ adult education.
 observing and imitating others
 3. A theoretical framework for understanding the mind that gained
  credence in the 1950s.
+
 
 1. The theory that says learners construct knowledge rather than just
  passively take in information

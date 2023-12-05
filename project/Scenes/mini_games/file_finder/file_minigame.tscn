@@ -9,15 +9,22 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_js1u7"]
 font_size = 50
-outline_size = 5
+outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 
 [node name="FileMinigame" type="Node2D"]
 script = ExtResource("1_uttu5")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="EdgeBackground" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(1920, 1080)
-color = Color(0.420561, 0.414643, 0.755414, 1)
+color = Color(0, 0.427451, 0.615686, 1)
+
+[node name="frontBackground" type="ColorRect" parent="."]
+offset_left = 21.0
+offset_top = 146.0
+offset_right = 1902.0
+offset_bottom = 1061.0
+color = Color(0.294118, 0.588235, 0.898039, 1)
 
 [node name="Previous" type="Button" parent="."]
 anchors_preset = 4

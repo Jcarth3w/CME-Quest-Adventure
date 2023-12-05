@@ -23,11 +23,17 @@ func enter_room(room_number):
 
 
 func check_unlock():
-	if $Room.check_win():
-		$HUD.empty_inventory()
-		$HUD.add_item("Folder", load("res://Assets/Sprites/room_1_custom_placeholders/Promo_file.png"))
-		$HUD/RoomMenu/Room2.visible = true
-		$HUD/WhiteRect/Label.text = "Find the adult learning resources"
+	if current_room == 1:
+		if $Room.check_win():
+			$HUD.empty_inventory()
+			$HUD.add_item("Folder", load("res://Assets/Sprites/room_1_custom_placeholders/Promo_file.png"))
+			$HUD/RoomMenu/Room2.visible = true
+			$HUD/WhiteRect/Label.text = "Find the adult learning resources"
+	elif current_room == 2:
+		if $Room2.check_win():
+			$HUD/Timer.stop()
+			$HUD/WhiteRect/Label.text = "Congratulations! You Won!"
+			
 
 
 func pause_room():

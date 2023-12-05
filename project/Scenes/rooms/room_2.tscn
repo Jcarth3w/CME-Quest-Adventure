@@ -1,30 +1,46 @@
-[gd_scene load_steps=9 format=3 uid="uid://dxurrur4fkonu"]
+[gd_scene load_steps=11 format=3 uid="uid://dxurrur4fkonu"]
 
 [ext_resource type="Script" path="res://Scenes/rooms/room_2.gd" id="1_ubila"]
-[ext_resource type="Texture2D" uid="uid://cbcx08btklchr" path="res://Assets/Sprites/room_1_custom_placeholders/Unknown_paper.png" id="2_74e56"]
+[ext_resource type="Texture2D" uid="uid://d1gbpeh7j816b" path="res://Assets/Sprites/Room2/Board.png" id="2_hnst7"]
 [ext_resource type="Script" path="res://Clickables/pickup/pickup.gd" id="3_s0qje"]
 [ext_resource type="Script" path="res://Clickables/new_scene/New_Scene_Object.gd" id="4_3ac61"]
 [ext_resource type="Texture2D" uid="uid://dqunufa6yvb80" path="res://Assets/Sprites/generic_items/genericItem_color_032.png" id="6_b6ws3"]
 [ext_resource type="PackedScene" uid="uid://c7brg2hyybb7t" path="res://Clickables/static_scene_btn/static_scene_button.tscn" id="7_nlnrm"]
-[ext_resource type="Texture2D" uid="uid://bn3kp4ijyl0oa" path="res://Assets/Sprites/room_1_custom_placeholders/filecabinet.jpg" id="8_y2axu"]
+[ext_resource type="Texture2D" uid="uid://bniggs3y0fm5a" path="res://Assets/Sprites/Room2/Bookshelf.png" id="8_88w0v"]
+[ext_resource type="Texture2D" uid="uid://dmm1o4xemcxfx" path="res://Assets/Sprites/Room2/Desk.png" id="9_1hoo2"]
 [ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Clickables/pickup/pickup.tscn" id="9_blg0f"]
+[ext_resource type="Texture2D" uid="uid://k7tyhsc5hvsx" path="res://Assets/Sprites/room_1_custom_placeholders/chair.png" id="10_msxcf"]
 
 [node name="Room2" type="Node2D"]
 script = ExtResource("1_ubila")
 
-[node name="Placeholder_Background" type="ColorRect" parent="."]
-offset_left = -3.0
+[node name="Background wall" type="ColorRect" parent="."]
 offset_top = -3.0
-offset_right = 1924.0
-offset_bottom = 1083.0
-color = Color(0.34902, 0.537255, 0.654902, 1)
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.745098, 0.909804, 0.882353, 1)
+
+[node name="BackgroundSplitter" type="ColorRect" parent="Background wall"]
+layout_mode = 0
+offset_top = 723.0
+offset_right = 1920.0
+offset_bottom = 771.0
+color = Color(0.294118, 0.486275, 0.498039, 1)
+
+[node name="BackgroundFloor" type="ColorRect" parent="Background wall/BackgroundSplitter"]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 1920.0
+offset_bottom = 360.0
+color = Color(0.560784, 0.729412, 0.72549, 1)
 
 [node name="Crossword_Button" type="TextureButton" parent="." node_paths=PackedStringArray("mini_game_prize")]
-offset_left = 833.0
-offset_top = 380.0
-offset_right = 1021.0
-offset_bottom = 605.0
-texture_normal = ExtResource("2_74e56")
+offset_left = 732.0
+offset_top = 180.0
+offset_right = 1329.0
+offset_bottom = 626.0
+scale = Vector2(0.765119, 0.666354)
+texture_normal = ExtResource("2_hnst7")
 script = ExtResource("4_3ac61")
 scene_path = "res://Scenes/mini_games/Crossword_Puzzle/crossword_minigame.tscn"
 mini_game_prize = NodePath("../prize")
@@ -45,12 +61,25 @@ offset_bottom = 252.0
 texture_normal = ExtResource("6_b6ws3")
 
 [node name="StaticSceneButton" parent="." instance=ExtResource("7_nlnrm")]
-offset_left = 1330.0
-offset_top = 227.0
-offset_right = 1589.0
-offset_bottom = 838.0
-texture_normal = ExtResource("8_y2axu")
+offset_left = 1384.0
+offset_top = 232.0
+offset_right = 1798.0
+offset_bottom = 867.0
+texture_normal = ExtResource("8_88w0v")
 scene_path = "res://Scenes/static_scene/crossword_answers.tscn"
+
+[node name="Desk" type="Sprite2D" parent="."]
+position = Vector2(509.766, 749.351)
+scale = Vector2(1.41546, 1.9632)
+texture = ExtResource("9_1hoo2")
+
+[node name="Chair" type="Sprite2D" parent="."]
+position = Vector2(351, 718)
+texture = ExtResource("10_msxcf")
+
+[node name="Chair2" type="Sprite2D" parent="."]
+position = Vector2(679, 717)
+texture = ExtResource("10_msxcf")
 
 [connection signal="pressed" from="Crossword_Button" to="Crossword_Button" method="_on_pressed"]
 [connection signal="pressed" from="Key_Button" to="Key_Button" method="_on_pressed"]
