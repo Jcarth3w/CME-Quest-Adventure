@@ -7,3 +7,16 @@ table {
     text-align: center;
     margin: auto;
 }
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: auto;
+}
+
+.search-form .answer-field {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}

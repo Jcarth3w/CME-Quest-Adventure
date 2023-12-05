@@ -25,7 +25,7 @@
     $password = "root";
     $dbname = "cme_quest_adventures";
 
-    $findname = $_POST['findname'];
+    $findname = $_GET['findname'];
 
     try {
         $conn = new PDO("mysql:host=" . $servername . ";dbname=" . $dbname, $username, $password);
