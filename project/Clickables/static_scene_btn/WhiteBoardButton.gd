@@ -1,5 +1,5 @@
+class_name StaticScene
 extends Clickable
-
 
 @export var scene_path : String
 

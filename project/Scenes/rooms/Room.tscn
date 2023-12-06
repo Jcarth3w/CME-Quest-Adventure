@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cpfslkjfr1qn8" path="res://Assets/Sprites/room_1_custom_placeholders/Flower.png" id="15_tfc22"]
 [ext_resource type="Texture2D" uid="uid://7dh6xy1cyylg" path="res://Assets/Sprites/room_1_custom_placeholders/tissues.png" id="17_iavhs"]
 [ext_resource type="Texture2D" uid="uid://4vloe2o85w0c" path="res://Assets/Sprites/room_1_custom_placeholders/papershredder.png" id="18_lm3ui"]
-[ext_resource type="Script" path="res://Scenes/rooms/WhiteBoardButton.gd" id="18_mfent"]
+[ext_resource type="Script" path="res://Clickables/static_scene_btn/WhiteBoardButton.gd" id="18_mfent"]
 
 [node name="Room" type="Node2D"]
 script = ExtResource("1_dbjvq")

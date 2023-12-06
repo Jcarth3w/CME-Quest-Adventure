@@ -5,7 +5,8 @@ signal resume
 
 var items = []
 var current_item := 1
-
+var map_active = true
+var menu_active = true
 var scenario_menu = preload("res://Scenes/gui/scenario_menu.tscn")
 
 func _ready():
@@ -41,12 +42,14 @@ func empty_inventory():
 			item.texture = null
 	items.clear()
 
+
 func add_item(item_name, sprite_path) -> void:
 	items.append(item_name)
 	add_item_image(sprite_path)
 
 
 func _on_menu_button_pressed():
+	if menu_active:
 		owner.pause_room()
 		if $RoomMenu.visible == false:
 			$Timer.stop()
@@ -73,20 +76,21 @@ func _on_scenario_pressed():
 
 
 func _on_map_button_pressed():
-	owner.pause_room()
-	if $InGameMenu.visible == false:
-			$RoomMenu.visible = true
+	if map_active:
+		owner.pause_room()
+		if $InGameMenu.visible == false:
+				$RoomMenu.visible = true
 
 
 func _on_room1_pressed():
 	owner.enter_room(1)
 	$RoomMenu.visible = false
 	owner.resume_room()
-	$Timer.start()
+
 
 
 func _on_room2_pressed():
 	owner.enter_room(2)
 	$RoomMenu.visible = false
 	owner.resume_room()
-	$Timer.start()
+
