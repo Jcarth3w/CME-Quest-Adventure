@@ -33,8 +33,21 @@ func check_unlock():
 		if $Room2.check_win():
 			$HUD/Timer.stop()
 			$HUD/WhiteRect/Label.text = "Congratulations! You Won!"
-			
 
+
+func disable_menu(menu) -> void:
+	if menu == 1:
+		$HUD.menu_active = false
+	elif menu == 2:
+		$HUD.map_active = false
+	elif menu == 3:
+		$HUD.menu_active = false
+		$HUD.map_active = false
+
+func activate_menus() -> void:
+	$HUD.menu_active = true
+	$HUD.map_active = true
+	
 
 func pause_room():
 	if current_room == 1:

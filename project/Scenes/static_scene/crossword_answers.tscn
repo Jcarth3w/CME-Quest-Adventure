@@ -85,7 +85,6 @@ scale = Vector2(0.938971, 0.030303)
 color = Color(0.498039, 0.278431, 0.176471, 1)
 
 [node name="andragogyBook" type="ColorRect" parent="."]
-anchors_preset = -1
 offset_left = 214.0
 offset_top = 153.0
 offset_right = 293.0
