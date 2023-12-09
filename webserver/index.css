@@ -1,11 +1,39 @@
 body {
-    text-align: center;
+	text-align: center;
+	background: linear-gradient(to bottom, #ffffff, #ff7e7e);
+	margin: 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
+h1 {
+	margin: 50px;
+}
+
+/* For input fields */
+input {
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 1px solid #ff0000;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* For tables */
 table {
-    border: solid 1px black;
-    text-align: center;
-    margin: auto;
+	border-collapse: collapse;
+	width: 75%;
+	margin: auto;
+}
+
+table, th, td {
+	padding: 5px;
+	text-align: center;
+	font-size: 18px;
+}
+
+form {
+	padding-bottom: 65px;
 }
 
 .search-form {
@@ -19,4 +47,18 @@ table {
     display: flex;
     justify-content: center;
     padding: 5px;
+	align-items: center;
+}
+
+#submit {
+	background-color: #ff0000;
+	color: #ffffff;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+ 
+#submit:active {
+	background-color: #cc0000;
 }

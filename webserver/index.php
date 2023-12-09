@@ -11,7 +11,7 @@
                 <label for="findname">Enter Username:</label>
                 <input type='text' name="findname"/>
             </span>
-            <input type='submit' value="Search"/>
+            <input id='submit' type='submit' value="Search"/>
         </form>
         <?php require("datatable.php")?>
         <p>You are viewing a read-only table. <a href="exporttable.php">Export Table</p>
