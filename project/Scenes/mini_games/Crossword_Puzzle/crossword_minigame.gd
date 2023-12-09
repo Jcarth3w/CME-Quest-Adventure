@@ -38,7 +38,7 @@ func _on_check_button_pressed():
 func check_answer():
 	if $UserText.text in answers: 
 		print("res://Assets/Crossword_Assets/" + $UserText.text.capitalize() + ".png")
-		answers.get($UserText.text).texture = load("res://Assets/Crossword_Assets/" + $UserText.text.capitalize() + ".png")
+		answers.get($UserText.text).texture = load("res://Assets/Crossword_Assets/" + $UserText.text.to_lower() + ".png")
 		answers.erase($UserText.text)
 		completed.append($UserText.text)
 	$UserText.clear()

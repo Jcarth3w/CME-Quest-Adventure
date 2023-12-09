@@ -6,6 +6,10 @@ var current_room = 1
 func _ready():
 	$Room2.pause_game()
 	$Room2.visible = false
+	if FileAccess.file_exists("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt"):
+		var dir = DirAccess.open("res://Scenes/mini_games/Crossword_Puzzle/")
+		dir.remove("saved_puzzle.txt")
+
 
 func enter_room(room_number):
 	if room_number == 1:
