@@ -12,3 +12,7 @@ pip3 install "gdtoolkit==4.*"
 sh install_hooks.sh
 ```
 4. Hook should now be installed! Will automatically run `gdlint .` on commit.
+
+## CME Main Project Repository
+
+- https://github.com/Jcarth3w/CME-Quest-Adventures
