@@ -60,7 +60,6 @@ func _on_quit_pressed():
 	if FileAccess.file_exists("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt"):
 		var dir = DirAccess.open("res://Scenes/mini_games/Crossword_Puzzle/")
 		dir.remove("saved_puzzle.txt")
-		print("file found")
 	get_tree().quit()
 
 
