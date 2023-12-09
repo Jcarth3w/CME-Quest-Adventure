@@ -1,4 +1,4 @@
-name: 'Test Project'
+name: 'Test & Build'
 
 env:
   GODOT_VERSION: 4.1.1 # Remember to manually set image to this version below.
@@ -13,7 +13,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write    
 
     container:
       image: barichello/godot-ci:4.1.1
@@ -22,5 +22,29 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Move Windows templates into directory
+        run: |
+          mkdir -v -p ~/.local/share/godot/export_templates
+          mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+      - name: Create staging directory
+        run: mkdir -v -p build/windows
+
+      - name: Build
+        run: |
+          godot -v --export-release --headless "Windows" "../build/windows/CME Quest Adventures.exe" project/project.godot
+          
       - name: Run Tests
         run: godot --headless -d -s --path project addons/gut/gut_cmdln.gd -gdir=res://tests/ -ginclude_subdirs=true -gprefix="" -gsuffix="_test.gd" -gexit
+
+
+      - name: Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "build/windows/CME_Quest_Adventures.exe"
+          allowUpdates: true
+          body: "This draft build is updated upon every push to master"
+          name: "Latest"
+          replacesArtifacts: true 
+          draft: true
+          tag: latest
+          commit: master
