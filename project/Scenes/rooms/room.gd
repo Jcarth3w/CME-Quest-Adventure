@@ -28,14 +28,12 @@ func _on_static_scene_spawn() -> void:
 
 
 func pause_game() -> void:
-	print("pause")
 	for child in get_children():
 		if child.has_method("pause"):
 			child.pause()
 
 
 func resume_game() -> void:
-	print("resume")
 	for child in get_children():
 		if child.has_method("resume"):
 			child.resume()

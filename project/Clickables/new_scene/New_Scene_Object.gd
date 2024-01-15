@@ -30,5 +30,3 @@ func _on_finished() -> void:
 	finished = true
 	if mini_game_prize != null:
 		mini_game_prize.pressed()
-	else:
-		pass

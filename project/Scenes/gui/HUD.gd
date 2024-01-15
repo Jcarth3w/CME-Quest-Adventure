@@ -82,14 +82,14 @@ func _on_map_button_pressed():
 
 
 func _on_room1_pressed():
-	owner.enter_room(1)
+	get_parent().enter_room(1)
 	$RoomMenu.visible = false
 	owner.resume_room()
 
 
 
 func _on_room2_pressed():
-	owner.enter_room(2)
+	get_parent().enter_room(2)
 	$RoomMenu.visible = false
 	owner.resume_room()
 
