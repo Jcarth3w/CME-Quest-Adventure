@@ -1,6 +1,10 @@
 extends Node2D
 
 var current_room = 1
+var url = "http://localhost:8000/"
+var scenario_num = 1
+var generic_user = "Lani"
+var finished_time
 
 
 func _ready():
@@ -36,6 +40,7 @@ func check_unlock():
 	elif current_room == 2:
 		if $Room2.check_win():
 			$HUD/Timer.stop()
+			send_data()
 			$HUD/WhiteRect/Label.text = "Congratulations! You Won!"
 
 
@@ -65,3 +70,13 @@ func resume_room():
 		$Room.resume_game()
 	elif current_room == 2:
 		$Room2.resume_game()
+
+
+func send_data():
+	finished_time = $HUD/Timer/Label.text
+	var data_to_send = {"scenario" : scenario_num,
+	"username": generic_user,
+	"time": finished_time,
+	"finished": 1
+	}
+	$DBoperations._make_post_request(url, data_to_send)
