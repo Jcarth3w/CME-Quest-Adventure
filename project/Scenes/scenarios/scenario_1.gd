@@ -56,7 +56,6 @@ func disable_menu(menu) -> void:
 func activate_menus() -> void:
 	$HUD.menu_active = true
 	$HUD.map_active = true
-	
 
 func pause_room():
 	if current_room == 1:
@@ -79,4 +78,4 @@ func send_data():
 	"time": finished_time,
 	"finished": 1
 	}
-	$DBoperations._make_post_request(url, data_to_send)
+	$DBoperations.make_post_request(url, data_to_send)

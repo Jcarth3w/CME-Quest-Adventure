@@ -24,7 +24,7 @@ func _on_scene_change(command) -> void:
 
 
 func _on_static_scene_spawn() -> void:
-	owner.disable_menu(3)
+	get_parent().disable_menu(3)
 
 
 func pause_game() -> void:
@@ -37,9 +37,9 @@ func resume_game() -> void:
 	for child in get_children():
 		if child.has_method("resume"):
 			child.resume()
-	owner.activate_menus()
+	get_parent().activate_menus()
 
 func give_item(title, texture):
-	if owner.has_node("HUD"):
-		owner.get_node("HUD").add_item(title, texture)
+	if get_parent().has_node("HUD"):
+		get_parent().get_node("HUD").add_item(title, texture)
 
