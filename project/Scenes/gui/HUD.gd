@@ -49,6 +49,7 @@ func add_item(item_name, sprite_path) -> void:
 
 func _on_menu_button_pressed():
 	if menu_active:
+		
 		get_parent().pause_room()
 		if $RoomMenu.visible == false:
 			$Timer.stop()
@@ -56,9 +57,11 @@ func _on_menu_button_pressed():
 
 
 func _on_quit_pressed():
+	get_parent().send_data()
 	if FileAccess.file_exists("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt"):
 		var dir = DirAccess.open("res://Scenes/mini_games/Crossword_Puzzle/")
 		dir.remove("saved_puzzle.txt")
+	await get_tree().create_timer(2).timeout
 	get_tree().quit()
 
 

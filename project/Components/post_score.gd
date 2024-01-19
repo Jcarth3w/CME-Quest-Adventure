@@ -6,7 +6,7 @@ func make_post_request(url, data_to_send):
 	var data = JSON.stringify(data_to_send)
 	print(data)
 	# Add 'Content-Type' header:
-	var headers = ["Content-Type: application/x-www-form-urlencoded"]
+	var headers = ["Content-Type: application/json"]
 	$HTTPRequest.request(url, headers, HTTPClient.METHOD_POST, data)
 
 

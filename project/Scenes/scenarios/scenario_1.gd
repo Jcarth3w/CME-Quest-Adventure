@@ -1,7 +1,7 @@
 extends Node2D
 
 var current_room = 1
-var url = "http://localhost:8000/"
+var url = "http://localhost:8000/postdata.php"
 var scenario_num = 1
 var generic_user = "Lani"
 var finished_time
