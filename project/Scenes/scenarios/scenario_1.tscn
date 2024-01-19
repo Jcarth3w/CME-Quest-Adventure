@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/scenarios/scenario_1.gd" id="1_4j01s"]
 [ext_resource type="PackedScene" uid="uid://dxurrur4fkonu" path="res://Scenes/rooms/room_2.tscn" id="1_msoe2"]
-[ext_resource type="PackedScene" uid="uid://b302n6pq0hkk1" path="res://Scenes/rooms/Room.tscn" id="2_iqiqe"]
+[ext_resource type="PackedScene" uid="uid://b302n6pq0hkk1" path="res://Scenes/rooms/room1.tscn" id="2_iqiqe"]
 [ext_resource type="PackedScene" uid="uid://b8xl3wqxn7v5d" path="res://Scenes/gui/HUD.tscn" id="3_iim46"]
 [ext_resource type="Script" path="res://Components/post_score.gd" id="5_5jqvq"]
 
@@ -11,7 +11,7 @@ script = ExtResource("1_4j01s")
 
 [node name="Room2" parent="." instance=ExtResource("1_msoe2")]
 
-[node name="Room" parent="." instance=ExtResource("2_iqiqe")]
+[node name="Room1" parent="." instance=ExtResource("2_iqiqe")]
 
 [node name="HUD" parent="." instance=ExtResource("3_iim46")]
 

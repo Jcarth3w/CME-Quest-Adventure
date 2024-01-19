@@ -2,7 +2,5 @@
 
 [ext_resource type="Script" path="res://Clickables/pickup/pickup.gd" id="1_ko4ml"]
 
-[node name="object" type="TextureButton"]
+[node name="Pickup" type="TextureButton"]
 script = ExtResource("1_ko4ml")
-
-[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -49,7 +49,6 @@ func add_item(item_name, sprite_path) -> void:
 
 func _on_menu_button_pressed():
 	if menu_active:
-		
 		get_parent().pause_room()
 		if $RoomMenu.visible == false:
 			$Timer.stop()
@@ -90,5 +89,5 @@ func _on_room1_pressed():
 
 
 func _on_room2_pressed():
-	get_parent().enter_room(2)
+	get_parent().enter_room(0)
 	$RoomMenu.visible = false

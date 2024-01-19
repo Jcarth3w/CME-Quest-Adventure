@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c7brg2hyybb7t"]
 
 [ext_resource type="Texture2D" uid="uid://bihv8ad0n5y0p" path="res://Assets/Sprites/room_1_custom_placeholders/Resized_whiteboard.png" id="1_mw6l2"]
-[ext_resource type="Script" path="res://Clickables/static_scene_btn/WhiteBoardButton.gd" id="2_kw8dh"]
+[ext_resource type="Script" path="res://Clickables/static_scene_btn/static_scene_button.gd" id="2_6qtnk"]
 
 [node name="StaticSceneButton" type="TextureButton"]
 offset_left = 128.0
@@ -9,6 +9,4 @@ offset_top = 184.0
 offset_right = 513.0
 offset_bottom = 481.0
 texture_normal = ExtResource("1_mw6l2")
-script = ExtResource("2_kw8dh")
-
-[connection signal="pressed" from="." to="." method="_on_pressed"]
+script = ExtResource("2_6qtnk")
