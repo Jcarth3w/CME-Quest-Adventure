@@ -22,14 +22,14 @@ func _on_static_scene_spawn() -> void:
 
 func pause_game() -> void:
 	for child in get_children():
-		if child.has_method("pause"):
-			child.pause()
+		if child is Clickable:
+			child.disabled = true
 
 
 func resume_game() -> void:
 	for child in get_children():
-		if child.has_method("resume"):
-			child.resume()
+		if child is Clickable:
+			child.disabled = false
 	get_parent().activate_menus()
 
 

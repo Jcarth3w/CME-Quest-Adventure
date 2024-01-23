@@ -1,3 +1,4 @@
+class_name HUD
 extends Node2D
 
 signal pause
