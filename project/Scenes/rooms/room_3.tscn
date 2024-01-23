@@ -52,6 +52,7 @@ offset_right = 4622.0
 offset_bottom = 4978.0
 scale = Vector2(0.05, 0.05)
 texture_normal = ExtResource("5_lgfck")
+scene_path = "res://Scenes/mini_games/laptop/laptop_mini_game.tscn"
 
 [node name="Trash" type="Sprite2D" parent="."]
 position = Vector2(521, 778)
@@ -59,7 +60,8 @@ scale = Vector2(1.39864, 1.239)
 texture = ExtResource("6_43dq4")
 
 [node name="LittleTable" type="Sprite2D" parent="."]
-modulate = Color(0.137255, 0.137255, 0.137255, 1)
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
 position = Vector2(970, 738)
 rotation = 0.00807691
 scale = Vector2(0.480605, 0.755308)
