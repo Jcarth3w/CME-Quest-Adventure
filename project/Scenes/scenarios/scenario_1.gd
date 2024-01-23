@@ -2,6 +2,7 @@ extends Node2D
 
 var current_room = 1
 var url = "http://localhost:8000/postdata.php"
+var url2 = "http://localhost:8000/pulldata.php"
 var scenario_num = 1
 var generic_user = "Lani"
 var finished_time
@@ -77,3 +78,6 @@ func send_data():
 	"finished": 1
 	}
 	$DBoperations.make_post_request(url, data_to_send)
+	
+func get_data():
+	$DBoperations.make_get_request(url2)

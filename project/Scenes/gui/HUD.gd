@@ -51,6 +51,7 @@ func add_item(item_name, sprite_path) -> void:
 func _on_menu_button_pressed():
 	if menu_active:
 		get_parent().pause_room()
+		get_parent().get_data()
 		if $RoomMenu.visible == false:
 			$Timer.stop()
 			$InGameMenu.visible = true
