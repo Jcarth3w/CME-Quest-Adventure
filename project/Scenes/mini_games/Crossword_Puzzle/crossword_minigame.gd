@@ -36,8 +36,7 @@ func _on_check_button_pressed():
 
 
 func check_answer():
-	if $UserText.text in answers: 
-		print("res://Assets/Crossword_Assets/" + $UserText.text.capitalize() + ".png")
+	if $UserText.text in answers:
 		answers.get($UserText.text).texture = load("res://Assets/Crossword_Assets/" + $UserText.text.to_lower() + ".png")
 		answers.erase($UserText.text)
 		completed.append($UserText.text)
@@ -55,7 +54,7 @@ func check_win():
 func save_state(key):
 	var save_file = FileAccess.open("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt", FileAccess.WRITE)
 	for word in key:
-		save_file.store_string(word + "\n") 
+		save_file.store_string(word + "\n")
 	save_file.close()
 
 

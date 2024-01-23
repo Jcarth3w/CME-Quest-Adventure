@@ -1,15 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://beginlf1sakva"]
+[gd_scene load_steps=6 format=3 uid="uid://beginlf1sakva"]
 
 [ext_resource type="Script" path="res://Scenes/scenarios/scenario_1.gd" id="1_4j01s"]
 [ext_resource type="PackedScene" uid="uid://dxurrur4fkonu" path="res://Scenes/rooms/room_2.tscn" id="1_msoe2"]
-[ext_resource type="PackedScene" uid="uid://b302n6pq0hkk1" path="res://Scenes/rooms/Room.tscn" id="2_iqiqe"]
+[ext_resource type="PackedScene" uid="uid://b302n6pq0hkk1" path="res://Scenes/rooms/room1.tscn" id="2_iqiqe"]
 [ext_resource type="PackedScene" uid="uid://b8xl3wqxn7v5d" path="res://Scenes/gui/HUD.tscn" id="3_iim46"]
+[ext_resource type="Script" path="res://Components/post_score.gd" id="5_5jqvq"]
 
 [node name="Scenario1" type="Node2D"]
 script = ExtResource("1_4j01s")
 
 [node name="Room2" parent="." instance=ExtResource("1_msoe2")]
 
-[node name="Room" parent="." instance=ExtResource("2_iqiqe")]
+[node name="Room1" parent="." instance=ExtResource("2_iqiqe")]
 
 [node name="HUD" parent="." instance=ExtResource("3_iim46")]
+
+[node name="DBoperations" type="Node2D" parent="."]
+script = ExtResource("5_5jqvq")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="DBoperations"]
+
+[connection signal="request_completed" from="DBoperations/HTTPRequest" to="DBoperations" method="_on_http_request_request_completed"]

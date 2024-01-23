@@ -22,4 +22,4 @@ func update_label():
 		ten_minutes += 1
 		minutes = 0
 
-	$Label.text = "Time: " + str(ten_minutes) + str(minutes) + ":" + str(ten_seconds) + str(seconds)
+	$Label.text = str(ten_minutes) + str(minutes) + ":" + str(ten_seconds) + str(seconds)

@@ -3,20 +3,13 @@ extends Clickable
 
 signal scene_changed
 @export var scene_path: String
-@export var mini_game_prize: Pickup
+@export var prize_texture: Texture
+@export var prize_name: String
 var finished = false
 
 
-func _ready() -> void:
-	if mini_game_prize == null:
-		print("NewScene: I expected a mini game prize")
-
-
-func _on_pressed() -> void:
-	pressed()
-
-func pressed():
-	if state == "active" and finished == false:
+func action():
+	if finished == false:
 		var scene = load(scene_path)
 		if scene != null:
 			var scene_inst = scene.instantiate()
@@ -28,7 +21,4 @@ func pressed():
 func _on_finished() -> void:
 	scene_changed.emit("resume")
 	finished = true
-	if mini_game_prize != null:
-		mini_game_prize.pressed()
-	else:
-		pass
+	get_parent().give_item(prize_name, prize_texture)

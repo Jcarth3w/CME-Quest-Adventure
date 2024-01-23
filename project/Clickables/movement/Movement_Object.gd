@@ -14,16 +14,12 @@ func _ready():
 	start_y = global_position.y
 
 
-func _on_pressed() -> void:
-	pressed()
-
-
-func pressed():
-	if state == "active" and not moved:
+func action():
+	if not moved:
 		self.position.x = x_coordinate
 		self.position.y = y_coordinate
 		moved = true
-	elif state == "active" and moved:
+	else:
 		self.position.x = start_x
 		self.position.y = start_y
 		moved = false

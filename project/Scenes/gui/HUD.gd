@@ -1,3 +1,4 @@
+class_name HUD
 extends Node2D
 
 signal pause
@@ -16,7 +17,6 @@ func _ready():
 	$RoomMenu.get_node("Room1").pressed.connect(_on_room1_pressed)
 	$RoomMenu.get_node("Room2").pressed.connect(_on_room2_pressed)
 	$RoomMenu.get_node("Room2").visible = false
-	
 
 func add_item_image(sprite_path) -> void:
 	if current_item == 1:
@@ -32,7 +32,7 @@ func add_item_image(sprite_path) -> void:
 	else:
 		$Inventory/Item6.texture = sprite_path
 	current_item += 1
-	owner.check_unlock()
+	get_parent().check_unlock()
 
 
 func empty_inventory():
@@ -50,22 +50,24 @@ func add_item(item_name, sprite_path) -> void:
 
 func _on_menu_button_pressed():
 	if menu_active:
-		owner.pause_room()
+		get_parent().pause_room()
 		if $RoomMenu.visible == false:
 			$Timer.stop()
 			$InGameMenu.visible = true
 
 
 func _on_quit_pressed():
+	get_parent().send_data()
 	if FileAccess.file_exists("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt"):
 		var dir = DirAccess.open("res://Scenes/mini_games/Crossword_Puzzle/")
 		dir.remove("saved_puzzle.txt")
+	await get_tree().create_timer(2).timeout
 	get_tree().quit()
 
 
 func _on_resume_pressed():
 	$Timer.start()
-	owner.resume_room()
+	get_parent().resume_room()
 	$InGameMenu.visible = false
 
 
@@ -76,20 +78,17 @@ func _on_scenario_pressed():
 
 func _on_map_button_pressed():
 	if map_active:
-		owner.pause_room()
+		get_parent().pause_room()
 		if $InGameMenu.visible == false:
 				$RoomMenu.visible = true
 
 
 func _on_room1_pressed():
-	owner.enter_room(1)
+	get_parent().enter_room(1)
 	$RoomMenu.visible = false
-	owner.resume_room()
 
 
 
 func _on_room2_pressed():
-	owner.enter_room(2)
+	get_parent().enter_room(0)
 	$RoomMenu.visible = false
-	owner.resume_room()
-

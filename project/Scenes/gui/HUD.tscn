@@ -71,7 +71,6 @@ offset_left = -0.280273
 offset_top = -2.04
 offset_right = 0.9198
 offset_bottom = 0.519989
-text = "Time: 00:00"
 label_settings = SubResource("LabelSettings_f47q1")
 metadata/_edit_use_anchors_ = true
 
