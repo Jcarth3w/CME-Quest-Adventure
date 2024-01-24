@@ -25,6 +25,16 @@ VALUES
 
 UNLOCK TABLES;
 
+DELIMITER ;;
+   CREATE TRIGGER before_insert_scores
+     BEFORE INSERT
+     ON scores
+     FOR EACH ROW
+   BEGIN
+     SET NEW.createdAt = NOW();
+   END;;
+DELIMITER ;
+
 ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'root';
 
 SET FOREIGN_KEY_CHECKS = 1; 
