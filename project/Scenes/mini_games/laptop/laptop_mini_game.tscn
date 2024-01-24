@@ -1,13 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://6f7f3ik8hlfv"]
+[gd_scene load_steps=8 format=3 uid="uid://6f7f3ik8hlfv"]
 
 [ext_resource type="Script" path="res://Scenes/mini_games/laptop/laptop_mini_game.gd" id="1_mdm6b"]
 [ext_resource type="Texture2D" uid="uid://rpdjh6s3x3m2" path="res://Assets/Sprites/room_1_custom_placeholders/Red Background.png" id="2_a45ph"]
+[ext_resource type="Texture2D" uid="uid://t0fto8k5duub" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-12.png" id="3_fku8c"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_aep5h"]
 font_size = 72
 font_color = Color(0, 0, 0, 1)
 outline_size = 22
 outline_color = Color(0.184314, 0.356863, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_khtax"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hkkht"]
+font_size = 28
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7l6lw"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
 
 [node name="LaptopMiniGame" type="Node2D"]
 script = ExtResource("1_mdm6b")
@@ -25,25 +38,117 @@ offset_bottom = 1127.0
 scale = Vector2(0.025, 0.05)
 texture_normal = ExtResource("2_a45ph")
 
-[node name="Username" type="LineEdit" parent="."]
+[node name="Login" type="Node2D" parent="."]
+
+[node name="Username" type="LineEdit" parent="Login"]
 offset_left = 721.0
 offset_top = 564.0
 offset_right = 1069.0
 offset_bottom = 595.0
 
-[node name="Password" type="LineEdit" parent="."]
+[node name="Password" type="LineEdit" parent="Login"]
 offset_left = 719.0
 offset_top = 642.0
 offset_right = 1069.0
 offset_bottom = 673.0
 
-[node name="Label" type="Label" parent="."]
-offset_left = 739.0
-offset_top = 366.0
-offset_right = 1045.0
-offset_bottom = 468.0
-text = "LOGIN"
+[node name="BigText" type="Label" parent="Login"]
+offset_left = 487.0
+offset_top = 246.0
+offset_right = 1319.0
+offset_bottom = 348.0
+text = "CME EMPLOYEE LAPTOP"
 label_settings = SubResource("LabelSettings_aep5h")
 horizontal_alignment = 1
 
+[node name="Button" type="Button" parent="Login"]
+modulate = Color(0, 1, 0, 1)
+offset_left = 1130.0
+offset_top = 636.0
+offset_right = 1306.0
+offset_bottom = 682.0
+text = "LOGIN"
+
+[node name="Feedback" type="Label" parent="Login"]
+visible = false
+offset_left = 798.0
+offset_top = 794.0
+offset_right = 974.0
+offset_bottom = 847.0
+text = "INCORRECT"
+label_settings = SubResource("LabelSettings_khtax")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Files" type="Node2D" parent="."]
+visible = false
+
+[node name="File1" type="TextureButton" parent="Files"]
+offset_left = 138.0
+offset_top = 244.0
+offset_right = 2388.0
+offset_bottom = 2494.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("3_fku8c")
+
+[node name="File2" type="TextureButton" parent="Files"]
+offset_left = 546.0
+offset_top = 234.0
+offset_right = 2796.0
+offset_bottom = 2484.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("3_fku8c")
+
+[node name="File3" type="TextureButton" parent="Files"]
+offset_left = 925.0
+offset_top = 237.0
+offset_right = 3175.0
+offset_bottom = 2487.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("3_fku8c")
+
+[node name="File4" type="TextureButton" parent="Files"]
+offset_left = 1323.0
+offset_top = 226.0
+offset_right = 3573.0
+offset_bottom = 2476.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("3_fku8c")
+
+[node name="FileRead" type="ColorRect" parent="Files"]
+offset_left = 710.0
+offset_top = 523.0
+offset_right = 1113.0
+offset_bottom = 952.0
+color = Color(1, 0.988235, 0.498039, 1)
+
+[node name="FileText" type="Label" parent="Files"]
+offset_left = 744.0
+offset_top = 551.0
+offset_right = 1082.0
+offset_bottom = 920.0
+text = "placeholder text"
+label_settings = SubResource("LabelSettings_hkkht")
+
+[node name="Print" type="Button" parent="Files"]
+modulate = Color(0, 1, 0, 1)
+offset_left = 1200.0
+offset_top = 870.0
+offset_right = 1330.0
+offset_bottom = 927.0
+text = "PRINT"
+
+[node name="PrintFeedback" type="Label" parent="Files"]
+visible = false
+offset_left = 1534.0
+offset_top = 776.0
+offset_right = 1789.0
+offset_bottom = 899.0
+text = "PRINT SUCCESSFUL"
+label_settings = SubResource("LabelSettings_7l6lw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="PowerButton" to="." method="_on_power_button_pressed"]
+[connection signal="pressed" from="Login/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Files/Print" to="." method="_on_print_pressed"]

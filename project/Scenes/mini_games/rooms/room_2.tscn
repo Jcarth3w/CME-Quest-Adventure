@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dxurrur4fkonu"]
 
-[ext_resource type="Script" path="res://Scenes/rooms/room_2.gd" id="1_ubila"]
+[ext_resource type="Script" path="res://Scenes/mini_games/rooms/room_2.gd" id="1_ubila"]
 [ext_resource type="Texture2D" uid="uid://d1gbpeh7j816b" path="res://Assets/Sprites/Room2/Board.png" id="2_hnst7"]
 [ext_resource type="Script" path="res://Clickables/pickup/pickup.gd" id="3_s0qje"]
 [ext_resource type="Script" path="res://Clickables/new_scene/New_Scene_Object.gd" id="4_3ac61"]
