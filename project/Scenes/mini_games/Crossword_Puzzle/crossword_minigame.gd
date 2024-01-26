@@ -40,7 +40,7 @@ func check_answer():
 		answers.get($UserText.text).texture = load("res://Assets/Crossword_Assets/" + $UserText.text.to_lower() + ".png")
 		answers.erase($UserText.text)
 		completed.append($UserText.text)
-	$UserText.clear()
+		$UserText.clear()
 
 
 func check_win():

@@ -1,0 +1,73 @@
+[gd_scene load_steps=9 format=3 uid="uid://cepvxyc5hm41t"]
+
+[ext_resource type="Script" path="res://Scenes/mini_games/rooms/room3.gd" id="1_0r8gd"]
+[ext_resource type="PackedScene" uid="uid://pn2l6ln2hl3j" path="res://Clickables/new_scene/new_scene_object.tscn" id="2_tubx5"]
+[ext_resource type="Texture2D" uid="uid://cp6thg0dbkcxn" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-02.png" id="3_g3v3j"]
+[ext_resource type="Texture2D" uid="uid://dwqw21d8i31b" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-01(1).png" id="4_hyb53"]
+[ext_resource type="Texture2D" uid="uid://culbul2t8kbp5" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-19.png" id="5_pymel"]
+[ext_resource type="Texture2D" uid="uid://ihqucqebj6dc" path="res://Assets/Sprites/room_1_custom_placeholders/Trash_can.png" id="6_4wrwl"]
+[ext_resource type="Texture2D" uid="uid://18telq4wmu2" path="res://Assets/Sprites/room_1_custom_placeholders/desk.png" id="7_ftm4o"]
+[ext_resource type="Texture2D" uid="uid://bko6uquctebmt" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-13.png" id="8_xcblm"]
+
+[node name="Room3" type="Node2D"]
+script = ExtResource("1_0r8gd")
+
+[node name="Background wall" type="ColorRect" parent="."]
+offset_top = -3.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.67451, 0.92549, 0.713726, 1)
+
+[node name="BackgroundSplitter" type="ColorRect" parent="Background wall"]
+layout_mode = 0
+offset_top = 723.0
+offset_right = 1920.0
+offset_bottom = 771.0
+color = Color(0.254902, 0.431373, 0.447059, 1)
+
+[node name="BackgroundFloor" type="ColorRect" parent="Background wall/BackgroundSplitter"]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 1920.0
+offset_bottom = 360.0
+color = Color(0.356863, 0.635294, 0.411765, 1)
+
+[node name="FilingCabinet" parent="." instance=ExtResource("2_tubx5")]
+offset_left = 1424.0
+offset_top = 374.0
+offset_right = 3674.0
+offset_bottom = 2624.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_g3v3j")
+
+[node name="Desk" type="Sprite2D" parent="."]
+position = Vector2(230, 747)
+scale = Vector2(0.215778, 0.302222)
+texture = ExtResource("4_hyb53")
+
+[node name="Laptop" parent="." instance=ExtResource("2_tubx5")]
+offset_left = 122.0
+offset_top = 478.0
+offset_right = 4622.0
+offset_bottom = 4978.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("5_pymel")
+scene_path = "res://Scenes/mini_games/laptop/laptop_mini_game.tscn"
+
+[node name="Trash" type="Sprite2D" parent="."]
+position = Vector2(521, 778)
+scale = Vector2(1.39864, 1.239)
+texture = ExtResource("6_4wrwl")
+
+[node name="LittleTable" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(970, 738)
+rotation = 0.00807691
+scale = Vector2(0.480605, 0.755308)
+texture = ExtResource("7_ftm4o")
+
+[node name="Printer" type="Sprite2D" parent="."]
+position = Vector2(976, 628)
+scale = Vector2(0.101556, 0.084)
+texture = ExtResource("8_xcblm")
