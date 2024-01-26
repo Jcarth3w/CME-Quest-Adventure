@@ -1,6 +1,6 @@
 # Godot 4+ specific ignores
 .godot/
-*.import/
+*.import
 
 # Mac related files
 .DS_Store
