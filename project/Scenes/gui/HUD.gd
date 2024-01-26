@@ -32,7 +32,6 @@ func add_item_image(sprite_path) -> void:
 	else:
 		$Inventory/Item6.texture = sprite_path
 	current_item += 1
-	get_parent().check_unlock()
 
 
 func empty_inventory():

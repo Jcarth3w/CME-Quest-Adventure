@@ -75,6 +75,7 @@ offset_top = 671.0
 offset_right = 3413.0
 offset_bottom = 2921.0
 flip_h = true
+room_number = 2
 
 [node name="Flower" parent="." instance=ExtResource("8_je1k2")]
 offset_left = 1150.0

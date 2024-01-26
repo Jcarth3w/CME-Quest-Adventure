@@ -29,18 +29,9 @@ func enter_room(new_room):
 			room.visible = true
 
 
-func check_unlock():
-	if current_room == 1:
-		if $Room1.check_win():
-			$HUD.empty_inventory()
-			$HUD.add_item("Folder", load("res://Assets/Sprites/room_1_custom_placeholders/Promo_file.png"))
-			$HUD/RoomMenu/Room2.visible = true
-			$HUD/WhiteRect/Label.text = "Find the adult learning resources"
-	elif current_room == 2:
-		if $Room2.check_win():
-			$HUD/Timer.stop()
-			send_data()
-			$HUD/WhiteRect/Label.text = "Congratulations! You Won!"
+func room_unlock(room_number):
+	if room_number == 2:
+		$HUD/RoomMenu/Room2.visible = true
 
 
 func disable_menu(menu) -> void:
@@ -52,9 +43,11 @@ func disable_menu(menu) -> void:
 		$HUD.menu_active = false
 		$HUD.map_active = false
 
+
 func activate_menus() -> void:
 	$HUD.menu_active = true
 	$HUD.map_active = true
+
 
 func pause_room():
 	if current_room == 1:

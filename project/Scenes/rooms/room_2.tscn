@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dxurrur4fkonu"]
+[gd_scene load_steps=9 format=3 uid="uid://dxurrur4fkonu"]
 
 [ext_resource type="Script" path="res://Scenes/rooms/room_2.gd" id="1_xmdg1"]
 [ext_resource type="Texture2D" uid="uid://d1gbpeh7j816b" path="res://Assets/Sprites/Room2/Board.png" id="2_yva6x"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://dt8kyilmk6dl2" path="res://Assets/Sprites/generic_items/genericItem_color_035.png" id="4_0dgl6"]
 [ext_resource type="PackedScene" uid="uid://c7brg2hyybb7t" path="res://Clickables/static_scene_btn/static_scene_button.tscn" id="7_x8tk5"]
 [ext_resource type="Texture2D" uid="uid://bniggs3y0fm5a" path="res://Assets/Sprites/Room2/Bookshelf.png" id="8_wahkr"]
-[ext_resource type="PackedScene" uid="uid://t7fuuyah6666" path="res://Clickables/room_unlocks/combo_unlock.tscn" id="9_3vgh8"]
 [ext_resource type="Texture2D" uid="uid://dmm1o4xemcxfx" path="res://Assets/Sprites/Room2/Desk.png" id="9_huuy6"]
 [ext_resource type="Texture2D" uid="uid://k7tyhsc5hvsx" path="res://Assets/Sprites/room_1_custom_placeholders/chair.png" id="10_dw2od"]
 
@@ -65,6 +64,3 @@ texture = ExtResource("10_dw2od")
 [node name="Chair2" type="Sprite2D" parent="."]
 position = Vector2(679, 717)
 texture = ExtResource("10_dw2od")
-
-[node name="ComboUnlock" parent="." instance=ExtResource("9_3vgh8")]
-position = Vector2(984, 507)

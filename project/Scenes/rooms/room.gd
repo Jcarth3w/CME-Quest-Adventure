@@ -8,10 +8,6 @@ func _ready() -> void:
 			child.pressed.connect(_on_clickable.bind(child))
 
 
-func check_win():
-	pass
-
-
 func _on_clickable(clickable) -> void:
 	clickable.action()
 
@@ -36,3 +32,7 @@ func resume_game() -> void:
 func give_item(title, texture):
 	if get_parent().has_node("HUD"):
 		get_parent().get_node("HUD").add_item(title, texture)
+		
+
+func key_found(room_number) -> void:
+	get_parent().room_unlock(room_number)
