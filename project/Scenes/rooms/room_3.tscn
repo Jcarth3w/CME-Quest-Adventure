@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cepvxyc5hm41t"]
 
-[ext_resource type="Script" path="res://Scenes/mini_games/rooms/room3.gd" id="1_0r8gd"]
+[ext_resource type="Script" path="res://Scenes/rooms/room3.gd" id="1_0r8gd"]
 [ext_resource type="PackedScene" uid="uid://pn2l6ln2hl3j" path="res://Clickables/new_scene/new_scene_object.tscn" id="2_tubx5"]
 [ext_resource type="Texture2D" uid="uid://cp6thg0dbkcxn" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-02.png" id="3_g3v3j"]
 [ext_resource type="Texture2D" uid="uid://dwqw21d8i31b" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-01(1).png" id="4_hyb53"]

@@ -8,7 +8,7 @@ func action():
 	var scene_load = load(scene_path)
 	var scene = scene_load.instantiate()
 	scene.finished.connect(_on_finished)
-	add_child(scene)
+	get_parent().add_child(scene)
 	get_parent().pause_game()
 
 func _on_finished():
