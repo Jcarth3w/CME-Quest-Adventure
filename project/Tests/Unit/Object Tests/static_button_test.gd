@@ -10,9 +10,9 @@ func before_all() -> void:
 	get_tree().root.add_child(test_room)
 	button = test_room.get_node("StaticSceneButton")
 
-
+#Confirms scene has been loaded
 func test_button():
 	button.scene_path = "res://Scenes/static_scene/whiteboard.tscn"
-	button.spawn_scene()
+	button.action()
 	await get_tree().create_timer(1).timeout
-	assert_eq(button.has_node("Whiteboard"), true)
+	assert_eq(test_room.has_node("Whiteboard"), true)
