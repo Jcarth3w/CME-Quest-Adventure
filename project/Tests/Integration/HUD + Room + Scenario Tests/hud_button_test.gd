@@ -16,6 +16,7 @@ func before_all() -> void:
 	room2 = test_scenario.get_node("Room2")
 	room.resume_room()
 	hud = test_scenario.get_node("HUD")
+	timer = hud.get_node("Timer")
 	
 
 
@@ -39,7 +40,6 @@ func test_press_active_menu_inactive_room_menu_active() -> void:
 	var new_scene = room.get_node("TestNewScene")
 	var pickup = room.get_node("TestPickup")
 	var static_scene = room.get_node("StaticSceneButton")
-	var timer = hud.get_node("Timer")
 	var in_game_menu = hud.get_node("InGameMenu")
 	hud.get_node("RoomMenu").visible = true
 	hud._on_menu_button_pressed()
@@ -58,7 +58,6 @@ func test_press_active_menu() -> void:
 	var new_scene = room.get_node("TestNewScene")
 	var pickup = room.get_node("TestPickup")
 	var static_scene = room.get_node("StaticSceneButton")
-	var timer = hud.get_node("Timer")
 	var in_game_menu = hud.get_node("InGameMenu")
 	hud.get_node("RoomMenu").visible = false
 	hud._on_menu_button_pressed()
@@ -89,7 +88,6 @@ func test_on_resume_pressed() -> void:
 	var new_scene = room.get_node("TestNewScene")
 	var pickup = room.get_node("TestPickup")
 	var static_scene = room.get_node("StaticSceneButton")
-	var timer = hud.get_node("Timer")
 	var in_game_menu = hud.get_node("InGameMenu")
 	
 	hud._on_resume_pressed()
@@ -134,7 +132,6 @@ func test_on_room2_pressed() -> void:
 	
 
 func test_on_quit_pressed_send_data() -> void:
-	var timer = hud.get_node("Timer")
 	hud._on_quit_pressed()
 	
 	assert_eq(hud.get_parent().finished_time, timer.get_node("Label").text)

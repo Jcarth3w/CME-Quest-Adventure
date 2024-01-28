@@ -19,6 +19,6 @@ func _on_button_press(button) -> void:
 
 func check_answer(player_answer) -> void:
 	if player_answer == answer:
-		print("you did it, you're so smarrrrttt")
+		$Display.text = "you did it, you're so smarrrrttt"
 	else:
-		print("you suck, get good")
+		$Display.text = "you suck, get good"
