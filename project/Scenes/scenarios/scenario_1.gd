@@ -1,19 +1,20 @@
 extends Node2D
 
-var current_room = 1
+var current_room : Node2D
 var url = "http://localhost:8000/postdata.php"
 var url2 = "http://localhost:8000/pulldata.php"
 var scenario_num = 1
 var generic_user = "Lani"
 var finished_time
+var finished
 var rooms = []
 
 
 func _ready():
+	current_room = find_child("Room1")
 	for child in get_children():
 		if child is Room:
 			rooms.append(child)
-	enter_room(1)
 	if FileAccess.file_exists("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt"):
 		var dir = DirAccess.open("res://Scenes/mini_games/Crossword_Puzzle/")
 		dir.remove("saved_puzzle.txt")
@@ -21,11 +22,11 @@ func _ready():
 
 func enter_room(new_room):
 	for room in rooms:
-		if room != rooms[new_room]:
-			room.pause_game()
+		if room != new_room:
+			room.pause_room()
 			room.visible = false
 		else:
-			room.resume_game()
+			room.resume_room()
 			room.visible = true
 
 
@@ -50,17 +51,11 @@ func activate_menus() -> void:
 
 
 func pause_room():
-	if current_room == 1:
-		$Room1.pause_game()
-	elif current_room == 2:
-		$Room2.pause_game()
+	current_room.pause_room()
 
 
 func resume_room():
-	if current_room == 1:
-		$Room1.resume_game()
-	elif current_room == 2:
-		$Room2.resume_game()
+	current_room.resume_room()
 
 
 func send_data():
@@ -68,7 +63,7 @@ func send_data():
 	var data_to_send = {"scenario" : scenario_num,
 	"username": generic_user,
 	"time": finished_time,
-	"finished": 1
+	"finished": finished
 	}
 	$DBoperations.make_post_request(url, data_to_send)
 	

@@ -34,14 +34,6 @@ func add_item_image(sprite_path) -> void:
 	current_item += 1
 
 
-func empty_inventory():
-	current_item = 1
-	for item in $Inventory.get_children():
-		if item is Sprite2D:
-			item.texture = null
-	items.clear()
-
-
 func add_item(item_name, sprite_path) -> void:
 	items.append(item_name)
 	add_item_image(sprite_path)
@@ -57,6 +49,7 @@ func _on_menu_button_pressed():
 
 
 func _on_quit_pressed():
+	get_parent().finished = 0
 	get_parent().send_data()
 	if FileAccess.file_exists("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt"):
 		var dir = DirAccess.open("res://Scenes/mini_games/Crossword_Puzzle/")
@@ -84,11 +77,13 @@ func _on_map_button_pressed():
 
 
 func _on_room1_pressed():
-	get_parent().enter_room(1)
+	get_parent().current_room = get_parent().get_node("Room1")
+	get_parent().enter_room(get_parent().get_node("Room1"))
 	$RoomMenu.visible = false
 
 
 
 func _on_room2_pressed():
-	get_parent().enter_room(0)
+	get_parent().current_room = get_parent().get_node("Room2")
+	get_parent().enter_room(get_parent().get_node("Room2"))
 	$RoomMenu.visible = false

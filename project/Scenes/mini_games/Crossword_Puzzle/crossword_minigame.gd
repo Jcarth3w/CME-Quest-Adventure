@@ -26,7 +26,7 @@ func check_completed():
 
 func _on_exit_button_pressed():
 	save_state(completed)
-	get_tree().get_root().get_node("Scenario1").get_node("Room2").resume_game()
+	get_tree().get_root().get_node("Scenario1").get_node("Room2").resume_room()
 	queue_free()
 
 

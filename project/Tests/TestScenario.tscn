@@ -1,15 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://btyhltssb5x52"]
+[gd_scene load_steps=6 format=3 uid="uid://btyhltssb5x52"]
 
 [ext_resource type="Script" path="res://Scenes/scenarios/scenario_1.gd" id="1_evxeb"]
 [ext_resource type="PackedScene" uid="uid://x1cxbdtve8eh" path="res://Tests/TestRoom.tscn" id="1_itwno"]
 [ext_resource type="PackedScene" uid="uid://b8xl3wqxn7v5d" path="res://Scenes/gui/HUD.tscn" id="2_kqiqm"]
+[ext_resource type="Script" path="res://Components/post_score.gd" id="2_r3y7m"]
 [ext_resource type="PackedScene" uid="uid://dxurrur4fkonu" path="res://Scenes/rooms/room_2.tscn" id="3_rll0j"]
 
 [node name="TestScenario" type="Node2D"]
 script = ExtResource("1_evxeb")
 
-[node name="Room" parent="." instance=ExtResource("1_itwno")]
+[node name="DBoperations" type="Node2D" parent="."]
+script = ExtResource("2_r3y7m")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="DBoperations"]
+
+[node name="Room1" parent="." instance=ExtResource("1_itwno")]
 
 [node name="Room2" parent="." instance=ExtResource("3_rll0j")]
 
 [node name="HUD" parent="." instance=ExtResource("2_kqiqm")]
+
+[connection signal="request_completed" from="DBoperations/HTTPRequest" to="DBoperations" method="_on_http_request_request_completed"]

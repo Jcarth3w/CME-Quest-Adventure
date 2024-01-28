@@ -16,13 +16,13 @@ func _on_static_scene_spawn() -> void:
 	get_parent().disable_menu(3)
 
 
-func pause_game() -> void:
+func pause_room() -> void:
 	for child in get_children():
 		if child is Clickable:
 			child.disabled = true
 
 
-func resume_game() -> void:
+func resume_room() -> void:
 	for child in get_children():
 		if child is Clickable:
 			child.disabled = false

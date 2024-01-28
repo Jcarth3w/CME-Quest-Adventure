@@ -9,7 +9,7 @@ var pickup
 func before_all() -> void:
 	test_scenario = test_scenario_preload.instantiate()
 	get_tree().root.add_child(test_scenario)
-	test_room = test_scenario.get_node("Room")
+	test_room = test_scenario.get_node("Room1")
 	pickup = test_room.get_node("TestPickup")
 
 

@@ -9,7 +9,7 @@ func action():
 	var scene = scene_load.instantiate()
 	scene.finished.connect(_on_finished)
 	get_parent().add_child(scene)
-	get_parent().pause_game()
+	get_parent().pause_room()
 
 func _on_finished():
-	get_parent().resume_game()
+	get_parent().resume_room()
