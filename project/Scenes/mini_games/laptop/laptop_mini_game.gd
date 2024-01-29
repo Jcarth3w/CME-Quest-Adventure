@@ -32,7 +32,8 @@ func change_file_reader(text_file) -> void:
 
 
 func _on_power_button_pressed() -> void:
-	get_parent().get_node("printed").visible = true
+	if $Files/PrintFeedback.visible == true:
+		get_parent().get_node("printed").visible = true
 	queue_free()
 
 

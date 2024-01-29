@@ -82,14 +82,17 @@ func _on_map_button_pressed():
 
 func _on_room1_pressed():
 	get_parent().enter_room(get_parent().get_node("Room1"))
+	get_parent().current_room = get_parent().get_node("Room1")
 	$RoomMenu.visible = false
 
 
 func _on_room2_pressed():
 	get_parent().enter_room(get_parent().get_node("Room2"))
+	get_parent().current_room = get_parent().get_node("Room2")
 	$RoomMenu.visible = false
 
 
 func _on_room3_pressed():
 	get_parent().enter_room(get_parent().get_node("Room3"))
+	get_parent().current_room = get_parent().get_node("Room3")
 	$RoomMenu.visible = false
