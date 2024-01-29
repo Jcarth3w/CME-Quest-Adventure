@@ -25,7 +25,10 @@ func test_change_file_reader_no_file() -> void:
 func test_change_file_reader_with_file() -> void:
 	var files_screen = test_laptop.get_node("Files")
 	test_laptop.change_file_reader("one.txt")
-	print(files_screen.get_node("FileText").text)
 	assert_eq(files_screen.get_node("FileText").text, "somebody once told me\nthe world was gonna roll me\ni aint the sharpest tool in the sheeeed\n")
-	
-	
+
+
+func test_on_power_button_pressed() -> void:
+	test_laptop._on_power_button_pressed()
+	await yield_for(1)
+	assert_eq(get_tree().get_root().has_node("LaptopMiniGame"), false)

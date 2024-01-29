@@ -17,6 +17,8 @@ func _ready():
 	$RoomMenu.get_node("Room1").pressed.connect(_on_room1_pressed)
 	$RoomMenu.get_node("Room2").pressed.connect(_on_room2_pressed)
 	$RoomMenu.get_node("Room2").visible = false
+	$RoomMenu.get_node("Room3").pressed.connect(_on_room3_pressed)
+	$RoomMenu.get_node("Room3").visible = false
 
 func add_item_image(sprite_path) -> void:
 	if current_item == 1:
@@ -29,8 +31,10 @@ func add_item_image(sprite_path) -> void:
 		$Inventory/Item4.texture = sprite_path
 	elif current_item == 5:
 		$Inventory/Item5.texture = sprite_path
-	else:
+	elif current_item == 6:
 		$Inventory/Item6.texture = sprite_path
+	else:
+		$Inventory/Item7.texture = sprite_path
 	current_item += 1
 
 
@@ -77,13 +81,15 @@ func _on_map_button_pressed():
 
 
 func _on_room1_pressed():
-	get_parent().current_room = get_parent().get_node("Room1")
 	get_parent().enter_room(get_parent().get_node("Room1"))
 	$RoomMenu.visible = false
 
 
-
 func _on_room2_pressed():
-	get_parent().current_room = get_parent().get_node("Room2")
 	get_parent().enter_room(get_parent().get_node("Room2"))
+	$RoomMenu.visible = false
+
+
+func _on_room3_pressed():
+	get_parent().enter_room(get_parent().get_node("Room3"))
 	$RoomMenu.visible = false

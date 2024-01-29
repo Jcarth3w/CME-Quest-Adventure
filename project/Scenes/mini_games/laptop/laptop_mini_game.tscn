@@ -30,14 +30,6 @@ offset_top = -3.0
 offset_right = 1920.0
 offset_bottom = 1080.0
 
-[node name="PowerButton" type="TextureButton" parent="."]
-offset_left = 1800.0
-offset_top = 47.0
-offset_right = 3720.0
-offset_bottom = 1127.0
-scale = Vector2(0.025, 0.05)
-texture_normal = ExtResource("2_a45ph")
-
 [node name="Login" type="Node2D" parent="."]
 
 [node name="Username" type="LineEdit" parent="Login"]
@@ -149,6 +141,14 @@ label_settings = SubResource("LabelSettings_7l6lw")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="PowerButton" to="." method="_on_power_button_pressed"]
+[node name="PowerButton" type="TextureButton" parent="."]
+offset_left = 1781.0
+offset_top = 263.0
+offset_right = 3701.0
+offset_bottom = 1343.0
+scale = Vector2(0.025, 0.05)
+texture_normal = ExtResource("2_a45ph")
+
 [connection signal="pressed" from="Login/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Files/Print" to="." method="_on_print_pressed"]
+[connection signal="pressed" from="PowerButton" to="." method="_on_power_button_pressed"]

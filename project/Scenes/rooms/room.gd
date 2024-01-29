@@ -34,5 +34,10 @@ func give_item(title, texture):
 		get_parent().get_node("HUD").add_item(title, texture)
 		
 
-func key_found(room_number) -> void:
+func unlock(room_number) -> void:
 	get_parent().room_unlock(room_number)
+	
+
+func connect_clickable(object) -> void:
+	object.pressed.connect(_on_clickable.bind(object))
+

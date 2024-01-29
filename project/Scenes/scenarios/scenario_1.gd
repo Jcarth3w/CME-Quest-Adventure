@@ -12,6 +12,8 @@ var rooms = []
 
 func _ready():
 	current_room = find_child("Room1")
+	$Room2.pause_room()
+	$Room3.pause_room()
 	for child in get_children():
 		if child is Room:
 			rooms.append(child)
@@ -33,6 +35,8 @@ func enter_room(new_room):
 func room_unlock(room_number):
 	if room_number == 2:
 		$HUD/RoomMenu/Room2.visible = true
+	elif room_number == 3:
+		$HUD/RoomMenu/Room3.visible = true
 
 
 func disable_menu(menu) -> void:

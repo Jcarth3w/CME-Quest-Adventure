@@ -32,6 +32,7 @@ func change_file_reader(text_file) -> void:
 
 
 func _on_power_button_pressed() -> void:
+	get_parent().get_node("printed").visible = true
 	queue_free()
 
 
@@ -47,4 +48,12 @@ func _on_file_press(file) -> void:
 
 
 func _on_print_pressed():
+	var print = load("res://Clickables/pickup/pickup.tscn")
+	var print_inst = print.instantiate()
+	print_inst.global_position = get_parent().get_node("PrintPosition").global_position
+	print_inst.texture_normal = load("res://Assets/Sprites/generic_items/genericItem_color_037.png")
+	print_inst.name = "printed"
+	print_inst.visible = false
+	get_parent().add_child(print_inst)
+	get_parent().connect_clickable(print_inst)
 	$Files/PrintFeedback.visible = true

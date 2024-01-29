@@ -39,6 +39,7 @@ offset_right = 3674.0
 offset_bottom = 2624.0
 scale = Vector2(0.25, 0.25)
 texture_normal = ExtResource("3_g3v3j")
+scene_path = "res://Scenes/mini_games/file_finder/file_minigame.tscn"
 
 [node name="Desk" type="Sprite2D" parent="."]
 position = Vector2(230, 747)
@@ -71,3 +72,6 @@ texture = ExtResource("7_ftm4o")
 position = Vector2(976, 628)
 scale = Vector2(0.101556, 0.084)
 texture = ExtResource("8_xcblm")
+
+[node name="PrintPosition" type="Marker2D" parent="."]
+position = Vector2(978, 654)
