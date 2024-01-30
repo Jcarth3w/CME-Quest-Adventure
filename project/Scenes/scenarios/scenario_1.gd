@@ -1,5 +1,5 @@
 extends Node2D
-var current_room = 1 
+var current_room = 1
 var rooms = []
 
 
@@ -24,6 +24,12 @@ func enter_room(new_room):
 			room.resume_room()
 			room.visible = true
 
+
+func check_win() -> bool:
+	if $HUD.items.size() == 7:
+		return true
+	else:
+		return false
 
 func room_unlock(room_number):
 	if room_number == 2:
@@ -55,9 +61,9 @@ func resume_room():
 	current_room.resume_room()
 
 
-func send_data():
+func send_data(finished):
 	var finished_time = $HUD/Timer/Label.text
-	$DBoperations.make_post_request(1, finished_time, "Johnny", 1)
+	$DBoperations.make_post_request(1, finished_time, "Johnny", finished)
 	
 func get_data():
 	$DBoperations.make_get_request()

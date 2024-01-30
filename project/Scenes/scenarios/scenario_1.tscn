@@ -11,9 +11,10 @@
 script = ExtResource("1_4j01s")
 
 [node name="Room3" parent="." instance=ExtResource("2_tbts0")]
-position = Vector2(-1, 0)
+visible = false
 
 [node name="Room2" parent="." instance=ExtResource("1_msoe2")]
+visible = false
 
 [node name="Room1" parent="." instance=ExtResource("2_iqiqe")]
 

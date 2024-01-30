@@ -61,8 +61,7 @@ func _on_objectives_button_pressed():
 	
 
 func _on_quit_pressed():
-	get_parent().finished = 0
-	get_parent().send_data()
+	get_parent().send_data(0)
 	if FileAccess.file_exists("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt"):
 		var dir = DirAccess.open("res://Scenes/mini_games/Crossword_Puzzle/")
 		dir.remove("saved_puzzle.txt")
