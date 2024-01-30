@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cac2ihisxm2am"
-path="res://.godot/imported/experiential_learning_empty.png-834b0ffaf3deecf40bd91e28150faa28.ctex"
+path="res://.godot/imported/Experiential_Learning_Empty.png-d7bf2506a624d448b50b8e84ba5640a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Crossword_Assets/experiential_learning_empty.png"
-dest_files=["res://.godot/imported/experiential_learning_empty.png-834b0ffaf3deecf40bd91e28150faa28.ctex"]
+source_file="res://Assets/Crossword_Assets/Experiential_Learning_Empty.png"
+dest_files=["res://.godot/imported/Experiential_Learning_Empty.png-d7bf2506a624d448b50b8e84ba5640a9.ctex"]
 
 [params]
 

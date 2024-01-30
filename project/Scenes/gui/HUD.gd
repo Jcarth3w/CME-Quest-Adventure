@@ -51,6 +51,14 @@ func _on_menu_button_pressed():
 			$Timer.stop()
 			$InGameMenu.visible = true
 
+func _on_objectives_button_pressed():
+	if $ObjectiveMenu.visible == false:
+		$ObjectiveMenu.visible = true
+		$BlackBorderRectangle/Label.text = "Hide Objectives"
+	else:
+		$ObjectiveMenu.visible = false
+		$BlackBorderRectangle/Label.text = "View Objectives"
+	
 
 func _on_quit_pressed():
 	get_parent().finished = 0
@@ -96,3 +104,6 @@ func _on_room3_pressed():
 	get_parent().enter_room(get_parent().get_node("Room3"))
 	get_parent().current_room = get_parent().get_node("Room3")
 	$RoomMenu.visible = false
+
+
+
