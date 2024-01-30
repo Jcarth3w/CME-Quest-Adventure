@@ -31,7 +31,6 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 
 [node name="Login" type="Node2D" parent="."]
-visible = false
 
 [node name="Username" type="LineEdit" parent="Login"]
 offset_left = 721.0
@@ -74,6 +73,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Files" type="Node2D" parent="."]
+visible = false
 
 [node name="File1" type="TextureButton" parent="Files"]
 offset_left = 138.0
@@ -131,12 +131,10 @@ offset_bottom = 927.0
 text = "PRINT"
 
 [node name="PrintFeedback" type="Label" parent="Files"]
-visible = false
-offset_left = 1534.0
-offset_top = 776.0
-offset_right = 1789.0
-offset_bottom = 899.0
-text = "PRINT SUCCESSFUL"
+offset_left = 1189.0
+offset_top = 654.0
+offset_right = 1444.0
+offset_bottom = 777.0
 label_settings = SubResource("LabelSettings_7l6lw")
 horizontal_alignment = 1
 vertical_alignment = 1
