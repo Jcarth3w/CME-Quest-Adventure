@@ -9,7 +9,11 @@ func _ready() -> void:
 
 
 func _on_clickable(clickable) -> void:
-	clickable.action()
+	if clickable.name == "FilingCabinet":
+		if get_parent().check_win():
+			clickable.action()
+	else:
+		clickable.action()
 
 
 func _on_static_scene_spawn() -> void:

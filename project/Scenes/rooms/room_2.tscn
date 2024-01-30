@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dxurrur4fkonu"]
 
-[ext_resource type="Script" path="res://Scenes/rooms/room_2.gd" id="1_xmdg1"]
+[ext_resource type="Script" path="res://Scenes/rooms/room.gd" id="1_xmdg1"]
 [ext_resource type="Texture2D" uid="uid://d1gbpeh7j816b" path="res://Assets/Sprites/Room2/Board.png" id="2_yva6x"]
 [ext_resource type="Script" path="res://Clickables/new_scene/New_Scene_Object.gd" id="3_ibul7"]
 [ext_resource type="Texture2D" uid="uid://dt8kyilmk6dl2" path="res://Assets/Sprites/generic_items/genericItem_color_035.png" id="4_0dgl6"]
