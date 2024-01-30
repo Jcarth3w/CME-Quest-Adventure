@@ -1,12 +1,5 @@
 extends Node2D
-
-var current_room : Node2D
-var url = "http://localhost:8000/postdata.php"
-var url2 = "http://localhost:8000/pulldata.php"
-var scenario_num = 1
-var generic_user = "Lani"
-var finished_time
-var finished
+var current_room = 1 
 var rooms = []
 
 
@@ -63,13 +56,8 @@ func resume_room():
 
 
 func send_data():
-	finished_time = $HUD/Timer/Label.text
-	var data_to_send = {"scenario" : scenario_num,
-	"username": generic_user,
-	"time": finished_time,
-	"finished": finished
-	}
-	$DBoperations.make_post_request(url, data_to_send)
+	var finished_time = $HUD/Timer/Label.text
+	$DBoperations.make_post_request(1, finished_time, "Johnny", 1)
 	
 func get_data():
-	$DBoperations.make_get_request(url2)
+	$DBoperations.make_get_request()
