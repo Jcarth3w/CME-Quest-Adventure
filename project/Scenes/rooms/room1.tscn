@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://b302n6pq0hkk1"]
 
-[ext_resource type="Script" path="res://Scenes/rooms/room1.gd" id="1_dbjvq"]
+[ext_resource type="Script" path="res://Scenes/rooms/room.gd" id="1_dbjvq"]
 [ext_resource type="Texture2D" uid="uid://bkomnkytheji1" path="res://Assets/Sprites/room_1_custom_placeholders/RoomBackground.png" id="2_bb0ow"]
 [ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Clickables/pickup/pickup.tscn" id="2_pjc2w"]
 [ext_resource type="Texture2D" uid="uid://dqunufa6yvb80" path="res://Assets/Sprites/generic_items/genericItem_color_032.png" id="4_5llip"]
@@ -113,9 +113,7 @@ offset_right = 1877.0
 offset_bottom = 947.0
 scale = Vector2(0.948463, 0.81468)
 texture_normal = ExtResource("10_2w5ac")
-scene_path = "res://Scenes/mini_games/file_finder/file_minigame.tscn"
-prize_texture = ExtResource("12_72ahr")
-prize_name = "file_prize"
+script = null
 
 [node name="PaperShredder" parent="." instance=ExtResource("8_je1k2")]
 offset_left = 1371.0

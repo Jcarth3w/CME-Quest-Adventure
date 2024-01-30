@@ -1,14 +1,15 @@
 extends Node2D
-
 var current_room = 1 
 var rooms = []
 
 
 func _ready():
+	current_room = find_child("Room1")
+	$Room2.pause_room()
+	$Room3.pause_room()
 	for child in get_children():
 		if child is Room:
 			rooms.append(child)
-	enter_room(1)
 	if FileAccess.file_exists("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt"):
 		var dir = DirAccess.open("res://Scenes/mini_games/Crossword_Puzzle/")
 		dir.remove("saved_puzzle.txt")
@@ -16,17 +17,19 @@ func _ready():
 
 func enter_room(new_room):
 	for room in rooms:
-		if room != rooms[new_room]:
-			room.pause_game()
+		if room != new_room:
+			room.pause_room()
 			room.visible = false
 		else:
-			room.resume_game()
+			room.resume_room()
 			room.visible = true
 
 
 func room_unlock(room_number):
 	if room_number == 2:
 		$HUD/RoomMenu/Room2.visible = true
+	elif room_number == 3:
+		$HUD/RoomMenu/Room3.visible = true
 
 
 func disable_menu(menu) -> void:
@@ -45,17 +48,11 @@ func activate_menus() -> void:
 
 
 func pause_room():
-	if current_room == 1:
-		$Room1.pause_game()
-	elif current_room == 2:
-		$Room2.pause_game()
+	current_room.pause_room()
 
 
 func resume_room():
-	if current_room == 1:
-		$Room1.resume_game()
-	elif current_room == 2:
-		$Room2.resume_game()
+	current_room.resume_room()
 
 
 func send_data():

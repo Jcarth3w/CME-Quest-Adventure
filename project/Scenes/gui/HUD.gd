@@ -17,6 +17,8 @@ func _ready():
 	$RoomMenu.get_node("Room1").pressed.connect(_on_room1_pressed)
 	$RoomMenu.get_node("Room2").pressed.connect(_on_room2_pressed)
 	$RoomMenu.get_node("Room2").visible = false
+	$RoomMenu.get_node("Room3").pressed.connect(_on_room3_pressed)
+	$RoomMenu.get_node("Room3").visible = false
 
 func add_item_image(sprite_path) -> void:
 	if current_item == 1:
@@ -29,17 +31,11 @@ func add_item_image(sprite_path) -> void:
 		$Inventory/Item4.texture = sprite_path
 	elif current_item == 5:
 		$Inventory/Item5.texture = sprite_path
-	else:
+	elif current_item == 6:
 		$Inventory/Item6.texture = sprite_path
+	else:
+		$Inventory/Item7.texture = sprite_path
 	current_item += 1
-
-
-func empty_inventory():
-	current_item = 1
-	for item in $Inventory.get_children():
-		if item is Sprite2D:
-			item.texture = null
-	items.clear()
 
 
 func add_item(item_name, sprite_path) -> void:
@@ -55,8 +51,17 @@ func _on_menu_button_pressed():
 			$Timer.stop()
 			$InGameMenu.visible = true
 
+func _on_objectives_button_pressed():
+	if $ObjectiveMenu.visible == false:
+		$ObjectiveMenu.visible = true
+		$BlackBorderRectangle/Label.text = "Hide Objectives"
+	else:
+		$ObjectiveMenu.visible = false
+		$BlackBorderRectangle/Label.text = "View Objectives"
+	
 
 func _on_quit_pressed():
+	get_parent().finished = 0
 	get_parent().send_data()
 	if FileAccess.file_exists("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt"):
 		var dir = DirAccess.open("res://Scenes/mini_games/Crossword_Puzzle/")
@@ -84,11 +89,21 @@ func _on_map_button_pressed():
 
 
 func _on_room1_pressed():
-	get_parent().enter_room(1)
+	get_parent().enter_room(get_parent().get_node("Room1"))
+	get_parent().current_room = get_parent().get_node("Room1")
 	$RoomMenu.visible = false
-
 
 
 func _on_room2_pressed():
-	get_parent().enter_room(0)
+	get_parent().enter_room(get_parent().get_node("Room2"))
+	get_parent().current_room = get_parent().get_node("Room2")
 	$RoomMenu.visible = false
+
+
+func _on_room3_pressed():
+	get_parent().enter_room(get_parent().get_node("Room3"))
+	get_parent().current_room = get_parent().get_node("Room3")
+	$RoomMenu.visible = false
+
+
+

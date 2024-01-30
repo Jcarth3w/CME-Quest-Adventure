@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://btrq7xlbfn1gb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2f4ns"]
+font_size = 17
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="ObjectiveMenu" type="CanvasLayer"]
+
+[node name="BlackBorder" type="ColorRect" parent="."]
+offset_left = 112.0
+offset_top = 128.0
+offset_right = 454.0
+offset_bottom = 518.0
+scale = Vector2(1.08219, 0.94342)
+color = Color(0, 0, 0, 1)
+
+[node name="RedFill" type="ColorRect" parent="BlackBorder"]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 339.0
+offset_bottom = 387.0
+color = Color(0.737255, 0, 0.203922, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 128.0
+offset_top = 152.0
+offset_right = 464.0
+offset_bottom = 472.0
+text = "
+Find the Promotional Papers 
+
+Find the Promotional Folder 
+
+Find the Adult Learning Resources Books
+
+Print the Remaining Document
+
+Organize and put everything in the correct filing cabinet
+
+"
+label_settings = SubResource("LabelSettings_2f4ns")
+horizontal_alignment = 1
+autowrap_mode = 2

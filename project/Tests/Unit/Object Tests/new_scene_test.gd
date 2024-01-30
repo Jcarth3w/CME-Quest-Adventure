@@ -13,5 +13,5 @@ func before_all() -> void:
 
 func test_new_scene():
 	new_scene.scene_path = "res://Scenes/mini_games/shredder/ShredderMiniGame.tscn"
-	new_scene.pressed()
+	new_scene.action()
 	assert_eq(test_room.has_node("ShredderMiniGame"), true)

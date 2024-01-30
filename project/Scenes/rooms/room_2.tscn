@@ -1,13 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://dxurrur4fkonu"]
+[gd_scene load_steps=13 format=3 uid="uid://dxurrur4fkonu"]
 
-[ext_resource type="Script" path="res://Scenes/rooms/room_2.gd" id="1_xmdg1"]
+[ext_resource type="Script" path="res://Scenes/rooms/room.gd" id="1_xmdg1"]
 [ext_resource type="Texture2D" uid="uid://d1gbpeh7j816b" path="res://Assets/Sprites/Room2/Board.png" id="2_yva6x"]
 [ext_resource type="Script" path="res://Clickables/new_scene/New_Scene_Object.gd" id="3_ibul7"]
 [ext_resource type="Texture2D" uid="uid://dt8kyilmk6dl2" path="res://Assets/Sprites/generic_items/genericItem_color_035.png" id="4_0dgl6"]
 [ext_resource type="PackedScene" uid="uid://c7brg2hyybb7t" path="res://Clickables/static_scene_btn/static_scene_button.tscn" id="7_x8tk5"]
 [ext_resource type="Texture2D" uid="uid://bniggs3y0fm5a" path="res://Assets/Sprites/Room2/Bookshelf.png" id="8_wahkr"]
 [ext_resource type="Texture2D" uid="uid://dmm1o4xemcxfx" path="res://Assets/Sprites/Room2/Desk.png" id="9_huuy6"]
+[ext_resource type="Texture2D" uid="uid://b3pfe3e62av5a" path="res://Assets/Sprites/Room2/keypad.PNG" id="9_tgu88"]
 [ext_resource type="Texture2D" uid="uid://k7tyhsc5hvsx" path="res://Assets/Sprites/room_1_custom_placeholders/chair.png" id="10_dw2od"]
+[ext_resource type="Script" path="res://Scenes/rooms/combo_button.gd" id="10_mgps6"]
+[ext_resource type="PackedScene" uid="uid://rksr0yf3cfrd" path="res://Clickables/movement/Movement_Object.tscn" id="11_a351n"]
+[ext_resource type="Texture2D" uid="uid://w10bfogg4ojl" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-09.png" id="12_jxi8s"]
 
 [node name="Room2" type="Node2D"]
 script = ExtResource("1_xmdg1")
@@ -42,7 +46,6 @@ texture_normal = ExtResource("2_yva6x")
 script = ExtResource("3_ibul7")
 scene_path = "res://Scenes/mini_games/Crossword_Puzzle/crossword_minigame.tscn"
 prize_texture = ExtResource("4_0dgl6")
-prize_name = "xword_prize"
 
 [node name="StaticSceneButton" parent="." instance=ExtResource("7_x8tk5")]
 offset_left = 1384.0
@@ -56,6 +59,26 @@ scene_path = "res://Scenes/static_scene/crossword_answers.tscn"
 position = Vector2(509.766, 749.351)
 scale = Vector2(1.41546, 1.9632)
 texture = ExtResource("9_huuy6")
+
+[node name="Room3Unlock" type="TextureButton" parent="."]
+offset_left = 477.0
+offset_top = 488.0
+offset_right = 1112.0
+offset_bottom = 1245.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("9_tgu88")
+script = ExtResource("10_mgps6")
+scene_path = "res://Clickables/room_unlocks/combo_unlock.tscn"
+
+[node name="Movement_Object" parent="." instance=ExtResource("11_a351n")]
+offset_left = 396.0
+offset_top = 405.0
+offset_right = 2646.0
+offset_bottom = 2655.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("12_jxi8s")
+x_coordinate = 250
+y_coordinate = 420
 
 [node name="Chair" type="Sprite2D" parent="."]
 position = Vector2(351, 718)

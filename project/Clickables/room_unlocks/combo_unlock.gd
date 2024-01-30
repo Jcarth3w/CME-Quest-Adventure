@@ -1,6 +1,8 @@
 extends Node2D
 
-var answer = "6969"
+signal finished
+var answer = "123"
+var room_number = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() ->void:
@@ -14,11 +16,19 @@ func _on_button_press(button) -> void:
 		check_answer($Display.text)
 	elif button.text == "CLEAR":
 		$Display.text = ""
+	elif button.text == "X":
+		finished.emit()
+		queue_free()
 	else:
 		$Display.text += button.text
+	
 
 func check_answer(player_answer) -> void:
 	if player_answer == answer:
-		print("you did it, you're so smarrrrttt")
+		$Display.text = "unlocked"
+		get_parent().unlock(room_number)
+		await get_tree().create_timer(0.5).timeout
+		queue_free()
 	else:
-		print("you suck, get good")
+		$Display.text = "incorrect"
+

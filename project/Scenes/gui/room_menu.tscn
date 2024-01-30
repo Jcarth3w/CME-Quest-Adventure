@@ -38,16 +38,22 @@ label_settings = SubResource("LabelSettings_6adl1")
 metadata/_edit_use_anchors_ = true
 
 [node name="Room1" type="TextureButton" parent="."]
-offset_left = 813.0
-offset_top = 536.0
-offset_right = 876.0
-offset_bottom = 601.0
+offset_left = 738.0
+offset_top = 532.0
+offset_right = 801.0
+offset_bottom = 597.0
 texture_normal = ExtResource("1_s6ykq")
-flip_h = true
 
 [node name="Room2" type="TextureButton" parent="."]
-offset_left = 1041.0
-offset_top = 533.0
-offset_right = 1104.0
-offset_bottom = 598.0
+offset_left = 925.0
+offset_top = 529.0
+offset_right = 988.0
+offset_bottom = 594.0
+texture_normal = ExtResource("1_s6ykq")
+
+[node name="Room3" type="TextureButton" parent="."]
+offset_left = 1097.0
+offset_top = 529.0
+offset_right = 1160.0
+offset_bottom = 594.0
 texture_normal = ExtResource("1_s6ykq")
