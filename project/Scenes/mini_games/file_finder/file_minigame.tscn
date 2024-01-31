@@ -133,6 +133,7 @@ offset_bottom = 1061.0
 color = Color(0.294118, 0.588235, 0.898039, 1)
 
 [node name="Slots" type="Node2D" parent="OrganizeFiles"]
+position = Vector2(127, 283)
 
 [node name="Slot1" type="TextureButton" parent="OrganizeFiles/Slots"]
 offset_left = 78.0
@@ -183,6 +184,7 @@ scale = Vector2(2.5, 2.5)
 texture_normal = ExtResource("7_arwno")
 
 [node name="Items" type="Node2D" parent="OrganizeFiles"]
+position = Vector2(186, 493)
 
 [node name="Item1" type="TextureButton" parent="OrganizeFiles/Items"]
 offset_right = 237.0

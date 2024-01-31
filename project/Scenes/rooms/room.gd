@@ -1,6 +1,8 @@
 class_name Room
 extends Node2D
 
+signal final
+
 
 func _ready() -> void:
 	for child in get_children():
