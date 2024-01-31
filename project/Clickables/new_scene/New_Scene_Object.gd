@@ -13,7 +13,7 @@ func action():
 		var scene = load(scene_path)
 		if scene != null:
 			var scene_inst = scene.instantiate()
-			owner.add_child(scene_inst)
+			get_parent().add_child(scene_inst)
 			scene_inst.finished.connect(_on_finished)
 			scene_changed.emit("pause")
 

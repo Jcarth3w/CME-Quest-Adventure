@@ -4,6 +4,7 @@ var username = "john"
 var password = "123"
 var screens = []
 var file_contents = {}
+var current_file
 
 
 func _ready() -> void:
@@ -32,6 +33,8 @@ func change_file_reader(text_file) -> void:
 
 
 func _on_power_button_pressed() -> void:
+	if check_correct():
+		get_parent().get_node("printed").visible = true
 	queue_free()
 
 
@@ -44,7 +47,33 @@ func _on_button_pressed() -> void:
 
 func _on_file_press(file) -> void:
 	change_file_reader(file_contents.get(file))
+	current_file = file
 
 
 func _on_print_pressed():
+	if check_correct():
+		print_paper()
+	else:
+		$Files/PrintFeedback.text = "INCORRECT FILE: PRINT FAILED"
+		$Files/PrintFeedback.visible = true
+	
+
+func print_paper() -> void:
+	var printed = load("res://Clickables/pickup/pickup.tscn")
+	var print_inst = printed.instantiate()
+	print_inst.global_position = get_parent().get_node("PrintPosition").global_position
+	print_inst.texture_normal = load("res://Assets/Sprites/generic_items/genericItem_color_037.png")
+	print_inst.name = "printed"
+	print_inst.visible = false
+	get_parent().add_child(print_inst)
+	get_parent().connect_clickable(print_inst)
+	$Files/PrintFeedback.text = "CORRECT FILE: PRINT SUCCESSFUL"
 	$Files/PrintFeedback.visible = true
+
+
+func check_correct():
+	if current_file != $Files/File4:
+		return false
+	else:
+		return true
+

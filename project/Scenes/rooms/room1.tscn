@@ -1,6 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://b302n6pq0hkk1"]
+[gd_scene load_steps=20 format=3 uid="uid://b302n6pq0hkk1"]
 
-[ext_resource type="Script" path="res://Scenes/mini_games/rooms/room1.gd" id="1_dbjvq"]
+[ext_resource type="Script" path="res://Scenes/rooms/room.gd" id="1_dbjvq"]
 [ext_resource type="Texture2D" uid="uid://bkomnkytheji1" path="res://Assets/Sprites/room_1_custom_placeholders/RoomBackground.png" id="2_bb0ow"]
 [ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Clickables/pickup/pickup.tscn" id="2_pjc2w"]
 [ext_resource type="Texture2D" uid="uid://dqunufa6yvb80" path="res://Assets/Sprites/generic_items/genericItem_color_032.png" id="4_5llip"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://7dh6xy1cyylg" path="res://Assets/Sprites/room_1_custom_placeholders/tissues.png" id="17_iavhs"]
 [ext_resource type="Texture2D" uid="uid://4vloe2o85w0c" path="res://Assets/Sprites/room_1_custom_placeholders/papershredder.png" id="18_lm3ui"]
 [ext_resource type="Script" path="res://Clickables/static_scene_btn/static_scene_button.gd" id="18_mfent"]
+[ext_resource type="PackedScene" uid="uid://ccliul8ayjg6h" path="res://Clickables/room_unlocks/key.tscn" id="19_0x56j"]
 
 [node name="Room1" type="Node2D"]
 script = ExtResource("1_dbjvq")
@@ -68,11 +69,19 @@ offset_right = 902.0
 offset_bottom = 427.0
 texture_normal = ExtResource("4_5llip")
 
+[node name="Room2Key" parent="." instance=ExtResource("19_0x56j")]
+offset_left = 1163.0
+offset_top = 671.0
+offset_right = 3413.0
+offset_bottom = 2921.0
+flip_h = true
+room_number = 2
+
 [node name="Flower" parent="." instance=ExtResource("8_je1k2")]
-offset_left = 1142.0
-offset_top = 471.0
-offset_right = 1278.0
-offset_bottom = 819.0
+offset_left = 1150.0
+offset_top = 460.0
+offset_right = 1286.0
+offset_bottom = 808.0
 scale = Vector2(1.19971, 1.1379)
 texture_normal = ExtResource("15_tfc22")
 script = ExtResource("10_u6dd1")
@@ -104,9 +113,7 @@ offset_right = 1877.0
 offset_bottom = 947.0
 scale = Vector2(0.948463, 0.81468)
 texture_normal = ExtResource("10_2w5ac")
-scene_path = "res://Scenes/mini_games/file_finder/file_minigame.tscn"
-prize_texture = ExtResource("12_72ahr")
-prize_name = "file_prize"
+script = null
 
 [node name="PaperShredder" parent="." instance=ExtResource("8_je1k2")]
 offset_left = 1371.0

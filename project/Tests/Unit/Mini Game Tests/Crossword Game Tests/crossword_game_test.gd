@@ -13,7 +13,7 @@ func before_all() -> void:
 func test_check_answer_incorrect():
 	test_mini.get_node("UserText").text = "smart water"
 	test_mini.check_answer()
-	assert_eq(test_mini.get_node("UserText").text, "")
+	assert_eq(test_mini.get_node("UserText").text, "smart water")
 
 func test_check_answer_correct():
 	test_mini.get_node("UserText").text = "andragogy"

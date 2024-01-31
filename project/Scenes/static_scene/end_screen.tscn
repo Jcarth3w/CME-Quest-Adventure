@@ -1,0 +1,144 @@
+[gd_scene load_steps=7 format=3 uid="uid://ck2ksk2fhxohl"]
+
+[ext_resource type="Script" path="res://Scenes/static_scene/end_screen.gd" id="1_luu4i"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rkqva"]
+font_size = 56
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nk5yc"]
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8gjyi"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_poqw4"]
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mhe6e"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[node name="EndScreen" type="CanvasLayer"]
+script = ExtResource("1_luu4i")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -600.0
+offset_top = -450.0
+offset_right = 600.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.796078, 0, 0.203922, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -437.5
+offset_top = -400.5
+offset_right = 437.5
+offset_bottom = 400.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Congrats" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.353646
+anchor_top = 0.138889
+anchor_right = 0.646354
+anchor_bottom = 0.212963
+offset_bottom = -1.52588e-05
+grow_horizontal = 2
+grow_vertical = 2
+text = "CONGRATULATIONS!"
+label_settings = SubResource("LabelSettings_rkqva")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="User" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -265.0
+offset_right = 42.0
+offset_bottom = -207.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "user"
+label_settings = SubResource("LabelSettings_nk5yc")
+
+[node name="Scenario" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.409375
+anchor_top = 0.324074
+anchor_right = 0.590625
+anchor_bottom = 0.368519
+offset_top = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Completed Scenario # "
+label_settings = SubResource("LabelSettings_8gjyi")
+metadata/_edit_use_anchors_ = true
+
+[node name="ScenNum" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -55.0
+offset_right = 20.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "#"
+label_settings = SubResource("LabelSettings_poqw4")
+horizontal_alignment = 1
+
+[node name="Time" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.475781
+anchor_top = 0.509259
+anchor_right = 0.524219
+anchor_bottom = 0.553704
+offset_top = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Time: "
+label_settings = SubResource("LabelSettings_8gjyi")
+metadata/_edit_use_anchors_ = true
+
+[node name="TimeVal" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = 185.0
+offset_right = 20.0
+offset_bottom = 208.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "00:00"
+label_settings = SubResource("LabelSettings_mhe6e")
+horizontal_alignment = 1

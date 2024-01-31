@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://x1cxbdtve8eh"]
+[gd_scene load_steps=9 format=3 uid="uid://x1cxbdtve8eh"]
 
-[ext_resource type="Script" path="res://Scenes/mini_games/rooms/room.gd" id="1_nq3g1"]
+[ext_resource type="Script" path="res://Scenes/rooms/room.gd" id="1_nq3g1"]
 [ext_resource type="PackedScene" uid="uid://rksr0yf3cfrd" path="res://Clickables/movement/Movement_Object.tscn" id="1_xte3c"]
 [ext_resource type="Texture2D" uid="uid://bo6owma52kh4u" path="res://Assets/Sprites/generic_items/genericItem_color_001.png" id="2_byr8h"]
 [ext_resource type="PackedScene" uid="uid://pn2l6ln2hl3j" path="res://Clickables/new_scene/new_scene_object.tscn" id="4_6gx4v"]
 [ext_resource type="Texture2D" uid="uid://ytuunfigl51e" path="res://Assets/Sprites/generic_items/genericItem_color_002.png" id="5_d2ivu"]
 [ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Clickables/pickup/pickup.tscn" id="5_ouvw5"]
+[ext_resource type="PackedScene" uid="uid://ccliul8ayjg6h" path="res://Clickables/room_unlocks/key.tscn" id="8_imjnm"]
 [ext_resource type="PackedScene" uid="uid://c7brg2hyybb7t" path="res://Clickables/static_scene_btn/static_scene_button.tscn" id="9_fp5jy"]
 
 [node name="TestRoom" type="Node2D"]
@@ -28,3 +29,9 @@ offset_bottom = 289.0
 texture_normal = ExtResource("5_d2ivu")
 
 [node name="StaticSceneButton" parent="." instance=ExtResource("9_fp5jy")]
+
+[node name="Key" parent="." instance=ExtResource("8_imjnm")]
+offset_left = 1484.16
+offset_top = 1194.62
+offset_right = 3734.16
+offset_bottom = 3444.62

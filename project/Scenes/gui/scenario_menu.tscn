@@ -81,7 +81,7 @@ offset_left = 840.0
 offset_top = 824.0
 offset_right = 1073.0
 offset_bottom = 913.0
-text = "Return to Game"
+text = "CLOSE"
 
 [node name="ScenarioLabel" type="Label" parent="."]
 anchors_preset = 8

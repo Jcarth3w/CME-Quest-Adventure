@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bdtol8suwnlv7"]
+[gd_scene load_steps=10 format=3 uid="uid://bdtol8suwnlv7"]
 
 [ext_resource type="Script" path="res://Scenes/mini_games/file_finder/FileMinigameManager.gd" id="1_uttu5"]
 [ext_resource type="Texture2D" uid="uid://c2vty8rtegoq" path="res://Assets/Sprites/room_1_custom_placeholders/Fun_files.png" id="2_a47ji"]
 [ext_resource type="Texture2D" uid="uid://c4vppo3v2xkk" path="res://Assets/Sprites/room_1_custom_placeholders/Profile.png" id="4_67jox"]
 [ext_resource type="Texture2D" uid="uid://cw50q765dhasb" path="res://Assets/Sprites/room_1_custom_placeholders/Report_file.png" id="5_f44y0"]
 [ext_resource type="Texture2D" uid="uid://1fki42ji8o62" path="res://Assets/Sprites/room_1_custom_placeholders/Promo_file.png" id="6_wuo8l"]
+[ext_resource type="Texture2D" uid="uid://dcm6p18p7lslf" path="res://Assets/Sprites/generic_items/genericItem_color_160.png" id="7_arwno"]
 [ext_resource type="Texture2D" uid="uid://v5q1p56fu8vl" path="res://Assets/Sprites/room_1_custom_placeholders/Work_file.png" id="7_g5sw6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_js1u7"]
@@ -12,21 +13,28 @@ font_size = 50
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 
-[node name="FileMinigame" type="Node2D"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rge4g"]
+load_path = "res://.godot/imported/genericItem_color_160.png-45fdbac054b4d6afd5c2530fe6bc54fa.ctex"
+
+[node name="Scenario1Final" type="Node2D"]
 script = ExtResource("1_uttu5")
 
-[node name="EdgeBackground" type="ColorRect" parent="."]
+[node name="FileFind" type="Node2D" parent="."]
+
+[node name="EdgeBackground" type="ColorRect" parent="FileFind"]
 custom_minimum_size = Vector2(1920, 1080)
+offset_right = 1920.0
+offset_bottom = 1080.0
 color = Color(0, 0.427451, 0.615686, 1)
 
-[node name="frontBackground" type="ColorRect" parent="."]
+[node name="frontBackground" type="ColorRect" parent="FileFind"]
 offset_left = 21.0
 offset_top = 146.0
 offset_right = 1902.0
 offset_bottom = 1061.0
 color = Color(0.294118, 0.588235, 0.898039, 1)
 
-[node name="Previous" type="Button" parent="."]
+[node name="Previous" type="Button" parent="FileFind"]
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
@@ -37,7 +45,7 @@ offset_bottom = 530.0
 grow_vertical = 2
 text = "PREVIOUS"
 
-[node name="Next" type="Button" parent="."]
+[node name="Next" type="Button" parent="FileFind"]
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
@@ -48,7 +56,7 @@ offset_bottom = 530.0
 grow_vertical = 2
 text = "NEXT"
 
-[node name="Check" type="Label" parent="."]
+[node name="Check" type="Label" parent="FileFind"]
 anchors_preset = -1
 anchor_left = 1.0
 anchor_top = -3.25
@@ -64,49 +72,159 @@ label_settings = SubResource("LabelSettings_js1u7")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="File1" type="TextureButton" parent="."]
+[node name="File1" type="TextureButton" parent="FileFind"]
 offset_left = 914.0
 offset_top = 455.0
-offset_right = 1008.0
-offset_bottom = 553.0
+offset_right = 1151.0
+offset_bottom = 676.0
 texture_normal = ExtResource("2_a47ji")
 
-[node name="File2" type="TextureButton" parent="."]
+[node name="File2" type="TextureButton" parent="FileFind"]
 offset_left = -239.0
 offset_top = 433.0
 offset_right = -2.0
 offset_bottom = 654.0
 texture_normal = ExtResource("4_67jox")
 
-[node name="File3" type="TextureButton" parent="."]
+[node name="File3" type="TextureButton" parent="FileFind"]
 offset_left = -415.0
 offset_top = 197.0
 offset_right = -178.0
 offset_bottom = 418.0
 texture_normal = ExtResource("5_f44y0")
 
-[node name="File4" type="TextureButton" parent="."]
+[node name="File4" type="TextureButton" parent="FileFind"]
 offset_left = -508.0
 offset_top = 517.0
 offset_right = -271.0
 offset_bottom = 738.0
 texture_normal = ExtResource("6_wuo8l")
 
-[node name="File5" type="TextureButton" parent="."]
+[node name="File5" type="TextureButton" parent="FileFind"]
 offset_left = -285.0
 offset_top = 736.0
 offset_right = -48.0
 offset_bottom = 957.0
 texture_normal = ExtResource("7_g5sw6")
 
-[node name="OffLeft" type="Marker2D" parent="."]
+[node name="OffLeft" type="Marker2D" parent="FileFind"]
 position = Vector2(281, 852)
 
-[node name="OffRight" type="Marker2D" parent="."]
+[node name="OffRight" type="Marker2D" parent="FileFind"]
 position = Vector2(1604, 855)
 
-[node name="Center" type="Marker2D" parent="."]
+[node name="Center" type="Marker2D" parent="FileFind"]
 position = Vector2(893, 425)
 
-[connection signal="pressed" from="Previous" to="." method="_on_previous_pressed"]
-[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
+[node name="OrganizeFiles" type="Node2D" parent="."]
+visible = false
+
+[node name="EdgeBackground" type="ColorRect" parent="OrganizeFiles"]
+custom_minimum_size = Vector2(1920, 1080)
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0.427451, 0.615686, 1)
+
+[node name="frontBackground" type="ColorRect" parent="OrganizeFiles"]
+offset_left = 21.0
+offset_top = 146.0
+offset_right = 1902.0
+offset_bottom = 1061.0
+color = Color(0.294118, 0.588235, 0.898039, 1)
+
+[node name="Slots" type="Node2D" parent="OrganizeFiles"]
+position = Vector2(127, 283)
+
+[node name="Slot1" type="TextureButton" parent="OrganizeFiles/Slots"]
+offset_left = 78.0
+offset_top = 595.0
+offset_right = 118.0
+offset_bottom = 635.0
+scale = Vector2(2.5, 2.5)
+texture_normal = SubResource("CompressedTexture2D_rge4g")
+
+[node name="Slot2" type="TextureButton" parent="OrganizeFiles/Slots"]
+offset_left = 302.0
+offset_top = 595.0
+offset_right = 342.0
+offset_bottom = 635.0
+scale = Vector2(2.5, 2.5)
+texture_normal = ExtResource("7_arwno")
+
+[node name="Slot3" type="TextureButton" parent="OrganizeFiles/Slots"]
+offset_left = 580.0
+offset_top = 596.0
+offset_right = 620.0
+offset_bottom = 636.0
+scale = Vector2(2.5, 2.5)
+texture_normal = ExtResource("7_arwno")
+
+[node name="Slot4" type="TextureButton" parent="OrganizeFiles/Slots"]
+offset_left = 883.0
+offset_top = 603.0
+offset_right = 923.0
+offset_bottom = 643.0
+scale = Vector2(2.5, 2.5)
+texture_normal = ExtResource("7_arwno")
+
+[node name="Slot5" type="TextureButton" parent="OrganizeFiles/Slots"]
+offset_left = 1196.0
+offset_top = 599.0
+offset_right = 1236.0
+offset_bottom = 639.0
+scale = Vector2(2.5, 2.5)
+texture_normal = ExtResource("7_arwno")
+
+[node name="Slot6" type="TextureButton" parent="OrganizeFiles/Slots"]
+offset_left = 1549.0
+offset_top = 579.0
+offset_right = 1589.0
+offset_bottom = 619.0
+scale = Vector2(2.5, 2.5)
+texture_normal = ExtResource("7_arwno")
+
+[node name="Items" type="Node2D" parent="OrganizeFiles"]
+position = Vector2(186, 493)
+
+[node name="Item1" type="TextureButton" parent="OrganizeFiles/Items"]
+offset_right = 237.0
+offset_bottom = 221.0
+texture_normal = ExtResource("2_a47ji")
+
+[node name="Item2" type="TextureButton" parent="OrganizeFiles/Items"]
+offset_left = 257.0
+offset_top = 7.0
+offset_right = 494.0
+offset_bottom = 228.0
+texture_normal = ExtResource("2_a47ji")
+metadata/_edit_use_anchors_ = true
+
+[node name="Item3" type="TextureButton" parent="OrganizeFiles/Items"]
+offset_left = 530.0
+offset_top = 3.0
+offset_right = 767.0
+offset_bottom = 224.0
+texture_normal = ExtResource("2_a47ji")
+
+[node name="Item4" type="TextureButton" parent="OrganizeFiles/Items"]
+offset_left = 807.0
+offset_top = 7.0
+offset_right = 1044.0
+offset_bottom = 228.0
+texture_normal = ExtResource("2_a47ji")
+
+[node name="Item5" type="TextureButton" parent="OrganizeFiles/Items"]
+offset_left = 1075.0
+offset_top = 7.0
+offset_right = 1312.0
+offset_bottom = 228.0
+texture_normal = ExtResource("2_a47ji")
+
+[node name="Item6" type="TextureButton" parent="OrganizeFiles/Items"]
+offset_left = 1349.0
+offset_right = 1586.0
+offset_bottom = 221.0
+texture_normal = ExtResource("2_a47ji")
+
+[connection signal="pressed" from="FileFind/Previous" to="." method="_on_previous_pressed"]
+[connection signal="pressed" from="FileFind/Next" to="." method="_on_next_pressed"]
