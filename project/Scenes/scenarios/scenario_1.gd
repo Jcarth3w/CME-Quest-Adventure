@@ -1,7 +1,9 @@
 extends Node2D
 var current_room = 1
+var username = "john"
 var rooms = []
 var open_screen_path = "res://Scenes/gui/scenario_menu.tscn"
+var end_screen_path = "res://Scenes/static_scene/end_screen.tscn"
 
 
 func _ready():
@@ -65,7 +67,13 @@ func activate_menus() -> void:
 
 func _on_room_final() -> void:
 	$HUD/Timer.stop()
-	#spawn stat screen
+	var end_screen = load(end_screen_path)
+	var end_screen_inst = end_screen.instantiate()
+	end_screen_inst.username = username
+	end_screen_inst.scen_num = 1
+	end_screen_inst.time_val = $HUD/Timer/Label.text 
+	add_child(end_screen_inst)
+	
 
 func pause_room():
 	current_room.pause_room()
