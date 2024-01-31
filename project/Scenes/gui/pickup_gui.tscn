@@ -42,3 +42,5 @@ offset_right = 628.0
 offset_bottom = 121.0
 text = "Placeholder has been picked up"
 label_settings = SubResource("LabelSettings_ka1av")
+horizontal_alignment = 1
+vertical_alignment = 1
