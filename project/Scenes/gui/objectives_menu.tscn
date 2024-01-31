@@ -16,6 +16,7 @@ scale = Vector2(1.08219, 0.94342)
 color = Color(0, 0, 0, 1)
 
 [node name="RedFill" type="ColorRect" parent="BlackBorder"]
+layout_mode = 0
 offset_left = 3.0
 offset_top = 3.0
 offset_right = 339.0

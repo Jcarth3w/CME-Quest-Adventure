@@ -10,6 +10,7 @@ var map_active = true
 var menu_active = true
 var scenario_menu = preload("res://Scenes/gui/scenario_menu.tscn")
 
+
 func _ready():
 	$InGameMenu.get_node("quit").pressed.connect(_on_quit_pressed)
 	$InGameMenu.get_node("resume").pressed.connect(_on_resume_pressed)
@@ -19,6 +20,7 @@ func _ready():
 	$RoomMenu.get_node("Room2").visible = false
 	$RoomMenu.get_node("Room3").pressed.connect(_on_room3_pressed)
 	$RoomMenu.get_node("Room3").visible = false
+
 
 func add_item_image(sprite_path) -> void:
 	if current_item == 1:
@@ -51,6 +53,7 @@ func _on_menu_button_pressed():
 			$Timer.stop()
 			$InGameMenu.visible = true
 
+
 func _on_objectives_button_pressed():
 	if $ObjectiveMenu.visible == false:
 		$ObjectiveMenu.visible = true
@@ -58,7 +61,7 @@ func _on_objectives_button_pressed():
 	else:
 		$ObjectiveMenu.visible = false
 		$BlackBorderRectangle/Label.text = "View Objectives"
-	
+
 
 func _on_quit_pressed():
 	get_parent().send_data(0)
@@ -81,10 +84,20 @@ func _on_scenario_pressed():
 
 
 func _on_map_button_pressed():
-	if map_active:
+	if map_active and $RoomMenu.visible == false:
 		get_parent().pause_room()
 		if $InGameMenu.visible == false:
 				$RoomMenu.visible = true
+	elif $RoomMenu.visible == true:
+		$RoomMenu.visible = false
+		get_parent().resume_room()
+
+
+func room_menu_press() -> void:
+	if $RoomMenu.visible == true:
+		$RoomMenu.visible = false
+	else:
+		$RoomMenu.visible = true
 
 
 func _on_room1_pressed():
@@ -103,6 +116,3 @@ func _on_room3_pressed():
 	get_parent().enter_room(get_parent().get_node("Room3"))
 	get_parent().current_room = get_parent().get_node("Room3")
 	$RoomMenu.visible = false
-
-
-

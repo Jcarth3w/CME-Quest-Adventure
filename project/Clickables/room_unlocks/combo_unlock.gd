@@ -27,6 +27,7 @@ func check_answer(player_answer) -> void:
 	if player_answer == answer:
 		$Display.text = "unlocked"
 		get_parent().unlock(room_number)
+		finished.emit()
 		await get_tree().create_timer(0.5).timeout
 		queue_free()
 	else:

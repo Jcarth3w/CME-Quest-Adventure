@@ -1,15 +1,20 @@
 extends Node2D
 var current_room = 1
 var rooms = []
+var open_screen_path = "res://Scenes/gui/scenario_menu.tscn"
 
 
 func _ready():
 	current_room = find_child("Room1")
-	$Room2.pause_room()
-	$Room3.pause_room()
+	var open_screen = load(open_screen_path)
+	var open_scrn_inst = open_screen.instantiate()
+	open_scrn_inst.get_node("ContinueButton").pressed.connect(_on_open_screen_close)
+	add_child(open_scrn_inst)
 	for child in get_children():
 		if child is Room:
 			rooms.append(child)
+			child.pause_room()
+			child.final.connect(_on_room_final)
 	if FileAccess.file_exists("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt"):
 		var dir = DirAccess.open("res://Scenes/mini_games/Crossword_Puzzle/")
 		dir.remove("saved_puzzle.txt")
@@ -31,12 +36,17 @@ func check_win() -> bool:
 	else:
 		return false
 
+
 func room_unlock(room_number):
 	if room_number == 2:
 		$HUD/RoomMenu/Room2.visible = true
 	elif room_number == 3:
 		$HUD/RoomMenu/Room3.visible = true
 
+
+func _on_open_screen_close() -> void:
+	$Room1.resume_room()
+	$HUD/Timer.start()
 
 func disable_menu(menu) -> void:
 	if menu == 1:
@@ -53,6 +63,10 @@ func activate_menus() -> void:
 	$HUD.map_active = true
 
 
+func _on_room_final() -> void:
+	$HUD/Timer.stop()
+	#spawn stat screen
+
 func pause_room():
 	current_room.pause_room()
 
@@ -64,6 +78,7 @@ func resume_room():
 func send_data(finished):
 	var finished_time = $HUD/Timer/Label.text
 	$DBoperations.make_post_request(1, finished_time, "Johnny", finished)
-	
+
+
 func get_data():
 	$DBoperations.make_get_request()

@@ -84,6 +84,7 @@ func _on_slot_press(slot) -> void:
 		if player_order.size() == 6:
 			check_win()
 
+
 func check_win():
 	if player_order == correct_order:
 		print("Congrats")
