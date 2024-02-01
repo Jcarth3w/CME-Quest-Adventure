@@ -36,8 +36,9 @@ func test_press_inactive_menu_button_() -> void:
 	assert_eq(static_scene.disabled, false)
 
 
-func test_press_active_menu_inactive_room_menu_active() -> void:
+func test_press_menu_active_room_menu_active() -> void:
 	hud.menu_active = true
+	test_scenario._on_open_screen_close()
 	var moveable = room.get_node("TestMoveable")
 	var new_scene = room.get_node("TestNewScene")
 	var pickup = room.get_node("TestPickup")

@@ -1,6 +1,10 @@
 extends Node2D
 var current_room = 1
 var username = "john"
+var finished_time
+var finished = 0
+var generic_user = "Lani"
+var scenario_num = 1
 var rooms = []
 var open_screen_path = "res://Scenes/gui/scenario_menu.tscn"
 var end_screen_path = "res://Scenes/static_scene/end_screen.tscn"
@@ -84,7 +88,7 @@ func resume_room():
 
 
 func send_data(finished):
-	var finished_time = $HUD/Timer/Label.text
+	finished_time = $HUD/Timer/Label.text
 	$DBoperations.make_post_request(1, finished_time, "Johnny", finished)
 
 
