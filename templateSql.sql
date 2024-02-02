@@ -23,6 +23,18 @@ INSERT INTO `scores` (`id`, `scenario`, `username`, `time`, `finished`, `created
 VALUES
 	(1,1,'Johnson B','12:00:00','1','2015-04-06 11:10:38');
 
+DELIMITER //
+
+CREATE TRIGGER scores_BEFORE_INSERT
+BEFORE INSERT ON scores
+FOR EACH ROW
+BEGIN
+    SET NEW.createdAt = NOW();
+END;
+//
+
+DELIMITER ;
+
 UNLOCK TABLES;
 
 ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'root';
