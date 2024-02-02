@@ -28,7 +28,13 @@ func test_change_file_reader_no_file() -> void:
 func test_change_file_reader_with_file() -> void:
 	var files_screen = test_laptop.get_node("Files")
 	test_laptop.change_file_reader("one.txt")
-	assert_eq(files_screen.get_node("FileText").text, "somebody once told me\nthe world was gonna roll me\ni aint the sharpest tool in the sheeeed\n")
+	assert_eq(files_screen.get_node("FileText").text, "somebody once
+told me
+the world was
+gonna roll me
+i aint the sharpest
+tool in the sheeeed
+")
 
 
 func test_on_login_button_pressed_failure() -> void:
@@ -48,7 +54,13 @@ func test_on_login_button_pressed_success() -> void:
 func test_on_file_pressed() -> void:
 	var files_screen = test_laptop.get_node("Files")
 	test_laptop._on_file_press(files_screen.get_node("File1"))
-	assert_eq(files_screen.get_node("FileText").text, "somebody once told me\nthe world was gonna roll me\ni aint the sharpest tool in the sheeeed\n")
+	assert_eq(files_screen.get_node("FileText").text, "somebody once
+told me
+the world was
+gonna roll me
+i aint the sharpest
+tool in the sheeeed
+")
 
 
 func test_on_power_button_pressed() -> void:
