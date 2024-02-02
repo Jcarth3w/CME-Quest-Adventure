@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c7brg2hyybb7t" path="res://Clickables/static_scene_btn/static_scene_button.tscn" id="7_x8tk5"]
 [ext_resource type="Texture2D" uid="uid://bniggs3y0fm5a" path="res://Assets/Sprites/Room2/Bookshelf.png" id="8_wahkr"]
 [ext_resource type="Texture2D" uid="uid://dmm1o4xemcxfx" path="res://Assets/Sprites/Room2/Desk.png" id="9_huuy6"]
-[ext_resource type="Texture2D" uid="uid://b3pfe3e62av5a" path="res://Assets/Sprites/Room2/keypad.PNG" id="9_tgu88"]
+[ext_resource type="Texture2D" uid="uid://d2lkqle3adl2q" path="res://Assets/Sprites/Room2/keypad.PNG" id="9_tgu88"]
 [ext_resource type="Texture2D" uid="uid://k7tyhsc5hvsx" path="res://Assets/Sprites/room_1_custom_placeholders/chair.png" id="10_dw2od"]
 [ext_resource type="Script" path="res://Scenes/rooms/combo_button.gd" id="10_mgps6"]
 [ext_resource type="PackedScene" uid="uid://rksr0yf3cfrd" path="res://Clickables/movement/Movement_Object.tscn" id="11_a351n"]

@@ -38,6 +38,7 @@ func resume_room() -> void:
 func give_item(title, texture):
 	if get_parent().has_node("HUD"):
 		get_parent().get_node("HUD").add_item(title, texture)
+		get_parent().get_node("pickup_gui").show_pickup(title)
 		
 
 func unlock(room_number) -> void:
