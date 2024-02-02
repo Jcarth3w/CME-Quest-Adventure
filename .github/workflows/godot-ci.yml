@@ -34,7 +34,9 @@ jobs:
           godot -v --export-release --headless "Windows" "../build/windows/CME Quest Adventures.exe" project/project.godot
           
       - name: Run Tests
-        run: godot --headless -d -s --path project addons/gut/gut_cmdln.gd -gdir=res://Tests/ -ginclude_subdirs=true -gprefix="" -gsuffix="_test.gd" -gexit
+        run: |
+         godot --headless -d -s --path project addons/gut/gut_cmdln.gd -gdir=res://Tests/Unit -ginclude_subdirs=true -gprefix="" -gsuffix="_test.gd" -gexit
+         godot --headless -d -s --path project addons/gut/gut_cmdln.gd -gdir=res://Tests/Integration -ginclude_subdirs=true -gprefix="" -gsuffix="_test.gd" -gexit
 
 
       - name: Release
