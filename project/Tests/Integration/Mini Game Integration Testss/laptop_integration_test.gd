@@ -15,6 +15,7 @@ func before_all() -> void:
 func test_on_print_pressed() -> void:
 	var files_screen = test_laptop.get_node("Files")
 	var printed_feedback = files_screen.get_node("PrintFeedback")
+	test_laptop.current_file = files_screen.get_node("File4")
 	test_laptop._on_print_pressed()
 	assert_eq(test_room.has_node("printed"), true)
 	assert_eq(files_screen.get_node("PrintFeedback").visible, true)
@@ -23,6 +24,7 @@ func test_on_print_pressed() -> void:
 func test_on_power_button_pressed_with_printed_feedback() -> void:
 	var files_screen = test_laptop.get_node("Files")
 	var printed_feedback = files_screen.get_node("PrintFeedback")
+	test_laptop.current_file = files_screen.get_node("File4")
 	test_laptop._on_print_pressed()
 	test_laptop._on_power_button_pressed()
 	await yield_for(1)
