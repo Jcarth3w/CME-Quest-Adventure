@@ -5,16 +5,18 @@ var popup_path = "res://Scenes/gui/pop_up_message.tscn"
 
 func show_pickup(title):
 	var spawn = spawn_popup()
-	spawn.get_node("PickupText").text = "picked up " + title
-	add_child(spawn)
-	move_messages(spawn)
+	if spawn != null:
+		spawn.get_node("PickupText").text = "picked up " + title
+		add_child(spawn)
+		move_messages(spawn)
 	
 	
 func show_message(message):
 	var spawn = spawn_popup()
-	spawn.get_node("PickupText").text = message
-	add_child(spawn)
-	move_messages(spawn)
+	if spawn != null:
+		spawn.get_node("PickupText").text = message
+		add_child(spawn)
+		move_messages(spawn)
 	
 	
 func spawn_popup():
