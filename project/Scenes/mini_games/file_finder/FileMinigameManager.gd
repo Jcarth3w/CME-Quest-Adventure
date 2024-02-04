@@ -1,23 +1,19 @@
 extends MiniGame
 
 
+@export var file_textures: Array[Texture]
+
 var files
-var current_file = 0
+var current_file = -1
 var current_item
 var correct_order = {}
 var player_order = {}
 var item_positions = {}
 
 
-func _ready():
-	files = [$FileFind/File1, $FileFind/File2, $FileFind/File3, $FileFind/File4, $FileFind/File5]
-	for file in files:
-		if file.name == "File1":
-			file.global_position = $FileFind/Center.global_position
-		else:
-			file.global_position = $FileFind/OffLeft.global_position
 
-		file.pressed.connect(on_file_press.bind(file))
+func _ready():
+	$FileFind/OffLeft.texture = file_textures[0]
 	
 	for item in $OrganizeFiles/Items.get_children():
 		if item is TextureButton:
@@ -37,28 +33,27 @@ func _ready():
 					"Slot6" : $OrganizeFiles/Items/Item6,}
 
 
-func on_file_press(file):
-	if file.global_position == $FileFind/Center.global_position:
-		if file.name == "File4":
-			$FileFind/Check.text = "Congratulations!"
-			await get_tree().create_timer(1).timeout
-			$FileFind.visible = false
-			$OrganizeFiles.visible = true
-		else:
-			$FileFind/Check.text = "Incorrect."
-			await get_tree().create_timer(1).timeout
-			$FileFind/Check.text = "Find the promotional Folder"
-
 
 func _on_previous_pressed() -> void:
 	previous_pressed()
 
 
 func previous_pressed():
-	if current_file > 0:
-		files[current_file].global_position = $FileFind/OffLeft.global_position
-		files[current_file - 1].global_position = $FileFind/Center.global_position
+	if current_file > 1:
 		current_file -= 1
+		$FileFind/Center.texture_normal = file_textures[current_file]
+		$FileFind/OffLeft.texture = file_textures[current_file + 1]
+		$FileFind/OffRight.texture = file_textures[current_file -1]
+	elif current_file == 1:
+		current_file -= 1
+		$FileFind/Center.texture_normal = file_textures[current_file]
+		$FileFind/OffLeft.texture = file_textures[current_file + 1]
+		$FileFind/OffRight.texture = null
+	elif current_file == 0:
+		current_file -= 1
+		$FileFind/Center.texture_normal = null
+		$FileFind/OffLeft.texture = file_textures[current_file + 1]
+		$FileFind/OffRight.texture = null
 
 
 func _on_next_pressed() -> void:
@@ -66,10 +61,15 @@ func _on_next_pressed() -> void:
 
 
 func next_pressed():
-	if current_file < 4:
-		files[current_file].global_position = $FileFind/OffRight.global_position
-		files[current_file + 1].global_position = $FileFind/Center.global_position
+	if current_file >= -1 and current_file < 4:
 		current_file += 1
+		$FileFind/Center.texture_normal = file_textures[current_file]
+		if current_file < 4:
+			$FileFind/OffLeft.texture = file_textures[current_file + 1]
+		else:
+			$FileFind/OffLeft.texture = null
+		if current_file > 0:
+			$FileFind/OffRight.texture = file_textures[current_file -1]
 
 
 func _on_item_press(item) -> void:
@@ -94,3 +94,15 @@ func check_win():
 		for item in player_order:
 			player_order[item].global_position = item_positions.get(player_order[item])
 		player_order.clear()
+
+
+func _on_center_pressed():
+		if current_file == 3:
+			$FileFind/Check.text = "Congratulations!"
+			await get_tree().create_timer(1).timeout
+			$FileFind.visible = false
+			$OrganizeFiles.visible = true
+		else:
+			$FileFind/Check.text = "Incorrect."
+			await get_tree().create_timer(1).timeout
+			$FileFind/Check.text = "Find the promotional Folder"
