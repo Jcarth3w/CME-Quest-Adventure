@@ -1,16 +1,17 @@
-[gd_scene load_steps=10 format=3 uid="uid://bdtol8suwnlv7"]
+[gd_scene load_steps=11 format=3 uid="uid://bdtol8suwnlv7"]
 
 [ext_resource type="Script" path="res://Scenes/mini_games/file_finder/FileMinigameManager.gd" id="1_uttu5"]
 [ext_resource type="Texture2D" uid="uid://c2vty8rtegoq" path="res://Assets/Sprites/room_1_custom_placeholders/Fun_files.png" id="2_a47ji"]
-[ext_resource type="Texture2D" uid="uid://c4vppo3v2xkk" path="res://Assets/Sprites/room_1_custom_placeholders/Profile.png" id="4_67jox"]
-[ext_resource type="Texture2D" uid="uid://cw50q765dhasb" path="res://Assets/Sprites/room_1_custom_placeholders/Report_file.png" id="5_f44y0"]
-[ext_resource type="Texture2D" uid="uid://1fki42ji8o62" path="res://Assets/Sprites/room_1_custom_placeholders/Promo_file.png" id="6_wuo8l"]
+[ext_resource type="Texture2D" uid="uid://b70odmdckfuf0" path="res://Assets/AdjustedStandfordAssets/ComplianceFolder.png" id="2_wwggp"]
+[ext_resource type="Texture2D" uid="uid://7ihrcj0hto85" path="res://Assets/AdjustedStandfordAssets/SafetyFolder.png" id="3_2fy7v"]
+[ext_resource type="Texture2D" uid="uid://cbbldglpxmqtb" path="res://Assets/AdjustedStandfordAssets/MarketingFolder.png" id="4_j8qpf"]
+[ext_resource type="Texture2D" uid="uid://6i7cn4wx0cf" path="res://Assets/AdjustedStandfordAssets/PromotionalFolder.png" id="5_d72pe"]
+[ext_resource type="Texture2D" uid="uid://b0uwfiulbrmf2" path="res://Assets/AdjustedStandfordAssets/LearningFolder.png" id="6_xsvny"]
 [ext_resource type="Texture2D" uid="uid://dcm6p18p7lslf" path="res://Assets/Sprites/generic_items/genericItem_color_160.png" id="7_arwno"]
-[ext_resource type="Texture2D" uid="uid://v5q1p56fu8vl" path="res://Assets/Sprites/room_1_custom_placeholders/Work_file.png" id="7_g5sw6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_js1u7"]
-font_size = 50
-outline_size = 10
+font_size = 60
+outline_size = 12
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rge4g"]
@@ -67,54 +68,59 @@ offset_top = 137.0
 offset_right = 1322.0
 offset_bottom = 440.0
 grow_horizontal = 2
-text = "Find the promotional Folder"
+text = "Find the Correct Folder"
 label_settings = SubResource("LabelSettings_js1u7")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="File1" type="TextureButton" parent="FileFind"]
-offset_left = 914.0
-offset_top = 455.0
-offset_right = 1151.0
-offset_bottom = 676.0
-texture_normal = ExtResource("2_a47ji")
+offset_left = -503.0
+offset_top = 821.0
+offset_right = 1074.0
+offset_bottom = 1927.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("2_wwggp")
 
 [node name="File2" type="TextureButton" parent="FileFind"]
-offset_left = -239.0
-offset_top = 433.0
-offset_right = -2.0
-offset_bottom = 654.0
-texture_normal = ExtResource("4_67jox")
+offset_left = -483.0
+offset_top = 453.0
+offset_right = 1094.0
+offset_bottom = 1559.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("3_2fy7v")
 
 [node name="File3" type="TextureButton" parent="FileFind"]
-offset_left = -415.0
-offset_top = 197.0
-offset_right = -178.0
-offset_bottom = 418.0
-texture_normal = ExtResource("5_f44y0")
+offset_left = -676.0
+offset_top = 102.0
+offset_right = 901.0
+offset_bottom = 1208.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_j8qpf")
 
 [node name="File4" type="TextureButton" parent="FileFind"]
-offset_left = -508.0
-offset_top = 517.0
-offset_right = -271.0
-offset_bottom = 738.0
-texture_normal = ExtResource("6_wuo8l")
+offset_left = -972.0
+offset_top = 458.0
+offset_right = 605.0
+offset_bottom = 1564.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("5_d72pe")
 
 [node name="File5" type="TextureButton" parent="FileFind"]
-offset_left = -285.0
-offset_top = 736.0
-offset_right = -48.0
-offset_bottom = 957.0
-texture_normal = ExtResource("7_g5sw6")
+offset_left = -989.0
+offset_top = 833.0
+offset_right = 588.0
+offset_bottom = 1939.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("6_xsvny")
 
 [node name="OffLeft" type="Marker2D" parent="FileFind"]
-position = Vector2(281, 852)
+position = Vector2(120, 673)
 
 [node name="OffRight" type="Marker2D" parent="FileFind"]
-position = Vector2(1604, 855)
+position = Vector2(1336, 669)
 
 [node name="Center" type="Marker2D" parent="FileFind"]
-position = Vector2(893, 425)
+position = Vector2(737, 423)
 
 [node name="OrganizeFiles" type="Node2D" parent="."]
 visible = false

@@ -1,12 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://cepvxyc5hm41t"]
+[gd_scene load_steps=12 format=3 uid="uid://cepvxyc5hm41t"]
 
+[ext_resource type="Texture2D" uid="uid://7xbcb4a61lct" path="res://Assets/AdjustedStandfordAssets/FilingCabinet.png" id="2_dgsrt"]
 [ext_resource type="PackedScene" uid="uid://pn2l6ln2hl3j" path="res://Clickables/new_scene/new_scene_object.tscn" id="2_tubx5"]
-[ext_resource type="Texture2D" uid="uid://cp6thg0dbkcxn" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-02.png" id="3_g3v3j"]
+[ext_resource type="Texture2D" uid="uid://dglocgdvpkmue" path="res://Assets/AdjustedStandfordAssets/ResizedLaptop.png" id="4_eou70"]
 [ext_resource type="Texture2D" uid="uid://dwqw21d8i31b" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-01(1).png" id="4_hyb53"]
-[ext_resource type="Texture2D" uid="uid://culbul2t8kbp5" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-19.png" id="5_pymel"]
 [ext_resource type="Texture2D" uid="uid://ihqucqebj6dc" path="res://Assets/Sprites/room_1_custom_placeholders/Trash_can.png" id="6_4wrwl"]
-[ext_resource type="Texture2D" uid="uid://18telq4wmu2" path="res://Assets/Sprites/room_1_custom_placeholders/desk.png" id="7_ftm4o"]
+[ext_resource type="Texture2D" uid="uid://dmm1o4xemcxfx" path="res://Assets/Sprites/Room2/Desk.png" id="6_mdhq7"]
+[ext_resource type="PackedScene" uid="uid://rksr0yf3cfrd" path="res://Clickables/movement/Movement_Object.tscn" id="8_lems2"]
 [ext_resource type="Texture2D" uid="uid://bko6uquctebmt" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-13.png" id="8_xcblm"]
+[ext_resource type="Texture2D" uid="uid://k7tyhsc5hvsx" path="res://Assets/Sprites/room_1_custom_placeholders/chair.png" id="9_dd7ir"]
+[ext_resource type="Texture2D" uid="uid://cygackt4v7jam" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-06.png" id="10_2ocqh"]
 
 [sub_resource type="GDScript" id="GDScript_wty1p"]
 script/source = "extends Room
@@ -36,45 +39,58 @@ offset_bottom = 360.0
 color = Color(0.356863, 0.635294, 0.411765, 1)
 
 [node name="FilingCabinet" parent="." instance=ExtResource("2_tubx5")]
-offset_left = 1424.0
-offset_top = 374.0
-offset_right = 3674.0
-offset_bottom = 2624.0
+offset_left = 1351.0
+offset_top = 429.0
+offset_right = 3007.0
+offset_bottom = 2169.0
 scale = Vector2(0.25, 0.25)
-texture_normal = ExtResource("3_g3v3j")
+texture_normal = ExtResource("2_dgsrt")
 scene_path = "res://Scenes/mini_games/file_finder/file_minigame.tscn"
 
 [node name="Desk" type="Sprite2D" parent="."]
-position = Vector2(230, 747)
-scale = Vector2(0.215778, 0.302222)
+position = Vector2(921, 759)
+scale = Vector2(0.24, 0.336)
 texture = ExtResource("4_hyb53")
 
 [node name="Laptop" parent="." instance=ExtResource("2_tubx5")]
-offset_left = 122.0
-offset_top = 478.0
-offset_right = 4622.0
-offset_bottom = 4978.0
+offset_left = 833.0
+offset_top = 539.0
+offset_right = 4473.0
+offset_bottom = 3319.0
 scale = Vector2(0.05, 0.05)
-texture_normal = ExtResource("5_pymel")
+texture_normal = ExtResource("4_eou70")
 scene_path = "res://Scenes/mini_games/laptop/laptop_mini_game.tscn"
 
 [node name="Trash" type="Sprite2D" parent="."]
-position = Vector2(521, 778)
+position = Vector2(618, 788)
 scale = Vector2(1.39864, 1.239)
 texture = ExtResource("6_4wrwl")
 
 [node name="LittleTable" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 1)
-self_modulate = Color(0, 0, 0, 1)
-position = Vector2(970, 738)
+modulate = Color(0.686275, 0.686275, 0.686275, 1)
+position = Vector2(313, 761)
 rotation = 0.00807691
-scale = Vector2(0.480605, 0.755308)
-texture = ExtResource("7_ftm4o")
+scale = Vector2(0.6, 1.365)
+texture = ExtResource("6_mdhq7")
 
 [node name="Printer" type="Sprite2D" parent="."]
-position = Vector2(976, 628)
-scale = Vector2(0.101556, 0.084)
+position = Vector2(318, 622)
+scale = Vector2(0.12, 0.099)
 texture = ExtResource("8_xcblm")
 
 [node name="PrintPosition" type="Marker2D" parent="."]
-position = Vector2(978, 654)
+position = Vector2(367, 641)
+
+[node name="Chair" parent="." instance=ExtResource("8_lems2")]
+offset_left = 814.0
+offset_top = 567.0
+offset_right = 1039.0
+offset_bottom = 915.0
+texture_normal = ExtResource("9_dd7ir")
+x_coordinate = 1100
+y_coordinate = 600
+
+[node name="Custom-illustrations-stanford-monuments-assets-06" type="Sprite2D" parent="."]
+position = Vector2(923, 400)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_2ocqh")

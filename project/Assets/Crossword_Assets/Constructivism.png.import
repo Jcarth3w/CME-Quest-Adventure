@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tbxv0y71tunf"
-path="res://.godot/imported/constructivism.png-12cf1e1806cd577cea51046380edb1f0.ctex"
+path="res://.godot/imported/Constructivism.png-b3002acd866d8197ca5735a3430de7e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Crossword_Assets/constructivism.png"
-dest_files=["res://.godot/imported/constructivism.png-12cf1e1806cd577cea51046380edb1f0.ctex"]
+source_file="res://Assets/Crossword_Assets/Constructivism.png"
+dest_files=["res://.godot/imported/Constructivism.png-b3002acd866d8197ca5735a3430de7e6.ctex"]
 
 [params]
 
