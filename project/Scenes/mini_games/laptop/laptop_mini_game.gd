@@ -69,6 +69,7 @@ func print_paper() -> void:
 	get_parent().connect_clickable(print_inst)
 	$Files/PrintFeedback.text = "CORRECT FILE: PRINT SUCCESSFUL"
 	$Files/PrintFeedback.visible = true
+	finished.emit()
 
 
 func check_correct():
