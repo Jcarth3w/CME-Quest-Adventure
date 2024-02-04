@@ -9,6 +9,7 @@ var current_item
 var correct_order = {}
 var player_order = {}
 var item_positions = {}
+var previous_selection
 
 
 
@@ -73,14 +74,17 @@ func next_pressed():
 
 
 func _on_item_press(item) -> void:
-	current_item = item
+	if current_item != item:
+		current_item = item
 
 
 func _on_slot_press(slot) -> void:
-	if current_item != null:
+	if current_item != null and current_item != previous_selection:
 		current_item.global_position = slot.global_position
 		var element = {slot.name : current_item}
 		player_order.merge(element)
+		current_item.disabled = true
+		previous_selection = current_item
 		if player_order.size() == 6:
 			check_win()
 
@@ -92,6 +96,7 @@ func check_win():
 		queue_free()
 	else:
 		for item in player_order:
+			player_order[item].disabled = false
 			player_order[item].global_position = item_positions.get(player_order[item])
 		player_order.clear()
 
