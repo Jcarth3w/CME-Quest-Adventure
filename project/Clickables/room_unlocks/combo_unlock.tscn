@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://t7fuuyah6666"]
+[gd_scene load_steps=4 format=3 uid="uid://t7fuuyah6666"]
 
 [ext_resource type="Script" path="res://Clickables/room_unlocks/combo_unlock.gd" id="1_lnmn8"]
+[ext_resource type="Texture2D" uid="uid://dxky81p2526sa" path="res://Assets/Sprites/Iteration 3 assets/RedStickyNote.png" id="2_gbo8g"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_26263"]
 font_size = 32
@@ -144,3 +145,9 @@ offset_top = -437.0
 offset_right = 506.0
 offset_bottom = -336.0
 text = "X"
+
+[node name="RedStickyNote" type="Sprite2D" parent="."]
+position = Vector2(-374, 367)
+rotation = 1.02974
+scale = Vector2(0.513046, 0.522883)
+texture = ExtResource("2_gbo8g")

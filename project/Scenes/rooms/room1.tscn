@@ -1,24 +1,27 @@
-[gd_scene load_steps=20 format=3 uid="uid://b302n6pq0hkk1"]
+[gd_scene load_steps=23 format=3 uid="uid://b302n6pq0hkk1"]
 
 [ext_resource type="Script" path="res://Scenes/rooms/room.gd" id="1_dbjvq"]
 [ext_resource type="Texture2D" uid="uid://bkomnkytheji1" path="res://Assets/Sprites/room_1_custom_placeholders/RoomBackground.png" id="2_bb0ow"]
 [ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Clickables/pickup/pickup.tscn" id="2_pjc2w"]
 [ext_resource type="Texture2D" uid="uid://bnmarmnacxlxl" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-08.png" id="3_qsxvy"]
-[ext_resource type="Texture2D" uid="uid://dqunufa6yvb80" path="res://Assets/Sprites/generic_items/genericItem_color_032.png" id="4_5llip"]
-[ext_resource type="Texture2D" uid="uid://dacjvsk8hwi11" path="res://Assets/AdjustedStandfordAssets/ResizedDesk.png" id="5_mma7x"]
+[ext_resource type="Texture2D" uid="uid://cmh7wmjm11xxf" path="res://Assets/AdjustedStandfordAssets/ResizedDesk.png" id="5_mma7x"]
 [ext_resource type="Texture2D" uid="uid://ihqucqebj6dc" path="res://Assets/Sprites/room_1_custom_placeholders/Trash_can.png" id="5_nq2e7"]
 [ext_resource type="Texture2D" uid="uid://d0g5gdljbiet3" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-04.png" id="6_570gy"]
 [ext_resource type="PackedScene" uid="uid://pn2l6ln2hl3j" path="res://Clickables/new_scene/new_scene_object.tscn" id="8_je1k2"]
+[ext_resource type="Texture2D" uid="uid://ckrhn43uqw2b2" path="res://Assets/Sprites/Iteration 3 assets/SocialMediaGraphics.png" id="8_lovqv"]
+[ext_resource type="Texture2D" uid="uid://btv06d3005rb" path="res://Assets/Sprites/Iteration 3 assets/SavePostcard.png" id="9_2mnun"]
 [ext_resource type="Script" path="res://Clickables/movement/Movement_Object.gd" id="10_u6dd1"]
-[ext_resource type="Texture2D" uid="uid://br8i00f1js83g" path="res://Assets/AdjustedStandfordAssets/ResizedPlant.png" id="11_53m2s"]
+[ext_resource type="Texture2D" uid="uid://dcwv4r2gxs7pn" path="res://Assets/AdjustedStandfordAssets/ResizedPlant.png" id="11_53m2s"]
 [ext_resource type="Texture2D" uid="uid://k7tyhsc5hvsx" path="res://Assets/Sprites/room_1_custom_placeholders/chair.png" id="12_0w1me"]
-[ext_resource type="Texture2D" uid="uid://c1r2dvhr7oiuv" path="res://Assets/Sprites/generic_items/genericItem_color_082.png" id="12_72ahr"]
+[ext_resource type="Texture2D" uid="uid://m4duyp5rkxs4" path="res://Assets/Sprites/Iteration 3 assets/Brochure.png" id="14_3m03u"]
 [ext_resource type="PackedScene" uid="uid://rksr0yf3cfrd" path="res://Clickables/movement/Movement_Object.tscn" id="14_rvr23"]
-[ext_resource type="Texture2D" uid="uid://dchghkeopxurf" path="res://Assets/AdjustedStandfordAssets/FilingCabinet.png" id="16_w7hoe"]
-[ext_resource type="Texture2D" uid="uid://b7vrru7dccbq8" path="res://Assets/AdjustedStandfordAssets/Whiteboard.png" id="18_gvnkl"]
+[ext_resource type="Texture2D" uid="uid://7xbcb4a61lct" path="res://Assets/AdjustedStandfordAssets/FilingCabinet.png" id="16_w7hoe"]
+[ext_resource type="Texture2D" uid="uid://cm61fk5eolb2m" path="res://Assets/AdjustedStandfordAssets/Whiteboard.png" id="18_gvnkl"]
 [ext_resource type="Texture2D" uid="uid://4vloe2o85w0c" path="res://Assets/Sprites/room_1_custom_placeholders/papershredder.png" id="18_lm3ui"]
 [ext_resource type="Script" path="res://Clickables/static_scene_btn/static_scene_button.gd" id="18_mfent"]
 [ext_resource type="PackedScene" uid="uid://ccliul8ayjg6h" path="res://Clickables/room_unlocks/key.tscn" id="19_0x56j"]
+[ext_resource type="Texture2D" uid="uid://cuy7kvxdepdl0" path="res://Assets/Sprites/Iteration 3 assets/RegistrationPaper.png" id="19_y1w0n"]
+[ext_resource type="Texture2D" uid="uid://cmxy8qbcfdm1j" path="res://Assets/Sprites/Iteration 3 assets/YellowStickyNote.png" id="22_gshux"]
 
 [node name="Room1" type="Node2D"]
 script = ExtResource("1_dbjvq")
@@ -49,18 +52,22 @@ scale = Vector2(0.1, 0.09)
 texture = ExtResource("6_570gy")
 
 [node name="social media graphics" parent="." instance=ExtResource("2_pjc2w")]
-offset_left = 346.0
-offset_top = 765.0
-offset_right = 462.0
-offset_bottom = 877.0
-texture_normal = ExtResource("4_5llip")
+offset_left = 354.0
+offset_top = 736.0
+offset_right = 1120.0
+offset_bottom = 1296.0
+rotation = 0.228638
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("8_lovqv")
 
 [node name="save-the-date postcards" parent="." instance=ExtResource("2_pjc2w")]
-offset_left = 755.0
-offset_top = 346.0
-offset_right = 871.0
-offset_bottom = 458.0
-texture_normal = ExtResource("4_5llip")
+offset_left = 724.0
+offset_top = 379.0
+offset_right = 1588.0
+offset_bottom = 887.0
+rotation = -0.342085
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("9_2mnun")
 
 [node name="Room2Key" parent="." instance=ExtResource("19_0x56j")]
 offset_left = 920.0
@@ -87,14 +94,14 @@ offset_top = 595.0
 offset_right = 659.0
 offset_bottom = 679.0
 scene_path = "res://Scenes/mini_games/desktop_matching/DeskMiniGame.tscn"
-prize_texture = ExtResource("12_72ahr")
+prize_texture = ExtResource("14_3m03u")
 prize_name = "conference brochure"
 
 [node name="Chair" parent="." instance=ExtResource("14_rvr23")]
-offset_left = 231.0
-offset_top = 571.0
-offset_right = 456.0
-offset_bottom = 919.0
+offset_left = 218.0
+offset_top = 565.0
+offset_right = 443.0
+offset_bottom = 913.0
 texture_normal = ExtResource("12_0w1me")
 x_coordinate = 118
 y_coordinate = 557
@@ -116,7 +123,7 @@ offset_bottom = 1853.0
 scale = Vector2(0.172647, 0.162982)
 texture_normal = ExtResource("18_lm3ui")
 scene_path = "res://Scenes/mini_games/shredder/ShredderMiniGame.tscn"
-prize_texture = ExtResource("12_72ahr")
+prize_texture = ExtResource("19_y1w0n")
 prize_name = "Registration Forms"
 
 [node name="WhiteBoard" type="TextureButton" parent="."]
@@ -128,3 +135,8 @@ scale = Vector2(0.25, 0.25)
 texture_normal = ExtResource("18_gvnkl")
 script = ExtResource("18_mfent")
 scene_path = "res://Scenes/static_scene/whiteboard.tscn"
+
+[node name="YellowStickyNote" type="Sprite2D" parent="."]
+position = Vector2(1533, 382)
+scale = Vector2(0.164794, 0.167339)
+texture = ExtResource("22_gshux")

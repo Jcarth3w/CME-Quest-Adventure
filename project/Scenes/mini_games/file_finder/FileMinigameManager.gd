@@ -99,6 +99,8 @@ func check_win():
 			player_order[item].disabled = false
 			player_order[item].global_position = item_positions.get(player_order[item])
 		player_order.clear()
+		current_item = null
+		previous_selection = null
 
 
 func _on_center_pressed():

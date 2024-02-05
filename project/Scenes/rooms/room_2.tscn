@@ -1,19 +1,20 @@
-[gd_scene load_steps=15 format=3 uid="uid://dxurrur4fkonu"]
+[gd_scene load_steps=16 format=3 uid="uid://dxurrur4fkonu"]
 
 [ext_resource type="Script" path="res://Scenes/rooms/room.gd" id="1_xmdg1"]
-[ext_resource type="Texture2D" uid="uid://26oq6v35hclv" path="res://Assets/AdjustedStandfordAssets/ResizedPinBoard.png" id="2_4hu8h"]
+[ext_resource type="Texture2D" uid="uid://cs7agr8j6c5qa" path="res://Assets/AdjustedStandfordAssets/ResizedPinBoard.png" id="2_4hu8h"]
+[ext_resource type="Texture2D" uid="uid://dcdmky0ibhjvh" path="res://Assets/Sprites/Iteration 3 assets/OrderedStickyNotes.png" id="2_ff5rt"]
 [ext_resource type="Script" path="res://Clickables/new_scene/New_Scene_Object.gd" id="3_ibul7"]
-[ext_resource type="Texture2D" uid="uid://dt8kyilmk6dl2" path="res://Assets/Sprites/generic_items/genericItem_color_035.png" id="4_0dgl6"]
-[ext_resource type="Texture2D" uid="uid://bxpshu6d3vm3s" path="res://Assets/AdjustedStandfordAssets/ResizedBookshelf.png" id="6_wkf6y"]
+[ext_resource type="Texture2D" uid="uid://d0g5gdljbiet3" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-04.png" id="5_rd7x1"]
+[ext_resource type="Texture2D" uid="uid://cg61ae3u1q5gd" path="res://Assets/AdjustedStandfordAssets/ResizedBookshelf.png" id="6_wkf6y"]
 [ext_resource type="PackedScene" uid="uid://c7brg2hyybb7t" path="res://Clickables/static_scene_btn/static_scene_button.tscn" id="7_x8tk5"]
 [ext_resource type="Texture2D" uid="uid://dmm1o4xemcxfx" path="res://Assets/Sprites/Room2/Desk.png" id="9_huuy6"]
-[ext_resource type="Texture2D" uid="uid://kh7ulnpq5ujt" path="res://Assets/Sprites/Room2/keypad.PNG" id="9_tgu88"]
+[ext_resource type="Texture2D" uid="uid://dji6o0cowqmqe" path="res://Assets/Sprites/Room2/keypad.PNG" id="9_tgu88"]
 [ext_resource type="Texture2D" uid="uid://k7tyhsc5hvsx" path="res://Assets/Sprites/room_1_custom_placeholders/chair.png" id="10_dw2od"]
 [ext_resource type="Script" path="res://Scenes/rooms/combo_button.gd" id="10_mgps6"]
 [ext_resource type="PackedScene" uid="uid://rksr0yf3cfrd" path="res://Clickables/movement/Movement_Object.tscn" id="11_a351n"]
 [ext_resource type="Texture2D" uid="uid://w10bfogg4ojl" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-09.png" id="12_jxi8s"]
 [ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Clickables/pickup/pickup.tscn" id="13_8i57d"]
-[ext_resource type="Texture2D" uid="uid://c1wco3n84fkda" path="res://Assets/Sprites/generic_items/genericItem_color_037.png" id="14_t1kvx"]
+[ext_resource type="Texture2D" uid="uid://dbvywqj0kjdyv" path="res://Assets/Sprites/Iteration 3 assets/Poster.png" id="15_nbiuo"]
 
 [node name="Room2" type="Node2D"]
 script = ExtResource("1_xmdg1")
@@ -38,6 +39,11 @@ offset_right = 1920.0
 offset_bottom = 360.0
 color = Color(0.560784, 0.729412, 0.72549, 1)
 
+[node name="OrderedStickyNotes" type="Sprite2D" parent="."]
+position = Vector2(503, 436)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_ff5rt")
+
 [node name="Crossword_Button" type="TextureButton" parent="."]
 offset_left = 679.0
 offset_top = 188.0
@@ -47,10 +53,10 @@ scale = Vector2(0.3, 0.261)
 texture_normal = ExtResource("2_4hu8h")
 script = ExtResource("3_ibul7")
 scene_path = "res://Scenes/mini_games/Crossword_Puzzle/crossword_minigame.tscn"
-prize_texture = ExtResource("4_0dgl6")
+prize_texture = ExtResource("5_rd7x1")
 prize_name = "Adult Learning Resources"
 
-[node name="StaticSceneButton" parent="." instance=ExtResource("7_x8tk5")]
+[node name="Bookshelf" parent="." instance=ExtResource("7_x8tk5")]
 offset_left = 1331.0
 offset_top = 227.0
 offset_right = 2658.0
@@ -74,7 +80,7 @@ texture_normal = ExtResource("9_tgu88")
 script = ExtResource("10_mgps6")
 scene_path = "res://Clickables/room_unlocks/combo_unlock.tscn"
 
-[node name="Movement_Object" parent="." instance=ExtResource("11_a351n")]
+[node name="Plant" parent="." instance=ExtResource("11_a351n")]
 offset_left = 454.0
 offset_top = 406.0
 offset_right = 1525.0
@@ -92,9 +98,10 @@ texture = ExtResource("10_dw2od")
 position = Vector2(679, 717)
 texture = ExtResource("10_dw2od")
 
-[node name="Event Poster" parent="." instance=ExtResource("13_8i57d")]
-offset_left = 210.0
-offset_top = 230.0
-offset_right = 298.0
-offset_bottom = 354.0
-texture_normal = ExtResource("14_t1kvx")
+[node name="event poster" parent="." instance=ExtResource("13_8i57d")]
+offset_left = 201.0
+offset_top = 210.0
+offset_right = 1201.0
+offset_bottom = 1210.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("15_nbiuo")
