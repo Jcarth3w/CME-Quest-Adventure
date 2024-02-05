@@ -1,7 +1,7 @@
 extends Node2D
 
 signal finished
-var answer = "123"
+var answer = "8562"
 var room_number = 3
 
 # Called when the node enters the scene tree for the first time.

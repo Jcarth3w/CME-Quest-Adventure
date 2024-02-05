@@ -1,7 +1,7 @@
 extends MiniGame
 
-var username = "john"
-var password = "123"
+var username = "cmeadmin"
+var password = "Complianc3"
 var screens = []
 var file_contents = {}
 var current_file
