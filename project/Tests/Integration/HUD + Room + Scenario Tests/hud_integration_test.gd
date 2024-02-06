@@ -107,7 +107,7 @@ func test_on_resume_pressed() -> void:
 func test_on_room1_pressed() -> void:
 	var room_menu = hud.get_node("RoomMenu")
 	var crossword = room2.get_node("Crossword_Button")
-	var static_scene = room2.get_node("StaticSceneButton")
+	var static_scene = room2.get_node("Bookshelf")
 	hud._on_room1_pressed()
 	
 	assert_eq(room2.visible, false)

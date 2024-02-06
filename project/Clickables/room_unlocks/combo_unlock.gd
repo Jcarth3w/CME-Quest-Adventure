@@ -1,7 +1,7 @@
 extends Node2D
 
 signal finished
-var answer = "123"
+var answer = "8562"
 var room_number = 3
 
 # Called when the node enters the scene tree for the first time.
@@ -20,12 +20,15 @@ func _on_button_press(button) -> void:
 		finished.emit()
 		queue_free()
 	else:
-		$Display.text += button.text
+		if $Display.text == "incorrect":
+			$Display.text = button.text
+		else:
+			$Display.text += button.text
 	
 
 func check_answer(player_answer) -> void:
 	if player_answer == answer:
-		$Display.text = "unlocked"
+		$Display.text = "unlocked room 3"
 		get_parent().unlock(room_number)
 		finished.emit()
 		await get_tree().create_timer(0.5).timeout

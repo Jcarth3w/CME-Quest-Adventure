@@ -21,4 +21,5 @@ func action():
 func _on_finished() -> void:
 	scene_changed.emit("resume")
 	finished = true
-	get_parent().give_item(prize_name, prize_texture)
+	if prize_texture != null:
+		get_parent().give_item(prize_name, prize_texture)

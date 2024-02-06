@@ -27,7 +27,7 @@ func test_label_update_on_clear_press() -> void:
 
 func test_check_answer_success() -> void:
 	test_combo.get_node("Display").text = test_combo.answer
-	test_combo.check_answer("123")
+	test_combo.check_answer("8562")
 	assert_eq(test_combo.get_node("Display").text, "unlocked")
 
 
@@ -38,6 +38,6 @@ func test_check_answer_failure() -> void:
 
 
 func test_label_update_on_enter_press() -> void:
-	test_combo.get_node("Display").text = "123"
+	test_combo.get_node("Display").text = "8562"
 	test_combo._on_button_press(test_combo.get_node("Enter"))
 	assert_eq(test_combo.get_node("Display").text, "unlocked")

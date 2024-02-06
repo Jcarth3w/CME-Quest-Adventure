@@ -14,8 +14,11 @@ func _on_clickable(clickable) -> void:
 	if clickable.name == "FilingCabinet":
 		if get_parent().check_win():
 			clickable.action()
+		else:
+			get_parent().get_node("popup_gui").show_message("You need to collect all promo materials")
 	else:
 		clickable.action()
+		
 
 
 func _on_static_scene_spawn() -> void:
@@ -38,7 +41,7 @@ func resume_room() -> void:
 func give_item(title, texture):
 	if get_parent().has_node("HUD"):
 		get_parent().get_node("HUD").add_item(title, texture)
-		get_parent().get_node("pickup_gui").show_pickup(title)
+		get_parent().get_node("popup_gui").show_pickup(title)
 		
 
 func unlock(room_number) -> void:

@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://biac0s4a3lu8q"]
+
+[ext_resource type="Script" path="res://Scenes/gui/pop_up_message.gd" id="1_tv35j"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lvw7i"]
+font_size = 32
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="PopUp" type="ColorRect"]
+offset_left = 1273.0
+offset_top = 907.0
+offset_right = 2049.0
+offset_bottom = 1107.0
+scale = Vector2(0.824264, 0.822346)
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_tv35j")
+
+[node name="BrighterBorder" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 770.0
+offset_bottom = 192.0
+color = Color(0.737255, 0, 0.203922, 1)
+
+[node name="DarkerBorder" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 31.0
+offset_right = 746.0
+offset_bottom = 167.0
+color = Color(0, 0, 0, 0.223529)
+
+[node name="PickupText" type="Label" parent="."]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 73.0
+offset_right = 628.0
+offset_bottom = 121.0
+text = "placeholder"
+label_settings = SubResource("LabelSettings_lvw7i")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

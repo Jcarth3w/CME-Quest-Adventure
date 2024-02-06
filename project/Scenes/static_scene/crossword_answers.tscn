@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://b6r5ygupr28uc"]
+[gd_scene load_steps=11 format=3 uid="uid://b6r5ygupr28uc"]
 
 [ext_resource type="Script" path="res://Scenes/static_scene/whiteboard.gd" id="1_pis70"]
+[ext_resource type="Texture2D" uid="uid://bxbkylwwqcnul" path="res://Assets/Sprites/Iteration 3 assets/BlueStickynote.png" id="2_kovkh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n8npj"]
 font_size = 30
@@ -235,5 +236,11 @@ offset_top = 160.0
 offset_right = 1658.0
 offset_bottom = 242.0
 text = "Exit"
+
+[node name="BlueStickynote" type="Sprite2D" parent="."]
+position = Vector2(1188, 628)
+rotation = -0.102974
+scale = Vector2(0.416667, 0.438508)
+texture = ExtResource("2_kovkh")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed" flags=18]

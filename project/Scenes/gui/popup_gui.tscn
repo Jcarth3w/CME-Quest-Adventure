@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bp3esxqwlfxd0"]
+
+[ext_resource type="Script" path="res://Scenes/gui/popup_gui.gd" id="1_nrxri"]
+
+[node name="popup_gui" type="Node2D"]
+position = Vector2(6, 8)
+script = ExtResource("1_nrxri")

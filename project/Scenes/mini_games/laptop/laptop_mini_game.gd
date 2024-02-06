@@ -1,7 +1,7 @@
 extends MiniGame
 
-var username = "john"
-var password = "123"
+var username = "cmeadmin"
+var password = "Complianc3"
 var screens = []
 var file_contents = {}
 var current_file
@@ -62,13 +62,15 @@ func print_paper() -> void:
 	var printed = load("res://Clickables/pickup/pickup.tscn")
 	var print_inst = printed.instantiate()
 	print_inst.global_position = get_parent().get_node("PrintPosition").global_position
-	print_inst.texture_normal = load("res://Assets/Sprites/generic_items/genericItem_color_037.png")
+	print_inst.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/PrintedDocument.png")
 	print_inst.name = "printed"
+	print_inst.scale = Vector2(.15, .15)
 	print_inst.visible = false
 	get_parent().add_child(print_inst)
 	get_parent().connect_clickable(print_inst)
 	$Files/PrintFeedback.text = "CORRECT FILE: PRINT SUCCESSFUL"
 	$Files/PrintFeedback.visible = true
+	finished.emit()
 
 
 func check_correct():

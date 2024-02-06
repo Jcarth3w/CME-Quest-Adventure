@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://u7sc0sv2fhxo"
-path="res://.godot/imported/Andragogy_Empty.png-de16693337530f96920dabead50cf8f8.ctex"
+path="res://.godot/imported/andragogy_empty.png-47a64ffcb4927e717c87a22c346c96c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Crossword_Assets/Andragogy_Empty.png"
-dest_files=["res://.godot/imported/Andragogy_Empty.png-de16693337530f96920dabead50cf8f8.ctex"]
+source_file="res://Assets/Crossword_Assets/andragogy_empty.png"
+dest_files=["res://.godot/imported/andragogy_empty.png-47a64ffcb4927e717c87a22c346c96c4.ctex"]
 
 [params]
 

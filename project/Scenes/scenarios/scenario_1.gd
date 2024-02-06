@@ -87,9 +87,9 @@ func resume_room():
 	current_room.resume_room()
 
 
-func send_data(finished):
+func send_data(completed):
 	finished_time = $HUD/Timer/Label.text
-	$DBoperations.make_post_request(1, finished_time, "Johnny", finished)
+	$DBoperations.make_post_request(1, finished_time, "Johnny", completed)
 
 
 func get_data():

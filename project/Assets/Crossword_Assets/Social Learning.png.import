@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bt16jy3rwsnji"
-path="res://.godot/imported/Social Learning.png-1c3a948152b2a17da8882d6e4563936a.ctex"
+path="res://.godot/imported/social learning.png-483849bc65be8618d77f6fd2e161595f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Crossword_Assets/Social Learning.png"
-dest_files=["res://.godot/imported/Social Learning.png-1c3a948152b2a17da8882d6e4563936a.ctex"]
+source_file="res://Assets/Crossword_Assets/social learning.png"
+dest_files=["res://.godot/imported/social learning.png-483849bc65be8618d77f6fd2e161595f.ctex"]
 
 [params]
 
