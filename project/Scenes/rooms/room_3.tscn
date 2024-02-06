@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://cepvxyc5hm41t"]
+[gd_scene load_steps=14 format=3 uid="uid://cepvxyc5hm41t"]
 
-[ext_resource type="Texture2D" uid="uid://7xbcb4a61lct" path="res://Assets/AdjustedStandfordAssets/FilingCabinet.png" id="2_dgsrt"]
+[ext_resource type="Texture2D" uid="uid://d0g5gdljbiet3" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-04.png" id="1_678gh"]
+[ext_resource type="Texture2D" uid="uid://bcqysaietu2xf" path="res://Assets/AdjustedStandfordAssets/FilingCabinet.png" id="2_dgsrt"]
 [ext_resource type="PackedScene" uid="uid://pn2l6ln2hl3j" path="res://Clickables/new_scene/new_scene_object.tscn" id="2_tubx5"]
-[ext_resource type="Texture2D" uid="uid://dglocgdvpkmue" path="res://Assets/AdjustedStandfordAssets/ResizedLaptop.png" id="4_eou70"]
+[ext_resource type="Texture2D" uid="uid://di8jujftnmsl" path="res://Assets/AdjustedStandfordAssets/ResizedLaptop.png" id="4_eou70"]
 [ext_resource type="Texture2D" uid="uid://dwqw21d8i31b" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-01(1).png" id="4_hyb53"]
 [ext_resource type="Texture2D" uid="uid://ihqucqebj6dc" path="res://Assets/Sprites/room_1_custom_placeholders/Trash_can.png" id="6_4wrwl"]
 [ext_resource type="Texture2D" uid="uid://dmm1o4xemcxfx" path="res://Assets/Sprites/Room2/Desk.png" id="6_mdhq7"]
@@ -10,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bko6uquctebmt" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-13.png" id="8_xcblm"]
 [ext_resource type="Texture2D" uid="uid://k7tyhsc5hvsx" path="res://Assets/Sprites/room_1_custom_placeholders/chair.png" id="9_dd7ir"]
 [ext_resource type="Texture2D" uid="uid://cygackt4v7jam" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-06.png" id="10_2ocqh"]
+[ext_resource type="Texture2D" uid="uid://wi4o4wyyf88l" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-21.png" id="12_23igp"]
 
 [sub_resource type="GDScript" id="GDScript_wty1p"]
 script/source = "extends Room
@@ -37,6 +39,11 @@ offset_top = 48.0
 offset_right = 1920.0
 offset_bottom = 360.0
 color = Color(0.356863, 0.635294, 0.411765, 1)
+
+[node name="Books" type="Sprite2D" parent="."]
+position = Vector2(1557, 363)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_678gh")
 
 [node name="FilingCabinet" parent="." instance=ExtResource("2_tubx5")]
 offset_left = 1351.0
@@ -90,7 +97,26 @@ texture_normal = ExtResource("9_dd7ir")
 x_coordinate = 1100
 y_coordinate = 600
 
-[node name="Custom-illustrations-stanford-monuments-assets-06" type="Sprite2D" parent="."]
+[node name="Whiteboard" type="Sprite2D" parent="."]
 position = Vector2(923, 400)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("10_2ocqh")
+
+[node name="TV" type="Sprite2D" parent="."]
+position = Vector2(312, 381)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("12_23igp")
+
+[node name="Tv_deco" type="ColorRect" parent="."]
+offset_left = 141.0
+offset_top = 467.0
+offset_right = 480.0
+offset_bottom = 486.0
+color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+
+[node name="Tv_deco2" type="ColorRect" parent="."]
+offset_left = 227.0
+offset_top = 302.0
+offset_right = 388.0
+offset_bottom = 439.0
+color = Color(0.730469, 0.890625, 0.90625, 1)
