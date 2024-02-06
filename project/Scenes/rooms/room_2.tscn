@@ -88,13 +88,13 @@ scene_path = "res://Clickables/room_unlocks/combo_unlock.tscn"
 
 [node name="Plant" parent="." instance=ExtResource("11_a351n")]
 offset_left = 459.0
-offset_top = 424.0
+offset_top = 432.0
 offset_right = 1530.0
-offset_bottom = 2484.0
+offset_bottom = 2492.0
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("12_jxi8s")
 x_coordinate = 583
-y_coordinate = 420
+y_coordinate = 432
 
 [node name="Chair" type="Sprite2D" parent="."]
 position = Vector2(590.469, 743)

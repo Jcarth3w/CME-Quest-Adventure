@@ -1,18 +1,18 @@
 [gd_scene load_steps=22 format=3 uid="uid://bdtol8suwnlv7"]
 
 [ext_resource type="Script" path="res://Scenes/mini_games/file_finder/FileMinigameManager.gd" id="1_uttu5"]
-[ext_resource type="Texture2D" uid="uid://b70odmdckfuf0" path="res://Assets/AdjustedStandfordAssets/ComplianceFolder.png" id="2_wwggp"]
-[ext_resource type="Texture2D" uid="uid://7ihrcj0hto85" path="res://Assets/AdjustedStandfordAssets/SafetyFolder.png" id="3_2fy7v"]
-[ext_resource type="Texture2D" uid="uid://cbbldglpxmqtb" path="res://Assets/AdjustedStandfordAssets/MarketingFolder.png" id="4_j8qpf"]
-[ext_resource type="Texture2D" uid="uid://6i7cn4wx0cf" path="res://Assets/AdjustedStandfordAssets/PromotionalFolder.png" id="5_d72pe"]
-[ext_resource type="Texture2D" uid="uid://b0uwfiulbrmf2" path="res://Assets/AdjustedStandfordAssets/LearningFolder.png" id="6_xsvny"]
+[ext_resource type="Texture2D" uid="uid://cxt3xit0o2htc" path="res://Assets/AdjustedStandfordAssets/ComplianceFolder.png" id="2_wwggp"]
+[ext_resource type="Texture2D" uid="uid://c572e5ff4ereu" path="res://Assets/AdjustedStandfordAssets/SafetyFolder.png" id="3_2fy7v"]
+[ext_resource type="Texture2D" uid="uid://dlmtgtobx1e4a" path="res://Assets/AdjustedStandfordAssets/MarketingFolder.png" id="4_j8qpf"]
+[ext_resource type="Texture2D" uid="uid://dq3irqg14u120" path="res://Assets/AdjustedStandfordAssets/PromotionalFolder.png" id="5_d72pe"]
+[ext_resource type="Texture2D" uid="uid://brblfds0ttr20" path="res://Assets/AdjustedStandfordAssets/LearningFolder.png" id="6_xsvny"]
 [ext_resource type="Texture2D" uid="uid://dcm6p18p7lslf" path="res://Assets/Sprites/generic_items/genericItem_color_160.png" id="7_arwno"]
-[ext_resource type="Texture2D" uid="uid://m4duyp5rkxs4" path="res://Assets/Sprites/Iteration 3 assets/Brochure.png" id="8_v3vra"]
-[ext_resource type="Texture2D" uid="uid://dbvywqj0kjdyv" path="res://Assets/Sprites/Iteration 3 assets/Poster.png" id="9_k6ic3"]
-[ext_resource type="Texture2D" uid="uid://c0lr84v7p8ek1" path="res://Assets/Sprites/Iteration 3 assets/PrintedDocument.png" id="10_ld2li"]
-[ext_resource type="Texture2D" uid="uid://cuy7kvxdepdl0" path="res://Assets/Sprites/Iteration 3 assets/RegistrationPaper.png" id="11_f607e"]
-[ext_resource type="Texture2D" uid="uid://btv06d3005rb" path="res://Assets/Sprites/Iteration 3 assets/SavePostcard.png" id="12_1gixw"]
-[ext_resource type="Texture2D" uid="uid://ckrhn43uqw2b2" path="res://Assets/Sprites/Iteration 3 assets/SocialMediaGraphics.png" id="13_nm5vl"]
+[ext_resource type="Texture2D" uid="uid://dghr40ejfclrp" path="res://Assets/Sprites/Iteration 3 assets/Brochure.png" id="8_v3vra"]
+[ext_resource type="Texture2D" uid="uid://c3b7lql53402d" path="res://Assets/Sprites/Iteration 3 assets/Poster.png" id="9_k6ic3"]
+[ext_resource type="Texture2D" uid="uid://cg6tedn3y1orp" path="res://Assets/Sprites/Iteration 3 assets/PrintedDocument.png" id="10_ld2li"]
+[ext_resource type="Texture2D" uid="uid://c5gsymh0ni4wm" path="res://Assets/Sprites/Iteration 3 assets/RegistrationPaper.png" id="11_f607e"]
+[ext_resource type="Texture2D" uid="uid://btk2eqgwm1opa" path="res://Assets/Sprites/Iteration 3 assets/SavePostcard.png" id="12_1gixw"]
+[ext_resource type="Texture2D" uid="uid://ckj5s8n7wy1qo" path="res://Assets/Sprites/Iteration 3 assets/SocialMediaGraphics.png" id="13_nm5vl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_js1u7"]
 font_size = 60
@@ -129,15 +129,16 @@ offset_bottom = 1061.0
 color = Color(0.294118, 0.588235, 0.898039, 1)
 
 [node name="Slots" type="Node2D" parent="OrganizeFiles"]
-position = Vector2(127, 283)
+position = Vector2(87, 104)
 
 [node name="Slot1" type="TextureButton" parent="OrganizeFiles/Slots"]
-offset_left = 78.0
-offset_top = 595.0
-offset_right = 118.0
-offset_bottom = 635.0
+offset_left = 154.0
+offset_top = 564.0
+offset_right = 194.0
+offset_bottom = 604.0
 scale = Vector2(2.5, 2.5)
 texture_normal = SubResource("CompressedTexture2D_rge4g")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="OrganizeFiles/Slots/Slot1"]
 layout_mode = 0
@@ -147,14 +148,16 @@ offset_right = 63.8
 offset_bottom = 67.2
 text = "Brochure"
 label_settings = SubResource("LabelSettings_harr4")
+metadata/_edit_use_anchors_ = true
 
 [node name="Slot2" type="TextureButton" parent="OrganizeFiles/Slots"]
-offset_left = 302.0
-offset_top = 595.0
-offset_right = 342.0
-offset_bottom = 635.0
+offset_left = 422.0
+offset_top = 614.0
+offset_right = 462.0
+offset_bottom = 654.0
 scale = Vector2(2.5, 2.5)
 texture_normal = ExtResource("7_arwno")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="OrganizeFiles/Slots/Slot2"]
 layout_mode = 0
@@ -164,14 +167,16 @@ offset_right = 80.0
 offset_bottom = 68.0
 text = "Event Poster"
 label_settings = SubResource("LabelSettings_8n0tk")
+metadata/_edit_use_anchors_ = true
 
 [node name="Slot3" type="TextureButton" parent="OrganizeFiles/Slots"]
-offset_left = 580.0
-offset_top = 596.0
-offset_right = 620.0
-offset_bottom = 636.0
+offset_left = 716.0
+offset_top = 558.0
+offset_right = 756.0
+offset_bottom = 598.0
 scale = Vector2(2.5, 2.5)
 texture_normal = ExtResource("7_arwno")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="OrganizeFiles/Slots/Slot3"]
 layout_mode = 0
@@ -181,14 +186,16 @@ offset_right = 102.4
 offset_bottom = 68.0
 text = "Printed Document"
 label_settings = SubResource("LabelSettings_wrjap")
+metadata/_edit_use_anchors_ = true
 
 [node name="Slot4" type="TextureButton" parent="OrganizeFiles/Slots"]
-offset_left = 883.0
-offset_top = 603.0
-offset_right = 923.0
-offset_bottom = 643.0
+offset_left = 991.0
+offset_top = 620.0
+offset_right = 1031.0
+offset_bottom = 660.0
 scale = Vector2(2.5, 2.5)
 texture_normal = ExtResource("7_arwno")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="OrganizeFiles/Slots/Slot4"]
 layout_mode = 0
@@ -198,14 +205,16 @@ offset_right = 80.0
 offset_bottom = 65.2
 text = "Registration Form"
 label_settings = SubResource("LabelSettings_fd78b")
+metadata/_edit_use_anchors_ = true
 
 [node name="Slot5" type="TextureButton" parent="OrganizeFiles/Slots"]
-offset_left = 1196.0
-offset_top = 599.0
-offset_right = 1236.0
-offset_bottom = 639.0
+offset_left = 1256.0
+offset_top = 561.0
+offset_right = 1296.0
+offset_bottom = 601.0
 scale = Vector2(2.5, 2.5)
 texture_normal = ExtResource("7_arwno")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="OrganizeFiles/Slots/Slot5"]
 layout_mode = 0
@@ -215,14 +224,16 @@ offset_right = 65.0
 offset_bottom = 63.8
 text = "Save The Dates"
 label_settings = SubResource("LabelSettings_5g3xo")
+metadata/_edit_use_anchors_ = true
 
 [node name="Slot6" type="TextureButton" parent="OrganizeFiles/Slots"]
-offset_left = 1529.0
-offset_top = 595.0
-offset_right = 1569.0
-offset_bottom = 635.0
+offset_left = 1539.0
+offset_top = 620.0
+offset_right = 1579.0
+offset_bottom = 660.0
 scale = Vector2(2.5, 2.5)
 texture_normal = ExtResource("7_arwno")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="OrganizeFiles/Slots/Slot6"]
 layout_mode = 0
@@ -232,9 +243,10 @@ offset_right = 110.4
 offset_bottom = 69.2
 text = "Social Media Graphic"
 label_settings = SubResource("LabelSettings_yvdqi")
+metadata/_edit_use_anchors_ = true
 
 [node name="Items" type="Node2D" parent="OrganizeFiles"]
-position = Vector2(186, 493)
+position = Vector2(215, 319)
 
 [node name="Item1" type="TextureButton" parent="OrganizeFiles/Items"]
 offset_left = 1356.0
