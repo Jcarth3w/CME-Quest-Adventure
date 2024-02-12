@@ -54,20 +54,6 @@ func _on_open_screen_close() -> void:
 	$Room1.resume_room()
 	$HUD/Timer.start()
 
-func disable_menu(menu) -> void:
-	if menu == 1:
-		$HUD.menu_active = false
-	elif menu == 2:
-		$HUD.map_active = false
-	elif menu == 3:
-		$HUD.menu_active = false
-		$HUD.map_active = false
-
-
-func activate_menus() -> void:
-	$HUD.menu_active = true
-	$HUD.map_active = true
-
 
 func _on_room_final() -> void:
 	$HUD/Timer.stop()
