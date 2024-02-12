@@ -63,14 +63,6 @@ func _on_room_final() -> void:
 	end_screen_inst.scen_num = 1
 	end_screen_inst.time_val = $HUD/Timer/Label.text 
 	add_child(end_screen_inst)
-	
-
-func pause_room():
-	current_room.pause_room()
-
-
-func resume_room():
-	current_room.resume_room()
 
 
 func send_data(completed):

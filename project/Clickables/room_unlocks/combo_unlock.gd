@@ -12,18 +12,19 @@ func _ready() ->void:
 
 
 func _on_button_press(button) -> void:
-	if button.text == "ENTER":
-		check_answer($Display.text)
-	elif button.text == "CLEAR":
-		$Display.text = ""
-	elif button.text == "X":
-		queue_free()
-		get_parent().resume_room()
-	else:
-		if $Display.text == "incorrect":
-			$Display.text = button.text
-		else:
-			$Display.text += button.text
+	match button.text:
+		"ENTER":
+			check_answer($Display.text)
+		"CLEAR":
+			$Display.text = ""
+		"X":
+			queue_free()
+			get_parent().resume_room()
+		_:
+			if $Display.text == "incorrect":
+				$Display.text = button.text
+			else:
+				$Display.text += button.text
 	
 
 func check_answer(player_answer) -> void:
