@@ -17,8 +17,8 @@ func _on_button_press(button) -> void:
 	elif button.text == "CLEAR":
 		$Display.text = ""
 	elif button.text == "X":
-		finished.emit()
 		queue_free()
+		get_parent().resume_room()
 	else:
 		if $Display.text == "incorrect":
 			$Display.text = button.text
