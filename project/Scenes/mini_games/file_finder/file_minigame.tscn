@@ -299,4 +299,4 @@ texture_normal = ExtResource("13_nm5vl")
 
 [connection signal="pressed" from="FileFind/Previous" to="." method="_on_previous_pressed"]
 [connection signal="pressed" from="FileFind/Next" to="." method="_on_next_pressed"]
-[connection signal="pressed" from="FileFind/Center" to="." method="_on_center_pressed"]
+[connection signal="pressed" from="FileFind/Center" to="." method="on_center_pressed"]

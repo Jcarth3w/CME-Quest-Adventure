@@ -14,7 +14,7 @@ func _ready():
 	current_room = find_child("Room1")
 	var open_screen = load(open_screen_path)
 	var open_scrn_inst = open_screen.instantiate()
-	open_scrn_inst.get_node("ContinueButton").pressed.connect(_on_open_screen_close)
+	open_scrn_inst.get_node("ContinueButton").pressed.connect(on_open_screen_close)
 	add_child(open_scrn_inst)
 	for child in get_children():
 		if child is Room:
@@ -39,8 +39,7 @@ func enter_room(new_room):
 func check_win() -> bool:
 	if $HUD.items.size() == 7:
 		return true
-	else:
-		return false
+	return false
 
 
 func room_unlock(room_number):
@@ -50,7 +49,7 @@ func room_unlock(room_number):
 		$HUD/RoomMenu/Room3.visible = true
 
 
-func _on_open_screen_close() -> void:
+func on_open_screen_close() -> void:
 	$Room1.resume_room()
 	$HUD/Timer.start()
 
@@ -61,7 +60,7 @@ func _on_room_final() -> void:
 	var end_screen_inst = end_screen.instantiate()
 	end_screen_inst.username = username
 	end_screen_inst.scen_num = 1
-	end_screen_inst.time_val = $HUD/Timer/Label.text 
+	end_screen_inst.time_val = $HUD/Timer/Label.text
 	add_child(end_screen_inst)
 
 

@@ -33,7 +33,7 @@ func test_change_file_reader_with_file() -> void:
 
 func test_on_login_button_pressed_failure() -> void:
 	var login_screen = test_laptop.get_node("Login")
-	test_laptop._on_button_pressed()
+	test_laptop.on_button_pressed()
 	assert_eq(login_screen.get_node("Feedback").visible, true)
 
 
@@ -41,17 +41,17 @@ func test_on_login_button_pressed_success() -> void:
 	var login_screen = test_laptop.get_node("Login")
 	login_screen.get_node("Username").text = "john"
 	login_screen.get_node("Password").text = "123"
-	test_laptop._on_button_pressed()
+	test_laptop.on_button_pressed()
 	assert_eq(login_screen.visible, false)
 	assert_eq(test_laptop.get_node("Files").visible, true)
 
 func test_on_file_pressed() -> void:
 	var files_screen = test_laptop.get_node("Files")
-	test_laptop._on_file_press(files_screen.get_node("File1"))
+	test_laptop.on_file_press(files_screen.get_node("File1"))
 	assert_eq(files_screen.get_node("FileText").text, "This is a placeholder document\n")
 
 
 func test_on_power_button_pressed() -> void:
-	test_laptop._on_power_button_pressed()
+	test_laptop.on_power_button_pressed()
 	await yield_for(1)
 	assert_eq(get_tree().get_root().has_node("LaptopMiniGame"), false)

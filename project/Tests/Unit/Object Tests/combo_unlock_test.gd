@@ -15,13 +15,13 @@ func before_all() -> void:
 
 
 func test_label_update_on_number_button_press() -> void:
-	test_combo._on_button_press(test_combo.get_node("1"))
+	test_combo.on_button_press(test_combo.get_node("1"))
 	assert_eq(test_combo.get_node("Display").text, "1")
 
 
 func test_label_update_on_clear_press() -> void:
 	test_combo.get_node("Display").text = "123456789"
-	test_combo._on_button_press(test_combo.get_node("Clear"))
+	test_combo.on_button_press(test_combo.get_node("Clear"))
 	assert_eq(test_combo.get_node("Display").text, "")
 
 
@@ -39,5 +39,5 @@ func test_check_answer_failure() -> void:
 
 func test_label_update_on_enter_press() -> void:
 	test_combo.get_node("Display").text = "8562"
-	test_combo._on_button_press(test_combo.get_node("Enter"))
+	test_combo.on_button_press(test_combo.get_node("Enter"))
 	assert_eq(test_combo.get_node("Display").text, "unlocked room 3")

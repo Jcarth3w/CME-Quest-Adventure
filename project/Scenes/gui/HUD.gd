@@ -25,7 +25,7 @@ func add_item_image(sprite_path) -> void:
 	current_item += 1
 
 
-func _on_menu_button_pressed():
+func on_menu_button_pressed():
 	if menu_active:
 		pause.emit()
 		get_parent().get_data()
@@ -34,16 +34,7 @@ func _on_menu_button_pressed():
 			$InGameMenu.visible = true
 
 
-func _on_objectives_button_pressed():
-	if $ObjectiveMenu.visible == false:
-		$ObjectiveMenu.visible = true
-		$BlackBorderRectangle/Label.text = "Hide Objectives"
-	else:
-		$ObjectiveMenu.visible = false
-		$BlackBorderRectangle/Label.text = "View Objectives"
-
-
-func _on_quit_pressed():
+func on_quit_pressed():
 	get_parent().send_data(0)
 	if FileAccess.file_exists("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt"):
 		var dir = DirAccess.open("res://Scenes/mini_games/Crossword_Puzzle/")
@@ -52,18 +43,18 @@ func _on_quit_pressed():
 	get_tree().quit()
 
 
-func _on_resume_pressed():
+func on_resume_pressed():
 	$Timer.start()
 	resume.emit()
 	$InGameMenu.visible = false
 
 
-func _on_scenario_pressed():
+func on_scenario_pressed():
 	var scenario_menu_inst = scenario_menu.instantiate()
 	add_child(scenario_menu_inst)
 
 
-func _on_map_button_pressed():
+func on_map_button_pressed():
 	if map_active and $RoomMenu.visible == false:
 		pause.emit()
 		if $InGameMenu.visible == false:
@@ -73,19 +64,19 @@ func _on_map_button_pressed():
 		resume.emit()
 
 
-func _on_room1_pressed():
+func on_room1_pressed():
 	get_parent().enter_room(get_parent().get_node("Room1"))
 	get_parent().current_room = get_parent().get_node("Room1")
 	$RoomMenu.visible = false
 
 
-func _on_room2_pressed():
+func on_room2_pressed():
 	get_parent().enter_room(get_parent().get_node("Room2"))
 	get_parent().current_room = get_parent().get_node("Room2")
 	$RoomMenu.visible = false
 
 
-func _on_room3_pressed():
+func on_room3_pressed():
 	get_parent().enter_room(get_parent().get_node("Room3"))
 	get_parent().current_room = get_parent().get_node("Room3")
 	$RoomMenu.visible = false
@@ -112,13 +103,13 @@ func _on_item_add(title, texture) -> void:
 
 
 func connect_menu_buttons() -> void:
-	$InGameMenu.get_node("quit").pressed.connect(_on_quit_pressed)
-	$InGameMenu.get_node("resume").pressed.connect(_on_resume_pressed)
-	$InGameMenu.get_node("scenario").pressed.connect(_on_scenario_pressed)
-	$RoomMenu.get_node("Room1").pressed.connect(_on_room1_pressed)
-	$RoomMenu.get_node("Room2").pressed.connect(_on_room2_pressed)
+	$InGameMenu.get_node("quit").pressed.connect(on_quit_pressed)
+	$InGameMenu.get_node("resume").pressed.connect(on_resume_pressed)
+	$InGameMenu.get_node("scenario").pressed.connect(on_scenario_pressed)
+	$RoomMenu.get_node("Room1").pressed.connect(on_room1_pressed)
+	$RoomMenu.get_node("Room2").pressed.connect(on_room2_pressed)
 	$RoomMenu.get_node("Room2").visible = false
-	$RoomMenu.get_node("Room3").pressed.connect(_on_room3_pressed)
+	$RoomMenu.get_node("Room3").pressed.connect(on_room3_pressed)
 	$RoomMenu.get_node("Room3").visible = false
 
 
@@ -129,3 +120,12 @@ func connect_room_signals() -> void:
 				child.activate_menus.connect(_on_activate_menus)
 				child.disable_menus.connect(_on_disable_menus)
 				child.item_add.connect(_on_item_add)
+
+
+func on_objectives_button_toggled():
+	if $ObjectiveMenu.visible == false:
+		$ObjectiveMenu.visible = true
+		$BlackBorderRectangle/Label.text = "Hide Objectives"
+	else:
+		$ObjectiveMenu.visible = false
+		$BlackBorderRectangle/Label.text = "View Objectives"

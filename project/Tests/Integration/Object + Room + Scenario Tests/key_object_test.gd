@@ -10,7 +10,7 @@ func before_all() -> void:
 	get_tree().root.add_child(test_scenario)
 	room = test_scenario.get_node("Room1")
 	key = room.get_node("Key")
-	
+
 
 func test_key_action() -> void:
 	key.action()

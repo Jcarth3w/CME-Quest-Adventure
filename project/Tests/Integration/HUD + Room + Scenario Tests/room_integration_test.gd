@@ -20,7 +20,7 @@ func before_all() -> void:
 	inventory = hud.get_node("Inventory")
 
 func test_on_static_scene_spawn() -> void:
-	room._on_static_scene_spawn()
+	room.on_static_scene_spawn()
 	assert_eq(hud.map_active, false)
 	assert_eq(hud.menu_active, false)
 
@@ -30,7 +30,7 @@ func test_on_resume_room() -> void:
 	var pickup = room.get_node("TestPickup")
 	var static_scene = room.get_node("StaticSceneButton")
 	room.resume_room()
-	
+
 	assert_eq(moveable.disabled, false)
 	assert_eq(new_scene.disabled, false)
 	assert_eq(pickup.disabled, false)
@@ -40,8 +40,9 @@ func test_on_resume_room() -> void:
 
 
 func test_give_item() -> void:
-	room.give_item("book", load("res://Assets/Sprites/generic_items/genericItem_color_032.png"))
-	assert_eq(inventory.get_node("Item1").texture, load("res://Assets/Sprites/generic_items/genericItem_color_032.png"))
+	var test_texture = load("res://Assets/Sprites/generic_items/genericItem_color_032.png")
+	room.give_item("book", test_texture)
+	assert_eq(inventory.get_node("Item1").texture, test_texture)
 	assert_eq(hud.items.has("book"), true)
 
 

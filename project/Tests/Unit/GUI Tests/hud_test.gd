@@ -12,5 +12,5 @@ func before_all() -> void:
 
 
 func test_on_scenario_pressed() -> void:
-	hud._on_scenario_pressed()
+	hud.on_scenario_pressed()
 	assert_eq(hud.has_node("Scenario_menu"), true)

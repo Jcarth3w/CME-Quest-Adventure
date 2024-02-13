@@ -118,6 +118,6 @@ layout_mode = 0
 offset_right = 362.0
 offset_bottom = 82.0
 
-[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
-[connection signal="pressed" from="MapButton" to="." method="_on_map_button_pressed"]
-[connection signal="pressed" from="BlackBorderRectangle/ObjectivesButton" to="." method="_on_objectives_button_pressed"]
+[connection signal="pressed" from="MenuButton" to="." method="on_menu_button_pressed"]
+[connection signal="pressed" from="MapButton" to="." method="on_map_button_pressed"]
+[connection signal="toggled" from="BlackBorderRectangle/ObjectivesButton" to="." method="on_objectives_button_toggled"]
