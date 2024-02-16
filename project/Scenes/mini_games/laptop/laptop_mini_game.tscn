@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/mini_games/laptop/laptop_mini_game.gd" id="1_mdm6b"]
 [ext_resource type="Texture2D" uid="uid://rpdjh6s3x3m2" path="res://Assets/Sprites/room_1_custom_placeholders/Red Background.png" id="2_a45ph"]
-[ext_resource type="Texture2D" uid="uid://dpchufhoke5mj" path="res://Assets/AdjustedStandfordAssets/BlankFolder.png" id="2_cfe0u"]
+[ext_resource type="Texture2D" uid="uid://bjghy1hj1e4sr" path="res://Assets/AdjustedStandfordAssets/BlankFolder.png" id="2_cfe0u"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_aep5h"]
 font_size = 72
@@ -177,6 +177,6 @@ offset_bottom = 1339.0
 scale = Vector2(0.04, 0.066)
 texture_normal = ExtResource("2_a45ph")
 
-[connection signal="pressed" from="Login/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Files/Print" to="." method="_on_print_pressed"]
-[connection signal="pressed" from="PowerButton" to="." method="_on_power_button_pressed"]
+[connection signal="pressed" from="Login/Button" to="." method="on_button_pressed"]
+[connection signal="pressed" from="Files/Print" to="." method="on_print_pressed"]
+[connection signal="pressed" from="PowerButton" to="." method="on_power_button_pressed"]

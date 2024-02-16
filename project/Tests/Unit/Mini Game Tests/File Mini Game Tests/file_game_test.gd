@@ -9,28 +9,32 @@ func before_all() -> void:
 	get_tree().root.add_child(test_mini)
 
 
+
 func test_next_button():
-	test_mini._on_next_pressed()
+	test_mini.next_pressed()
 	print(test_mini.file_textures[test_mini.current_file - 1])
-	assert_eq(test_mini.file_textures[test_mini.current_file], test_mini.get_node("FileFind").get_node("Center").texture_normal)
+	var center = test_mini.get_node("FileFind").get_node("Center").texture_normal
+	assert_eq(test_mini.file_textures[test_mini.current_file], center)
 	assert_eq(test_mini.current_file, 0)
 
 
 func test_prev_button():
 	test_mini.current_file = 1
 	test_mini.previous_pressed()
-	assert_eq(test_mini.file_textures[test_mini.current_file + 1], test_mini.get_node("FileFind").get_node("OffLeft").texture)
-	assert_eq(test_mini.file_textures[test_mini.current_file], test_mini.get_node("FileFind").get_node("Center").texture_normal)
+	var center = test_mini.get_node("FileFind").get_node("Center").texture_normal
+	var off_left = test_mini.get_node("FileFind").get_node("OffLeft").texture
+	assert_eq(test_mini.file_textures[test_mini.current_file + 1], off_left)
+	assert_eq(test_mini.file_textures[test_mini.current_file], center)
 	assert_eq(test_mini.current_file, 0)
 
 
 func test_on_file_pressed_incorrect():
 	test_mini.current_file = 2
-	test_mini._on_center_pressed()
+	test_mini.on_center_pressed()
 	assert_eq(test_mini.get_node("FileFind").get_node("Check").text, "Incorrect.")
 
 
 func test_on_file_pressed_correct():
 	test_mini.current_file = 3
-	test_mini._on_center_pressed()
+	test_mini.on_center_pressed()
 	assert_eq(test_mini.get_node("FileFind").get_node("Check").text, "Congratulations!")

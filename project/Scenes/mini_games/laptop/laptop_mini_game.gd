@@ -10,11 +10,11 @@ var current_file
 func _ready() -> void:
 	screens.append($Login)
 	screens.append($Files)
-	
+
 	for child in $Files.get_children():
 		if child is TextureButton:
-			child.pressed.connect(_on_file_press.bind(child))
-	
+			child.pressed.connect(on_file_press.bind(child))
+
 	file_contents = {$Files/File1 : "one.txt", $Files/File2 : "two.txt",
 	$Files/File3 : "three.txt", $Files/File4 : "four.txt" }
 
@@ -32,31 +32,31 @@ func change_file_reader(text_file) -> void:
 		$Files/FileText.text = save_file.get_as_text()
 
 
-func _on_power_button_pressed() -> void:
+func on_power_button_pressed() -> void:
 	if check_correct():
 		get_parent().get_node("printed").visible = true
 	queue_free()
 
 
-func _on_button_pressed() -> void:
+func on_button_pressed() -> void:
 	if $Login/Username.text == username and $Login/Password.text == password:
 		change_screen($Files)
 	else:
 		$Login/Feedback.visible = true
 
 
-func _on_file_press(file) -> void:
+func on_file_press(file) -> void:
 	change_file_reader(file_contents.get(file))
 	current_file = file
 
 
-func _on_print_pressed():
+func on_print_pressed():
 	if check_correct():
 		print_paper()
 	else:
 		$Files/PrintFeedback.text = "INCORRECT FILE: PRINT FAILED"
 		$Files/PrintFeedback.visible = true
-	
+
 
 func print_paper() -> void:
 	var printed = load("res://Clickables/pickup/pickup.tscn")
@@ -76,6 +76,5 @@ func print_paper() -> void:
 func check_correct():
 	if current_file != $Files/File4:
 		return false
-	else:
-		return true
+	return true
 

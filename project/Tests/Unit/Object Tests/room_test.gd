@@ -22,7 +22,7 @@ func test_pause_room() -> void:
 	var pickup = room.get_node("TestPickup")
 	var static_scene = room.get_node("StaticSceneButton")
 	room.pause_room()
-	
+
 	assert_eq(moveable.disabled, true)
 	assert_eq(new_scene.disabled, true)
 	assert_eq(pickup.disabled, true)

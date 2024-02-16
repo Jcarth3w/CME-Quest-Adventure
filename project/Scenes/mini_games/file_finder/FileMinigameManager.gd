@@ -15,17 +15,17 @@ var previous_selection
 
 func _ready():
 	$FileFind/OffLeft.texture = file_textures[0]
-	
+
 	for item in $OrganizeFiles/Items.get_children():
 		if item is TextureButton:
 			item.pressed.connect(_on_item_press.bind(item))
 			var item_position = {item : item.global_position}
 			item_positions.merge(item_position)
-			
+
 	for slot in $OrganizeFiles/Slots.get_children():
 		if slot is TextureButton:
 			slot.pressed.connect(_on_slot_press.bind(slot))
-			
+
 	correct_order = {"Slot1" : $OrganizeFiles/Items/Item1,
 					"Slot2" : $OrganizeFiles/Items/Item2,
 					"Slot3" : $OrganizeFiles/Items/Item3,
@@ -103,7 +103,7 @@ func check_win():
 		previous_selection = null
 
 
-func _on_center_pressed():
+func on_center_pressed():
 		if current_file == 3:
 			$FileFind/Check.text = "Congratulations!"
 			await get_tree().create_timer(1).timeout

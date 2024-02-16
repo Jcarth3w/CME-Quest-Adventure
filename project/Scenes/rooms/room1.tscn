@@ -1,26 +1,27 @@
-[gd_scene load_steps=22 format=3 uid="uid://b302n6pq0hkk1"]
+[gd_scene load_steps=23 format=3 uid="uid://b302n6pq0hkk1"]
 
 [ext_resource type="Script" path="res://Scenes/rooms/room.gd" id="1_dbjvq"]
 [ext_resource type="Texture2D" uid="uid://bkomnkytheji1" path="res://Assets/Sprites/room_1_custom_placeholders/RoomBackground.png" id="2_bb0ow"]
 [ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Clickables/pickup/pickup.tscn" id="2_pjc2w"]
 [ext_resource type="Texture2D" uid="uid://bnmarmnacxlxl" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-08.png" id="3_qsxvy"]
-[ext_resource type="Texture2D" uid="uid://c3byfud350l7b" path="res://Assets/AdjustedStandfordAssets/ResizedDesk.png" id="5_mma7x"]
+[ext_resource type="Texture2D" uid="uid://bg5h86nkqkngn" path="res://Assets/AdjustedStandfordAssets/ResizedDesk.png" id="5_mma7x"]
 [ext_resource type="Texture2D" uid="uid://ihqucqebj6dc" path="res://Assets/Sprites/room_1_custom_placeholders/Trash_can.png" id="5_nq2e7"]
 [ext_resource type="PackedScene" uid="uid://pn2l6ln2hl3j" path="res://Clickables/new_scene/new_scene_object.tscn" id="8_je1k2"]
-[ext_resource type="Texture2D" uid="uid://ckj5s8n7wy1qo" path="res://Assets/Sprites/Iteration 3 assets/SocialMediaGraphics.png" id="8_lovqv"]
-[ext_resource type="Texture2D" uid="uid://btk2eqgwm1opa" path="res://Assets/Sprites/Iteration 3 assets/SavePostcard.png" id="9_2mnun"]
+[ext_resource type="Texture2D" uid="uid://dcmfxrepy3txx" path="res://Assets/Sprites/Iteration 3 assets/SocialMediaGraphics.png" id="8_lovqv"]
+[ext_resource type="Texture2D" uid="uid://dqo0k8028asee" path="res://Assets/Sprites/Iteration 3 assets/SavePostcard.png" id="9_2mnun"]
 [ext_resource type="Script" path="res://Clickables/movement/Movement_Object.gd" id="10_u6dd1"]
-[ext_resource type="Texture2D" uid="uid://blav7gddktfog" path="res://Assets/AdjustedStandfordAssets/ResizedPlant.png" id="11_53m2s"]
+[ext_resource type="Texture2D" uid="uid://b1r2tcmopop8o" path="res://Assets/AdjustedStandfordAssets/ResizedPlant.png" id="11_53m2s"]
 [ext_resource type="Texture2D" uid="uid://k7tyhsc5hvsx" path="res://Assets/Sprites/room_1_custom_placeholders/chair.png" id="12_0w1me"]
-[ext_resource type="Texture2D" uid="uid://dghr40ejfclrp" path="res://Assets/Sprites/Iteration 3 assets/Brochure.png" id="14_3m03u"]
+[ext_resource type="Script" path="res://Clickables/new_scene/new_scene_object.gd" id="14_0dlg4"]
+[ext_resource type="Texture2D" uid="uid://bhuyw2kfk5ybm" path="res://Assets/Sprites/Iteration 3 assets/Brochure.png" id="14_3m03u"]
 [ext_resource type="PackedScene" uid="uid://rksr0yf3cfrd" path="res://Clickables/movement/Movement_Object.tscn" id="14_rvr23"]
-[ext_resource type="Texture2D" uid="uid://dec0005ik8jph" path="res://Assets/AdjustedStandfordAssets/Whiteboard.png" id="18_gvnkl"]
+[ext_resource type="Texture2D" uid="uid://deydka1ptkao7" path="res://Assets/AdjustedStandfordAssets/Whiteboard.png" id="18_gvnkl"]
 [ext_resource type="Texture2D" uid="uid://4vloe2o85w0c" path="res://Assets/Sprites/room_1_custom_placeholders/papershredder.png" id="18_lm3ui"]
 [ext_resource type="Script" path="res://Clickables/static_scene_btn/static_scene_button.gd" id="18_mfent"]
 [ext_resource type="PackedScene" uid="uid://ccliul8ayjg6h" path="res://Clickables/room_unlocks/key.tscn" id="19_0x56j"]
-[ext_resource type="Texture2D" uid="uid://c5gsymh0ni4wm" path="res://Assets/Sprites/Iteration 3 assets/RegistrationPaper.png" id="19_y1w0n"]
-[ext_resource type="Texture2D" uid="uid://c1rwtx0rmm8tx" path="res://Assets/Sprites/Iteration 3 assets/Door.png" id="21_oj5rv"]
-[ext_resource type="Texture2D" uid="uid://dsya8y1qxajbd" path="res://Assets/Sprites/Iteration 3 assets/YellowStickyNote.png" id="22_gshux"]
+[ext_resource type="Texture2D" uid="uid://dyy6kieu74jiw" path="res://Assets/Sprites/Iteration 3 assets/RegistrationPaper.png" id="19_y1w0n"]
+[ext_resource type="Texture2D" uid="uid://c8bgmj0gqger2" path="res://Assets/Sprites/Iteration 3 assets/Door.png" id="21_oj5rv"]
+[ext_resource type="Texture2D" uid="uid://da3l74g5tb52x" path="res://Assets/Sprites/Iteration 3 assets/YellowStickyNote.png" id="22_gshux"]
 
 [node name="Room1" type="Node2D"]
 script = ExtResource("1_dbjvq")
@@ -92,9 +93,10 @@ offset_left = 724.0
 offset_top = 583.0
 offset_right = 1367.0
 offset_bottom = 667.0
+script = ExtResource("14_0dlg4")
 scene_path = "res://Scenes/mini_games/desktop_matching/DeskMiniGame.tscn"
 prize_texture = ExtResource("14_3m03u")
-prize_name = "conference brochure"
+prize_name = "brochure"
 
 [node name="Chair" parent="." instance=ExtResource("14_rvr23")]
 offset_left = 937.0
@@ -112,9 +114,10 @@ offset_right = 1711.0
 offset_bottom = 1850.0
 scale = Vector2(0.172647, 0.162982)
 texture_normal = ExtResource("18_lm3ui")
+script = ExtResource("14_0dlg4")
 scene_path = "res://Scenes/mini_games/shredder/ShredderMiniGame.tscn"
 prize_texture = ExtResource("19_y1w0n")
-prize_name = "Registration Forms"
+prize_name = "registration"
 
 [node name="WhiteBoard" type="TextureButton" parent="."]
 offset_left = 854.0

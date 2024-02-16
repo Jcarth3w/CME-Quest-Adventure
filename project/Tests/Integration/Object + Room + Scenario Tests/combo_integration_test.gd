@@ -17,7 +17,7 @@ func before_all() -> void:
 func test_combo_unlock() -> void:
 	var room_menu = test_scenario.get_node("HUD").get_node("RoomMenu")
 	test_combo.get_node("Display").text = "6969"
-	test_combo._on_button_press(test_combo.get_node("Enter"))
+	test_combo.on_button_press(test_combo.get_node("Enter"))
 	await yield_for(1)
 	assert_eq(test_combo.get_node("Display").text, "incorrect")
 	assert_eq(room_menu.has_node("Room3"), true)

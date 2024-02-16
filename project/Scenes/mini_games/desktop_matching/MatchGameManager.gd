@@ -5,10 +5,12 @@ extends MiniGame
 var flipped_count = 0
 var check_pair_matching = false
 var is_timer_started = false
+var won = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta) -> void:
-	check_win()
+	if won == false:
+		check_win()
 	check_pair()
 
 
@@ -23,6 +25,7 @@ func check_pair() -> void:
 func check_win() -> void:
 	if winning_pair.is_matched == true:
 			win()
+			won = true
 
 func win() -> void:
 	$Label.text = "You win!"

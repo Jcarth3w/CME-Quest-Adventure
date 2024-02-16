@@ -19,7 +19,8 @@ func test_check_answer_correct():
 	test_mini.get_node("UserText").text = "andragogy"
 	test_mini.check_answer()
 	assert_eq(test_mini.get_node("Andragogy").texture, test_texture)
-	
+
+
 func test_check_fail():
 	assert_eq(test_mini.check_win(), null)
 
@@ -27,4 +28,3 @@ func test_check_win():
 	test_mini.answers.clear()
 	test_mini.check_win()
 	assert_eq(test_mini.get_node("Label").text, "You win!")
-	
