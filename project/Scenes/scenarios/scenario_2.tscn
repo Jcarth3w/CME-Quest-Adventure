@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cknyxopjpq58i"]
+[gd_scene load_steps=4 format=3 uid="uid://cknyxopjpq58i"]
 
 [ext_resource type="PackedScene" uid="uid://d02w8tm7p5omg" path="res://Scenes/rooms/room_4.tscn" id="2_j7kmh"]
 [ext_resource type="PackedScene" uid="uid://bp3esxqwlfxd0" path="res://Scenes/gui/popup_gui.tscn" id="3_208rw"]
+[ext_resource type="PackedScene" uid="uid://b8xl3wqxn7v5d" path="res://Scenes/gui/HUD.tscn" id="3_ac87f"]
 
 [node name="scenario_2" type="Node2D"]
 
 [node name="room4" parent="." instance=ExtResource("2_j7kmh")]
 
 [node name="popup_gui" parent="." instance=ExtResource("3_208rw")]
+
+[node name="HUD" parent="." instance=ExtResource("3_ac87f")]
