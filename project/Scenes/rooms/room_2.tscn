@@ -1,21 +1,21 @@
 [gd_scene load_steps=17 format=3 uid="uid://dxurrur4fkonu"]
 
 [ext_resource type="Script" path="res://Scenes/rooms/room.gd" id="1_xmdg1"]
-[ext_resource type="Texture2D" uid="uid://bwi1hjiuaua1d" path="res://Assets/AdjustedStandfordAssets/ResizedPinBoard.png" id="2_4hu8h"]
-[ext_resource type="Texture2D" uid="uid://gurfi6qb2pop" path="res://Assets/Sprites/Iteration 3 assets/OrderedStickyNotes.png" id="2_ff5rt"]
-[ext_resource type="Texture2D" uid="uid://c1rwtx0rmm8tx" path="res://Assets/Sprites/Iteration 3 assets/Door.png" id="2_koxut"]
-[ext_resource type="Script" path="res://Clickables/new_scene/New_Scene_Object.gd" id="3_ibul7"]
+[ext_resource type="Texture2D" uid="uid://c5aw2lgu2qldx" path="res://Assets/AdjustedStandfordAssets/ResizedPinBoard.png" id="2_4hu8h"]
+[ext_resource type="Texture2D" uid="uid://cjnqf37tk1jgb" path="res://Assets/Sprites/Iteration 3 assets/OrderedStickyNotes.png" id="2_ff5rt"]
+[ext_resource type="Texture2D" uid="uid://c8bgmj0gqger2" path="res://Assets/Sprites/Iteration 3 assets/Door.png" id="2_koxut"]
+[ext_resource type="Script" path="res://Clickables/new_scene/new_scene_object.gd" id="5_q81bl"]
 [ext_resource type="Texture2D" uid="uid://d0g5gdljbiet3" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-04.png" id="5_rd7x1"]
-[ext_resource type="Texture2D" uid="uid://bgxnsxjprlu7a" path="res://Assets/AdjustedStandfordAssets/ResizedBookshelf.png" id="6_wkf6y"]
+[ext_resource type="Texture2D" uid="uid://beahs7n6gpb3f" path="res://Assets/AdjustedStandfordAssets/ResizedBookshelf.png" id="6_wkf6y"]
 [ext_resource type="PackedScene" uid="uid://c7brg2hyybb7t" path="res://Clickables/static_scene_btn/static_scene_button.tscn" id="7_x8tk5"]
 [ext_resource type="Texture2D" uid="uid://dmm1o4xemcxfx" path="res://Assets/Sprites/Room2/Desk.png" id="9_huuy6"]
-[ext_resource type="Texture2D" uid="uid://b3pfe3e62av5a" path="res://Assets/Sprites/Room2/keypad.PNG" id="9_tgu88"]
+[ext_resource type="Texture2D" uid="uid://dhxim7wroyin3" path="res://Assets/Sprites/Room2/keypad.PNG" id="9_tgu88"]
 [ext_resource type="Texture2D" uid="uid://k7tyhsc5hvsx" path="res://Assets/Sprites/room_1_custom_placeholders/chair.png" id="10_dw2od"]
 [ext_resource type="Script" path="res://Scenes/rooms/combo_button.gd" id="10_mgps6"]
 [ext_resource type="PackedScene" uid="uid://rksr0yf3cfrd" path="res://Clickables/movement/Movement_Object.tscn" id="11_a351n"]
 [ext_resource type="Texture2D" uid="uid://w10bfogg4ojl" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-09.png" id="12_jxi8s"]
 [ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Clickables/pickup/pickup.tscn" id="13_8i57d"]
-[ext_resource type="Texture2D" uid="uid://c3b7lql53402d" path="res://Assets/Sprites/Iteration 3 assets/Poster.png" id="15_nbiuo"]
+[ext_resource type="Texture2D" uid="uid://d2exdrfmom6g5" path="res://Assets/Sprites/Iteration 3 assets/Poster.png" id="15_nbiuo"]
 
 [node name="Room2" type="Node2D"]
 script = ExtResource("1_xmdg1")
@@ -57,10 +57,10 @@ offset_right = 2484.0
 offset_bottom = 1535.0
 scale = Vector2(0.3, 0.261)
 texture_normal = ExtResource("2_4hu8h")
-script = ExtResource("3_ibul7")
+script = ExtResource("5_q81bl")
 scene_path = "res://Scenes/mini_games/Crossword_Puzzle/crossword_minigame.tscn"
 prize_texture = ExtResource("5_rd7x1")
-prize_name = "Adult Learning Resources"
+prize_name = "books"
 
 [node name="Bookshelf" parent="." instance=ExtResource("7_x8tk5")]
 offset_left = 1328.0

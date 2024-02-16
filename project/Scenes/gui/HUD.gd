@@ -122,7 +122,7 @@ func connect_room_signals() -> void:
 				child.item_add.connect(_on_item_add)
 
 
-func on_objectives_button_toggled():
+func on_objectives_button_pressed():
 	if $ObjectiveMenu.visible == false:
 		$ObjectiveMenu.visible = true
 		$BlackBorderRectangle/Label.text = "Hide Objectives"
