@@ -1,0 +1,113 @@
+[gd_scene load_steps=12 format=3 uid="uid://d02w8tm7p5omg"]
+
+[ext_resource type="Texture2D" uid="uid://dwqw21d8i31b" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-01(1).png" id="1_jnk3n"]
+[ext_resource type="Script" path="res://Scenes/rooms/room.gd" id="1_ntxub"]
+[ext_resource type="Texture2D" uid="uid://b0ex76amoqaou" path="res://Assets/Sprites/Iteration 3 assets/Door.png" id="2_c3hvj"]
+[ext_resource type="Texture2D" uid="uid://26oq6v35hclv" path="res://Assets/AdjustedStandfordAssets/ResizedPinBoard.png" id="3_rudau"]
+[ext_resource type="Script" path="res://Clickables/new_scene/New_Scene_Object.gd" id="4_ulmpx"]
+[ext_resource type="Texture2D" uid="uid://b7vrru7dccbq8" path="res://Assets/AdjustedStandfordAssets/Whiteboard.png" id="5_t6bep"]
+[ext_resource type="Texture2D" uid="uid://br8i00f1js83g" path="res://Assets/AdjustedStandfordAssets/ResizedPlant.png" id="6_553eh"]
+[ext_resource type="Script" path="res://Clickables/clickable.gd" id="7_5day1"]
+[ext_resource type="Texture2D" uid="uid://dmkjn76k67o6s" path="res://Assets/AdjustedStandfordAssets/ResizedLaptop.png" id="8_mlpgt"]
+[ext_resource type="Texture2D" uid="uid://bn3kp4ijyl0oa" path="res://Assets/Sprites/room_1_custom_placeholders/filecabinet.jpg" id="9_hb4pp"]
+[ext_resource type="Texture2D" uid="uid://y2oapx4lpbab" path="res://Assets/AdjustedStandfordAssets/ResizedClipBoard.png" id="11_e37d3"]
+
+[node name="room4" type="Node2D"]
+script = ExtResource("1_ntxub")
+
+[node name="BackgroundWall" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1084.0
+size_flags_horizontal = 4
+color = Color(0.443137, 0.466667, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="BackgroudSplitter" type="ColorRect" parent="BackgroundWall"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.656827
+anchor_right = 1.00104
+anchor_bottom = 0.707565
+color = Color(0.509804, 0.509804, 0.509804, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="BackgroundFloor" type="ColorRect" parent="BackgroundWall/BackgroudSplitter"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.000520291
+anchor_top = 0.981818
+anchor_right = 1.0
+anchor_bottom = 6.87273
+color = Color(0.356863, 0.356863, 0.356863, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Desk" type="Sprite2D" parent="."]
+position = Vector2(358, 742)
+scale = Vector2(0.275111, 0.347111)
+texture = ExtResource("1_jnk3n")
+
+[node name="Door" type="Sprite2D" parent="."]
+position = Vector2(1719, 481)
+scale = Vector2(0.664634, 0.71875)
+texture = ExtResource("2_c3hvj")
+
+[node name="BulletinBoard" type="TextureButton" parent="."]
+offset_left = 1074.0
+offset_top = 175.0
+offset_right = 2879.0
+offset_bottom = 1522.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_rudau")
+script = ExtResource("4_ulmpx")
+metadata/_edit_use_anchors_ = true
+
+[node name="Whiteboard" type="TextureButton" parent="."]
+offset_left = 314.0
+offset_top = 185.0
+offset_right = 2168.0
+offset_bottom = 1417.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("5_t6bep")
+script = ExtResource("4_ulmpx")
+scene_path = "res://Scenes/mini_games/whiteboard_matching/whiteboard_matching_game.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="Plant" type="TextureButton" parent="."]
+offset_left = 1208.0
+offset_top = 546.0
+offset_right = 2279.0
+offset_bottom = 2606.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("6_553eh")
+script = ExtResource("7_5day1")
+metadata/_edit_use_anchors_ = true
+
+[node name="Laptop" type="TextureButton" parent="."]
+offset_left = 124.0
+offset_top = 510.0
+offset_right = 3733.0
+offset_bottom = 3268.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("8_mlpgt")
+script = ExtResource("4_ulmpx")
+metadata/_edit_use_anchors_ = true
+
+[node name="FileCabinet" type="TextureButton" parent="."]
+offset_left = 835.0
+offset_top = 401.0
+offset_right = 1091.0
+offset_bottom = 1012.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("9_hb4pp")
+script = ExtResource("4_ulmpx")
+metadata/_edit_use_anchors_ = true
+
+[node name="ClipBoard" type="TextureButton" parent="."]
+offset_left = 79.0
+offset_top = 274.0
+offset_right = 2360.0
+offset_bottom = 3489.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("11_e37d3")
+script = ExtResource("4_ulmpx")
+metadata/_edit_use_anchors_ = true
