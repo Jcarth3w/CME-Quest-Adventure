@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://biac0s4a3lu8q"]
 
-[ext_resource type="Script" path="res://Scenes/gui/pop_up_message.gd" id="1_tv35j"]
+[ext_resource type="Script" path="res://Scenes/gui/popup/pop_up_message.gd" id="1_tv35j"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lvw7i"]
 font_size = 32

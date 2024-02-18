@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdbogdf051mfk"]
+[gd_scene load_steps=4 format=3 uid="uid://bdbogdf051mfk"]
 
+[ext_resource type="Script" path="res://Scenes/gui/menus/room_menu.gd" id="1_4pcej"]
 [ext_resource type="Texture2D" uid="uid://w4reronmwabt" path="res://Assets/Sprites/generic_items/genericItem_color_155.png" id="1_s6ykq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6adl1"]
 font_size = 33
 
 [node name="RoomMenu" type="CanvasLayer"]
+script = ExtResource("1_4pcej")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 8

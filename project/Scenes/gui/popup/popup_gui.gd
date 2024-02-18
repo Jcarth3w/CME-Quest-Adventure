@@ -1,7 +1,7 @@
 extends Node2D
 
 var messages = []
-var popup_path = "res://Scenes/gui/pop_up_message.tscn"
+var popup_path = "res://Scenes/gui/popup/pop_up_message.tscn"
 
 func show_pickup(title):
 	var spawn = spawn_popup()

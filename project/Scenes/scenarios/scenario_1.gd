@@ -6,7 +6,7 @@ var finished = 0
 var generic_user = "Lani"
 var scenario_num = 1
 var rooms = []
-var open_screen_path = "res://Scenes/gui/scenario_menu.tscn"
+var open_screen_path = "res://Scenes/gui/menus/scenario_menu.tscn"
 var end_screen_path = "res://Scenes/static_scene/end_screen.tscn"
 
 

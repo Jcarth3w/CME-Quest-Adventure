@@ -10,11 +10,10 @@ signal activate_menus
 func _ready() -> void:
 	for child in get_children():
 		if child is Clickable:
-			child.pressed.connect(on_clickable.bind(child))
+			connect_clickable(child)
 
 	if get_parent() != null and get_parent().has_node("HUD"):
 		get_parent().get_node("HUD").pause.connect(_on_hud_pause)
-		get_parent().get_node("HUD").resume.connect(_on_hud_resume)
 
 
 func on_clickable(clickable) -> void:
@@ -56,9 +55,8 @@ func unlock(room_number) -> void:
 	get_parent().room_unlock(room_number)
 
 
-func _on_hud_pause() -> void:
-	pause_room()
-
-
-func _on_hud_resume() -> void:
-	resume_room()
+func _on_hud_pause(value) -> void:
+	if value == true:
+		pause_room()
+	else:
+		resume_room()

@@ -6,16 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://cepvxyc5hm41t" path="res://Scenes/rooms/room_3.tscn" id="2_tbts0"]
 [ext_resource type="PackedScene" uid="uid://b8xl3wqxn7v5d" path="res://Scenes/gui/HUD.tscn" id="3_iim46"]
 [ext_resource type="Script" path="res://Components/post_score.gd" id="5_5jqvq"]
-[ext_resource type="PackedScene" uid="uid://bp3esxqwlfxd0" path="res://Scenes/gui/popup_gui.tscn" id="6_kv0rk"]
+[ext_resource type="PackedScene" uid="uid://bp3esxqwlfxd0" path="res://Scenes/gui/popup/popup_gui.tscn" id="6_kv0rk"]
 
 [node name="Scenario1" type="Node2D"]
 script = ExtResource("1_4j01s")
 
 [node name="Room3" parent="." instance=ExtResource("2_tbts0")]
-visible = false
 
 [node name="Room2" parent="." instance=ExtResource("1_msoe2")]
-visible = false
 
 [node name="Room1" parent="." instance=ExtResource("2_iqiqe")]
 
