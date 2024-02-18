@@ -39,6 +39,7 @@ func enter_room(new_room):
 func check_win() -> bool:
 	if $HUD.items.size() == 7:
 		return true
+	$popup_gui.show_message("You have unfinished objectives")
 	return false
 
 

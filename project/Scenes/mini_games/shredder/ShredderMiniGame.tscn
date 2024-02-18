@@ -1,8 +1,8 @@
 [gd_scene load_steps=15 format=3 uid="uid://cs0rndg84v7q0"]
 
-[ext_resource type="Script" path="res://Scenes/mini_games/shredder/ShredderMiniGame.gd" id="1_51bei"]
+[ext_resource type="Script" path="res://Scenes/mini_games/shredder/shredder_mini_game.gd" id="1_51bei"]
 [ext_resource type="Texture2D" uid="uid://wjox7l8cx5c4" path="res://Assets/Sprites/generic_items/genericItem_color_141.png" id="2_ptm7d"]
-[ext_resource type="Script" path="res://Scenes/mini_games/shredder/Clip board.gd" id="3_rochj"]
+[ext_resource type="Script" path="res://Scenes/mini_games/shredder/clip_board.gd" id="3_rochj"]
 [ext_resource type="Texture2D" uid="uid://ea3idyn2pse7" path="res://Assets/Sprites/room_1_custom_placeholders/PaperReg.png" id="4_6a764"]
 [ext_resource type="Script" path="res://Scenes/mini_games/shredder/Shred.gd" id="4_e4n14"]
 [ext_resource type="Texture2D" uid="uid://dcm6p18p7lslf" path="res://Assets/Sprites/generic_items/genericItem_color_160.png" id="4_smkob"]

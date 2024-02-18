@@ -15,8 +15,9 @@
 [ext_resource type="Script" path="res://Clickables/movement/movement_object.gd" id="12_4cr52"]
 [ext_resource type="Texture2D" uid="uid://wi4o4wyyf88l" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-21.png" id="12_23igp"]
 
-[node name="Room3" type="Node2D"]
+[node name="Room3" type="Node2D" node_paths=PackedStringArray("final_mini_game")]
 script = ExtResource("1_i68ly")
+final_mini_game = NodePath("FilingCabinet")
 
 [node name="Background wall" type="ColorRect" parent="."]
 offset_top = -3.0
