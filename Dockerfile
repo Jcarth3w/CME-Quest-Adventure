@@ -1,11 +1,49 @@
-FROM php:7.3-apache
-WORKDIR /var/www/html
-RUN docker-php-ext-install pdo_mysql && docker-php-ext-enable pdo_mysql
-RUN apt-get update && apt-get -y install sudo
-RUN sudo a2enmod rewrite &&  \
-    sudo a2enmod headers  &&  \
-    sudo service apache2 restart
+FROM php:8.0-apache
+
+# Install required PHP extensions
+RUN apt-get update && \
+    apt-get install -y \
+        zlib1g-dev \
+        libzip-dev \
+    && docker-php-ext-install \
+        pdo_mysql \
+        zip
+
+# Install Xdebug
+RUN pecl install xdebug \
+    && docker-php-ext-enable xdebug
+
+# Set XDEBUG_MODE to coverage
+ENV XDEBUG_MODE=coverage
+
+# Install unzip command
+RUN apt-get update && apt-get install -y unzip
+
+# Install 7z command
+RUN apt-get install -y p7zip-full
+
+# Enable Apache modules
+RUN a2enmod rewrite headers
+
+# Install Composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+# Install PHPUnit
+RUN composer global require phpunit/phpunit
+
+# Add Composer global bin directory to the PATH
+ENV PATH="${PATH}:/root/.composer/vendor/bin"
+
+# Restart Apache
+RUN service apache2 restart
+
+# Expose port 8000 (not necessary if you're using the default port 80)
 EXPOSE 8000
+
+
+
+
+
 # FROM ubuntu:latest
 # WORKDIR /usr/src/app
 
