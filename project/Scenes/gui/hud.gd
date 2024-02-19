@@ -24,7 +24,7 @@ func add_item_image(sprite_path) -> void:
 	current_item += 1
 
 
-func _on_item_add(title, texture) -> void:
+func on_item_add(title, texture) -> void:
 	items.append(title)
 	add_item_image(texture)
 
@@ -81,12 +81,12 @@ func on_room_select(room_name):
 	$RoomMenu.visible = false
 
 
-func _on_activate_menus() -> void:
+func on_activate_menus() -> void:
 	menu_active = true
 	map_active = true
 
 
-func _on_disable_menus(menu) -> void:
+func on_disable_menus(menu) -> void:
 	if menu == 1:
 		menu_active = false
 	elif menu == 2:
@@ -110,6 +110,6 @@ func connect_room_signals() -> void:
 	if get_parent() != null:
 		for child in get_parent().get_children():
 			if child is Room:
-				child.activate_menus.connect(_on_activate_menus)
-				child.disable_menus.connect(_on_disable_menus)
-				child.item_add.connect(_on_item_add)
+				child.activate_menus.connect(on_activate_menus)
+				child.disable_menus.connect(on_disable_menus)
+				child.item_add.connect(on_item_add)
