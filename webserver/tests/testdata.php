@@ -42,5 +42,15 @@ class testdata extends TestCase
         // Check if the scores were retrieved successfully
         $this->assertNotEmpty($scores);
     }
+
+	public function testRemoveScore()
+	{
+        // Delete the test score from the `scores` table
+        $stmt = $this->pdo->prepare("DELETE FROM scores WHERE username='testuser';");
+        $stmt->execute();
+
+        // Check if the score was deleted successfully
+        $this->assertEquals(1, $stmt->rowCount());
+	}
 }
 ?>
