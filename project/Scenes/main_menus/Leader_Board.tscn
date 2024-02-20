@@ -1,4 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0yb0aod8hxnd"]
+[gd_scene load_steps=9 format=3 uid="uid://b0yb0aod8hxnd"]
+
+[ext_resource type="Script" path="res://Scenes/main_menus/leader_board.gd" id="1_v2e5o"]
+[ext_resource type="Script" path="res://Components/post_score.gd" id="2_1pegd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_76bff"]
 font_size = 140
@@ -33,6 +36,7 @@ outline_size = 11
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Leader_Board" type="Node2D"]
+script = ExtResource("1_v2e5o")
 
 [node name="Background" type="ColorRect" parent="."]
 offset_right = 1918.0
@@ -65,6 +69,7 @@ offset_bottom = 1083.0
 color = Color(0.796078, 0, 0.203922, 1)
 
 [node name="Bottom Border" type="ColorRect" parent="Background"]
+layout_mode = 0
 offset_left = 1924.0
 offset_top = 1052.0
 offset_right = 1981.0
@@ -73,6 +78,7 @@ rotation = 1.5708
 color = Color(0.796078, 0, 0.203922, 1)
 
 [node name="Top Border" type="ColorRect" parent="Background"]
+layout_mode = 0
 offset_left = 1921.0
 offset_top = -29.0
 offset_right = 1978.0
@@ -80,20 +86,21 @@ offset_bottom = 1895.0
 rotation = 1.5708
 color = Color(0.796078, 0, 0.203922, 1)
 
-[node name="Scenario 1 Button" type="Button" parent="."]
+[node name="Scenario1Button" type="Button" parent="."]
 offset_left = 691.0
 offset_top = 366.0
 offset_right = 1149.0
 offset_bottom = 526.0
+action_mode = 0
 
-[node name="ButtonBackground" type="ColorRect" parent="Scenario 1 Button"]
+[node name="ButtonBackground" type="ColorRect" parent="Scenario1Button"]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 7.0
 offset_right = 451.0
 offset_bottom = 153.0
 
-[node name="Label" type="Label" parent="Scenario 1 Button"]
+[node name="Label" type="Label" parent="Scenario1Button"]
 layout_mode = 0
 offset_left = 7.0
 offset_top = 6.0
@@ -104,20 +111,21 @@ label_settings = SubResource("LabelSettings_4qoj6")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Scenario 2 Button" type="Button" parent="."]
+[node name="Scenario2Button" type="Button" parent="."]
 offset_left = 691.0
 offset_top = 597.0
 offset_right = 1149.0
 offset_bottom = 757.0
+action_mode = 0
 
-[node name="ButtonBackground" type="ColorRect" parent="Scenario 2 Button"]
+[node name="ButtonBackground" type="ColorRect" parent="Scenario2Button"]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 7.0
 offset_right = 451.0
 offset_bottom = 153.0
 
-[node name="Label" type="Label" parent="Scenario 2 Button"]
+[node name="Label" type="Label" parent="Scenario2Button"]
 layout_mode = 0
 offset_left = 7.0
 offset_top = 6.0
@@ -128,7 +136,8 @@ label_settings = SubResource("LabelSettings_4qoj6")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Scenario1 Times" type="ColorRect" parent="."]
+[node name="Scenario1Times" type="ColorRect" parent="."]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -142,7 +151,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="ScenarioBackground" type="ColorRect" parent="Scenario1 Times"]
+[node name="ScenarioBackground" type="ColorRect" parent="Scenario1Times"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 11.0
@@ -150,7 +159,7 @@ offset_right = 1255.0
 offset_bottom = 766.0
 color = Color(0.796078, 0, 0.203922, 1)
 
-[node name="Label Seperator" type="ColorRect" parent="Scenario1 Times"]
+[node name="Label Seperator" type="ColorRect" parent="Scenario1Times"]
 layout_mode = 0
 offset_left = 285.0
 offset_top = 122.0
@@ -158,7 +167,7 @@ offset_right = 978.0
 offset_bottom = 135.0
 color = Color(0, 0, 0, 1)
 
-[node name="ScenarioNumber" type="Label" parent="Scenario1 Times"]
+[node name="ScenarioNumber" type="Label" parent="Scenario1Times"]
 layout_mode = 0
 offset_left = 90.0
 offset_top = -24.0
@@ -170,7 +179,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="Top Time 1" type="ColorRect" parent="Scenario1 Times"]
+[node name="TopTime1" type="ColorRect" parent="Scenario1Times"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -185,7 +194,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="ScenarioBackground" type="ColorRect" parent="Scenario1 Times/Top Time 1"]
+[node name="ScenarioBackground" type="ColorRect" parent="Scenario1Times/TopTime1"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 11.0
@@ -193,7 +202,7 @@ offset_right = 1091.0
 offset_bottom = 96.0
 color = Color(0.796078, 0, 0.203922, 1)
 
-[node name="Leaderboard position" type="Label" parent="Scenario1 Times/Top Time 1"]
+[node name="Leaderboard position" type="Label" parent="Scenario1Times/TopTime1"]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 10.0
@@ -202,7 +211,7 @@ offset_bottom = 92.0
 text = "#1"
 label_settings = SubResource("LabelSettings_7wl6n")
 
-[node name="Username" type="Label" parent="Scenario1 Times/Top Time 1"]
+[node name="Username" type="Label" parent="Scenario1Times/TopTime1"]
 layout_mode = 0
 offset_left = 310.0
 offset_top = 7.0
@@ -212,7 +221,7 @@ text = "Test User"
 label_settings = SubResource("LabelSettings_486hm")
 horizontal_alignment = 1
 
-[node name="Time" type="Label" parent="Scenario1 Times/Top Time 1"]
+[node name="Time" type="Label" parent="Scenario1Times/TopTime1"]
 layout_mode = 0
 offset_left = 815.0
 offset_top = 11.0
@@ -222,7 +231,7 @@ text = "00:01"
 label_settings = SubResource("LabelSettings_qm6i6")
 horizontal_alignment = 1
 
-[node name="Top Time 2" type="ColorRect" parent="Scenario1 Times"]
+[node name="TopTime2" type="ColorRect" parent="Scenario1Times"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -237,7 +246,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="ScenarioBackground" type="ColorRect" parent="Scenario1 Times/Top Time 2"]
+[node name="ScenarioBackground" type="ColorRect" parent="Scenario1Times/TopTime2"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 11.0
@@ -245,7 +254,7 @@ offset_right = 1091.0
 offset_bottom = 94.0
 color = Color(0.796078, 0, 0.203922, 1)
 
-[node name="Leaderboard position" type="Label" parent="Scenario1 Times/Top Time 2"]
+[node name="Leaderboard position" type="Label" parent="Scenario1Times/TopTime2"]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 10.0
@@ -254,7 +263,7 @@ offset_bottom = 92.0
 text = "#2"
 label_settings = SubResource("LabelSettings_7wl6n")
 
-[node name="Username" type="Label" parent="Scenario1 Times/Top Time 2"]
+[node name="Username" type="Label" parent="Scenario1Times/TopTime2"]
 layout_mode = 0
 offset_left = 310.0
 offset_top = 7.0
@@ -264,7 +273,7 @@ text = "Test User"
 label_settings = SubResource("LabelSettings_486hm")
 horizontal_alignment = 1
 
-[node name="Time" type="Label" parent="Scenario1 Times/Top Time 2"]
+[node name="Time" type="Label" parent="Scenario1Times/TopTime2"]
 layout_mode = 0
 offset_left = 815.0
 offset_top = 11.0
@@ -274,7 +283,7 @@ text = "00:01"
 label_settings = SubResource("LabelSettings_qm6i6")
 horizontal_alignment = 1
 
-[node name="Top Time 3" type="ColorRect" parent="Scenario1 Times"]
+[node name="TopTime3" type="ColorRect" parent="Scenario1Times"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -289,7 +298,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="ScenarioBackground" type="ColorRect" parent="Scenario1 Times/Top Time 3"]
+[node name="ScenarioBackground" type="ColorRect" parent="Scenario1Times/TopTime3"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 11.0
@@ -297,7 +306,7 @@ offset_right = 1091.0
 offset_bottom = 96.0
 color = Color(0.796078, 0, 0.203922, 1)
 
-[node name="Leaderboard position" type="Label" parent="Scenario1 Times/Top Time 3"]
+[node name="Leaderboard position" type="Label" parent="Scenario1Times/TopTime3"]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 10.0
@@ -306,7 +315,7 @@ offset_bottom = 92.0
 text = "#3"
 label_settings = SubResource("LabelSettings_7wl6n")
 
-[node name="Username" type="Label" parent="Scenario1 Times/Top Time 3"]
+[node name="Username" type="Label" parent="Scenario1Times/TopTime3"]
 layout_mode = 0
 offset_left = 310.0
 offset_top = 7.0
@@ -316,7 +325,7 @@ text = "Test User"
 label_settings = SubResource("LabelSettings_486hm")
 horizontal_alignment = 1
 
-[node name="Time" type="Label" parent="Scenario1 Times/Top Time 3"]
+[node name="Time" type="Label" parent="Scenario1Times/TopTime3"]
 layout_mode = 0
 offset_left = 815.0
 offset_top = 11.0
@@ -326,7 +335,7 @@ text = "00:01"
 label_settings = SubResource("LabelSettings_qm6i6")
 horizontal_alignment = 1
 
-[node name="Top Time 4" type="ColorRect" parent="Scenario1 Times"]
+[node name="TopTime4" type="ColorRect" parent="Scenario1Times"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -341,7 +350,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="ScenarioBackground" type="ColorRect" parent="Scenario1 Times/Top Time 4"]
+[node name="ScenarioBackground" type="ColorRect" parent="Scenario1Times/TopTime4"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 11.0
@@ -349,7 +358,7 @@ offset_right = 1091.0
 offset_bottom = 96.0
 color = Color(0.796078, 0, 0.203922, 1)
 
-[node name="Leaderboard position" type="Label" parent="Scenario1 Times/Top Time 4"]
+[node name="Leaderboard position" type="Label" parent="Scenario1Times/TopTime4"]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 10.0
@@ -358,7 +367,7 @@ offset_bottom = 92.0
 text = "#4"
 label_settings = SubResource("LabelSettings_7wl6n")
 
-[node name="Username" type="Label" parent="Scenario1 Times/Top Time 4"]
+[node name="Username" type="Label" parent="Scenario1Times/TopTime4"]
 layout_mode = 0
 offset_left = 310.0
 offset_top = 7.0
@@ -368,7 +377,7 @@ text = "Test User"
 label_settings = SubResource("LabelSettings_486hm")
 horizontal_alignment = 1
 
-[node name="Time" type="Label" parent="Scenario1 Times/Top Time 4"]
+[node name="Time" type="Label" parent="Scenario1Times/TopTime4"]
 layout_mode = 0
 offset_left = 815.0
 offset_top = 11.0
@@ -378,7 +387,7 @@ text = "00:01"
 label_settings = SubResource("LabelSettings_qm6i6")
 horizontal_alignment = 1
 
-[node name="Top Time 5" type="ColorRect" parent="Scenario1 Times"]
+[node name="TopTime5" type="ColorRect" parent="Scenario1Times"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -393,7 +402,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="ScenarioBackground" type="ColorRect" parent="Scenario1 Times/Top Time 5"]
+[node name="ScenarioBackground" type="ColorRect" parent="Scenario1Times/TopTime5"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 11.0
@@ -401,7 +410,7 @@ offset_right = 1091.0
 offset_bottom = 96.0
 color = Color(0.796078, 0, 0.203922, 1)
 
-[node name="Leaderboard position" type="Label" parent="Scenario1 Times/Top Time 5"]
+[node name="Leaderboard position" type="Label" parent="Scenario1Times/TopTime5"]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 10.0
@@ -410,7 +419,7 @@ offset_bottom = 92.0
 text = "#5"
 label_settings = SubResource("LabelSettings_7wl6n")
 
-[node name="Username" type="Label" parent="Scenario1 Times/Top Time 5"]
+[node name="Username" type="Label" parent="Scenario1Times/TopTime5"]
 layout_mode = 0
 offset_left = 310.0
 offset_top = 7.0
@@ -420,7 +429,7 @@ text = "Test User"
 label_settings = SubResource("LabelSettings_486hm")
 horizontal_alignment = 1
 
-[node name="Time" type="Label" parent="Scenario1 Times/Top Time 5"]
+[node name="Time" type="Label" parent="Scenario1Times/TopTime5"]
 layout_mode = 0
 offset_left = 815.0
 offset_top = 11.0
@@ -430,7 +439,8 @@ text = "00:01"
 label_settings = SubResource("LabelSettings_qm6i6")
 horizontal_alignment = 1
 
-[node name="Scenario1 Times2" type="ColorRect" parent="."]
+[node name="Scenario2Times" type="ColorRect" parent="."]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -444,7 +454,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="ScenarioBackground" type="ColorRect" parent="Scenario1 Times2"]
+[node name="ScenarioBackground" type="ColorRect" parent="Scenario2Times"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 11.0
@@ -452,7 +462,7 @@ offset_right = 1255.0
 offset_bottom = 766.0
 color = Color(0.796078, 0, 0.203922, 1)
 
-[node name="Label Seperator" type="ColorRect" parent="Scenario1 Times2"]
+[node name="Label Seperator" type="ColorRect" parent="Scenario2Times"]
 layout_mode = 0
 offset_left = 285.0
 offset_top = 122.0
@@ -460,7 +470,7 @@ offset_right = 978.0
 offset_bottom = 135.0
 color = Color(0, 0, 0, 1)
 
-[node name="ScenarioNumber" type="Label" parent="Scenario1 Times2"]
+[node name="ScenarioNumber" type="Label" parent="Scenario2Times"]
 layout_mode = 0
 offset_left = 90.0
 offset_top = -24.0
@@ -472,7 +482,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="Top Time 1" type="ColorRect" parent="Scenario1 Times2"]
+[node name="Top Time 1" type="ColorRect" parent="Scenario2Times"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -487,7 +497,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="ScenarioBackground" type="ColorRect" parent="Scenario1 Times2/Top Time 1"]
+[node name="ScenarioBackground" type="ColorRect" parent="Scenario2Times/Top Time 1"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 11.0
@@ -495,7 +505,7 @@ offset_right = 1091.0
 offset_bottom = 96.0
 color = Color(0.796078, 0, 0.203922, 1)
 
-[node name="Leaderboard position" type="Label" parent="Scenario1 Times2/Top Time 1"]
+[node name="Leaderboard position" type="Label" parent="Scenario2Times/Top Time 1"]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 10.0
@@ -504,7 +514,7 @@ offset_bottom = 92.0
 text = "#1"
 label_settings = SubResource("LabelSettings_7wl6n")
 
-[node name="Username" type="Label" parent="Scenario1 Times2/Top Time 1"]
+[node name="Username" type="Label" parent="Scenario2Times/Top Time 1"]
 layout_mode = 0
 offset_left = 310.0
 offset_top = 7.0
@@ -514,7 +524,7 @@ text = "Test User"
 label_settings = SubResource("LabelSettings_486hm")
 horizontal_alignment = 1
 
-[node name="Time" type="Label" parent="Scenario1 Times2/Top Time 1"]
+[node name="Time" type="Label" parent="Scenario2Times/Top Time 1"]
 layout_mode = 0
 offset_left = 815.0
 offset_top = 11.0
@@ -524,7 +534,7 @@ text = "00:01"
 label_settings = SubResource("LabelSettings_qm6i6")
 horizontal_alignment = 1
 
-[node name="Top Time 2" type="ColorRect" parent="Scenario1 Times2"]
+[node name="Top Time 2" type="ColorRect" parent="Scenario2Times"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -539,7 +549,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="ScenarioBackground" type="ColorRect" parent="Scenario1 Times2/Top Time 2"]
+[node name="ScenarioBackground" type="ColorRect" parent="Scenario2Times/Top Time 2"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 11.0
@@ -547,7 +557,7 @@ offset_right = 1091.0
 offset_bottom = 94.0
 color = Color(0.796078, 0, 0.203922, 1)
 
-[node name="Leaderboard position" type="Label" parent="Scenario1 Times2/Top Time 2"]
+[node name="Leaderboard position" type="Label" parent="Scenario2Times/Top Time 2"]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 10.0
@@ -556,7 +566,7 @@ offset_bottom = 92.0
 text = "#2"
 label_settings = SubResource("LabelSettings_7wl6n")
 
-[node name="Username" type="Label" parent="Scenario1 Times2/Top Time 2"]
+[node name="Username" type="Label" parent="Scenario2Times/Top Time 2"]
 layout_mode = 0
 offset_left = 310.0
 offset_top = 7.0
@@ -566,7 +576,7 @@ text = "Test User"
 label_settings = SubResource("LabelSettings_486hm")
 horizontal_alignment = 1
 
-[node name="Time" type="Label" parent="Scenario1 Times2/Top Time 2"]
+[node name="Time" type="Label" parent="Scenario2Times/Top Time 2"]
 layout_mode = 0
 offset_left = 815.0
 offset_top = 11.0
@@ -576,7 +586,7 @@ text = "00:01"
 label_settings = SubResource("LabelSettings_qm6i6")
 horizontal_alignment = 1
 
-[node name="Top Time 3" type="ColorRect" parent="Scenario1 Times2"]
+[node name="Top Time 3" type="ColorRect" parent="Scenario2Times"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -591,7 +601,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="ScenarioBackground" type="ColorRect" parent="Scenario1 Times2/Top Time 3"]
+[node name="ScenarioBackground" type="ColorRect" parent="Scenario2Times/Top Time 3"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 11.0
@@ -599,7 +609,7 @@ offset_right = 1091.0
 offset_bottom = 96.0
 color = Color(0.796078, 0, 0.203922, 1)
 
-[node name="Leaderboard position" type="Label" parent="Scenario1 Times2/Top Time 3"]
+[node name="Leaderboard position" type="Label" parent="Scenario2Times/Top Time 3"]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 10.0
@@ -608,7 +618,7 @@ offset_bottom = 92.0
 text = "#3"
 label_settings = SubResource("LabelSettings_7wl6n")
 
-[node name="Username" type="Label" parent="Scenario1 Times2/Top Time 3"]
+[node name="Username" type="Label" parent="Scenario2Times/Top Time 3"]
 layout_mode = 0
 offset_left = 310.0
 offset_top = 7.0
@@ -618,7 +628,7 @@ text = "Test User"
 label_settings = SubResource("LabelSettings_486hm")
 horizontal_alignment = 1
 
-[node name="Time" type="Label" parent="Scenario1 Times2/Top Time 3"]
+[node name="Time" type="Label" parent="Scenario2Times/Top Time 3"]
 layout_mode = 0
 offset_left = 815.0
 offset_top = 11.0
@@ -628,7 +638,7 @@ text = "00:01"
 label_settings = SubResource("LabelSettings_qm6i6")
 horizontal_alignment = 1
 
-[node name="Top Time 4" type="ColorRect" parent="Scenario1 Times2"]
+[node name="Top Time 4" type="ColorRect" parent="Scenario2Times"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -643,7 +653,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="ScenarioBackground" type="ColorRect" parent="Scenario1 Times2/Top Time 4"]
+[node name="ScenarioBackground" type="ColorRect" parent="Scenario2Times/Top Time 4"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 11.0
@@ -651,7 +661,7 @@ offset_right = 1091.0
 offset_bottom = 96.0
 color = Color(0.796078, 0, 0.203922, 1)
 
-[node name="Leaderboard position" type="Label" parent="Scenario1 Times2/Top Time 4"]
+[node name="Leaderboard position" type="Label" parent="Scenario2Times/Top Time 4"]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 10.0
@@ -660,7 +670,7 @@ offset_bottom = 92.0
 text = "#4"
 label_settings = SubResource("LabelSettings_7wl6n")
 
-[node name="Username" type="Label" parent="Scenario1 Times2/Top Time 4"]
+[node name="Username" type="Label" parent="Scenario2Times/Top Time 4"]
 layout_mode = 0
 offset_left = 310.0
 offset_top = 7.0
@@ -670,7 +680,7 @@ text = "Test User"
 label_settings = SubResource("LabelSettings_486hm")
 horizontal_alignment = 1
 
-[node name="Time" type="Label" parent="Scenario1 Times2/Top Time 4"]
+[node name="Time" type="Label" parent="Scenario2Times/Top Time 4"]
 layout_mode = 0
 offset_left = 815.0
 offset_top = 11.0
@@ -680,7 +690,7 @@ text = "00:01"
 label_settings = SubResource("LabelSettings_qm6i6")
 horizontal_alignment = 1
 
-[node name="Top Time 5" type="ColorRect" parent="Scenario1 Times2"]
+[node name="Top Time 5" type="ColorRect" parent="Scenario2Times"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -695,7 +705,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="ScenarioBackground" type="ColorRect" parent="Scenario1 Times2/Top Time 5"]
+[node name="ScenarioBackground" type="ColorRect" parent="Scenario2Times/Top Time 5"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 11.0
@@ -703,7 +713,7 @@ offset_right = 1091.0
 offset_bottom = 96.0
 color = Color(0.796078, 0, 0.203922, 1)
 
-[node name="Leaderboard position" type="Label" parent="Scenario1 Times2/Top Time 5"]
+[node name="Leaderboard position" type="Label" parent="Scenario2Times/Top Time 5"]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 10.0
@@ -712,7 +722,7 @@ offset_bottom = 92.0
 text = "#5"
 label_settings = SubResource("LabelSettings_7wl6n")
 
-[node name="Username" type="Label" parent="Scenario1 Times2/Top Time 5"]
+[node name="Username" type="Label" parent="Scenario2Times/Top Time 5"]
 layout_mode = 0
 offset_left = 310.0
 offset_top = 7.0
@@ -722,7 +732,7 @@ text = "Test User"
 label_settings = SubResource("LabelSettings_486hm")
 horizontal_alignment = 1
 
-[node name="Time" type="Label" parent="Scenario1 Times2/Top Time 5"]
+[node name="Time" type="Label" parent="Scenario2Times/Top Time 5"]
 layout_mode = 0
 offset_left = 815.0
 offset_top = 11.0
@@ -731,3 +741,10 @@ offset_bottom = 97.0
 text = "00:01"
 label_settings = SubResource("LabelSettings_qm6i6")
 horizontal_alignment = 1
+
+[node name="DBoperations" type="Node2D" parent="."]
+script = ExtResource("2_1pegd")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="DBoperations"]
+
+[connection signal="request_completed" from="DBoperations/HTTPRequest" to="DBoperations" method="_on_http_request_request_completed"]
