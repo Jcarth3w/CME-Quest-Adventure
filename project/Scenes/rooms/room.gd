@@ -6,29 +6,32 @@ signal item_add
 signal disable_menus
 signal activate_menus
 
+@export var final_mini_game : TextureButton
+
 
 func _ready() -> void:
 	for child in get_children():
 		if child is Clickable:
-			child.pressed.connect(on_clickable.bind(child))
+			connect_clickable(child)
 
 	if get_parent() != null and get_parent().has_node("HUD"):
 		get_parent().get_node("HUD").pause.connect(_on_hud_pause)
-		get_parent().get_node("HUD").resume.connect(_on_hud_resume)
 
 
 func on_clickable(clickable) -> void:
-	if clickable.name == "FilingCabinet":
-		if get_parent().check_win():
-			clickable.action()
+	if final_mini_game != null:
+		if clickable.name == final_mini_game.name:
+			if get_parent().check_win():
+				clickable.action()
 		else:
-			get_parent().get_node("popup_gui").show_message("You need to collect all promo materials")
+			clickable.action()
 	else:
 		clickable.action()
 
 
 func connect_clickable(clickable):
 	clickable.pressed.connect(on_clickable.bind(clickable))
+
 
 func on_static_scene_spawn() -> void:
 	disable_menus.emit(3)
@@ -49,16 +52,14 @@ func resume_room() -> void:
 
 func give_item(title, texture):
 	item_add.emit(title, texture)
-	get_parent().get_node("popup_gui").show_pickup(title)
 
 
 func unlock(room_number) -> void:
 	get_parent().room_unlock(room_number)
 
 
-func _on_hud_pause() -> void:
-	pause_room()
-
-
-func _on_hud_resume() -> void:
-	resume_room()
+func _on_hud_pause(value) -> void:
+	if value == true:
+		pause_room()
+	else:
+		resume_room()

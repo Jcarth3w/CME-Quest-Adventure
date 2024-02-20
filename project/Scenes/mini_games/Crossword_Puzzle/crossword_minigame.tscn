@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://Scenes/mini_games/Crossword_Puzzle/crossword_minigame.gd" id="1_2buhs"]
 [ext_resource type="Texture2D" uid="uid://dcm6p18p7lslf" path="res://Assets/Sprites/generic_items/genericItem_color_160.png" id="2_u0irq"]
-[ext_resource type="Texture2D" uid="uid://u7sc0sv2fhxo" path="res://Assets/Crossword_Assets/andragogy_empty.png" id="3_xacx7"]
-[ext_resource type="Texture2D" uid="uid://d3stlj5vd25u" path="res://Assets/Crossword_Assets/constructivism_empty.png" id="4_totf0"]
-[ext_resource type="Texture2D" uid="uid://gx0omo1aenxk" path="res://Assets/Crossword_Assets/cognitivism_empty.png" id="5_1n2sm"]
-[ext_resource type="Texture2D" uid="uid://cac2ihisxm2am" path="res://Assets/Crossword_Assets/experiential_learning_empty.png" id="6_k8uyw"]
-[ext_resource type="Texture2D" uid="uid://bpdotjt2n6qk1" path="res://Assets/Crossword_Assets/social_learning_empty.png" id="7_qgp73"]
+[ext_resource type="Texture2D" uid="uid://u7sc0sv2fhxo" path="res://Assets/Crossword_Assets/Andragogy_Empty.png" id="3_xacx7"]
+[ext_resource type="Texture2D" uid="uid://d3stlj5vd25u" path="res://Assets/Crossword_Assets/Constructivism_Empty.png" id="4_totf0"]
+[ext_resource type="Texture2D" uid="uid://gx0omo1aenxk" path="res://Assets/Crossword_Assets/Cognitivism_Empty.png" id="5_1n2sm"]
+[ext_resource type="Texture2D" uid="uid://cac2ihisxm2am" path="res://Assets/Crossword_Assets/Experiential_Learning_Empty.png" id="6_k8uyw"]
+[ext_resource type="Texture2D" uid="uid://bpdotjt2n6qk1" path="res://Assets/Crossword_Assets/Social_Learning_Empty.png" id="7_qgp73"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_biiq2"]
 font_size = 42

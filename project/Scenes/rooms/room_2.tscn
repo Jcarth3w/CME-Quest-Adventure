@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dxurrur4fkonu"]
+[gd_scene load_steps=18 format=3 uid="uid://dxurrur4fkonu"]
 
 [ext_resource type="Script" path="res://Scenes/rooms/room.gd" id="1_xmdg1"]
 [ext_resource type="Texture2D" uid="uid://c5aw2lgu2qldx" path="res://Assets/AdjustedStandfordAssets/ResizedPinBoard.png" id="2_4hu8h"]
@@ -11,10 +11,11 @@
 [ext_resource type="Texture2D" uid="uid://dmm1o4xemcxfx" path="res://Assets/Sprites/Room2/Desk.png" id="9_huuy6"]
 [ext_resource type="Texture2D" uid="uid://dhxim7wroyin3" path="res://Assets/Sprites/Room2/keypad.PNG" id="9_tgu88"]
 [ext_resource type="Texture2D" uid="uid://k7tyhsc5hvsx" path="res://Assets/Sprites/room_1_custom_placeholders/chair.png" id="10_dw2od"]
-[ext_resource type="Script" path="res://Scenes/rooms/combo_button.gd" id="10_mgps6"]
+[ext_resource type="Script" path="res://Clickables/room_unlocks/combo_button.gd" id="10_mgps6"]
 [ext_resource type="PackedScene" uid="uid://rksr0yf3cfrd" path="res://Clickables/movement/Movement_Object.tscn" id="11_a351n"]
 [ext_resource type="Texture2D" uid="uid://w10bfogg4ojl" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-09.png" id="12_jxi8s"]
 [ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Clickables/pickup/pickup.tscn" id="13_8i57d"]
+[ext_resource type="Script" path="res://Clickables/movement/movement_object.gd" id="14_x07qm"]
 [ext_resource type="Texture2D" uid="uid://d2exdrfmom6g5" path="res://Assets/Sprites/Iteration 3 assets/Poster.png" id="15_nbiuo"]
 
 [node name="Room2" type="Node2D"]
@@ -87,13 +88,14 @@ script = ExtResource("10_mgps6")
 scene_path = "res://Clickables/room_unlocks/combo_unlock.tscn"
 
 [node name="Plant" parent="." instance=ExtResource("11_a351n")]
-offset_left = 459.0
+offset_left = 457.0
 offset_top = 432.0
-offset_right = 1530.0
+offset_right = 1528.0
 offset_bottom = 2492.0
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("12_jxi8s")
-x_coordinate = 583
+script = ExtResource("14_x07qm")
+x_coordinate = 568
 y_coordinate = 432
 
 [node name="Chair" type="Sprite2D" parent="."]

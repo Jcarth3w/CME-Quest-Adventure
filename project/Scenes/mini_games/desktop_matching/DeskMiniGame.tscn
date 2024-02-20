@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=3 uid="uid://ckueucjs1nwf3"]
 
-[ext_resource type="Script" path="res://Scenes/mini_games/desktop_matching/MatchGameManager.gd" id="1_0xnwf"]
-[ext_resource type="Script" path="res://Scenes/mini_games/desktop_matching/Pair.gd" id="2_lge7s"]
+[ext_resource type="Script" path="res://Scenes/mini_games/desktop_matching/match_game_manager.gd" id="1_0xnwf"]
+[ext_resource type="Script" path="res://Scenes/mini_games/desktop_matching/pair.gd" id="2_lge7s"]
 [ext_resource type="Texture2D" uid="uid://cbcx08btklchr" path="res://Assets/Sprites/room_1_custom_placeholders/Unknown_paper.png" id="3_o21xa"]
-[ext_resource type="Script" path="res://Scenes/mini_games/desktop_matching/MatchingObject.gd" id="4_nsjif"]
+[ext_resource type="Script" path="res://Scenes/mini_games/desktop_matching/matching_object.gd" id="4_nsjif"]
 [ext_resource type="Texture2D" uid="uid://c15mt6j8pobst" path="res://Assets/Sprites/generic_items/genericItem_color_005.png" id="5_fdj5v"]
 [ext_resource type="Texture2D" uid="uid://ytuunfigl51e" path="res://Assets/Sprites/generic_items/genericItem_color_002.png" id="5_wlnu6"]
 [ext_resource type="Texture2D" uid="uid://ciwlkhjal53fw" path="res://Assets/Sprites/generic_items/genericItem_color_003.png" id="6_fyt4m"]

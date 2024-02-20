@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bariyy13viy8o"]
+[gd_scene load_steps=3 format=3 uid="uid://bariyy13viy8o"]
+
+[ext_resource type="Script" path="res://Scenes/gui/menus/in_game_menu.gd" id="1_q08xi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cakm7"]
 font_size = 42
@@ -6,6 +8,7 @@ outline_size = 8
 outline_color = Color(0, 0, 0, 1)
 
 [node name="InGameMenu" type="CanvasLayer"]
+script = ExtResource("1_q08xi")
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 offset_left = 699.0
