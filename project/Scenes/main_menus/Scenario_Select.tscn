@@ -34,6 +34,7 @@ offset_right = 1918.0
 offset_bottom = 1079.0
 
 [node name="Label" type="Label" parent="Background"]
+layout_mode = 0
 offset_left = 416.0
 offset_top = 32.0
 offset_right = 1503.0
@@ -58,7 +59,7 @@ offset_right = 57.0
 offset_bottom = 1083.0
 color = Color(0.796078, 0, 0.203922, 1)
 
-[node name="ScenarioOne" type="ColorRect" parent="."]
+[node name="Scenario1" type="ColorRect" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -72,21 +73,24 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="ScenarioBackground" type="ColorRect" parent="ScenarioOne"]
+[node name="ScenarioBackground" type="ColorRect" parent="Scenario1"]
+layout_mode = 0
 offset_left = 11.0
 offset_top = 11.0
 offset_right = 1255.0
 offset_bottom = 605.0
 color = Color(0.796078, 0, 0.203922, 1)
 
-[node name="Label Seperator" type="ColorRect" parent="ScenarioOne"]
+[node name="Label Seperator" type="ColorRect" parent="Scenario1"]
+layout_mode = 0
 offset_left = 285.0
 offset_top = 122.0
 offset_right = 978.0
 offset_bottom = 135.0
 color = Color(0, 0, 0, 1)
 
-[node name="LevelName" type="Label" parent="ScenarioOne"]
+[node name="LevelName" type="Label" parent="Scenario1"]
+layout_mode = 0
 offset_left = 86.0
 offset_top = 66.0
 offset_right = 1173.0
@@ -97,7 +101,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="LevelTask" type="Label" parent="ScenarioOne"]
+[node name="LevelTask" type="Label" parent="Scenario1"]
 layout_mode = 0
 offset_left = 67.0
 offset_top = 233.0
@@ -109,7 +113,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="ScenarioNumber" type="Label" parent="ScenarioOne"]
+[node name="ScenarioNumber" type="Label" parent="Scenario1"]
+layout_mode = 0
 offset_left = 90.0
 offset_top = -24.0
 offset_right = 1177.0
@@ -120,7 +125,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="StartButtonOne" type="ColorRect" parent="ScenarioOne"]
+[node name="StartButtonOne" type="ColorRect" parent="Scenario1"]
 layout_mode = 0
 offset_left = 400.0
 offset_top = 394.0
@@ -128,14 +133,14 @@ offset_right = 858.0
 offset_bottom = 554.0
 color = Color(0, 0, 0, 1)
 
-[node name="ButtonBackground" type="ColorRect" parent="ScenarioOne/StartButtonOne"]
+[node name="ButtonBackground" type="ColorRect" parent="Scenario1/StartButtonOne"]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 7.0
 offset_right = 451.0
 offset_bottom = 153.0
 
-[node name="Label" type="Label" parent="ScenarioOne/StartButtonOne"]
+[node name="Label" type="Label" parent="Scenario1/StartButtonOne"]
 layout_mode = 0
 offset_left = 7.0
 offset_top = 6.0
