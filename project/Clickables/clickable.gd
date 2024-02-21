@@ -15,7 +15,11 @@ func connect_mouse() -> void:
 
 func on_mouse_entered():
 	scale = scale * 1.1
+	position.x -= 10
+	position.y -= 10
 
 
 func on_mouse_exited():
 	scale = scale / 1.1
+	position.x += 10
+	position.y += 10

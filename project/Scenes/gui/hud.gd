@@ -29,6 +29,18 @@ func _on_item_add(title, texture) -> void:
 	add_item_image(texture)
 
 
+func on_mouse_entered(button):
+	button.scale = button.scale * 1.1
+	button.position.x -= 5
+	button.position.y -= 5
+
+
+func on_mouse_exited(button):
+	button.scale = button.scale / 1.1
+	button.position.x += 5
+	button.position.y += 5
+
+
 func on_hud_button_pressed(button):
 	match button.get_name():
 		StringName("MenuButton"):
@@ -100,6 +112,9 @@ func connect_buttons() -> void:
 	for child in get_children():
 		if child is TextureButton:
 			child.pressed.connect(on_hud_button_pressed.bind(child))
+			child.set_mouse_filter(0)
+			child.mouse_entered.connect(on_mouse_entered.bind(child))
+			child.mouse_exited.connect(on_mouse_exited.bind(child))
 		elif child.name == StringName("InGameMenu"):
 			child.in_game_menu_press.connect(in_game_menu_press)
 		elif child.name == StringName("RoomMenu"):
