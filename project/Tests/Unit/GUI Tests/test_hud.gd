@@ -17,6 +17,7 @@ func test_add_item_image() -> void:
 	assert_eq(hud.current_item, 1)
 	assert_eq(hud.item_slots[0].texture, test_image)
 
+
 func test_on_item_add() -> void:
 	var test_image = load("res://Assets/Sprites/generic_items/genericItem_color_001.png")
 	hud.on_item_add("test", test_image)
@@ -145,8 +146,7 @@ func test_on_disable_menus_three() -> void:
 #func test_connect_buttons() -> void:
 #	hud.connect_buttons()
 #	await yield_for(2)
-#	assert_eq(is_connected("pressed", Callable(hud.get_node("MenuButton"), "on_hud_button_pressed")), true)
-#	assert_eq(is_connected("pressed", Callable(hud.get_node("MapButton"), "on_hud_button_pressed")), true)
+##	assert_eq(is_connected("pressed", Callable(hud.get_node("MapButton"), "on_hud_button_pressed")), true)
 #	assert_eq(is_connected("pressed", Callable(hud.get_node("ObjectivesButton"), "on_hud_button_pressed")), true)
 #	assert_eq(is_connected("in_game_menu_pressed", Callable(hud.get_node("InGameMenu"), "in_game_menu_pressed")), true)
-#	assert_eq(is_connected("room_select", Callable(hud.get_node("RoomMenu"), "on_room_select")), true)
+##	assert_eq(is_connected("room_select", Callable(hud.get_node("RoomMenu"), "on_room_select")), true)
