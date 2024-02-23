@@ -12,6 +12,7 @@ var moved = false
 func _ready():
 	start_x = global_position.x
 	start_y = global_position.y
+	connect_mouse()
 
 
 func action():
