@@ -2,15 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://dwqw21d8i31b" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-01(1).png" id="1_jnk3n"]
 [ext_resource type="Script" path="res://Scenes/rooms/room.gd" id="1_ntxub"]
-[ext_resource type="Texture2D" uid="uid://c8bgmj0gqger2" path="res://Assets/Sprites/Iteration 3 assets/Door.png" id="2_c3hvj"]
-[ext_resource type="Texture2D" uid="uid://c5aw2lgu2qldx" path="res://Assets/AdjustedStandfordAssets/ResizedPinBoard.png" id="3_rudau"]
-[ext_resource type="Texture2D" uid="uid://deydka1ptkao7" path="res://Assets/AdjustedStandfordAssets/Whiteboard.png" id="5_t6bep"]
+[ext_resource type="Texture2D" uid="uid://cb2n58u7x5yje" path="res://Assets/Sprites/Iteration 3 assets/Door.png" id="2_c3hvj"]
+[ext_resource type="Texture2D" uid="uid://bqdy8xr8315mm" path="res://Assets/AdjustedStandfordAssets/ResizedPinBoard.png" id="3_rudau"]
+[ext_resource type="Texture2D" uid="uid://cp5e5rsmk4cnk" path="res://Assets/AdjustedStandfordAssets/Whiteboard.png" id="5_t6bep"]
 [ext_resource type="Script" path="res://Clickables/new_scene/new_scene_object.gd" id="5_uh2m8"]
-[ext_resource type="Texture2D" uid="uid://b1r2tcmopop8o" path="res://Assets/AdjustedStandfordAssets/ResizedPlant.png" id="6_553eh"]
+[ext_resource type="Texture2D" uid="uid://dqn84b5qqj6ka" path="res://Assets/AdjustedStandfordAssets/ResizedPlant.png" id="6_553eh"]
 [ext_resource type="Script" path="res://Clickables/clickable.gd" id="7_5day1"]
-[ext_resource type="Texture2D" uid="uid://ci7deevjv20ji" path="res://Assets/AdjustedStandfordAssets/ResizedLaptop.png" id="8_mlpgt"]
+[ext_resource type="Texture2D" uid="uid://cr6emhixd0qne" path="res://Assets/AdjustedStandfordAssets/ResizedLaptop.png" id="8_mlpgt"]
 [ext_resource type="Texture2D" uid="uid://bn3kp4ijyl0oa" path="res://Assets/Sprites/room_1_custom_placeholders/filecabinet.jpg" id="9_hb4pp"]
-[ext_resource type="Texture2D" uid="uid://c3g5irvmxvur7" path="res://Assets/AdjustedStandfordAssets/ResizedClipBoard.png" id="11_e37d3"]
+[ext_resource type="Texture2D" uid="uid://bvbsfft61es0c" path="res://Assets/AdjustedStandfordAssets/ResizedClipBoard.png" id="11_e37d3"]
 
 [node name="room4" type="Node2D"]
 script = ExtResource("1_ntxub")
