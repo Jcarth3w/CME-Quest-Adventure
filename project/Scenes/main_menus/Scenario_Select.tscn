@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cll8mywp4rc6a"]
+[gd_scene load_steps=9 format=3 uid="uid://cll8mywp4rc6a"]
 
 [ext_resource type="Script" path="res://Scenes/main_menus/Scenario_Select.gd" id="1_glbo8"]
+[ext_resource type="Texture2D" uid="uid://ckv75wx1fw72e" path="res://Assets/Sprites/Iteration 3 assets/Left Arrow.png" id="2_ivuis"]
+[ext_resource type="Texture2D" uid="uid://j8rviu7fb7nr" path="res://Assets/Sprites/Iteration 3 assets/Right Arrow.png" id="3_8xqe1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jy4ff"]
 font_size = 140
@@ -68,9 +70,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 314.0
+offset_left = 329.0
 offset_top = 282.0
-offset_right = 1581.0
+offset_right = 1596.0
 offset_bottom = 898.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -158,5 +160,19 @@ vertical_alignment = 1
 offset_left = -2.0
 offset_right = 458.0
 offset_bottom = 161.0
+
+[node name="LeftButton" type="TextureButton" parent="."]
+offset_left = 104.0
+offset_top = 466.0
+offset_right = 276.0
+offset_bottom = 675.0
+texture_normal = ExtResource("2_ivuis")
+
+[node name="RightButton" type="TextureButton" parent="."]
+offset_left = 1646.0
+offset_top = 470.0
+offset_right = 1818.0
+offset_bottom = 679.0
+texture_normal = ExtResource("3_8xqe1")
 
 [connection signal="pressed" from="Scenario1/StartButtonOne/RoomOneButton" to="." method="_on_room_one_button_pressed"]
