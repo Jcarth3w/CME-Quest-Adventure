@@ -3,6 +3,9 @@ extends Clickable
 
 @export var scene_path : String
 
+func _ready() -> void:
+	connect_mouse()
+
 
 func action():
 	var scene_load = load(scene_path)

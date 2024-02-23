@@ -20,14 +20,6 @@ func show_pickup(title):
 		move_messages(spawn)
 
 
-func show_message(message):
-	var spawn = spawn_popup()
-	if spawn != null:
-		spawn.get_node("PickupText").text = message
-		add_child(spawn)
-		move_messages(spawn)
-
-
 func spawn_popup():
 	var popup_load = load(popup_path)
 	if (messages.size() < 3):
