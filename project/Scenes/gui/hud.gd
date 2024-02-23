@@ -9,7 +9,7 @@ var current_item := 0
 var map_active = true
 var menu_active = true
 var scenario_menu = preload("res://Scenes/gui/menus/scenario_menu.tscn")
-
+var objectives_color
 
 func _ready():
 	connect_buttons()
@@ -17,6 +17,7 @@ func _ready():
 	for child in $Inventory.get_children():
 		if child is Sprite2D:
 			item_slots.append(child)
+	objectives_color = $BlackBorderRectangle/RedFillRectangle.color
 
 
 func add_item_image(sprite_path) -> void:
@@ -30,12 +31,16 @@ func on_item_add(title, texture) -> void:
 
 
 func on_mouse_entered(button):
+	if button.get_name() == StringName("ObjectivesButton"):
+		$BlackBorderRectangle/RedFillRectangle.color = Color.DARK_RED
 	button.scale = button.scale * 1.1
 	button.position.x -= 5
 	button.position.y -= 5
 
 
 func on_mouse_exited(button):
+	if button.get_name() == StringName("ObjectivesButton"):
+		$BlackBorderRectangle/RedFillRectangle.color = objectives_color
 	button.scale = button.scale / 1.1
 	button.position.x += 5
 	button.position.y += 5
