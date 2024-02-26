@@ -9,7 +9,7 @@ CREATE TABLE `scores` (
 	`id` int unsigned NOT NULL AUTO_INCREMENT,
 	`scenario` int unsigned NOT NULL,
 	`username` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-	`time` time NOT NULL,
+	`time` varchar(5) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
 	`finished` boolean NOT NULL,
 	`createdAt` DATETIME DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY (`id`)
