@@ -12,6 +12,11 @@ func before_all() -> void:
 	test_popup = test_scenario.get_node("popup_gui")
 
 
+func test_show_pickup() -> void:
+	test_popup.show_pickup("test")
+	assert_eq(test_popup.messages[0].get_node("PickupText").text, "picked up test")
+
+
 func test_spawn_popup() -> void:
 	var popup = load(popup_path)
 	var spawn = popup.instantiate()
@@ -37,3 +42,6 @@ func test_move_messages() -> void:
 	test_popup.messages.append(spawn2)
 	test_popup.move_messages(spawn2)
 	assert_eq(spawn.global_position.y, (pos - 200))
+
+
+
