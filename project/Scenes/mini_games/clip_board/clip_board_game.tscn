@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bw3fffy0nho5u"]
+[gd_scene load_steps=9 format=3 uid="uid://bw3fffy0nho5u"]
 
 [ext_resource type="Script" path="res://Scenes/mini_games/clip_board/clip_board_game.gd" id="1_cquph"]
 [ext_resource type="Texture2D" uid="uid://cwis8k14rht7u" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-05.png" id="1_xy7dv"]
 [ext_resource type="Script" path="res://Scenes/mini_games/clip_board/clip_board_minigame.gd" id="2_ngvx4"]
 [ext_resource type="Texture2D" uid="uid://bk1e6mbabiw36" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-22.png" id="2_tay00"]
+[ext_resource type="Script" path="res://Scenes/mini_games/clip_board/clip_board_game_item.gd" id="3_phv8i"]
 [ext_resource type="Texture2D" uid="uid://cykm3xu5hxk5i" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-15(1).png" id="4_rjbnj"]
 [ext_resource type="Texture2D" uid="uid://dcm6p18p7lslf" path="res://Assets/Sprites/generic_items/genericItem_color_160.png" id="5_5gcnl"]
 
@@ -28,7 +29,7 @@ offset_right = 504.0
 offset_bottom = 975.0
 texture = ExtResource("1_xy7dv")
 expand_mode = 1
-script = ExtResource("2_ngvx4")
+script = ExtResource("3_phv8i")
 
 [node name="Panel" type="Panel" parent="Item1"]
 show_behind_parent = true
@@ -46,7 +47,7 @@ offset_right = 1052.0
 offset_bottom = 975.0
 texture = ExtResource("2_tay00")
 expand_mode = 1
-script = ExtResource("2_ngvx4")
+script = ExtResource("3_phv8i")
 
 [node name="Panel" type="Panel" parent="Item2"]
 show_behind_parent = true
@@ -64,7 +65,7 @@ offset_right = 1585.0
 offset_bottom = 975.0
 texture = ExtResource("4_rjbnj")
 expand_mode = 1
-script = ExtResource("2_ngvx4")
+script = ExtResource("3_phv8i")
 
 [node name="Panel" type="Panel" parent="Item3"]
 show_behind_parent = true
@@ -144,3 +145,5 @@ anchor_bottom = 1.76667
 text = "Drag in the correct order"
 label_settings = SubResource("LabelSettings_jak64")
 metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="CheckWinButton" to="." method="_on_check_win_button_pressed"]
