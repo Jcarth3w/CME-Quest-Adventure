@@ -9,7 +9,7 @@ CREATE TABLE `scores` (
 	`id` int unsigned NOT NULL AUTO_INCREMENT,
 	`scenario` int unsigned NOT NULL,
 	`username` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-	`time` time NOT NULL,
+	`time` varchar(5) NOT NULL,
 	`finished` boolean NOT NULL,
 	`createdAt` DATETIME DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY (`id`)
@@ -20,7 +20,7 @@ LOCK TABLES `scores` WRITE;
 
 INSERT INTO `scores` (`id`, `scenario`, `username`, `time`, `finished`, `createdAt`)
 VALUES
-	(1,1,'Johnson B','12:00:00','1','2015-04-06 11:10:38');
+	(1,1,'Johnson B','12:00','1','2015-04-06 11:10:38');
 
 UNLOCK TABLES;
 
