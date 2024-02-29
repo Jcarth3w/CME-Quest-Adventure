@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://0bmxcnx8rkqe"]
+
+[ext_resource type="Script" path="res://Components/sound_control.gd" id="1_qow02"]
+
+[node name="SoundControl" type="Node2D"]
+script = ExtResource("1_qow02")
+
+[node name="SoundFX" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
