@@ -1,12 +1,12 @@
 extends Node2D
 var current_room = 1
-var username = "john"
+var username = ""
 var finished_time
 var finished = 0
 var generic_user = "Lani"
 var scenario_num = 1
 var rooms = []
-var open_screen_path = "res://Scenes/gui/menus/scenario_menu.tscn"
+var open_screen_path = "res://Scenes/gui/menus/opening_screen.tscn"
 var end_screen_path = "res://Scenes/static_scene/end_screen.tscn"
 
 
@@ -15,6 +15,7 @@ func _ready():
 	var open_screen = load(open_screen_path)
 	var open_scrn_inst = open_screen.instantiate()
 	open_scrn_inst.get_node("ContinueButton").pressed.connect(on_open_screen_close)
+	open_scrn_inst.send_username.connect(on_username_recieved)
 	add_child(open_scrn_inst)
 	for child in get_children():
 		if child is Room:
@@ -67,8 +68,12 @@ func _on_room_final() -> void:
 
 func send_data(completed):
 	finished_time = $HUD/Timer/Label.text
-	$DBoperations.make_post_request(1, finished_time, "Johnny", completed)
+	$DBoperations.make_post_request(1, finished_time, username, completed)
 
 
 func get_data():
 	$DBoperations.make_get_request()
+
+
+func on_username_recieved(current_username):
+	username = current_username
