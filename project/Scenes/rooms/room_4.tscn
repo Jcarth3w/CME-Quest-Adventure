@@ -4,13 +4,13 @@
 [ext_resource type="Script" path="res://Scenes/rooms/room.gd" id="1_ntxub"]
 [ext_resource type="Texture2D" uid="uid://cb2n58u7x5yje" path="res://Assets/Sprites/Iteration 3 assets/Door.png" id="2_c3hvj"]
 [ext_resource type="Texture2D" uid="uid://bqdy8xr8315mm" path="res://Assets/AdjustedStandfordAssets/ResizedPinBoard.png" id="3_rudau"]
-[ext_resource type="Texture2D" uid="uid://cp5e5rsmk4cnk" path="res://Assets/AdjustedStandfordAssets/Whiteboard.png" id="5_t6bep"]
 [ext_resource type="Script" path="res://Clickables/new_scene/new_scene_object.gd" id="5_uh2m8"]
 [ext_resource type="Texture2D" uid="uid://dqn84b5qqj6ka" path="res://Assets/AdjustedStandfordAssets/ResizedPlant.png" id="6_553eh"]
 [ext_resource type="Script" path="res://Clickables/clickable.gd" id="7_5day1"]
 [ext_resource type="Texture2D" uid="uid://cr6emhixd0qne" path="res://Assets/AdjustedStandfordAssets/ResizedLaptop.png" id="8_mlpgt"]
 [ext_resource type="Texture2D" uid="uid://bn3kp4ijyl0oa" path="res://Assets/Sprites/room_1_custom_placeholders/filecabinet.jpg" id="9_hb4pp"]
 [ext_resource type="Texture2D" uid="uid://bvbsfft61es0c" path="res://Assets/AdjustedStandfordAssets/ResizedClipBoard.png" id="11_e37d3"]
+[ext_resource type="Texture2D" uid="uid://bo6owma52kh4u" path="res://Assets/Sprites/generic_items/genericItem_color_001.png" id="12_jngyd"]
 
 [node name="room4" type="Node2D"]
 script = ExtResource("1_ntxub")
@@ -61,16 +61,6 @@ texture_normal = ExtResource("3_rudau")
 script = ExtResource("5_uh2m8")
 metadata/_edit_use_anchors_ = true
 
-[node name="Whiteboard" type="TextureButton" parent="."]
-offset_left = 314.0
-offset_top = 185.0
-offset_right = 2168.0
-offset_bottom = 1417.0
-scale = Vector2(0.25, 0.25)
-texture_normal = ExtResource("5_t6bep")
-script = ExtResource("5_uh2m8")
-metadata/_edit_use_anchors_ = true
-
 [node name="Plant" type="TextureButton" parent="."]
 offset_left = 1208.0
 offset_top = 546.0
@@ -109,4 +99,6 @@ offset_bottom = 3489.0
 scale = Vector2(0.05, 0.05)
 texture_normal = ExtResource("11_e37d3")
 script = ExtResource("5_uh2m8")
+scene_path = "res://Scenes/mini_games/clip_board/clip_board_game.tscn"
+prize_texture = ExtResource("12_jngyd")
 metadata/_edit_use_anchors_ = true

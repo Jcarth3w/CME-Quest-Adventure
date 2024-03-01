@@ -21,6 +21,9 @@ func _drop_data(at_position, data):
 		var current_order = {String(name) : current_name}
 		emit_signal("gathered_data", current_order)
 		current_item.texture = null
+		current_item.get_node("Label").visible = false
+		$Label.text = current_item.get_node("Label").text
+		$Label.visible = true
 	else: 
 		texture = original_texture
 
