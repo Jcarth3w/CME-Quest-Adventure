@@ -139,7 +139,7 @@ label_settings = SubResource("LabelSettings_ixev0")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="QuitButton" type="TextureButton" parent="Leaderboard/RedRectangle"]
+[node name="LeaderBoardButton" type="TextureButton" parent="Leaderboard/RedRectangle"]
 layout_mode = 0
 offset_left = -8.0
 offset_top = -8.0
@@ -188,5 +188,5 @@ offset_right = 673.0
 offset_bottom = 215.0
 
 [connection signal="pressed" from="StartDesign/RedRectangle/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="Leaderboard/RedRectangle/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Leaderboard/RedRectangle/LeaderBoardButton" to="." method="_on_leader_board_button_pressed"]
 [connection signal="pressed" from="QuitDesign/RedRectangle/QuitButton" to="." method="_on_quit_button_pressed"]
