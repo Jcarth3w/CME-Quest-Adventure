@@ -1,21 +1,20 @@
-class_name Scenario
 extends Node2D
 var current_room = 1
-var username = "john"
+var username = ""
 var finished_time
 var finished = 0
-var generic_user = "Lani"
 var scenario_num = 1
 var rooms = []
-var open_screen_path = "res://Scenes/gui/scenario_menu.tscn"
+var open_screen_path = "res://Scenes/gui/menus/opening_screen.tscn"
 var end_screen_path = "res://Scenes/static_scene/end_screen.tscn"
 
 
 func _ready():
-	current_room = find_child("Room1")
+	current_room = find_child("room4")
 	var open_screen = load(open_screen_path)
 	var open_scrn_inst = open_screen.instantiate()
 	open_scrn_inst.get_node("ContinueButton").pressed.connect(on_open_screen_close)
+	open_scrn_inst.send_username.connect(on_username_recieved)
 	add_child(open_scrn_inst)
 	for child in get_children():
 		if child is Room:
@@ -38,8 +37,9 @@ func enter_room(new_room):
 
 
 func check_win() -> bool:
-	if $HUD.items.size() == 7:
+	if $HUD.items.size() == 2:
 		return true
+	$popup_gui.show_pickup("You have unfinished objectives")
 	return false
 
 
@@ -51,7 +51,7 @@ func room_unlock(room_number):
 
 
 func on_open_screen_close() -> void:
-	$Room1.resume_room()
+	$room4.resume_room()
 	$HUD/Timer.start()
 
 
@@ -67,8 +67,12 @@ func _on_room_final() -> void:
 
 func send_data(completed):
 	finished_time = $HUD/Timer/Label.text
-	$DBoperations.make_post_request(1, finished_time, "Johnny", completed)
+	$DBoperations.make_post_request(1, finished_time, username, completed)
 
 
 func get_data():
 	$DBoperations.make_get_request()
+
+
+func on_username_recieved(current_username):
+	username = current_username
