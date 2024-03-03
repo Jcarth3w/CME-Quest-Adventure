@@ -10,16 +10,16 @@ var end_screen_path = "res://Scenes/static_scene/end_screen.tscn"
 
 
 func _ready():
-	current_room = find_child("room4")
-	var open_screen = load(open_screen_path)
-	var open_scrn_inst = open_screen.instantiate()
-	open_scrn_inst.get_node("ContinueButton").pressed.connect(on_open_screen_close)
-	open_scrn_inst.send_username.connect(on_username_recieved)
-	add_child(open_scrn_inst)
+	current_room = find_child("Room1")
+	#var open_screen = load(open_screen_path)
+	#var open_scrn_inst = open_screen.instantiate()
+	#open_scrn_inst.get_node("ContinueButton").pressed.connect(on_open_screen_close)
+	#open_scrn_inst.send_username.connect(on_username_recieved)
+	#add_child(open_scrn_inst)
 	for child in get_children():
 		if child is Room:
 			rooms.append(child)
-			child.pause_room()
+			#child.pause_room()
 			child.final.connect(_on_room_final)
 	if FileAccess.file_exists("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt"):
 		var dir = DirAccess.open("res://Scenes/mini_games/Crossword_Puzzle/")
@@ -37,7 +37,7 @@ func enter_room(new_room):
 
 
 func check_win() -> bool:
-	if $HUD.items.size() == 2:
+	if $HUD.items.size() == 1:
 		return true
 	$popup_gui.show_pickup("You have unfinished objectives")
 	return false
@@ -51,7 +51,7 @@ func room_unlock(room_number):
 
 
 func on_open_screen_close() -> void:
-	$room4.resume_room()
+	$Room1.resume_room()
 	$HUD/Timer.start()
 
 

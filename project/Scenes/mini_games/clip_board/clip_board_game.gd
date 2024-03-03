@@ -14,8 +14,8 @@ func _ready() -> void:
 func check_win_button_pressed():
 	if player_order.hash() == correct_order.hash():
 		label.text = "You win!"
-		await get_tree().create_timer(1).timeout
 		finished.emit()
+		await get_tree().create_timer(1).timeout
 		queue_free()
 	else:
 		label.text = "Try again..."
