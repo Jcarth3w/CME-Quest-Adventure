@@ -745,5 +745,20 @@ script = ExtResource("2_1pegd")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="DBoperations"]
 
+[node name="BackButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 771.0
+offset_top = 822.0
+offset_right = 1087.0
+offset_bottom = 877.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "BACK TO MENU"
+
 [connection signal="request_completed" from="DBoperations/HTTPRequest" to="." method="_on_http_request_request_completed"]
 [connection signal="request_completed" from="DBoperations/HTTPRequest" to="DBoperations" method="_on_http_request_request_completed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
