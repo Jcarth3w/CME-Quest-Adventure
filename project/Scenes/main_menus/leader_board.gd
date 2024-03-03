@@ -60,3 +60,7 @@ func populate_leader_board(scenario_number):
 					child.get_node("Username").text = users[i]
 					child.get_node("Time").text =  times[i]
 					i = i+1
+
+
+func _on_back_button_pressed():
+	get_tree().change_scene_to_file("res://Scenes/main_menus/main_menu.tscn")
