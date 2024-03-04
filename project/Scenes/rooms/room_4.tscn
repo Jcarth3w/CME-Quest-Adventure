@@ -1,19 +1,21 @@
-[gd_scene load_steps=12 format=3 uid="uid://d02w8tm7p5omg"]
+[gd_scene load_steps=13 format=3 uid="uid://d02w8tm7p5omg"]
 
 [ext_resource type="Script" path="res://Scenes/rooms/room_4.gd" id="1_jgpyb"]
 [ext_resource type="Texture2D" uid="uid://dwqw21d8i31b" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-01(1).png" id="1_jnk3n"]
-[ext_resource type="Texture2D" uid="uid://c8bgmj0gqger2" path="res://Assets/Sprites/Iteration 3 assets/Door.png" id="2_c3hvj"]
-[ext_resource type="Texture2D" uid="uid://c5aw2lgu2qldx" path="res://Assets/AdjustedStandfordAssets/ResizedPinBoard.png" id="3_rudau"]
+[ext_resource type="Texture2D" uid="uid://be0uissf4g8d4" path="res://Assets/Sprites/Iteration 3 assets/Door.png" id="2_c3hvj"]
+[ext_resource type="Texture2D" uid="uid://cq2a802dag8bo" path="res://Assets/AdjustedStandfordAssets/ResizedPinBoard.png" id="3_rudau"]
 [ext_resource type="Script" path="res://Clickables/new_scene/new_scene_object.gd" id="5_uh2m8"]
-[ext_resource type="Texture2D" uid="uid://b1r2tcmopop8o" path="res://Assets/AdjustedStandfordAssets/ResizedPlant.png" id="6_553eh"]
-[ext_resource type="Texture2D" uid="uid://blmunjistx21t" path="res://Assets/AdjustedStandfordAssets/BlankFolder.png" id="6_7788q"]
+[ext_resource type="Texture2D" uid="uid://dsydvlkmqhong" path="res://Assets/AdjustedStandfordAssets/ResizedPlant.png" id="6_553eh"]
+[ext_resource type="Texture2D" uid="uid://cy1mwbp0b6s1x" path="res://Assets/Sprites/Iteration 3 assets/Poster.png" id="6_sdydr"]
 [ext_resource type="Script" path="res://Clickables/clickable.gd" id="7_5day1"]
-[ext_resource type="Texture2D" uid="uid://ci7deevjv20ji" path="res://Assets/AdjustedStandfordAssets/ResizedLaptop.png" id="8_mlpgt"]
+[ext_resource type="Texture2D" uid="uid://cc0e336mv83k3" path="res://Assets/AdjustedStandfordAssets/ResizedLaptop.png" id="8_mlpgt"]
 [ext_resource type="Texture2D" uid="uid://bn3kp4ijyl0oa" path="res://Assets/Sprites/room_1_custom_placeholders/filecabinet.jpg" id="9_hb4pp"]
-[ext_resource type="Texture2D" uid="uid://c3g5irvmxvur7" path="res://Assets/AdjustedStandfordAssets/ResizedClipBoard.png" id="11_e37d3"]
+[ext_resource type="Texture2D" uid="uid://03g2kljwi6d6" path="res://Assets/AdjustedStandfordAssets/ResizedClipBoard.png" id="11_e37d3"]
+[ext_resource type="Texture2D" uid="uid://bxoqnvhmqwcyd" path="res://Assets/Sprites/Iteration 3 assets/SocialMediaGraphics.png" id="12_julch"]
 
-[node name="room4" type="Node2D"]
+[node name="room4" type="Node2D" node_paths=PackedStringArray("final_mini_game")]
 script = ExtResource("1_jgpyb")
+final_mini_game = NodePath("BulletinBoard")
 
 [node name="BackgroundWall" type="ColorRect" parent="."]
 offset_right = 1920.0
@@ -60,7 +62,7 @@ scale = Vector2(0.25, 0.25)
 texture_normal = ExtResource("3_rudau")
 script = ExtResource("5_uh2m8")
 scene_path = "res://Scenes/mini_games/Bulletin Board/bulletin_board.tscn"
-prize_texture = ExtResource("6_7788q")
+prize_texture = ExtResource("6_sdydr")
 prize_name = "bulletin_prize"
 metadata/_edit_use_anchors_ = true
 
@@ -103,6 +105,6 @@ scale = Vector2(0.05, 0.05)
 texture_normal = ExtResource("11_e37d3")
 script = ExtResource("5_uh2m8")
 scene_path = "res://Scenes/mini_games/clip_board/clip_board_game.tscn"
-prize_texture = ExtResource("11_e37d3")
+prize_texture = ExtResource("12_julch")
 prize_name = "clip_prize"
 metadata/_edit_use_anchors_ = true

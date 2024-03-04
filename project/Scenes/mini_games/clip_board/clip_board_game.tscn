@@ -25,6 +25,7 @@ font_color = Color(0, 0, 0, 1)
 font_color = Color(0, 0, 0, 1)
 
 [node name="clip_board_game" type="Node2D"]
+position = Vector2(0, 50)
 script = ExtResource("1_cquph")
 
 [node name="Background" type="ColorRect" parent="."]
