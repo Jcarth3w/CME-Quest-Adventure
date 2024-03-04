@@ -19,6 +19,7 @@ func check_win_button_pressed():
 		label.text = "You win!"
 		await get_tree().create_timer(1).timeout
 		finished.emit()
+		get_parent().final.emit()
 		queue_free()
 	else:
 		label.text = "Try again..."

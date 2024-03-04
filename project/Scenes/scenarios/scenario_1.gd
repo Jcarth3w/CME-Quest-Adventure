@@ -4,7 +4,6 @@ var current_room = 1
 var username = ""
 var finished_time
 var finished = 0
-var generic_user = "Lani"
 var scenario_num = 1
 var rooms = []
 var open_screen_path = "res://Scenes/gui/menus/opening_screen.tscn"
@@ -41,7 +40,7 @@ func enter_room(new_room):
 func check_win() -> bool:
 	if $HUD.items.size() == 7:
 		return true
-	$popup_gui.show_pickup("You have unfinished objectives")
+	$popup_gui.show_message("You have unfinished objectives")
 	return false
 
 
