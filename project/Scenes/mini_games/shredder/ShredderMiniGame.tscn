@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://wjox7l8cx5c4" path="res://Assets/Sprites/generic_items/genericItem_color_141.png" id="2_ptm7d"]
 [ext_resource type="Script" path="res://Scenes/mini_games/shredder/clip_board.gd" id="3_rochj"]
 [ext_resource type="Texture2D" uid="uid://ea3idyn2pse7" path="res://Assets/Sprites/room_1_custom_placeholders/PaperReg.png" id="4_6a764"]
-[ext_resource type="Script" path="res://Scenes/mini_games/shredder/Shred.gd" id="4_e4n14"]
 [ext_resource type="Texture2D" uid="uid://dcm6p18p7lslf" path="res://Assets/Sprites/generic_items/genericItem_color_160.png" id="4_smkob"]
+[ext_resource type="Script" path="res://Scenes/mini_games/shredder/shred.gd" id="5_k5ng4"]
 [ext_resource type="Texture2D" uid="uid://bm178bucru5c3" path="res://Assets/Sprites/room_1_custom_placeholders/PaperIstra.png" id="6_squqo"]
 [ext_resource type="Texture2D" uid="uid://cqnprxanaj8xk" path="res://Assets/Sprites/room_1_custom_placeholders/Papertion.png" id="7_6moph"]
 [ext_resource type="Texture2D" uid="uid://cvfowmbihv100" path="res://Assets/Sprites/room_1_custom_placeholders/WrongPaper1.png" id="8_ck2q6"]
@@ -62,7 +62,7 @@ offset_right = 1595.0
 offset_bottom = 1248.0
 rotation = 0.866083
 texture_normal = ExtResource("4_6a764")
-script = ExtResource("4_e4n14")
+script = ExtResource("5_k5ng4")
 
 [node name="Shred 2" type="TextureButton" parent="."]
 offset_left = 966.0
@@ -71,7 +71,7 @@ offset_right = 1153.0
 offset_bottom = 1017.0
 rotation = -0.320482
 texture_normal = ExtResource("6_squqo")
-script = ExtResource("4_e4n14")
+script = ExtResource("5_k5ng4")
 
 [node name="Shred 3" type="TextureButton" parent="."]
 offset_left = 399.0
@@ -80,7 +80,7 @@ offset_right = 586.0
 offset_bottom = 1847.0
 rotation = -1.62383
 texture_normal = ExtResource("7_6moph")
-script = ExtResource("4_e4n14")
+script = ExtResource("5_k5ng4")
 
 [node name="Shred 4" type="TextureButton" parent="."]
 offset_left = 1229.0
@@ -89,7 +89,7 @@ offset_right = 1416.0
 offset_bottom = 1135.0
 rotation = -0.753436
 texture_normal = ExtResource("8_ck2q6")
-script = ExtResource("4_e4n14")
+script = ExtResource("5_k5ng4")
 
 [node name="Shred 5" type="TextureButton" parent="."]
 offset_left = 433.0
@@ -98,7 +98,7 @@ offset_right = 620.0
 offset_bottom = 1007.0
 rotation = -0.454467
 texture_normal = ExtResource("9_o3rdi")
-script = ExtResource("4_e4n14")
+script = ExtResource("5_k5ng4")
 
 [node name="Shred 6" type="TextureButton" parent="."]
 offset_left = 415.0
@@ -107,7 +107,7 @@ offset_right = 602.0
 offset_bottom = 1766.0
 rotation = 3.72453
 texture_normal = ExtResource("10_th7a5")
-script = ExtResource("4_e4n14")
+script = ExtResource("5_k5ng4")
 
 [node name="Shred 7" type="TextureButton" parent="."]
 offset_left = 962.12
@@ -116,7 +116,7 @@ offset_right = 1149.12
 offset_bottom = 1044.37
 rotation = 0.677643
 texture_normal = ExtResource("12_vf57k")
-script = ExtResource("4_e4n14")
+script = ExtResource("5_k5ng4")
 
 [node name="Shred 8" type="TextureButton" parent="."]
 offset_left = 1577.0
@@ -125,7 +125,7 @@ offset_right = 1764.0
 offset_bottom = 1791.0
 rotation = 2.30034
 texture_normal = ExtResource("11_rtk6o")
-script = ExtResource("4_e4n14")
+script = ExtResource("5_k5ng4")
 
 [node name="CheckBttn" type="TextureButton" parent="."]
 offset_left = 69.0

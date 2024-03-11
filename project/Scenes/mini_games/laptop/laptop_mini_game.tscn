@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/mini_games/laptop/laptop_mini_game.gd" id="1_mdm6b"]
 [ext_resource type="Texture2D" uid="uid://rpdjh6s3x3m2" path="res://Assets/Sprites/room_1_custom_placeholders/Red Background.png" id="2_a45ph"]
-[ext_resource type="Texture2D" uid="uid://blmunjistx21t" path="res://Assets/AdjustedStandfordAssets/BlankFolder.png" id="2_cfe0u"]
+[ext_resource type="Texture2D" uid="uid://cnu5aa2hfql8t" path="res://Assets/AdjustedStandfordAssets/BlankFolder.png" id="2_cfe0u"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_aep5h"]
 font_size = 72
