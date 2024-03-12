@@ -60,14 +60,14 @@ func _on_room_final() -> void:
 	var end_screen = load(end_screen_path)
 	var end_screen_inst = end_screen.instantiate()
 	end_screen_inst.username = username
-	end_screen_inst.scen_num = 1
+	end_screen_inst.scen_num = scenario_num
 	end_screen_inst.time_val = $HUD/Timer/Label.text
 	add_child(end_screen_inst)
 
 
 func send_data(completed):
 	finished_time = $HUD/Timer/Label.text
-	$DBoperations.make_post_request(1, finished_time, username, completed)
+	$DBoperations.make_post_request(scenario_num, finished_time, username, completed)
 
 
 func get_data():
