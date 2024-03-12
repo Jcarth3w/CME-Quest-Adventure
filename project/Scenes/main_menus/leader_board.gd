@@ -13,19 +13,15 @@ func _ready():
 func on_scenario_pressed(button) -> void:
 	match button.name:
 		"Scenario1Button":
-			if $Scenario1Times.visible == true:
-				$Scenario1Times.visible = false
-			else:
+			if $Scenario1Times.visible == false:
 				populate_leader_board(1)
 				$Scenario1Times.visible = true
-		"Scenario2Button":
-			if $Scenario2Times.visible == true:
 				$Scenario2Times.visible = false
-			else:
+		"Scenario2Button":
+			if $Scenario2Times.visible == false:
 				populate_leader_board(2)
 				$Scenario2Times.visible = true
-		_:
-			pass
+				$Scenario1Times.visible = false
 
 
 func _on_http_request_request_completed(result, response_code, headers, body):
@@ -64,3 +60,4 @@ func populate_leader_board(scenario_number):
 
 func _on_back_button_pressed():
 	get_tree().change_scene_to_file("res://Scenes/main_menus/main_menu.tscn")
+

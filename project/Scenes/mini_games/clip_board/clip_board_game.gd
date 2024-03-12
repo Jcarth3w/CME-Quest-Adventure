@@ -12,7 +12,7 @@ func _ready() -> void:
 			child.gathered_data.connect(_on_spot_gathered_data)
 
 func check_win_button_pressed():
-	if player_order.hash() == correct_order.hash():
+	if compare_dict(correct_order, player_order):
 		label.text = "You win!"
 		finished.emit()
 		await get_tree().create_timer(1).timeout
@@ -20,6 +20,16 @@ func check_win_button_pressed():
 	else:
 		label.text = "Try again..."
 		reset()
+
+
+func compare_dict(dict1, dict2):
+	for key in dict1:
+		if not dict2.has(key):
+			return false
+		var value = dict1[key]
+		if value != dict2[key]:
+			return false
+	return true
 
 
 func _on_check_win_button_pressed():
