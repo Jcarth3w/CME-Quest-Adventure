@@ -7,6 +7,9 @@ signal scene_changed
 @export var prize_name: String
 var finished = false
 
+func _ready() -> void:
+	connect_mouse()
+
 
 func action():
 	if finished == false:

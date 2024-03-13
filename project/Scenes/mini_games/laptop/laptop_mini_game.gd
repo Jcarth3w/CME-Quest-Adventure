@@ -77,4 +77,3 @@ func check_correct():
 	if current_file != $Files/File4:
 		return false
 	return true
-

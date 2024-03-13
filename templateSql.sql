@@ -20,7 +20,7 @@ LOCK TABLES `scores` WRITE;
 
 INSERT INTO `scores` (`id`, `scenario`, `username`, `time`, `finished`, `createdAt`)
 VALUES
-	(1,1,'Johnson B','12:00:00','1','2015-04-06 11:10:38');
+	(1,1,'Johnson B','12:00','1','2015-04-06 11:10:38');
 
 UNLOCK TABLES;
 

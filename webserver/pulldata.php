@@ -13,7 +13,8 @@
         die("Error: " . $e->getMessage());
     }
 
-    $query = "SELECT time FROM scores ORDER BY time DESC";
+
+    $query = "SELECT time, username FROM scores WHERE finished=1 AND scenario=1 ORDER BY time ASC LIMIT 5";
     $stmt = $conn->prepare($query);
     $stmt->execute();
 

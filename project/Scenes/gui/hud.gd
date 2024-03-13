@@ -9,7 +9,7 @@ var current_item := 0
 var map_active = true
 var menu_active = true
 var scenario_menu = preload("res://Scenes/gui/menus/scenario_menu.tscn")
-
+var objectives_color
 
 func _ready():
 	connect_buttons()
@@ -17,6 +17,7 @@ func _ready():
 	for child in $Inventory.get_children():
 		if child is Sprite2D:
 			item_slots.append(child)
+	objectives_color = $BlackBorderRectangle/RedFillRectangle.color
 
 
 func add_item_image(sprite_path) -> void:
@@ -24,9 +25,25 @@ func add_item_image(sprite_path) -> void:
 	current_item += 1
 
 
-func _on_item_add(title, texture) -> void:
+func on_item_add(title, texture) -> void:
 	items.append(title)
 	add_item_image(texture)
+
+
+func on_mouse_entered(button):
+	if button.get_name() == StringName("ObjectivesButton"):
+		$BlackBorderRectangle/RedFillRectangle.color = Color.DARK_RED
+	button.scale = button.scale * 1.1
+	button.position.x -= 5
+	button.position.y -= 5
+
+
+func on_mouse_exited(button):
+	if button.get_name() == StringName("ObjectivesButton"):
+		$BlackBorderRectangle/RedFillRectangle.color = objectives_color
+	button.scale = button.scale / 1.1
+	button.position.x += 5
+	button.position.y += 5
 
 
 func on_hud_button_pressed(button):
@@ -81,12 +98,12 @@ func on_room_select(room_name):
 	$RoomMenu.visible = false
 
 
-func _on_activate_menus() -> void:
+func on_activate_menus() -> void:
 	menu_active = true
 	map_active = true
 
 
-func _on_disable_menus(menu) -> void:
+func on_disable_menus(menu) -> void:
 	if menu == 1:
 		menu_active = false
 	elif menu == 2:
@@ -100,6 +117,9 @@ func connect_buttons() -> void:
 	for child in get_children():
 		if child is TextureButton:
 			child.pressed.connect(on_hud_button_pressed.bind(child))
+			child.set_mouse_filter(0)
+			child.mouse_entered.connect(on_mouse_entered.bind(child))
+			child.mouse_exited.connect(on_mouse_exited.bind(child))
 		elif child.name == StringName("InGameMenu"):
 			child.in_game_menu_press.connect(in_game_menu_press)
 		elif child.name == StringName("RoomMenu"):
@@ -110,6 +130,6 @@ func connect_room_signals() -> void:
 	if get_parent() != null:
 		for child in get_parent().get_children():
 			if child is Room:
-				child.activate_menus.connect(_on_activate_menus)
-				child.disable_menus.connect(_on_disable_menus)
-				child.item_add.connect(_on_item_add)
+				child.activate_menus.connect(on_activate_menus)
+				child.disable_menus.connect(on_disable_menus)
+				child.item_add.connect(on_item_add)

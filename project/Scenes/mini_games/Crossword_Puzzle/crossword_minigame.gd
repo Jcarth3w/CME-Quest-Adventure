@@ -6,11 +6,11 @@ var completed = []
 
 
 func _ready():
-	answers["andragogy"] = $Andragogy
-	answers["social learning"] = $SocialLearning
-	answers["cognitivism"] = $Cognitivism
-	answers["constructivism"] = $Constructivism
-	answers["experiential learning"] = $ExperientialLearning
+	answers["Andragogy"] = $Andragogy
+	answers["Social Learning"] = $SocialLearning
+	answers["Cognitivism"] = $Cognitivism
+	answers["Constructivism"] = $Constructivism
+	answers["Experiential Learning"] = $ExperientialLearning
 	check_completed()
 	for word in completed:
 		if word in answers:
@@ -36,10 +36,12 @@ func _on_check_button_pressed():
 
 
 func check_answer():
-	if $UserText.text in answers:
-		answers.get($UserText.text).texture = load("res://Assets/Crossword_Assets/" + $UserText.text.to_lower() + ".png")
-		answers.erase($UserText.text)
-		completed.append($UserText.text)
+	var guess = space_to_underscore($UserText.text).capitalize()
+	print(guess)
+	if guess in answers:
+		answers.get(guess).texture = load("res://Assets/Crossword_Assets/" + guess + ".png")
+		answers.erase(guess)
+		completed.append(guess)
 		$UserText.clear()
 
 
@@ -61,3 +63,7 @@ func save_state(key):
 func load_state():
 	var save_file = FileAccess.open("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt", FileAccess.READ)
 	return save_file.get_as_text()
+
+
+func space_to_underscore(text):
+	return text.replace(" ", "_")

@@ -1,0 +1,344 @@
+[gd_scene load_steps=11 format=3 uid="uid://bw3fffy0nho5u"]
+
+[ext_resource type="Script" path="res://Scenes/mini_games/clip_board/clip_board_game.gd" id="1_cquph"]
+[ext_resource type="Script" path="res://Scenes/mini_games/clip_board/clip_board_minigame.gd" id="2_ngvx4"]
+[ext_resource type="Texture2D" uid="uid://28qc845w0nmj" path="res://Assets/Sprites/generic_items/genericItem_color_038.png" id="2_qdqgh"]
+[ext_resource type="Script" path="res://Scenes/mini_games/clip_board/clip_board_game_item.gd" id="3_phv8i"]
+[ext_resource type="Texture2D" uid="uid://dcm6p18p7lslf" path="res://Assets/Sprites/generic_items/genericItem_color_160.png" id="5_5gcnl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xvtdb"]
+font_size = 22
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tjakb"]
+font_size = 28
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mh8x6"]
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jak64"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qstqw"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="clip_board_game" type="Node2D"]
+position = Vector2(0, 50)
+script = ExtResource("1_cquph")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_left = 221.0
+offset_top = 80.0
+offset_right = 1722.0
+offset_bottom = 1012.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Item1" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(200, 200)
+offset_left = 304.0
+offset_top = 775.0
+offset_right = 504.0
+offset_bottom = 975.0
+texture = ExtResource("2_qdqgh")
+expand_mode = 1
+script = ExtResource("3_phv8i")
+
+[node name="Panel" type="Panel" parent="Item1"]
+show_behind_parent = true
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Item1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.5
+offset_top = -32.0
+offset_right = 49.5
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "PROGRAM
+ANALYSIS"
+label_settings = SubResource("LabelSettings_xvtdb")
+
+[node name="Item2" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(200, 200)
+offset_left = 852.0
+offset_top = 775.0
+offset_right = 1052.0
+offset_bottom = 975.0
+texture = ExtResource("2_qdqgh")
+expand_mode = 1
+script = ExtResource("3_phv8i")
+
+[node name="Panel" type="Panel" parent="Item2"]
+show_behind_parent = true
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Item2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -32.0
+offset_right = 59.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MISSION"
+label_settings = SubResource("LabelSettings_tjakb")
+
+[node name="Item3" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(200, 200)
+offset_left = 1385.0
+offset_top = 775.0
+offset_right = 1585.0
+offset_bottom = 975.0
+texture = ExtResource("2_qdqgh")
+expand_mode = 1
+script = ExtResource("3_phv8i")
+
+[node name="Panel" type="Panel" parent="Item3"]
+show_behind_parent = true
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Item3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.5
+offset_top = -32.0
+offset_right = 78.5
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "PROGRAM
+IMPROVEMENTS"
+label_settings = SubResource("LabelSettings_mh8x6")
+horizontal_alignment = 1
+
+[node name="Definition1" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = -0.84
+anchor_top = 1.095
+anchor_right = 2.135
+anchor_bottom = 1.87
+offset_left = 234.0
+offset_top = 398.0
+offset_right = 687.0
+offset_bottom = 553.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "The provider has a CME mission 
+statement that includes expected results 
+articulated in terms of changes in competence, 
+performance, or patient outcomes 
+that will be the result of the program."
+label_settings = SubResource("LabelSettings_mh8x6")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Spot1" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(200, 200)
+offset_left = 337.0
+offset_top = 175.0
+offset_right = 537.0
+offset_bottom = 375.0
+expand_mode = 1
+script = ExtResource("2_ngvx4")
+
+[node name="Panel" type="Panel" parent="Spot1"]
+show_behind_parent = true
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Spot1"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.5
+offset_top = -32.0
+offset_right = 49.5
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "PROGRAM
+ANALYSIS"
+label_settings = SubResource("LabelSettings_xvtdb")
+
+[node name="Definition2" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = -1.0
+anchor_top = 1.085
+anchor_right = 1.975
+anchor_bottom = 1.86
+offset_left = 730.0
+offset_top = 402.0
+offset_right = 1199.0
+offset_bottom = 557.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "The provider gathers data or information
+ and conducts a program-based analysis on the 
+degree to which the CME mission of the provider 
+has been met through the conduct of
+ CME activities/educational interventions. "
+label_settings = SubResource("LabelSettings_mh8x6")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Spot2" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(200, 200)
+offset_left = 859.0
+offset_top = 183.0
+offset_right = 1059.0
+offset_bottom = 383.0
+expand_mode = 1
+script = ExtResource("2_ngvx4")
+
+[node name="Panel" type="Panel" parent="Spot2"]
+show_behind_parent = true
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Spot2"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -32.0
+offset_right = 59.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MISSION"
+label_settings = SubResource("LabelSettings_tjakb")
+
+[node name="Definition3" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = -0.76
+anchor_top = 1.205
+anchor_right = 1.676
+anchor_bottom = 1.825
+offset_left = 1228.0
+offset_top = 411.0
+offset_right = 1837.0
+offset_bottom = 566.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.8, 0.8)
+text = "The provider identifies, plans and implements
+ the needed or desired changes in the overall program 
+(eg, planners, teachers, infrastructure, methods, resources,
+ facilities, interventions) that are required to improve on ability 
+to meet the CME mission. "
+label_settings = SubResource("LabelSettings_mh8x6")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Spot3" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(200, 200)
+offset_left = 1380.0
+offset_top = 170.0
+offset_right = 1580.0
+offset_bottom = 370.0
+expand_mode = 1
+script = ExtResource("2_ngvx4")
+
+[node name="Panel" type="Panel" parent="Spot3"]
+show_behind_parent = true
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Spot3"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.5
+offset_top = -32.0
+offset_right = 78.5
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "PROGRAM
+IMPROVEMENTS"
+label_settings = SubResource("LabelSettings_mh8x6")
+horizontal_alignment = 1
+
+[node name="CheckWinButton" type="TextureButton" parent="."]
+offset_left = 886.0
+offset_top = 597.0
+offset_right = 926.0
+offset_bottom = 637.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("5_5gcnl")
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="Label" parent="CheckWinButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.74167
+anchor_top = -4.30833
+anchor_right = 4.30833
+anchor_bottom = -3.65833
+offset_right = 282.0
+offset_bottom = 26.0
+text = "Match the Words to their Definitions"
+label_settings = SubResource("LabelSettings_jak64")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="CheckWinButton"]
+layout_mode = 0
+anchor_left = -0.908334
+anchor_top = 0.725
+anchor_right = 1.81667
+anchor_bottom = 1.375
+text = "Check Answer"
+label_settings = SubResource("LabelSettings_qstqw")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="CheckWinButton" to="." method="_on_check_win_button_pressed"]
