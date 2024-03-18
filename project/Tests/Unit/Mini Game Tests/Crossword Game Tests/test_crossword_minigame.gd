@@ -7,7 +7,7 @@ var test_texture: Texture
 func before_all() -> void:
 	test_mini = test_mini_preload.instantiate()
 	get_tree().root.add_child(test_mini)
-	test_texture = load("res://Assets/Crossword_Assets/andragogy.png")
+	test_texture = load("res://Assets/Crossword_Assets/Andragogy.png")
 
 
 func test_check_answer_incorrect():

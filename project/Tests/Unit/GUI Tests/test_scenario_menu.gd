@@ -11,7 +11,7 @@ func before_all() -> void:
 	get_tree().root.add_child(test_scenario)
 	hud = test_scenario.get_node("HUD")
 	hud.in_game_menu_press("Scenario")
-	test_scenario_menu = test_scenario.get_node("Scenario_menu")
+	test_scenario_menu = hud.get_node("Scenario_menu")
 
 
 func test_on_continue_pressed() -> void:
