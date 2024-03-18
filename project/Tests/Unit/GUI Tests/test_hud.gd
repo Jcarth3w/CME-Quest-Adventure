@@ -111,8 +111,8 @@ func test_in_game_menu_press_resume() -> void:
 
 
 func test_in_game_menu_press_scenario() -> void:
-	hud.in_game_menu_press("Resume")
-	assert_eq(test_scenario.has_node("Scenario_menu"), true)
+	hud.in_game_menu_press("Scenario")
+	assert_eq(hud.has_node("Scenario_menu"), true)
 
 
 func test_on_room_select() -> void:

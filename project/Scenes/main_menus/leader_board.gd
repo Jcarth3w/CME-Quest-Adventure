@@ -4,24 +4,7 @@ var times = []
 var users = []
 
 func _ready():
-	for child in get_children():
-		if child is Button:
-			child.pressed.connect(on_scenario_pressed.bind(child))
 	$DBoperations.make_get_request()
-
-
-func on_scenario_pressed(button) -> void:
-	match button.name:
-		"Scenario1Button":
-			if $Scenario1Times.visible == false:
-				populate_leader_board(1)
-				$Scenario1Times.visible = true
-				$Scenario2Times.visible = false
-		"Scenario2Button":
-			if $Scenario2Times.visible == false:
-				populate_leader_board(2)
-				$Scenario2Times.visible = true
-				$Scenario1Times.visible = false
 
 
 func _on_http_request_request_completed(result, response_code, headers, body):
@@ -60,4 +43,15 @@ func populate_leader_board(scenario_number):
 
 func _on_back_button_pressed():
 	get_tree().change_scene_to_file("res://Scenes/main_menus/main_menu.tscn")
+
+
+func _on_scenario_1_button_pressed():
+	if $Scenario1Times.visible == false:
+		populate_leader_board(1)
+		$Scenario1Times.visible = true
+		$Scenario2Times.visible = false
+
+
+func _on_scenario_2_button_pressed():
+	pass
 
