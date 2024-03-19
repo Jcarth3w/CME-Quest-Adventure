@@ -22,6 +22,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Create export_presets.cfg
+        run: |
+          echo "[preset]
+          name=\"Windows\"
+          platform=\"Windows\"
+          custom_binary=\"CME_Quest_Adventures.exe\"
+          format=\"windows\"
+          export_filter=\"*.exe\"" > export_presets.cfg
+
       - name: Move Windows templates into directory
         run: |
           mkdir -v -p ~/.local/share/godot/export_templates
