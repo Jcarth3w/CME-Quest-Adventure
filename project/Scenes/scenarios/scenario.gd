@@ -1,17 +1,20 @@
 class_name Scenario
 extends Node2D
-var current_room = 1
+
+@export var scenario_num : int
+@export var max_items : int
+@export var current_room : Node2D
+
+
 var username = ""
 var finished_time
 var finished = 0
-var scenario_num = 1
 var rooms = []
 var open_screen_path = "res://Scenes/gui/menus/opening_screen.tscn"
 var end_screen_path = "res://Scenes/static_scene/end_screen.tscn"
 
 
 func _ready():
-	current_room = find_child("Room1")
 	var open_screen = load(open_screen_path)
 	var open_scrn_inst = open_screen.instantiate()
 	open_scrn_inst.get_node("ContinueButton").pressed.connect(on_open_screen_close)
@@ -38,7 +41,7 @@ func enter_room(new_room):
 
 
 func check_win() -> bool:
-	if $HUD.items.size() == 7:
+	if $HUD.items.size() == max_items:
 		return true
 	$popup_gui.show_message("You have unfinished objectives")
 	return false
@@ -61,7 +64,7 @@ func _on_room_final() -> void:
 	var end_screen = load(end_screen_path)
 	var end_screen_inst = end_screen.instantiate()
 	end_screen_inst.username = username
-	end_screen_inst.scen_num = 1
+	end_screen_inst.scen_num = scenario_num
 	end_screen_inst.time_val = $HUD/Timer/Label.text
 	add_child(end_screen_inst)
 
