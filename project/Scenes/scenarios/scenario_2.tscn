@@ -1,15 +1,18 @@
 [gd_scene load_steps=6 format=3 uid="uid://cknyxopjpq58i"]
 
-[ext_resource type="Script" path="res://Scenes/scenarios/scenario_2.gd" id="1_h4syf"]
+[ext_resource type="Script" path="res://Scenes/scenarios/scenario.gd" id="1_0b13o"]
 [ext_resource type="PackedScene" uid="uid://d02w8tm7p5omg" path="res://Scenes/rooms/room_4.tscn" id="2_j7kmh"]
-[ext_resource type="PackedScene" uid="uid://bp3esxqwlfxd0" path="res://Scenes/gui/popup_gui.tscn" id="3_208rw"]
+[ext_resource type="PackedScene" uid="uid://bp3esxqwlfxd0" path="res://Scenes/gui/popup/popup_gui.tscn" id="3_208rw"]
 [ext_resource type="PackedScene" uid="uid://b8xl3wqxn7v5d" path="res://Scenes/gui/HUD.tscn" id="3_ac87f"]
 [ext_resource type="PackedScene" uid="uid://wbewelwvsha2" path="res://Components/post_score.tscn" id="4_g1nls"]
 
-[node name="scenario_2" type="Node2D"]
-script = ExtResource("1_h4syf")
+[node name="scenario_2" type="Node2D" node_paths=PackedStringArray("current_room")]
+script = ExtResource("1_0b13o")
+scenario_num = 2
+max_items = 1
+current_room = NodePath("Room4")
 
-[node name="Room1" parent="." instance=ExtResource("2_j7kmh")]
+[node name="Room4" parent="." instance=ExtResource("2_j7kmh")]
 
 [node name="popup_gui" parent="." instance=ExtResource("3_208rw")]
 
