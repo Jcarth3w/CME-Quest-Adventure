@@ -15,5 +15,4 @@ func test_on_scenario1_pressed() -> void:
 	assert_eq(test_leaderboard.get_node("Scenario2Times").visible, false)
 
 
-func test_parse_times() -> void:
-	
+
