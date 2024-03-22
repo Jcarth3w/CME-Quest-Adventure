@@ -1,6 +1,6 @@
 extends GutTest
 
-var test_scenario_preload = preload("res://Tests/TestScenario.tscn")
+var test_scenario_preload = preload("res://Scenes/scenarios/scenario_1.tscn")
 var test_scenario: Node2D
 var test_combo_preload = preload("res://Clickables/room_unlocks/combo_unlock.tscn")
 var test_combo: Node2D
