@@ -1,9 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://b5lhwjd1itais"]
-
-[ext_resource type="Script" path="res://Clickables/drag_and_drop/drop.gd" id="1_l37qt"]
+[gd_scene format=3 uid="uid://b5lhwjd1itais"]
 
 [node name="Drop" type="TextureRect"]
 offset_right = 40.0
 offset_bottom = 40.0
 expand_mode = 1
-script = ExtResource("1_l37qt")
