@@ -1,3 +1,4 @@
+class_name Drop
 extends TextureRect
 
 signal gathered_data(values)
