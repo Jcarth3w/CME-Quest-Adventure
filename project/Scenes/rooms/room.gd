@@ -13,6 +13,8 @@ func _ready() -> void:
 	for child in get_children():
 		if child is Clickable:
 			connect_clickable(child)
+		if child.has_signal("gathered_data"):
+			child.gathered_data.connect(on_drag_and_drop.bind(self))
 
 	if get_parent() != null and get_parent().has_node("HUD"):
 		get_parent().get_node("HUD").pause.connect(_on_hud_pause)
@@ -58,6 +60,10 @@ func give_item(title, texture):
 
 func unlock(room_number) -> void:
 	get_parent().room_unlock(room_number)
+
+
+func on_drag_and_drop(drop):
+	drop.action()
 
 
 func _on_hud_pause(value) -> void:
