@@ -8,7 +8,7 @@ func action() -> void:
 
 
 func connect_mouse() -> void:
-	set_mouse_filter(0)
+	set_mouse_filter(MOUSE_FILTER_STOP)
 	mouse_entered.connect(on_mouse_entered)
 	mouse_exited.connect(on_mouse_exited)
 
