@@ -55,7 +55,7 @@ func room_unlock(room_number):
 
 
 func on_open_screen_close() -> void:
-	$Room1.resume_room()
+	current_room.resume_room()
 	$HUD/Timer.start()
 
 
