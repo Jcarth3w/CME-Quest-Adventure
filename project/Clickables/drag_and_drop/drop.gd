@@ -36,3 +36,7 @@ func is_position_in_designated_area(rect_position):
 func _on_drag_partner_dropped(item, image):
 	current_item = item
 	current_texture = image
+
+
+func action():
+	pass
