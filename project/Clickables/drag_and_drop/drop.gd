@@ -15,7 +15,7 @@ func _ready() -> void:
 	original_texture = texture 
 	
 	
-func _drop_data(at_position, data):
+func _drop_data(at_position, _data):
 	if is_position_in_designated_area(at_position):
 		texture = current_texture
 		gathered_data.emit()
@@ -24,14 +24,15 @@ func _drop_data(at_position, data):
 		texture = original_texture
 
 
-func _can_drop_data(at_position, data):
+func _can_drop_data(_at_position, data):
 	return data is Texture2D
 
 
-func is_position_in_designated_area(position):
+func is_position_in_designated_area(rect_position):
 	var designated_area = Rect2(Vector2 (0, 0), Vector2(320, 320))
-	return designated_area.has_point(position)
+	return designated_area.has_point(rect_position)
 
 
-func _on_drag_partner_dropped(item):
+func _on_drag_partner_dropped(item, image):
 	current_item = item
+	current_texture = image

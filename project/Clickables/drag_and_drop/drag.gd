@@ -11,11 +11,11 @@ func _ready() -> void:
 	original_texture = texture
 
 
-func _get_drag_data(at_position):
+func _get_drag_data(_at_position):
 	var preview = create_preview()
-	data_dropped.emit(self)
+	data_dropped.emit(self, original_texture)
 	set_drag_preview(preview)
-	return preview.get_child().texture
+	return original_texture
 
 func create_preview():
 	var preview_rect = TextureRect.new()
