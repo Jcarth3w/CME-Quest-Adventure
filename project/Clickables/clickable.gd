@@ -1,7 +1,9 @@
 class_name Clickable
 extends TextureButton
 
+@export var sound : AudioStream
 
+signal play
 
 func action() -> void:
 	pass
@@ -23,3 +25,6 @@ func on_mouse_exited():
 	scale = scale / 1.1
 	position.x += 10
 	position.y += 10
+
+func play_sound() -> void:
+	play.emit(sound)

@@ -80,3 +80,8 @@ func get_data():
 
 func on_username_recieved(current_username):
 	username = current_username
+
+
+func play_sound(sound):
+	$AudioStreamPlayer.stream = sound
+	$AudioStreamPlayer.play()

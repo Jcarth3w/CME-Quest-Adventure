@@ -23,6 +23,7 @@ func action():
 
 func _on_finished() -> void:
 	scene_changed.emit("resume")
+	play.emit(sound)
 	finished = true
 	if prize_texture != null:
 		get_parent().give_item(prize_name, prize_texture)
