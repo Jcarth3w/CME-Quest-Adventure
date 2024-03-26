@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://rksr0yf3cfrd"]
+[gd_scene load_steps=3 format=3 uid="uid://rksr0yf3cfrd"]
 
 [ext_resource type="Script" path="res://Clickables/movement/movement_object.gd" id="1_hfrc2"]
+[ext_resource type="AudioStream" uid="uid://bvml46igb4p5b" path="res://Assets/SFX/pickup_item.wav" id="2_j45ut"]
 
 [node name="Movement_Object" type="TextureButton"]
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_hfrc2")
+sound = ExtResource("2_j45ut")

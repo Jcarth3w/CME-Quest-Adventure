@@ -4,6 +4,7 @@ extends Node2D
 @export var scenario_num : int
 @export var max_items : int
 @export var current_room : Node2D
+@export var final_sound : AudioStream
 
 
 var username = ""
@@ -66,6 +67,7 @@ func _on_room_final() -> void:
 	end_screen_inst.username = username
 	end_screen_inst.scen_num = scenario_num
 	end_screen_inst.time_val = $HUD/Timer/Label.text
+	play_sound(final_sound)
 	add_child(end_screen_inst)
 
 

@@ -17,8 +17,8 @@ func _ready() -> void:
 func check_win_button_pressed():
 	if compare_dict(correct_order, player_order):
 		label.text = "You Win!"
-		await get_tree().create_timer(1).timeout
 		finished.emit()
+		await get_tree().create_timer(1).timeout
 		get_parent().final.emit()
 		queue_free()
 	else:

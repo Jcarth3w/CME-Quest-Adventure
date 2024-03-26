@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccliul8ayjg6h"]
+[gd_scene load_steps=4 format=3 uid="uid://ccliul8ayjg6h"]
 
 [ext_resource type="Texture2D" uid="uid://d0i8yp2bxew1a" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-14.png" id="1_35fcq"]
 [ext_resource type="Script" path="res://Clickables/room_unlocks/key.gd" id="2_67gcs"]
+[ext_resource type="AudioStream" uid="uid://daknlpvs2lmke" path="res://Assets/SFX/unlock_door.wav" id="3_o0rcm"]
 
 [node name="Key" type="TextureButton"]
 offset_right = 2250.0
@@ -9,3 +10,4 @@ offset_bottom = 2250.0
 scale = Vector2(0.075, 0.075)
 texture_normal = ExtResource("1_35fcq")
 script = ExtResource("2_67gcs")
+sound = ExtResource("3_o0rcm")

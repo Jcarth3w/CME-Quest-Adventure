@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://d0g5gdljbiet3" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-04.png" id="1_678gh"]
 [ext_resource type="Script" path="res://Scenes/rooms/room.gd" id="1_i68ly"]
-[ext_resource type="Texture2D" uid="uid://cwvtaqouh4meb" path="res://Assets/AdjustedStandfordAssets/FilingCabinet.png" id="2_dgsrt"]
+[ext_resource type="Texture2D" uid="uid://35n08j21go7k" path="res://Assets/AdjustedStandfordAssets/FilingCabinet.png" id="2_dgsrt"]
 [ext_resource type="PackedScene" uid="uid://pn2l6ln2hl3j" path="res://Clickables/new_scene/new_scene_object.tscn" id="2_tubx5"]
-[ext_resource type="Texture2D" uid="uid://cc0e336mv83k3" path="res://Assets/AdjustedStandfordAssets/ResizedLaptop.png" id="4_eou70"]
+[ext_resource type="Texture2D" uid="uid://ci7deevjv20ji" path="res://Assets/AdjustedStandfordAssets/ResizedLaptop.png" id="4_eou70"]
 [ext_resource type="Texture2D" uid="uid://dwqw21d8i31b" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-01(1).png" id="4_hyb53"]
 [ext_resource type="Texture2D" uid="uid://ihqucqebj6dc" path="res://Assets/Sprites/room_1_custom_placeholders/Trash_can.png" id="6_4wrwl"]
 [ext_resource type="Texture2D" uid="uid://dmm1o4xemcxfx" path="res://Assets/Sprites/Room2/Desk.png" id="6_mdhq7"]

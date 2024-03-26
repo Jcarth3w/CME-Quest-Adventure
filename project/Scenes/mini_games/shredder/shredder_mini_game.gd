@@ -17,6 +17,6 @@ func _on_check_bttn_pressed():
 func check_bttn_pressed():
 	if $ClipBoard.check_win():
 		$CheckBttn/Label.text = "You win!"
-		await get_tree().create_timer(1).timeout
 		finished.emit()
+		await get_tree().create_timer(1).timeout
 		queue_free()

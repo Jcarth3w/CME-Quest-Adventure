@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://db6kx103okwhb"]
+[gd_scene load_steps=3 format=3 uid="uid://db6kx103okwhb"]
 
 [ext_resource type="Script" path="res://Clickables/pickup/pickup.gd" id="1_ko4ml"]
+[ext_resource type="AudioStream" uid="uid://bvml46igb4p5b" path="res://Assets/SFX/pickup_item.wav" id="2_76o26"]
 
 [node name="Pickup" type="TextureButton"]
 script = ExtResource("1_ko4ml")
+sound = ExtResource("2_76o26")

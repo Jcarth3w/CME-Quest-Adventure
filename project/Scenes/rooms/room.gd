@@ -28,11 +28,9 @@ func on_clickable(clickable) -> void:
 		else:
 			clickable.action()
 	else:
-		if clickable is NewSceneClickable:
-			clickable.action()
-		else:
-			clickable.action()
-			clickable.play_sound()
+		clickable.action()
+		if not clickable is NewSceneClickable:
+			get_parent().play_sound(clickable.sound)
 
 
 
@@ -77,7 +75,5 @@ func _on_hud_pause(value) -> void:
 	else:
 		resume_room()
 
-
-func _on_clickable_sound_play(emited_sound):
-	var sound = emited_sound
+func send_sound(sound):
 	get_parent().play_sound(sound)
