@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c7brg2hyybb7t"]
+[gd_scene load_steps=4 format=3 uid="uid://c7brg2hyybb7t"]
 
 [ext_resource type="Texture2D" uid="uid://bihv8ad0n5y0p" path="res://Assets/Sprites/room_1_custom_placeholders/Resized_whiteboard.png" id="1_mw6l2"]
 [ext_resource type="Script" path="res://Clickables/static_scene_btn/static_scene_button.gd" id="2_6qtnk"]
+[ext_resource type="AudioStream" uid="uid://bvml46igb4p5b" path="res://Assets/SFX/pickup_item.wav" id="3_e471v"]
 
 [node name="StaticSceneButton" type="TextureButton"]
 offset_left = 128.0
@@ -10,3 +11,4 @@ offset_right = 513.0
 offset_bottom = 481.0
 texture_normal = ExtResource("1_mw6l2")
 script = ExtResource("2_6qtnk")
+sound = ExtResource("3_e471v")

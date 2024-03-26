@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Clickables/new_scene/new_scene_object.gd" id="5_q81bl"]
 [ext_resource type="Texture2D" uid="uid://d0g5gdljbiet3" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-04.png" id="5_rd7x1"]
 [ext_resource type="Texture2D" uid="uid://beahs7n6gpb3f" path="res://Assets/AdjustedStandfordAssets/ResizedBookshelf.png" id="6_wkf6y"]
+[ext_resource type="AudioStream" uid="uid://dfoyl604qjd56" path="res://Assets/SFX/minigame_win.wav" id="7_iyhw7"]
 [ext_resource type="PackedScene" uid="uid://c7brg2hyybb7t" path="res://Clickables/static_scene_btn/static_scene_button.tscn" id="7_x8tk5"]
 [ext_resource type="Texture2D" uid="uid://dmm1o4xemcxfx" path="res://Assets/Sprites/Room2/Desk.png" id="9_huuy6"]
 [ext_resource type="Texture2D" uid="uid://dhxim7wroyin3" path="res://Assets/Sprites/Room2/keypad.PNG" id="9_tgu88"]
@@ -15,7 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://rksr0yf3cfrd" path="res://Clickables/movement/Movement_Object.tscn" id="11_a351n"]
 [ext_resource type="Texture2D" uid="uid://w10bfogg4ojl" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-09.png" id="12_jxi8s"]
 [ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Clickables/pickup/pickup.tscn" id="13_8i57d"]
-[ext_resource type="Script" path="res://Clickables/movement/movement_object.gd" id="14_x07qm"]
 [ext_resource type="Texture2D" uid="uid://d2exdrfmom6g5" path="res://Assets/Sprites/Iteration 3 assets/Poster.png" id="15_nbiuo"]
 
 [node name="Room2" type="Node2D"]
@@ -62,6 +62,7 @@ script = ExtResource("5_q81bl")
 scene_path = "res://Scenes/mini_games/Crossword_Puzzle/crossword_minigame.tscn"
 prize_texture = ExtResource("5_rd7x1")
 prize_name = "books"
+sound = ExtResource("7_iyhw7")
 
 [node name="Bookshelf" parent="." instance=ExtResource("7_x8tk5")]
 offset_left = 1328.0
@@ -94,7 +95,6 @@ offset_right = 1528.0
 offset_bottom = 2492.0
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("12_jxi8s")
-script = ExtResource("14_x07qm")
 x_coordinate = 568
 y_coordinate = 432
 
