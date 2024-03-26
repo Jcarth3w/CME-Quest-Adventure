@@ -29,8 +29,8 @@ func check_win() -> void:
 
 func win() -> void:
 	$Label.text = "You win!"
-	await get_tree().create_timer(1.5).timeout
 	finished.emit()
+	await get_tree().create_timer(1.5).timeout
 	queue_free()
 
 
