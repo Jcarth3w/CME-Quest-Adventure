@@ -1,4 +1,4 @@
-extends Clickable
+extends StaticScene
 
 signal room
 
