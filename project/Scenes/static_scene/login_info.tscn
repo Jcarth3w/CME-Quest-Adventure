@@ -1,14 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://dweknn872ay27"]
+[gd_scene load_steps=6 format=3 uid="uid://dweknn872ay27"]
 
-[ext_resource type="Script" path="res://Scenes/static_scene/whiteboard.gd" id="1_p7du3"]
+[ext_resource type="Script" path="res://Scenes/static_scene/login_info.gd" id="1_768n0"]
 [ext_resource type="Texture2D" uid="uid://cmagc28cejsej" path="res://Assets/Sprites/Iteration 3 assets/Trashcan.png" id="2_5u4xu"]
 [ext_resource type="Texture2D" uid="uid://bbh78g6vr3mei" path="res://Assets/Sprites/Iteration 3 assets/resizedPaperShreds.png" id="3_f8a6p"]
+[ext_resource type="PackedScene" uid="uid://bscfg3pe82sgp" path="res://Clickables/Removables/Remove_button.tscn" id="3_ncpyt"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bm2ft"]
 font_color = Color(0, 0, 0, 1)
 
 [node name="LoginTrashCan" type="CanvasLayer"]
-script = ExtResource("1_p7du3")
+script = ExtResource("1_768n0")
 
 [node name="Background" type="Sprite2D" parent="."]
 modulate = Color(0, 0.0470588, 0.529412, 1)
@@ -47,32 +48,31 @@ Complianc3"
 label_settings = SubResource("LabelSettings_bm2ft")
 metadata/_edit_use_anchors_ = true
 
-[node name="PaperShreds3" type="TextureButton" parent="."]
-offset_left = 744.0
-offset_top = 660.0
-offset_right = 2503.0
-offset_bottom = 1388.0
-rotation = 0.178017
-scale = Vector2(0.212, 0.179)
+[node name="PaperShreds1" parent="." instance=ExtResource("3_ncpyt")]
+offset_left = 820.0
+offset_top = 602.0
+offset_right = 2579.0
+offset_bottom = 1330.0
+rotation = -0.0453351
+scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("3_f8a6p")
 
-[node name="PaperShreds2" type="TextureButton" parent="."]
-offset_left = 843.0
-offset_top = 658.0
-offset_right = 2602.0
-offset_bottom = 1386.0
-rotation = -0.062495
-scale = Vector2(0.212406, 0.195851)
+[node name="PaperShreds2" parent="." instance=ExtResource("3_ncpyt")]
+offset_left = 738.0
+offset_top = 622.0
+offset_right = 2497.0
+offset_bottom = 1350.0
+rotation = 0.183124
+scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("3_f8a6p")
 
-[node name="PaperShreds" type="TextureButton" parent="."]
-offset_left = 726.0
-offset_top = 571.0
-offset_right = 2485.0
-offset_bottom = 1299.0
-rotation = 0.117652
-scale = Vector2(0.214889, 0.190444)
+[node name="PaperShreds3" parent="." instance=ExtResource("3_ncpyt")]
+offset_left = 854.0
+offset_top = 681.0
+offset_right = 2613.0
+offset_bottom = 1409.0
+rotation = -0.0694409
+scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("3_f8a6p")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="PaperShreds" to="." method="_on_paper_shreds_pressed"]
