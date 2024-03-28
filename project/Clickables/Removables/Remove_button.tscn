@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bscfg3pe82sgp"]
+
+[ext_resource type="Script" path="res://Clickables/Removables/Remove_Button.gd" id="1_t8a8r"]
+
+[node name="RemoveButton" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_t8a8r")
