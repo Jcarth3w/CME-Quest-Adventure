@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cknyxopjpq58i"]
 
 [ext_resource type="Script" path="res://Scenes/scenarios/scenario.gd" id="1_0b13o"]
-[ext_resource type="AudioStream" uid="uid://bmewjqq14bmh0" path="res://Assets/SFX/game_win.wav" id="2_8fe0y"]
+[ext_resource type="AudioStream" uid="uid://fgvylfpbkftd" path="res://Assets/SFX/game_win.wav" id="2_8fe0y"]
 [ext_resource type="PackedScene" uid="uid://d02w8tm7p5omg" path="res://Scenes/rooms/room_4.tscn" id="2_j7kmh"]
 [ext_resource type="PackedScene" uid="uid://bp3esxqwlfxd0" path="res://Scenes/gui/popup/popup_gui.tscn" id="3_208rw"]
 [ext_resource type="PackedScene" uid="uid://b8xl3wqxn7v5d" path="res://Scenes/gui/HUD.tscn" id="3_ac87f"]
@@ -11,10 +11,10 @@
 script = ExtResource("1_0b13o")
 scenario_num = 2
 max_items = 1
-current_room = NodePath("Room4")
+current_room = NodePath("Room1")
 final_sound = ExtResource("2_8fe0y")
 
-[node name="Room4" parent="." instance=ExtResource("2_j7kmh")]
+[node name="Room1" parent="." instance=ExtResource("2_j7kmh")]
 
 [node name="popup_gui" parent="." instance=ExtResource("3_208rw")]
 
