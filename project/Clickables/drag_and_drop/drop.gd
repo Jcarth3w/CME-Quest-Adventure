@@ -12,7 +12,9 @@ var current_item
 
 
 func _ready() -> void:
-	drag_partner.data_dropped.connect(_on_drag_partner_dropped)
+	for child in get_parent().get_children():
+		if child is Drag:
+			child.data_dropped.connect(_on_drag_drop)
 	original_texture = texture 
 	
 	
@@ -34,7 +36,7 @@ func is_position_in_designated_area(rect_position):
 	return designated_area.has_point(rect_position)
 
 
-func _on_drag_partner_dropped(item, image):
+func _on_drag_drop(item, image):
 	current_item = item
 	current_texture = image
 
