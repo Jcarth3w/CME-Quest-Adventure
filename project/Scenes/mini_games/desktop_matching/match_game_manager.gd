@@ -23,9 +23,15 @@ func check_pair() -> void:
 
 
 func check_win() -> void:
-	if winning_pair.is_matched == true:
-			win()
-			won = true
+	var matchedCount = 0
+	for child in get_children():
+		if child is Node2D:
+			if(child.is_matched):
+				matchedCount = matchedCount + 1
+	if(matchedCount == 8):
+		win()
+		won = true
+		
 
 func win() -> void:
 	$Label.text = "You win!"

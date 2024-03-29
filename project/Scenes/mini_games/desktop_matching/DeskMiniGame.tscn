@@ -1,22 +1,27 @@
-[gd_scene load_steps=14 format=3 uid="uid://ckueucjs1nwf3"]
+[gd_scene load_steps=16 format=3 uid="uid://ckueucjs1nwf3"]
 
 [ext_resource type="Script" path="res://Scenes/mini_games/desktop_matching/match_game_manager.gd" id="1_0xnwf"]
 [ext_resource type="Script" path="res://Scenes/mini_games/desktop_matching/pair.gd" id="2_lge7s"]
-[ext_resource type="Texture2D" uid="uid://cbcx08btklchr" path="res://Assets/Sprites/room_1_custom_placeholders/Unknown_paper.png" id="3_o21xa"]
+[ext_resource type="Texture2D" uid="uid://berygyrnrk0u5" path="res://Assets/StanfordAssets/Card_back.png" id="3_hhyvw"]
 [ext_resource type="Script" path="res://Scenes/mini_games/desktop_matching/matching_object.gd" id="4_nsjif"]
-[ext_resource type="Texture2D" uid="uid://c15mt6j8pobst" path="res://Assets/Sprites/generic_items/genericItem_color_005.png" id="5_fdj5v"]
-[ext_resource type="Texture2D" uid="uid://ytuunfigl51e" path="res://Assets/Sprites/generic_items/genericItem_color_002.png" id="5_wlnu6"]
-[ext_resource type="Texture2D" uid="uid://ciwlkhjal53fw" path="res://Assets/Sprites/generic_items/genericItem_color_003.png" id="6_fyt4m"]
-[ext_resource type="Texture2D" uid="uid://d2jkjc2gxd0c3" path="res://Assets/Sprites/generic_items/genericItem_color_007.png" id="8_0srml"]
-[ext_resource type="Texture2D" uid="uid://dqunufa6yvb80" path="res://Assets/Sprites/generic_items/genericItem_color_032.png" id="9_v3eyn"]
-[ext_resource type="Texture2D" uid="uid://rqcubyw14bh7" path="res://Assets/Sprites/generic_items/genericItem_color_051.png" id="10_a7al7"]
-[ext_resource type="Texture2D" uid="uid://c2bx2c7fc4a18" path="res://Assets/Sprites/generic_items/genericItem_color_058.png" id="11_gwyyy"]
-[ext_resource type="Texture2D" uid="uid://dtx22o7apq7c5" path="res://Assets/Sprites/generic_items/genericItem_color_073.png" id="12_23j8c"]
+[ext_resource type="Texture2D" uid="uid://4sau8qx7oma3" path="res://Card_front.png" id="5_xtxdn"]
+[ext_resource type="Texture2D" uid="uid://c4jko5jnnpkg5" path="res://Assets/StanfordAssets/checklist.png" id="6_dp5pl"]
+[ext_resource type="Texture2D" uid="uid://mvix0xvqasmw" path="res://Assets/StanfordAssets/magnifying_glass.png" id="7_rlax6"]
+[ext_resource type="Texture2D" uid="uid://bnmarmnacxlxl" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-08.png" id="8_i6xat"]
+[ext_resource type="Texture2D" uid="uid://cwcxsfslcneqx" path="res://Assets/StanfordAssets/puzzle_piece.png" id="9_5sujp"]
+[ext_resource type="Texture2D" uid="uid://bk1e6mbabiw36" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-22.png" id="9_lyuf3"]
+[ext_resource type="Texture2D" uid="uid://dwws10go58xox" path="res://Assets/StanfordAssets/megaphone.png" id="10_bx1vf"]
+[ext_resource type="Texture2D" uid="uid://dt7sy0crl46pu" path="res://Assets/StanfordAssets/target.png" id="11_u0tca"]
+[ext_resource type="Texture2D" uid="uid://bovqulmlnpff" path="res://Assets/StanfordAssets/chicken.png" id="13_km731"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_o70vy"]
 font_size = 64
 outline_size = 16
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_v5vuo"]
+font_size = 133
+font_color = Color(0, 0, 0, 1)
 
 [node name="MiniGame" type="Node2D" node_paths=PackedStringArray("winning_pair")]
 script = ExtResource("1_0xnwf")
@@ -31,10 +36,10 @@ offset_bottom = 1080.0
 color = Color(0.678431, 0.4, 0.878431, 1)
 
 [node name="FrontBackground" type="ColorRect" parent="."]
-offset_left = 26.0
-offset_top = 155.0
-offset_right = 1900.0
-offset_bottom = 1055.0
+offset_left = 64.0
+offset_top = 148.0
+offset_right = 1886.0
+offset_bottom = 1048.0
 color = Color(0.760784, 0.592157, 0.984314, 1)
 
 [node name="Label" type="Label" parent="."]
@@ -46,7 +51,7 @@ offset_top = 159.0
 offset_right = 1343.0
 offset_bottom = 250.0
 grow_horizontal = 2
-text = "Find the Conference Books"
+text = "Match the image to its related word"
 label_settings = SubResource("LabelSettings_o70vy")
 horizontal_alignment = 1
 
@@ -58,43 +63,77 @@ card_1 = NodePath("Card 1")
 card_2 = NodePath("Card 2")
 
 [node name="Card 1" type="Sprite2D" parent="Pair 1"]
-position = Vector2(-1.79007, 48.0165)
-scale = Vector2(0.421, 0.5)
-texture = ExtResource("3_o21xa")
+position = Vector2(1.78992, 30.9579)
+scale = Vector2(0.12055, 0.140245)
+texture = ExtResource("3_hhyvw")
 script = ExtResource("4_nsjif")
-card_image = ExtResource("5_wlnu6")
-hide_image = ExtResource("3_o21xa")
+card_image = ExtResource("5_xtxdn")
+hide_image = ExtResource("3_hhyvw")
+
+[node name="Label" type="Label" parent="Pair 1/Card 1"]
+visible = false
+offset_left = -134.565
+offset_top = -359.999
+offset_right = 618.435
+offset_bottom = -174.999
+rotation = 0.954598
+text = "Regulations"
+label_settings = SubResource("LabelSettings_v5vuo")
+horizontal_alignment = 1
 
 [node name="Card 2" type="Sprite2D" parent="Pair 1"]
-position = Vector2(433.64, 169.953)
-scale = Vector2(0.395887, 0.471831)
-texture = ExtResource("3_o21xa")
+position = Vector2(1.34253, 160.476)
+scale = Vector2(0.11905, 0.140821)
+texture = ExtResource("3_hhyvw")
 script = ExtResource("4_nsjif")
-card_image = ExtResource("5_wlnu6")
-hide_image = ExtResource("3_o21xa")
+card_image = ExtResource("5_xtxdn")
+hide_image = ExtResource("3_hhyvw")
+
+[node name="Card Image" type="Sprite2D" parent="Pair 1/Card 2"]
+visible = false
+position = Vector2(3.75919, -8.97342)
+scale = Vector2(0.763554, 0.898477)
+texture = ExtResource("6_dp5pl")
 
 [node name="Pair 2" type="Node2D" parent="." node_paths=PackedStringArray("card_1", "card_2")]
-position = Vector2(735, 276)
-scale = Vector2(1.80682, 1.42725)
+position = Vector2(738, 290)
+scale = Vector2(2.005, 1.583)
 script = ExtResource("2_lge7s")
 card_1 = NodePath("Card 3")
-card_2 = NodePath("Card4")
+card_2 = NodePath("Card 4")
 
 [node name="Card 3" type="Sprite2D" parent="Pair 2"]
-position = Vector2(203.119, 70.0648)
-scale = Vector2(0.458517, 0.449295)
-texture = ExtResource("3_o21xa")
+position = Vector2(183.541, 31.1005)
+scale = Vector2(0.133778, 0.139904)
+texture = ExtResource("3_hhyvw")
 script = ExtResource("4_nsjif")
-card_image = ExtResource("6_fyt4m")
-hide_image = ExtResource("3_o21xa")
+card_image = ExtResource("5_xtxdn")
+hide_image = ExtResource("3_hhyvw")
 
-[node name="Card4" type="Sprite2D" parent="Pair 2"]
-position = Vector2(379.673, 63.759)
-scale = Vector2(0.502, 0.5)
-texture = ExtResource("3_o21xa")
+[node name="Label" type="Label" parent="Pair 2/Card 3"]
+visible = false
+offset_left = -134.565
+offset_top = -359.999
+offset_right = 618.435
+offset_bottom = -174.999
+rotation = 0.954598
+text = "Monitoring"
+label_settings = SubResource("LabelSettings_v5vuo")
+horizontal_alignment = 1
+
+[node name="Card 4" type="Sprite2D" parent="Pair 2"]
+position = Vector2(349.626, 30.8945)
+scale = Vector2(0.131717, 0.140357)
+texture = ExtResource("3_hhyvw")
 script = ExtResource("4_nsjif")
-card_image = ExtResource("6_fyt4m")
-hide_image = ExtResource("3_o21xa")
+card_image = ExtResource("5_xtxdn")
+hide_image = ExtResource("3_hhyvw")
+
+[node name="Card Image" type="Sprite2D" parent="Pair 2/Card 4"]
+visible = false
+position = Vector2(15.1445, 22.9266)
+scale = Vector2(0.564662, 0.701124)
+texture = ExtResource("7_rlax6")
 
 [node name="Pair3" type="Node2D" parent="." node_paths=PackedStringArray("card_1", "card_2")]
 script = ExtResource("2_lge7s")
@@ -102,20 +141,36 @@ card_1 = NodePath("Card 5")
 card_2 = NodePath("Card 6")
 
 [node name="Card 5" type="Sprite2D" parent="Pair3"]
-position = Vector2(421, 566)
-scale = Vector2(0.635, 0.5)
-texture = ExtResource("3_o21xa")
+position = Vector2(1439, 543)
+scale = Vector2(0.27297, 0.228385)
+texture = ExtResource("3_hhyvw")
 script = ExtResource("4_nsjif")
-card_image = ExtResource("5_fdj5v")
-hide_image = ExtResource("3_o21xa")
+card_image = ExtResource("5_xtxdn")
+hide_image = ExtResource("3_hhyvw")
+
+[node name="Label" type="Label" parent="Pair3/Card 5"]
+visible = false
+offset_left = -143.822
+offset_top = -359.872
+offset_right = 621.178
+offset_bottom = -174.872
+rotation = 0.954598
+text = "Assessment"
+label_settings = SubResource("LabelSettings_v5vuo")
+horizontal_alignment = 1
 
 [node name="Card 6" type="Sprite2D" parent="Pair3"]
-position = Vector2(740, 555)
-scale = Vector2(0.655218, 0.552813)
-texture = ExtResource("3_o21xa")
+position = Vector2(772, 546)
+scale = Vector2(0.270299, 0.22967)
+texture = ExtResource("3_hhyvw")
 script = ExtResource("4_nsjif")
-card_image = ExtResource("5_fdj5v")
-hide_image = ExtResource("3_o21xa")
+card_image = ExtResource("5_xtxdn")
+hide_image = ExtResource("3_hhyvw")
+
+[node name="Card Image" type="Sprite2D" parent="Pair3/Card 6"]
+visible = false
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("9_lyuf3")
 
 [node name="Pair4" type="Node2D" parent="." node_paths=PackedStringArray("card_1", "card_2")]
 script = ExtResource("2_lge7s")
@@ -123,20 +178,37 @@ card_1 = NodePath("Card 7")
 card_2 = NodePath("Card 8")
 
 [node name="Card 7" type="Sprite2D" parent="Pair4"]
-position = Vector2(732, 733)
-scale = Vector2(0.753, 0.5)
-texture = ExtResource("3_o21xa")
+position = Vector2(773, 754)
+scale = Vector2(0.270433, 0.220967)
+texture = ExtResource("3_hhyvw")
 script = ExtResource("4_nsjif")
-card_image = ExtResource("8_0srml")
-hide_image = ExtResource("3_o21xa")
+card_image = ExtResource("5_xtxdn")
+hide_image = ExtResource("3_hhyvw")
+
+[node name="Label" type="Label" parent="Pair4/Card 7"]
+visible = false
+offset_left = -134.565
+offset_top = -359.999
+offset_right = 618.435
+offset_bottom = -174.999
+rotation = 0.954598
+text = "Interactivity"
+label_settings = SubResource("LabelSettings_v5vuo")
+horizontal_alignment = 1
 
 [node name="Card 8" type="Sprite2D" parent="Pair4"]
-position = Vector2(755, 380)
-scale = Vector2(0.755, 0.5)
-texture = ExtResource("3_o21xa")
+position = Vector2(768, 341)
+scale = Vector2(0.267628, 0.221703)
+texture = ExtResource("3_hhyvw")
 script = ExtResource("4_nsjif")
-card_image = ExtResource("8_0srml")
-hide_image = ExtResource("3_o21xa")
+card_image = ExtResource("5_xtxdn")
+hide_image = ExtResource("3_hhyvw")
+
+[node name="Card Image" type="Sprite2D" parent="Pair4/Card 8"]
+visible = false
+position = Vector2(-5.03241, 20.3054)
+scale = Vector2(0.618436, 0.759247)
+texture = ExtResource("9_5sujp")
 
 [node name="Pair5" type="Node2D" parent="." node_paths=PackedStringArray("card_1", "card_2")]
 script = ExtResource("2_lge7s")
@@ -144,20 +216,37 @@ card_1 = NodePath("Card 9")
 card_2 = NodePath("Card 10")
 
 [node name="Card 9" type="Sprite2D" parent="Pair5"]
-position = Vector2(408, 744)
-scale = Vector2(0.636, 0.5)
-texture = ExtResource("3_o21xa")
+position = Vector2(440, 751)
+scale = Vector2(0.264957, 0.21978)
+texture = ExtResource("3_hhyvw")
 script = ExtResource("4_nsjif")
-card_image = ExtResource("9_v3eyn")
-hide_image = ExtResource("3_o21xa")
+card_image = ExtResource("5_xtxdn")
+hide_image = ExtResource("3_hhyvw")
+
+[node name="Label" type="Label" parent="Pair5/Card 9"]
+visible = false
+offset_left = -134.565
+offset_top = -359.999
+offset_right = 618.435
+offset_bottom = -174.999
+rotation = 0.954598
+text = "Promotion"
+label_settings = SubResource("LabelSettings_v5vuo")
+horizontal_alignment = 1
 
 [node name="Card 10" type="Sprite2D" parent="Pair5"]
-position = Vector2(1095, 727)
-scale = Vector2(0.636, 0.5)
-texture = ExtResource("3_o21xa")
+position = Vector2(1105.75, 746.46)
+scale = Vector2(0.269765, 0.220967)
+texture = ExtResource("3_hhyvw")
 script = ExtResource("4_nsjif")
-card_image = ExtResource("9_v3eyn")
-hide_image = ExtResource("3_o21xa")
+card_image = ExtResource("5_xtxdn")
+hide_image = ExtResource("3_hhyvw")
+
+[node name="Card Image" type="Sprite2D" parent="Pair5/Card 10"]
+visible = false
+position = Vector2(4.6333, 6.96924)
+scale = Vector2(0.69505, 0.78667)
+texture = ExtResource("10_bx1vf")
 
 [node name="Pair6" type="Node2D" parent="." node_paths=PackedStringArray("card_1", "card_2")]
 script = ExtResource("2_lge7s")
@@ -165,20 +254,38 @@ card_1 = NodePath("Card 11")
 card_2 = NodePath("Card 12")
 
 [node name="Card 11" type="Sprite2D" parent="Pair6"]
-position = Vector2(1097, 559)
-scale = Vector2(0.755, 0.5)
-texture = ExtResource("3_o21xa")
+position = Vector2(1106, 543)
+scale = Vector2(0.264957, 0.221978)
+texture = ExtResource("3_hhyvw")
 script = ExtResource("4_nsjif")
-card_image = ExtResource("10_a7al7")
-hide_image = ExtResource("3_o21xa")
+card_image = ExtResource("5_xtxdn")
+hide_image = ExtResource("3_hhyvw")
+
+[node name="Label" type="Label" parent="Pair6/Card 11"]
+visible = false
+offset_left = -18.0192
+offset_top = -414.77
+offset_right = 734.981
+offset_bottom = -44.77
+rotation = 1.00732
+text = "Target
+Audience"
+label_settings = SubResource("LabelSettings_v5vuo")
+horizontal_alignment = 1
 
 [node name="Card 12" type="Sprite2D" parent="Pair6"]
-position = Vector2(1391, 730)
-scale = Vector2(0.635, 0.5)
-texture = ExtResource("3_o21xa")
+position = Vector2(1440, 746)
+scale = Vector2(0.267094, 0.217582)
+texture = ExtResource("3_hhyvw")
 script = ExtResource("4_nsjif")
-card_image = ExtResource("10_a7al7")
-hide_image = ExtResource("3_o21xa")
+card_image = ExtResource("5_xtxdn")
+hide_image = ExtResource("3_hhyvw")
+
+[node name="Card Image" type="Sprite2D" parent="Pair6/Card 12"]
+visible = false
+position = Vector2(29.9531, 18.3848)
+scale = Vector2(0.12528, 0.182027)
+texture = ExtResource("11_u0tca")
 
 [node name="Pair7" type="Node2D" parent="." node_paths=PackedStringArray("card_1", "card_2")]
 script = ExtResource("2_lge7s")
@@ -186,41 +293,76 @@ card_1 = NodePath("Card 13")
 card_2 = NodePath("Card 14")
 
 [node name="Card 13" type="Sprite2D" parent="Pair7"]
-position = Vector2(402, 912)
-scale = Vector2(0.708, 0.5)
-texture = ExtResource("3_o21xa")
+position = Vector2(440, 952)
+scale = Vector2(0.266026, 0.216483)
+texture = ExtResource("3_hhyvw")
 script = ExtResource("4_nsjif")
-card_image = ExtResource("11_gwyyy")
-hide_image = ExtResource("3_o21xa")
+card_image = ExtResource("5_xtxdn")
+hide_image = ExtResource("3_hhyvw")
+
+[node name="Label" type="Label" parent="Pair7/Card 13"]
+visible = false
+offset_left = -134.565
+offset_top = -359.999
+offset_right = 618.435
+offset_bottom = -174.999
+rotation = 0.954598
+text = "Scheduling"
+label_settings = SubResource("LabelSettings_v5vuo")
+horizontal_alignment = 1
 
 [node name="Card 14" type="Sprite2D" parent="Pair7"]
-position = Vector2(1396, 873)
-scale = Vector2(0.635, 0.5)
-texture = ExtResource("3_o21xa")
+position = Vector2(1441, 943.804)
+scale = Vector2(0.269231, 0.213618)
+texture = ExtResource("3_hhyvw")
 script = ExtResource("4_nsjif")
-card_image = ExtResource("11_gwyyy")
-hide_image = ExtResource("3_o21xa")
+card_image = ExtResource("5_xtxdn")
+hide_image = ExtResource("3_hhyvw")
+
+[node name="Card Image" type="Sprite2D" parent="Pair7/Card 14"]
+visible = false
+position = Vector2(11.1426, 19.6426)
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("8_i6xat")
 
 [node name="Pair8" type="Node2D" parent="." node_paths=PackedStringArray("card_1", "card_2")]
+position = Vector2(5, 0)
 script = ExtResource("2_lge7s")
 card_1 = NodePath("Card 15")
 card_2 = NodePath("Card 16")
 
 [node name="Card 15" type="Sprite2D" parent="Pair8"]
-position = Vector2(1091, 888)
-scale = Vector2(0.799, 0.5)
-texture = ExtResource("3_o21xa")
+position = Vector2(1100, 949.25)
+scale = Vector2(0.267094, 0.212638)
+texture = ExtResource("3_hhyvw")
 script = ExtResource("4_nsjif")
-card_image = ExtResource("12_23j8c")
-hide_image = ExtResource("3_o21xa")
+card_image = ExtResource("5_xtxdn")
+hide_image = ExtResource("3_hhyvw")
+
+[node name="Label" type="Label" parent="Pair8/Card 15"]
+visible = false
+offset_left = -134.565
+offset_top = -359.999
+offset_right = 618.435
+offset_bottom = -174.999
+rotation = 0.954598
+text = "Catering"
+label_settings = SubResource("LabelSettings_v5vuo")
+horizontal_alignment = 1
 
 [node name="Card 16" type="Sprite2D" parent="Pair8"]
-position = Vector2(727, 905)
-scale = Vector2(0.636, 0.5)
-texture = ExtResource("3_o21xa")
+position = Vector2(767.602, 952.17)
+scale = Vector2(0.267945, 0.219407)
+texture = ExtResource("3_hhyvw")
 script = ExtResource("4_nsjif")
-card_image = ExtResource("12_23j8c")
-hide_image = ExtResource("3_o21xa")
+card_image = ExtResource("5_xtxdn")
+hide_image = ExtResource("3_hhyvw")
+
+[node name="Card Image" type="Sprite2D" parent="Pair8/Card 16"]
+visible = false
+position = Vector2(12.6836, 31.1294)
+scale = Vector2(0.692481, 0.872381)
+texture = ExtResource("13_km731")
 
 [node name="CheckPairTimer" type="Timer" parent="."]
 wait_time = 0.8

@@ -16,6 +16,7 @@ func _input(event):
 
 func flip():
 	set_texture(card_image)
+	get_child(0).visible = true
 	if is_flipped == false:
 		owner.flipped_count += 1
 		is_flipped = true
@@ -23,4 +24,5 @@ func flip():
 
 func reset():
 	is_flipped = false
+	get_child(0).visible = false
 	set_texture(hide_image)
