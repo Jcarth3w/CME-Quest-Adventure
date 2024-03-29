@@ -14,7 +14,7 @@ func _ready() -> void:
 		if child is Clickable:
 			connect_clickable(child)
 		if child.has_signal("gathered_data"):
-			child.gathered_data.connect(on_drag_and_drop.bind(self))
+			child.gathered_data.connect(on_drag_and_drop.bind(child))
 
 	if get_parent() != null and get_parent().has_node("HUD"):
 		get_parent().get_node("HUD").pause.connect(_on_hud_pause)
