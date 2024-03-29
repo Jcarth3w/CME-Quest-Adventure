@@ -1,0 +1,118 @@
+[gd_scene load_steps=12 format=3 uid="uid://bxolodkigvj0m"]
+
+[ext_resource type="Script" path="res://Scenes/mini_games/blooms_tax/blooms_tax_game.gd" id="1_lu4bo"]
+[ext_resource type="PackedScene" uid="uid://b5lhwjd1itais" path="res://Clickables/drag_and_drop/drop.tscn" id="2_5m88u"]
+[ext_resource type="Texture2D" uid="uid://bmh7laikfh860" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/BloomsTaxTrans.png" id="2_jr6vx"]
+[ext_resource type="Script" path="res://Clickables/drag_and_drop/drop.gd" id="3_8ondk"]
+[ext_resource type="PackedScene" uid="uid://bjqdr74ju46mx" path="res://Clickables/drag_and_drop/drag.tscn" id="4_bw5tn"]
+[ext_resource type="Texture2D" uid="uid://c7427imjacdaf" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/CreateBlooms.png" id="6_1bn1f"]
+[ext_resource type="Texture2D" uid="uid://cerxfs6fnd282" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/EvaluateBlooms.png" id="7_fiaqf"]
+[ext_resource type="Texture2D" uid="uid://l3vqo2rsiqcw" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/AnalyzeBlooms.png" id="8_br1ip"]
+[ext_resource type="Texture2D" uid="uid://vxe44o6orbyh" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/ApplyBlooms.png" id="9_sk0kv"]
+[ext_resource type="Texture2D" uid="uid://cbbehvgbe1bs" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/UnderstandBlooms.png" id="10_0fgqw"]
+[ext_resource type="Texture2D" uid="uid://baje00i3r7hc5" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/RememberBlooms.png" id="11_yr4mb"]
+
+[node name="blooms_tax_game" type="Node2D"]
+script = ExtResource("1_lu4bo")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 64.0
+offset_top = 128.0
+offset_right = 1856.0
+offset_bottom = 1024.0
+color = Color(0.882353, 0.45098, 0.737255, 1)
+
+[node name="BloomsTaxTrans" type="Sprite2D" parent="."]
+position = Vector2(722.875, 566.5)
+scale = Vector2(1.69153, 1.7416)
+texture = ExtResource("2_jr6vx")
+
+[node name="Drop" parent="." node_paths=PackedStringArray("drag_partner") instance=ExtResource("2_5m88u")]
+offset_left = 632.0
+offset_top = 210.0
+offset_right = 819.0
+offset_bottom = 281.0
+script = ExtResource("3_8ondk")
+drag_partner = NodePath("../Drag")
+
+[node name="Drop2" parent="." node_paths=PackedStringArray("drag_partner") instance=ExtResource("2_5m88u")]
+offset_left = 623.0
+offset_top = 328.0
+offset_right = 824.0
+offset_bottom = 398.0
+script = ExtResource("3_8ondk")
+drag_partner = NodePath("../Drag2")
+
+[node name="Drop3" parent="." node_paths=PackedStringArray("drag_partner") instance=ExtResource("2_5m88u")]
+offset_left = 630.0
+offset_top = 436.0
+offset_right = 823.0
+offset_bottom = 523.0
+script = ExtResource("3_8ondk")
+drag_partner = NodePath("../Drag3")
+
+[node name="Drop4" parent="." node_paths=PackedStringArray("drag_partner") instance=ExtResource("2_5m88u")]
+offset_left = 633.0
+offset_top = 560.0
+offset_right = 829.0
+offset_bottom = 648.0
+script = ExtResource("3_8ondk")
+drag_partner = NodePath("../Drag4")
+
+[node name="Drop5" parent="." node_paths=PackedStringArray("drag_partner") instance=ExtResource("2_5m88u")]
+offset_left = 626.0
+offset_top = 699.0
+offset_right = 835.0
+offset_bottom = 803.0
+script = ExtResource("3_8ondk")
+drag_partner = NodePath("../Drag5")
+
+[node name="Drop6" parent="." node_paths=PackedStringArray("drag_partner") instance=ExtResource("2_5m88u")]
+offset_left = 608.0
+offset_top = 846.0
+offset_right = 868.0
+offset_bottom = 953.0
+script = ExtResource("3_8ondk")
+drag_partner = NodePath("../Drag6")
+
+[node name="Drag" parent="." instance=ExtResource("4_bw5tn")]
+offset_left = 1341.0
+offset_top = 150.0
+offset_right = 1617.0
+offset_bottom = 253.0
+texture = ExtResource("6_1bn1f")
+
+[node name="Drag2" parent="." instance=ExtResource("4_bw5tn")]
+offset_left = 1346.0
+offset_top = 278.0
+offset_right = 1612.0
+offset_bottom = 381.0
+texture = ExtResource("7_fiaqf")
+
+[node name="Drag3" parent="." instance=ExtResource("4_bw5tn")]
+offset_left = 1349.0
+offset_top = 411.0
+offset_right = 1618.0
+offset_bottom = 511.0
+texture = ExtResource("8_br1ip")
+
+[node name="Drag4" parent="." instance=ExtResource("4_bw5tn")]
+offset_left = 1361.0
+offset_top = 552.0
+offset_right = 1629.0
+offset_bottom = 655.0
+texture = ExtResource("9_sk0kv")
+
+[node name="Drag5" parent="." instance=ExtResource("4_bw5tn")]
+offset_left = 1368.0
+offset_top = 676.0
+offset_right = 1633.0
+offset_bottom = 777.0
+texture = ExtResource("10_0fgqw")
+
+[node name="Drag6" parent="." instance=ExtResource("4_bw5tn")]
+offset_left = 1378.0
+offset_top = 807.0
+offset_right = 1641.0
+offset_bottom = 909.0
+texture = ExtResource("11_yr4mb")
