@@ -10,7 +10,21 @@ func make_post_request(scenario, time, username, finished):
 		"finished": finished,
 		"createdAt": Time.get_datetime_string_from_system()
 	}
-	var task: FirestoreTask = collection.update(username, data)
+	var query: FirestoreQuery = collection.where("username", "==", username)
+	query.get_documents().connect("completed", self, "_on_query_completed", [collection, data])
+
+
+func _on_query_completed(result, collection, data):
+	if result.success:
+		var documents: Array = result.documents
+		var username = data["username"]
+		
+		if documents.size() > 0:
+			username += "_${documents.size()}"
+			
+			collection.document(username).set(data)
+		else:
+			print("Query Error:", result.error)
 
 
 func _on_http_request_request_completed(_result, _response_code, _headers, body):
