@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://dwqw21d8i31b" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-01(1).png" id="2_m2fds"]
 [ext_resource type="Texture2D" uid="uid://cb2n58u7x5yje" path="res://Clickables/static_scene_btn/Sprites/Iteration 3 assets/Door.png" id="2_vtqet"]
 [ext_resource type="PackedScene" uid="uid://pn2l6ln2hl3j" path="res://Clickables/new_scene/new_scene_object.tscn" id="3_ts1c4"]
-[ext_resource type="Texture2D" uid="uid://cr6emhixd0qne" path="res://Assets/AdjustedStandfordAssets/ResizedLaptop.png" id="4_no767"]
+[ext_resource type="Texture2D" uid="uid://ci77noim6tqaa" path="res://Assets/AdjustedStandfordAssets/ResizedLaptop.png" id="4_no767"]
 [ext_resource type="Texture2D" uid="uid://d0g5gdljbiet3" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-04.png" id="5_xiio5"]
 [ext_resource type="PackedScene" uid="uid://bjqdr74ju46mx" path="res://Clickables/drag_and_drop/drag.tscn" id="6_4e2no"]
 [ext_resource type="Texture2D" uid="uid://f6cog0svtwyi" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/BloomsTaxMissingBottom.png" id="8_5g7rv"]
 [ext_resource type="PackedScene" uid="uid://b5lhwjd1itais" path="res://Clickables/drag_and_drop/drop.tscn" id="8_cqran"]
 [ext_resource type="Texture2D" uid="uid://b4ua5dek0oras" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/BloomsTaxMissingTop.png" id="10_a2r7c"]
-[ext_resource type="Script" path="res://Clickables/drag_and_drop/drop.gd" id="10_wbjxs"]
+[ext_resource type="Script" path="res://Scenes/mini_games/blooms_tax/blooms_room_drop.gd" id="11_8lwk0"]
 [ext_resource type="Texture2D" uid="uid://bmh7laikfh860" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/BloomsTaxTrans.png" id="12_vtjff"]
 
 [node name="room_5" type="Node2D"]
@@ -74,21 +74,20 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("8_5g7rv")
 stretch_mode = 2
 
-[node name="BloomsBottom" parent="." node_paths=PackedStringArray("drag_partner") instance=ExtResource("8_cqran")]
-offset_left = 107.0
-offset_top = 118.0
-offset_right = 527.0
-offset_bottom = 448.0
+[node name="BloomsBottom" parent="." instance=ExtResource("8_cqran")]
+offset_left = 106.0
+offset_top = 161.0
+offset_right = 526.0
+offset_bottom = 491.0
 texture = ExtResource("10_a2r7c")
-script = ExtResource("10_wbjxs")
-drag_partner = NodePath("../BloomsTop")
+script = ExtResource("11_8lwk0")
 
 [node name="BloomsGame" parent="." instance=ExtResource("3_ts1c4")]
 visible = false
-offset_left = 93.0
-offset_top = 114.0
-offset_right = 760.0
-offset_bottom = 590.0
+offset_left = 84.0
+offset_top = 165.0
+offset_right = 751.0
+offset_bottom = 641.0
 scale = Vector2(0.7, 0.7)
 texture_normal = ExtResource("12_vtjff")
 scene_path = "res://Scenes/mini_games/blooms_tax/blooms_tax_game.tscn"
