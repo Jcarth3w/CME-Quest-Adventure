@@ -1,50 +1,32 @@
-[gd_scene load_steps=22 format=3 uid="uid://bdtol8suwnlv7"]
+[gd_scene load_steps=17 format=3 uid="uid://bdtol8suwnlv7"]
 
 [ext_resource type="Script" path="res://Scenes/mini_games/file_finder/file_minigame_manager.gd" id="1_uttu5"]
-[ext_resource type="Texture2D" uid="uid://opwoeoflpbqn" path="res://Assets/AdjustedStandfordAssets/ComplianceFolder.png" id="2_wwggp"]
-[ext_resource type="Texture2D" uid="uid://c4ax1ifo8g8rx" path="res://Assets/AdjustedStandfordAssets/SafetyFolder.png" id="3_2fy7v"]
-[ext_resource type="Texture2D" uid="uid://o8p6mauqv33n" path="res://Assets/AdjustedStandfordAssets/MarketingFolder.png" id="4_j8qpf"]
-[ext_resource type="Texture2D" uid="uid://yi53q6wa3lgm" path="res://Assets/AdjustedStandfordAssets/PromotionalFolder.png" id="5_d72pe"]
-[ext_resource type="Texture2D" uid="uid://cijok6xfs67g7" path="res://Assets/AdjustedStandfordAssets/LearningFolder.png" id="6_xsvny"]
-[ext_resource type="Texture2D" uid="uid://dcm6p18p7lslf" path="res://Assets/Sprites/generic_items/genericItem_color_160.png" id="7_arwno"]
-[ext_resource type="Texture2D" uid="uid://dwr1muim3qqbu" path="res://Assets/Sprites/Iteration 3 assets/Brochure.png" id="8_v3vra"]
-[ext_resource type="Texture2D" uid="uid://bwsdb3b3y5m2j" path="res://Assets/Sprites/Iteration 3 assets/Poster.png" id="9_k6ic3"]
-[ext_resource type="Texture2D" uid="uid://1l13ivmgqwby" path="res://Assets/Sprites/Iteration 3 assets/PrintedDocument.png" id="10_ld2li"]
-[ext_resource type="Texture2D" uid="uid://d1f87p0trrbxd" path="res://Assets/Sprites/Iteration 3 assets/RegistrationPaper.png" id="11_f607e"]
-[ext_resource type="Texture2D" uid="uid://c8ljvujxodsph" path="res://Assets/Sprites/Iteration 3 assets/SavePostcard.png" id="12_1gixw"]
-[ext_resource type="Texture2D" uid="uid://r1wixbbs7naf" path="res://Assets/Sprites/Iteration 3 assets/SocialMediaGraphics.png" id="13_nm5vl"]
+[ext_resource type="Texture2D" uid="uid://cs0qitpdt2ltj" path="res://Assets/AdjustedStandfordAssets/ComplianceFolder.png" id="2_wwggp"]
+[ext_resource type="Texture2D" uid="uid://dx6x8esqdxul2" path="res://Assets/AdjustedStandfordAssets/SafetyFolder.png" id="3_2fy7v"]
+[ext_resource type="Texture2D" uid="uid://b30n0728hcs7x" path="res://Assets/AdjustedStandfordAssets/MarketingFolder.png" id="4_j8qpf"]
+[ext_resource type="Texture2D" uid="uid://dc7f5ht1vq2mk" path="res://Assets/AdjustedStandfordAssets/PromotionalFolder.png" id="5_d72pe"]
+[ext_resource type="Texture2D" uid="uid://cgmgwee03d24m" path="res://Assets/AdjustedStandfordAssets/LearningFolder.png" id="6_xsvny"]
+[ext_resource type="Script" path="res://Scenes/mini_games/file_finder/file_drop.gd" id="7_6foqy"]
+[ext_resource type="Script" path="res://Clickables/drag_and_drop/drag.gd" id="7_no75i"]
+[ext_resource type="Texture2D" uid="uid://bdbgarmgwdqsf" path="res://Assets/Sprites/generic_items/genericItem_color_088.png" id="7_pot2j"]
+[ext_resource type="Texture2D" uid="uid://bhuyw2kfk5ybm" path="res://Assets/Sprites/Iteration 3 assets/Brochure.png" id="8_v3vra"]
+[ext_resource type="Texture2D" uid="uid://d2exdrfmom6g5" path="res://Assets/Sprites/Iteration 3 assets/Poster.png" id="9_k6ic3"]
+[ext_resource type="Texture2D" uid="uid://cwsl3d0j4hiu7" path="res://Assets/Sprites/Iteration 3 assets/PrintedDocument.png" id="10_ld2li"]
+[ext_resource type="Texture2D" uid="uid://dyy6kieu74jiw" path="res://Assets/Sprites/Iteration 3 assets/RegistrationPaper.png" id="11_f607e"]
+[ext_resource type="Texture2D" uid="uid://dqo0k8028asee" path="res://Assets/Sprites/Iteration 3 assets/SavePostcard.png" id="12_1gixw"]
+[ext_resource type="Texture2D" uid="uid://dcmfxrepy3txx" path="res://Assets/Sprites/Iteration 3 assets/SocialMediaGraphics.png" id="13_nm5vl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_js1u7"]
 font_size = 60
 outline_size = 12
 outline_color = Color(0, 0, 0, 1)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rge4g"]
-load_path = "res://.godot/imported/genericItem_color_160.png-45fdbac054b4d6afd5c2530fe6bc54fa.ctex"
-
-[sub_resource type="LabelSettings" id="LabelSettings_harr4"]
-font_size = 13
-
-[sub_resource type="LabelSettings" id="LabelSettings_8n0tk"]
-font_size = 13
-
-[sub_resource type="LabelSettings" id="LabelSettings_wrjap"]
-font_size = 13
-
-[sub_resource type="LabelSettings" id="LabelSettings_fd78b"]
-font_size = 13
-
-[sub_resource type="LabelSettings" id="LabelSettings_5g3xo"]
-font_size = 13
-
-[sub_resource type="LabelSettings" id="LabelSettings_yvdqi"]
-font_size = 13
-
 [node name="Scenario1Final" type="Node2D"]
 script = ExtResource("1_uttu5")
 file_textures = Array[Texture]([ExtResource("2_wwggp"), ExtResource("3_2fy7v"), ExtResource("4_j8qpf"), ExtResource("5_d72pe"), ExtResource("6_xsvny")])
 
 [node name="FileFind" type="Node2D" parent="."]
+visible = false
 
 [node name="EdgeBackground" type="ColorRect" parent="FileFind"]
 custom_minimum_size = Vector2(1920, 1080)
@@ -113,7 +95,6 @@ offset_bottom = 423.0
 scale = Vector2(0.3, 0.3)
 
 [node name="OrganizeFiles" type="Node2D" parent="."]
-visible = false
 
 [node name="EdgeBackground" type="ColorRect" parent="OrganizeFiles"]
 custom_minimum_size = Vector2(1920, 1080)
@@ -131,171 +112,123 @@ color = Color(0.294118, 0.588235, 0.898039, 1)
 [node name="Slots" type="Node2D" parent="OrganizeFiles"]
 position = Vector2(87, 104)
 
-[node name="Slot1" type="TextureButton" parent="OrganizeFiles/Slots"]
+[node name="Slot1" type="TextureRect" parent="OrganizeFiles/Slots"]
 offset_left = 154.0
 offset_top = 564.0
 offset_right = 194.0
 offset_bottom = 604.0
 scale = Vector2(2.5, 2.5)
-texture_normal = SubResource("CompressedTexture2D_rge4g")
+texture = ExtResource("7_pot2j")
+script = ExtResource("7_6foqy")
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="OrganizeFiles/Slots/Slot1"]
-layout_mode = 0
-offset_left = -11.2
-offset_top = 41.2
-offset_right = 63.8
-offset_bottom = 67.2
-text = "Brochure"
-label_settings = SubResource("LabelSettings_harr4")
-metadata/_edit_use_anchors_ = true
-
-[node name="Slot2" type="TextureButton" parent="OrganizeFiles/Slots"]
+[node name="Slot2" type="TextureRect" parent="OrganizeFiles/Slots"]
 offset_left = 422.0
 offset_top = 614.0
 offset_right = 462.0
 offset_bottom = 654.0
 scale = Vector2(2.5, 2.5)
-texture_normal = ExtResource("7_arwno")
+texture = ExtResource("7_pot2j")
+script = ExtResource("7_6foqy")
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="OrganizeFiles/Slots/Slot2"]
-layout_mode = 0
-offset_left = -18.0
-offset_top = 42.0
-offset_right = 80.0
-offset_bottom = 68.0
-text = "Event Poster"
-label_settings = SubResource("LabelSettings_8n0tk")
-metadata/_edit_use_anchors_ = true
-
-[node name="Slot3" type="TextureButton" parent="OrganizeFiles/Slots"]
+[node name="Slot3" type="TextureRect" parent="OrganizeFiles/Slots"]
 offset_left = 716.0
 offset_top = 558.0
 offset_right = 756.0
 offset_bottom = 598.0
 scale = Vector2(2.5, 2.5)
-texture_normal = ExtResource("7_arwno")
+texture = ExtResource("7_pot2j")
+script = ExtResource("7_6foqy")
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="OrganizeFiles/Slots/Slot3"]
-layout_mode = 0
-offset_left = -39.6
-offset_top = 42.0
-offset_right = 102.4
-offset_bottom = 68.0
-text = "Printed Document"
-label_settings = SubResource("LabelSettings_wrjap")
-metadata/_edit_use_anchors_ = true
-
-[node name="Slot4" type="TextureButton" parent="OrganizeFiles/Slots"]
+[node name="Slot4" type="TextureRect" parent="OrganizeFiles/Slots"]
 offset_left = 991.0
 offset_top = 620.0
 offset_right = 1031.0
 offset_bottom = 660.0
 scale = Vector2(2.5, 2.5)
-texture_normal = ExtResource("7_arwno")
+texture = ExtResource("7_pot2j")
+script = ExtResource("7_6foqy")
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="OrganizeFiles/Slots/Slot4"]
-layout_mode = 0
-offset_left = -36.0
-offset_top = 39.2
-offset_right = 80.0
-offset_bottom = 65.2
-text = "Registration Form"
-label_settings = SubResource("LabelSettings_fd78b")
-metadata/_edit_use_anchors_ = true
-
-[node name="Slot5" type="TextureButton" parent="OrganizeFiles/Slots"]
+[node name="Slot5" type="TextureRect" parent="OrganizeFiles/Slots"]
 offset_left = 1256.0
 offset_top = 561.0
 offset_right = 1296.0
 offset_bottom = 601.0
 scale = Vector2(2.5, 2.5)
-texture_normal = ExtResource("7_arwno")
+texture = ExtResource("7_pot2j")
+script = ExtResource("7_6foqy")
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="OrganizeFiles/Slots/Slot5"]
-layout_mode = 0
-offset_left = -30.0
-offset_top = 40.8
-offset_right = 65.0
-offset_bottom = 63.8
-text = "Save The Dates"
-label_settings = SubResource("LabelSettings_5g3xo")
-metadata/_edit_use_anchors_ = true
-
-[node name="Slot6" type="TextureButton" parent="OrganizeFiles/Slots"]
+[node name="Slot6" type="TextureRect" parent="OrganizeFiles/Slots"]
 offset_left = 1539.0
 offset_top = 620.0
 offset_right = 1579.0
 offset_bottom = 660.0
 scale = Vector2(2.5, 2.5)
-texture_normal = ExtResource("7_arwno")
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="OrganizeFiles/Slots/Slot6"]
-layout_mode = 0
-offset_left = -51.6001
-offset_top = 43.2
-offset_right = 110.4
-offset_bottom = 69.2
-text = "Social Media Graphic"
-label_settings = SubResource("LabelSettings_yvdqi")
+texture = ExtResource("7_pot2j")
+script = ExtResource("7_6foqy")
 metadata/_edit_use_anchors_ = true
 
 [node name="Items" type="Node2D" parent="OrganizeFiles"]
 position = Vector2(215, 319)
 
-[node name="Item1" type="TextureButton" parent="OrganizeFiles/Items"]
+[node name="Item1" type="TextureRect" parent="OrganizeFiles/Items"]
 offset_left = 1356.0
 offset_top = -50.0
 offset_right = 1755.0
 offset_bottom = 648.0
 scale = Vector2(0.4, 0.4)
-texture_normal = ExtResource("8_v3vra")
+texture = ExtResource("8_v3vra")
+script = ExtResource("7_no75i")
 
-[node name="Item2" type="TextureButton" parent="OrganizeFiles/Items"]
+[node name="Item2" type="TextureRect" parent="OrganizeFiles/Items"]
 offset_left = 223.0
 offset_top = 5.0
 offset_right = 1223.0
 offset_bottom = 1005.0
 scale = Vector2(0.25, 0.25)
-texture_normal = ExtResource("9_k6ic3")
+texture = ExtResource("9_k6ic3")
+script = ExtResource("7_no75i")
 metadata/_edit_use_anchors_ = true
 
-[node name="Item3" type="TextureButton" parent="OrganizeFiles/Items"]
+[node name="Item3" type="TextureRect" parent="OrganizeFiles/Items"]
 offset_left = 1076.0
 offset_top = -20.0
 offset_right = 1868.0
 offset_bottom = 904.0
 scale = Vector2(0.25, 0.25)
-texture_normal = ExtResource("10_ld2li")
+texture = ExtResource("11_f607e")
+script = ExtResource("7_no75i")
 
-[node name="Item4" type="TextureButton" parent="OrganizeFiles/Items"]
+[node name="Item4" type="TextureRect" parent="OrganizeFiles/Items"]
 offset_left = 785.0
 offset_top = -22.0
 offset_right = 1649.0
 offset_bottom = 902.0
 scale = Vector2(0.25, 0.25)
-texture_normal = ExtResource("11_f607e")
+texture = ExtResource("10_ld2li")
+script = ExtResource("7_no75i")
 
-[node name="Item5" type="TextureButton" parent="OrganizeFiles/Items"]
+[node name="Item5" type="TextureRect" parent="OrganizeFiles/Items"]
 offset_left = -34.0
 offset_top = 56.0
 offset_right = 830.0
 offset_bottom = 564.0
 scale = Vector2(0.3, 0.3)
-texture_normal = ExtResource("12_1gixw")
+texture = ExtResource("12_1gixw")
+script = ExtResource("7_no75i")
 
-[node name="Item6" type="TextureButton" parent="OrganizeFiles/Items"]
+[node name="Item6" type="TextureRect" parent="OrganizeFiles/Items"]
 offset_left = 498.0
 offset_top = 43.0
 offset_right = 1264.0
 offset_bottom = 603.0
 scale = Vector2(0.3, 0.3)
-texture_normal = ExtResource("13_nm5vl")
+texture = ExtResource("13_nm5vl")
+script = ExtResource("7_no75i")
 
 [connection signal="pressed" from="FileFind/Previous" to="." method="_on_previous_pressed"]
 [connection signal="pressed" from="FileFind/Next" to="." method="_on_next_pressed"]
