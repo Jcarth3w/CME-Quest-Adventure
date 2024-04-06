@@ -3,8 +3,8 @@ extends MiniGame
 @onready var label = $CheckWinButton/Label2
 
 var correct_order = {"Spot1" : "ItemC", "Spot2" : "ItemO", "Spot3" : "ItemM",
-"Spot4" : "ItemP", "Spot5" : "ItemL", "Spot6" : "ItemI", 
-"Spot7" : "ItemA", "Spot8" : "ItemN", "Spot9" : "ItemC2", "Spot10" : "ItemE"}
+"Spot4" : "ItemP", "Spot5" : "ItemL", "Spot6" : "ItemI", "Spot7" : "ItemA", "Spot8" : "ItemN"
+, "Spot9" : "ItemC2", "Spot10" : "ItemE", "Spot11" : "ItemF", "Spot12" : "ItemG"}
 var player_order = {}
 
 
