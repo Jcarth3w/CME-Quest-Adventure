@@ -2,16 +2,17 @@ extends MiniGame
 
 @onready var label = $CheckWinButton/Label2
 
-var correct_order = {"Spot1" : "ItemC", "Spot2" : "ItemO", "Spot3" : "ItemM",
-"Spot4" : "ItemP", "Spot5" : "ItemL", "Spot6" : "ItemI", "Spot7" : "ItemA", "Spot8" : "ItemN"
-, "Spot9" : "ItemC2", "Spot10" : "ItemE", "Spot11" : "ItemF", "Spot12" : "ItemG"}
+var correct_order = {"Spot1" : "Item1", "Spot2" : "Item2", "Spot3" : "Item3",
+ "Spot4" : "Item4", "Spot5" : "Item5", "Spot6" : "Item6", "Spot7" : "Item7",
+ "Spot8" : "Item8", "Spot9" : "Item9", "Spot10" : "Item10", "Spot11" : "Item11",
+ "Spot12" : "Item12"}
 var player_order = {}
 
 
 func _ready() -> void:
 	for child in get_children():
 		if child.name.contains("Spot"):
-			child.get_node("Label").scale = Vector2(2, 2)
+			child.get_node("Label").scale = Vector2(1, 1)
 			child.gathered_data.connect(_on_spot_gathered_data)
 
 func check_win_button_pressed():
