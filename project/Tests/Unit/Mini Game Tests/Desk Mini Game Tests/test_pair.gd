@@ -21,3 +21,15 @@ func test_check_pair_true():
 	test_pair.card_2.is_flipped = true
 	test_pair.check_pair()
 	assert_eq(test_pair.is_matched, true)
+
+
+func test_on_disable_children():
+	test_pair.disable_children()
+	assert_true(test_pair.get_node("Card 1").disabled)
+	assert_true(test_pair.get_node("Card 2").disabled)
+
+
+func test_on_enable_children():
+	test_pair.enable_children()
+	assert_false(test_pair.get_node("Card 1").disabled)
+	assert_false(test_pair.get_node("Card 2").disabled)
