@@ -1,4 +1,4 @@
-extends Sprite2D
+extends TextureButton
 
 @export var card_image : Texture
 @export var hide_image : Texture
@@ -7,22 +7,18 @@ extends Sprite2D
 var is_flipped = false
 
 
-func _input(event):
-	if owner.check_pair_matching == false:
-		if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-			if get_rect().has_point(to_local(event.position)):
-				flip()
+func action():
+	flip()
 
 
 func flip():
-	set_texture(card_image)
+	texture_normal = card_image
 	get_child(0).visible = true
 	if is_flipped == false:
-		owner.flipped_count += 1
 		is_flipped = true
 
 
 func reset():
 	is_flipped = false
 	get_child(0).visible = false
-	set_texture(hide_image)
+	texture_normal = hide_image
