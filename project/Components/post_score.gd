@@ -3,28 +3,34 @@ extends Node
 
 func make_post_request(scenario, time, username, finished):
 	var collection: FirestoreCollection = Firebase.Firestore.collection("scores")
-	var data: Dictionary = {
-		"scenario": scenario,
-		"time": time,
-		"username": username,
-		"finished": finished,
-		"createdAt": Time.get_datetime_string_from_system()
-	}
-	var query: FirestoreQuery = collection.where("username", "==", username)
-	query.get_documents().connect("completed", self, "_on_query_completed", [collection, data])
-
-
-func _on_query_completed(result, collection, data):
-	if result.success:
-		var documents: Array = result.documents
-		var username = data["username"]
-		
-		if documents.size() > 0:
-			username += "_${documents.size()}"
-			
-			collection.document(username).set(data)
-		else:
-			print("Query Error:", result.error)
+	var query: FirestoreQuery = FirestoreQuery.new()
+	query.from("scores")
+	query.where("username", FirestoreQuery.OPERATOR.EQUAL, username)
+	var query_task: FirestoreTask = Firebase.Firestore.query(query)
+	var result: Array = await Firebase.Firestore.query(query).result_query
+	
+	if result.size() > 0:
+		var latest_id = 0
+		for score in result:
+			var id = score['id']
+			if id.is_number() and id > latest_id:
+				latest_id = id
+		latest_id += 1
+		collection.set(username + "_1", {
+			"scenario": scenario,
+			"time": time,
+			"username": username,
+			"finished": finished,
+			"createdAt": Time.get_datetime_string_from_system()
+		})
+	else:
+		collection.set(username + "_1", {
+			"scenario": scenario,
+			"time": time,
+			"username": username,
+			"finished": finished,
+			"createdAt": Time.get_datetime_string_from_system()
+		})
 
 
 func _on_http_request_request_completed(_result, _response_code, _headers, body):
