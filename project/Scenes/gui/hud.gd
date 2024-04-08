@@ -8,6 +8,7 @@ var item_slots = []
 var current_item := 0
 var map_active = true
 var menu_active = true
+var return_main_menu = "res://Scenes/main_menus/main_menu.tscn"
 var scenario_menu = preload("res://Scenes/gui/menus/scenario_menu.tscn")
 var objectives_color
 
@@ -89,7 +90,7 @@ func in_game_menu_press(button_name):
 				var dir = DirAccess.open("res://Scenes/mini_games/Crossword_Puzzle/")
 				dir.remove("saved_puzzle.txt")
 			await get_tree().create_timer(2).timeout
-			get_tree().quit()
+			get_tree().change_scene_to_file(return_main_menu)
 
 
 func on_room_select(room_name):
