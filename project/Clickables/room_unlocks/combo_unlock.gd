@@ -18,6 +18,7 @@ func on_button_press(button) -> void:
 		"CLEAR":
 			$Display.text = ""
 		"X":
+			get_parent().get_node("Room3Unlock").on_mouse_exited()
 			queue_free()
 			get_parent().resume_room()
 		_:
