@@ -57,7 +57,7 @@ var _config : Dictionary = {
     "clientSecret" : "",
     "domainUriPrefix" : "",
     "functionsGeoZone" : "",
-    "cacheLocation":"user://.firebase_cache",
+    "cacheLocation":"",
     "emulators": {
         "ports" : {
             "authentication" : "",
@@ -134,7 +134,7 @@ func _setup_modules() -> void:
 # -------------
 
 func _printerr(error : String) -> void:
-    printerr("[Firebase Error] >> "+error)
+    printerr("[Firebase Error] >> " + error)
 
 func _print(msg : String) -> void:
-    print("[Firebase] >> "+msg)
+    print("[Firebase] >> " + str(msg))

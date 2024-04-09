@@ -2,13 +2,16 @@ extends Node
 
 
 func make_post_request(scenario, time, username, finished):
+	# Firebase.Auth.login_with_email_and_password("jaredbowman@piesrgr8.com", "ctfd120")
+	Firebase.Auth.login_anonymous()
+
 	var collection: FirestoreCollection = Firebase.Firestore.collection("scores")
 	var query: FirestoreQuery = FirestoreQuery.new()
 	query.from("scores")
 	query.where("username", FirestoreQuery.OPERATOR.EQUAL, username)
 	var query_task: FirestoreTask = Firebase.Firestore.query(query)
 	var result: Array = await Firebase.Firestore.query(query).result_query
-	
+
 	if result.size() > 0:
 		var latest_id = 0
 		for score in result:
