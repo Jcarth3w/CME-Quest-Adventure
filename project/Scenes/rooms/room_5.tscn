@@ -59,6 +59,7 @@ offset_right = 4913.0
 offset_bottom = 3265.0
 scale = Vector2(0.05, 0.05)
 texture_normal = ExtResource("4_no767")
+scene_path = "res://Scenes/mini_games/room_five_laptop_matching/laptop_matching_game.tscn"
 
 [node name="Custom-illustrations-stanford-monuments-assets-04" type="Sprite2D" parent="."]
 position = Vector2(1075, 590)

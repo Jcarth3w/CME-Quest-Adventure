@@ -1,0 +1,130 @@
+[gd_scene load_steps=12 format=3 uid="uid://bca0w75ynxi1y"]
+
+[ext_resource type="Script" path="res://Clickables/drag_and_drop/drag_minigame.gd" id="1_714c7"]
+[ext_resource type="PackedScene" uid="uid://bjqdr74ju46mx" path="res://Clickables/drag_and_drop/drag.tscn" id="2_wr4ja"]
+[ext_resource type="PackedScene" uid="uid://b5lhwjd1itais" path="res://Clickables/drag_and_drop/drop.tscn" id="3_cg4xs"]
+[ext_resource type="Texture2D" uid="uid://b2jlnfp60kpf5" path="res://Assets/Scenario_2_assests/engages_patients_public.png" id="3_gtuj3"]
+[ext_resource type="Texture2D" uid="uid://doonm46ae5udn" path="res://Assets/Scenario_2_assests/engages_students.png" id="4_6oley"]
+[ext_resource type="Script" path="res://Clickables/drag_and_drop/drop.gd" id="4_w4bsr"]
+[ext_resource type="Texture2D" uid="uid://ccj7uuqx8yolq" path="res://Assets/Scenario_2_assests/engages_teams .png" id="5_6fptc"]
+[ext_resource type="Texture2D" uid="uid://dcm6p18p7lslf" path="res://Assets/Sprites/generic_items/genericItem_color_160.png" id="8_sdbix"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c5xba"]
+line_spacing = 5.0
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wimi6"]
+line_spacing = 5.0
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_s6po7"]
+line_spacing = 5.0
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[node name="promo_team_matching" type="Node2D"]
+script = ExtResource("1_714c7")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_left = 256.0
+offset_top = 128.0
+offset_right = 1664.0
+offset_bottom = 1024.0
+color = Color(0.792157, 0.756863, 0.917647, 1)
+
+[node name="Drag" parent="." instance=ExtResource("2_wr4ja")]
+offset_left = 443.0
+offset_top = 799.0
+offset_right = 1102.0
+offset_bottom = 1090.0
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("3_gtuj3")
+
+[node name="Drag2" parent="." instance=ExtResource("2_wr4ja")]
+offset_left = 803.0
+offset_top = 791.0
+offset_right = 1464.0
+offset_bottom = 1085.0
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("4_6oley")
+
+[node name="Drag3" parent="." instance=ExtResource("2_wr4ja")]
+offset_left = 1144.0
+offset_top = 788.0
+offset_right = 1803.0
+offset_bottom = 1076.0
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("5_6fptc")
+metadata/_edit_use_anchors_ = true
+
+[node name="Spot" parent="." node_paths=PackedStringArray("drag_partner") instance=ExtResource("3_cg4xs")]
+offset_left = 976.0
+offset_top = 608.0
+offset_right = 1264.0
+offset_bottom = 696.0
+script = ExtResource("4_w4bsr")
+drag_partner = NodePath("../Drag")
+
+[node name="Spot2" parent="." node_paths=PackedStringArray("drag_partner") instance=ExtResource("3_cg4xs")]
+offset_left = 736.0
+offset_top = 416.0
+offset_right = 1032.0
+offset_bottom = 504.0
+script = ExtResource("4_w4bsr")
+drag_partner = NodePath("../Drag2")
+
+[node name="Spot3" parent="." node_paths=PackedStringArray("drag_partner") instance=ExtResource("3_cg4xs")]
+offset_left = 692.0
+offset_top = 141.0
+offset_right = 983.0
+offset_bottom = 235.0
+script = ExtResource("4_w4bsr")
+drag_partner = NodePath("../Drag3")
+
+[node name="CheckWinButton" type="TextureButton" parent="."]
+offset_left = 1799.0
+offset_top = 778.0
+offset_right = 1839.0
+offset_bottom = 818.0
+scale = Vector2(1.25, 1.25)
+texture_normal = ExtResource("8_sdbix")
+
+[node name="Label" type="Label" parent="CheckWinButton"]
+layout_mode = 0
+offset_left = -49.6
+offset_top = 48.0
+offset_right = 59.4
+offset_bottom = 74.0
+scale = Vector2(1.25, 1.25)
+text = "Check Answer"
+
+[node name="EngagesTeamsSentence" type="Label" parent="."]
+offset_left = 320.0
+offset_top = 183.0
+offset_right = 1601.0
+offset_bottom = 277.0
+text = "The program successfully ______________________ by involving members of interprofessional
+teams in the planning and delivering of interprofessional continuing education (IPCE)."
+label_settings = SubResource("LabelSettings_c5xba")
+
+[node name="EngagesStudentsSentence" type="Label" parent="."]
+offset_left = 322.0
+offset_top = 352.0
+offset_right = 1538.0
+offset_bottom = 493.0
+text = "The initiative not only ______________________ but also ensures their active participation
+in the planning and delivery of CME, making the educational content more relevant
+and impactful"
+label_settings = SubResource("LabelSettings_wimi6")
+
+[node name="EngagesPatients_PublicSentence" type="Label" parent="."]
+offset_left = 320.0
+offset_top = 576.0
+offset_right = 1535.0
+offset_bottom = 717.0
+text = "A key aspect of our CME strategy is to ______________________ of the health professions,
+integrating them into the planning and delivery process to foster a collaborative
+and comprehensive learning environment"
+label_settings = SubResource("LabelSettings_s6po7")
