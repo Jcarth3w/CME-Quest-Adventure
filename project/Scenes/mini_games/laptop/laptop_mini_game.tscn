@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://6f7f3ik8hlfv"]
+[gd_scene load_steps=10 format=3 uid="uid://6f7f3ik8hlfv"]
 
 [ext_resource type="Script" path="res://Scenes/mini_games/laptop/laptop_mini_game.gd" id="1_mdm6b"]
 [ext_resource type="Texture2D" uid="uid://rpdjh6s3x3m2" path="res://Assets/Sprites/room_1_custom_placeholders/Red Background.png" id="2_a45ph"]
 [ext_resource type="Texture2D" uid="uid://bjoh0nhaqv22i" path="res://Assets/AdjustedStandfordAssets/Paper.png" id="3_wdiv2"]
+[ext_resource type="Texture2D" uid="uid://dk36r1p8iamyn" path="res://Assets/AdjustedStandfordAssets/BlankFolder.png" id="4_xjfps"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_aep5h"]
 font_size = 72
@@ -203,6 +204,14 @@ offset_right = 1968.0
 offset_bottom = 2056.0
 scale = Vector2(0.04, 0.066)
 texture_normal = ExtResource("2_a45ph")
+
+[node name="Folder" type="TextureButton" parent="."]
+offset_left = 1670.0
+offset_top = 138.0
+offset_right = 3247.0
+offset_bottom = 1244.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("4_xjfps")
 
 [connection signal="pressed" from="Login/Button" to="." method="on_button_pressed"]
 [connection signal="pressed" from="Files/Print" to="." method="on_print_pressed"]
