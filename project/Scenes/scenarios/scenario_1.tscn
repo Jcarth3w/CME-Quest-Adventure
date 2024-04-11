@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://beginlf1sakva"]
+[gd_scene load_steps=10 format=3 uid="uid://beginlf1sakva"]
 
 [ext_resource type="PackedScene" uid="uid://dxurrur4fkonu" path="res://Scenes/rooms/room_2.tscn" id="1_msoe2"]
-[ext_resource type="AudioStream" uid="uid://bmewjqq14bmh0" path="res://Assets/SFX/game_win.wav" id="2_8mdrn"]
+[ext_resource type="AudioStream" uid="uid://dq0157680r6ob" path="res://Assets/SFX/game_win.wav" id="2_8mdrn"]
 [ext_resource type="PackedScene" uid="uid://b302n6pq0hkk1" path="res://Scenes/rooms/room1.tscn" id="2_iqiqe"]
 [ext_resource type="PackedScene" uid="uid://cepvxyc5hm41t" path="res://Scenes/rooms/room_3.tscn" id="2_tbts0"]
 [ext_resource type="PackedScene" uid="uid://b8xl3wqxn7v5d" path="res://Scenes/gui/HUD.tscn" id="3_iim46"]
 [ext_resource type="Script" path="res://Components/post_score.gd" id="5_5jqvq"]
 [ext_resource type="PackedScene" uid="uid://bp3esxqwlfxd0" path="res://Scenes/gui/popup/popup_gui.tscn" id="6_kv0rk"]
 [ext_resource type="Script" path="res://Scenes/scenarios/scenario.gd" id="8_ar6hx"]
+[ext_resource type="AudioStream" uid="uid://bm2eive5rvne6" path="res://Assets/SFX/Room1Background.wav" id="9_qwi54"]
 
 [node name="Scenario1" type="Node2D" node_paths=PackedStringArray("current_room")]
 script = ExtResource("8_ar6hx")
@@ -34,5 +35,11 @@ script = ExtResource("5_5jqvq")
 [node name="HTTPRequest" type="HTTPRequest" parent="DBoperations"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
+[node name="BackgroundPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_qwi54")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="request_completed" from="DBoperations/HTTPRequest" to="DBoperations" method="_on_http_request_request_completed"]
