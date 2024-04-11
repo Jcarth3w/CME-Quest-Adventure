@@ -3,6 +3,7 @@ extends Node2D
 
 signal pause
 
+@export var objectives_label : String
 var items = []
 var item_slots = []
 var current_item := 0
