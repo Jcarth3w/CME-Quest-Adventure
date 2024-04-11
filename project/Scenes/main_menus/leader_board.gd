@@ -4,22 +4,33 @@ var times = []
 var users = []
 
 func _ready():
-	$DBoperations.make_get_request()
+	organize_data(await $DBoperations.make_get_request())
 
 
-func _on_http_request_request_completed(result, response_code, headers, body):
-	var raw_string = body.get_string_from_utf8()
-	print(raw_string)
-	parseTimes(raw_string)
-
-
-func parseTimes(raw_string):
+func organize_data(raw_string):
 	var json_array = JSON.parse_string(raw_string)
-	for s in json_array:
-		var time_value = s["time"]
-		var user_value = s["username"]
-		times.append(time_value)
-		users.append(user_value)
+	var organized = {}
+
+	for username in json_array.keys():
+		for entry in json_array[username]:
+			var time = entry["time"]
+			var scenario_num = entry["scenario"]
+
+			if username not in organized:
+				organized[username] = {}
+
+			if scenario_num not in organized[username]:
+				organized[username][scenario_num] = time
+				times.append(time)
+				users.append(users)
+
+			else:
+				if time > organized[username][scenario_num]:
+					organized[username][scenario_num] = time
+					times.append(time)
+					users.append(users)
+	print(organized)
+	return organized
 
 
 func populate_leader_board(scenario_number):
@@ -54,4 +65,3 @@ func _on_scenario_1_button_pressed():
 
 func _on_scenario_2_button_pressed():
 	pass
-

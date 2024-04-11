@@ -3,7 +3,6 @@ extends Node
 
 func _ready():
 	Firebase.Auth.login_anonymous()
-	make_get_request()
 
 
 func make_post_request(scenario, time, username, finished):
@@ -23,7 +22,6 @@ func make_post_request(scenario, time, username, finished):
 				var id_candidate = id_parts[1].to_int()
 				if id_candidate > latest_id:
 					latest_id = id_candidate
-					print(id_candidate)
 		latest_id += 1
 		collection.add(username + "_" + str(latest_id), {
 			"scenario": scenario,
@@ -42,18 +40,13 @@ func make_post_request(scenario, time, username, finished):
 		})
 
 
-func _on_http_request_request_completed(_result, _response_code, _headers, body):
-	var response = body.get_string_from_utf8()
-	print(response)
-
-
-func make_get_request() -> Dictionary:
+func make_get_request() -> String:
 	var query: FirestoreQuery = FirestoreQuery.new()
 	query.from("scores")
+	query.where("finished", FirestoreQuery.OPERATOR.EQUAL, 1)
 	query.order_by("time", FirestoreQuery.DIRECTION.ASCENDING)
 	var query_task: FirestoreTask = Firebase.Firestore.query(query)
 	var result: Array = await Firebase.Firestore.query(query).result_query
-	print(result)
 
 	var scores_dict: Dictionary = {}
 	for score in result:
@@ -64,6 +57,5 @@ func make_get_request() -> Dictionary:
 			scores_dict[username].append({"time": time, "scenario": scenario})
 		else:
 			scores_dict[username] = [{"time": time, "scenario": scenario}]
-	print(scores_dict)
-	return scores_dict
+	return JSON.stringify(scores_dict)
 
