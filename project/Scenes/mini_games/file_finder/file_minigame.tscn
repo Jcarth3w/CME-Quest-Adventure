@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bdtol8suwnlv7"]
+[gd_scene load_steps=22 format=3 uid="uid://bdtol8suwnlv7"]
 
 [ext_resource type="Script" path="res://Scenes/mini_games/file_finder/file_minigame_manager.gd" id="1_uttu5"]
 [ext_resource type="Texture2D" uid="uid://cs0qitpdt2ltj" path="res://Assets/AdjustedStandfordAssets/ComplianceFolder.png" id="2_wwggp"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cgmgwee03d24m" path="res://Assets/AdjustedStandfordAssets/LearningFolder.png" id="6_xsvny"]
 [ext_resource type="Script" path="res://Scenes/mini_games/file_finder/file_drop.gd" id="7_6foqy"]
 [ext_resource type="Script" path="res://Clickables/drag_and_drop/drag.gd" id="7_no75i"]
-[ext_resource type="Texture2D" uid="uid://bdbgarmgwdqsf" path="res://Assets/Sprites/generic_items/genericItem_color_088.png" id="7_pot2j"]
+[ext_resource type="Texture2D" uid="uid://blmunjistx21t" path="res://Assets/AdjustedStandfordAssets/BlankFolder.png" id="7_uejaq"]
 [ext_resource type="Texture2D" uid="uid://bhuyw2kfk5ybm" path="res://Assets/Sprites/Iteration 3 assets/Brochure.png" id="8_v3vra"]
 [ext_resource type="Texture2D" uid="uid://d2exdrfmom6g5" path="res://Assets/Sprites/Iteration 3 assets/Poster.png" id="9_k6ic3"]
 [ext_resource type="Texture2D" uid="uid://cwsl3d0j4hiu7" path="res://Assets/Sprites/Iteration 3 assets/PrintedDocument.png" id="10_ld2li"]
@@ -19,6 +19,35 @@
 [sub_resource type="LabelSettings" id="LabelSettings_js1u7"]
 font_size = 60
 outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_64bt4"]
+line_spacing = 0.0
+font_size = 40
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_firq8"]
+line_spacing = 0.0
+font_size = 38
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_a7no2"]
+font_size = 35
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8wod8"]
+line_spacing = 0.0
+font_size = 40
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lsoog"]
+line_spacing = 0.0
+font_size = 37
+outline_size = 8
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Scenario1Final" type="Node2D"]
@@ -109,66 +138,115 @@ offset_right = 1902.0
 offset_bottom = 1061.0
 color = Color(0.294118, 0.588235, 0.898039, 1)
 
+[node name="Label" type="Label" parent="OrganizeFiles"]
+offset_left = 100.0
+offset_top = 979.0
+offset_right = 277.0
+offset_bottom = 1037.0
+text = "Brochure"
+label_settings = SubResource("LabelSettings_64bt4")
+
+[node name="Label2" type="Label" parent="OrganizeFiles"]
+offset_left = 357.0
+offset_top = 953.0
+offset_right = 552.0
+offset_bottom = 1065.0
+text = "Event
+Poster"
+label_settings = SubResource("LabelSettings_firq8")
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="OrganizeFiles"]
+offset_left = 634.0
+offset_top = 983.0
+offset_right = 838.0
+offset_bottom = 1041.0
+text = "Registration"
+label_settings = SubResource("LabelSettings_a7no2")
+
+[node name="Label4" type="Label" parent="OrganizeFiles"]
+offset_left = 952.0
+offset_top = 972.0
+offset_right = 1129.0
+offset_bottom = 1030.0
+text = "Printed"
+label_settings = SubResource("LabelSettings_64bt4")
+
+[node name="Label5" type="Label" parent="OrganizeFiles"]
+offset_left = 1261.0
+offset_top = 960.0
+offset_right = 1438.0
+offset_bottom = 1070.0
+text = "Save the
+Date"
+label_settings = SubResource("LabelSettings_8wod8")
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="OrganizeFiles"]
+offset_left = 1562.0
+offset_top = 956.0
+offset_right = 1739.0
+offset_bottom = 1058.0
+text = "Media
+Graphic"
+label_settings = SubResource("LabelSettings_lsoog")
+horizontal_alignment = 1
+
 [node name="Slots" type="Node2D" parent="OrganizeFiles"]
 position = Vector2(87, 104)
 
 [node name="Slot1" type="TextureRect" parent="OrganizeFiles/Slots"]
-offset_left = 154.0
-offset_top = 564.0
-offset_right = 194.0
-offset_bottom = 604.0
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("7_pot2j")
+offset_left = -28.0
+offset_top = 670.0
+offset_right = 1549.0
+offset_bottom = 1776.0
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("7_uejaq")
 script = ExtResource("7_6foqy")
-metadata/_edit_use_anchors_ = true
 
 [node name="Slot2" type="TextureRect" parent="OrganizeFiles/Slots"]
-offset_left = 422.0
-offset_top = 614.0
-offset_right = 462.0
-offset_bottom = 654.0
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("7_pot2j")
+offset_left = 264.0
+offset_top = 664.0
+offset_right = 1841.0
+offset_bottom = 1770.0
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("7_uejaq")
 script = ExtResource("7_6foqy")
-metadata/_edit_use_anchors_ = true
 
 [node name="Slot3" type="TextureRect" parent="OrganizeFiles/Slots"]
-offset_left = 716.0
-offset_top = 558.0
-offset_right = 756.0
-offset_bottom = 598.0
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("7_pot2j")
+offset_left = 541.0
+offset_top = 669.0
+offset_right = 2118.0
+offset_bottom = 1775.0
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("7_uejaq")
 script = ExtResource("7_6foqy")
-metadata/_edit_use_anchors_ = true
 
 [node name="Slot4" type="TextureRect" parent="OrganizeFiles/Slots"]
-offset_left = 991.0
-offset_top = 620.0
-offset_right = 1031.0
-offset_bottom = 660.0
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("7_pot2j")
+offset_left = 836.0
+offset_top = 668.0
+offset_right = 2413.0
+offset_bottom = 1774.0
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("7_uejaq")
 script = ExtResource("7_6foqy")
-metadata/_edit_use_anchors_ = true
 
 [node name="Slot5" type="TextureRect" parent="OrganizeFiles/Slots"]
-offset_left = 1256.0
-offset_top = 561.0
-offset_right = 1296.0
-offset_bottom = 601.0
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("7_pot2j")
+offset_left = 1150.0
+offset_top = 686.0
+offset_right = 2727.0
+offset_bottom = 1792.0
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("7_uejaq")
 script = ExtResource("7_6foqy")
-metadata/_edit_use_anchors_ = true
 
 [node name="Slot6" type="TextureRect" parent="OrganizeFiles/Slots"]
-offset_left = 1539.0
-offset_top = 620.0
-offset_right = 1579.0
-offset_bottom = 660.0
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("7_pot2j")
+offset_left = 1451.0
+offset_top = 674.0
+offset_right = 3028.0
+offset_bottom = 1780.0
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("7_uejaq")
 script = ExtResource("7_6foqy")
 metadata/_edit_use_anchors_ = true
 

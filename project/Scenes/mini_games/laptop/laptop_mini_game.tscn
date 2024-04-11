@@ -1,25 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://6f7f3ik8hlfv"]
+[gd_scene load_steps=9 format=3 uid="uid://6f7f3ik8hlfv"]
 
 [ext_resource type="Script" path="res://Scenes/mini_games/laptop/laptop_mini_game.gd" id="1_mdm6b"]
-<<<<<<< Updated upstream
-[ext_resource type="Texture2D" uid="uid://rpdjh6s3x3m2" path="res://Assets/Sprites/room_1_custom_placeholders/Red Background.png" id="2_a45ph"]
-<<<<<<< Updated upstream
-[ext_resource type="Texture2D" uid="uid://bjoh0nhaqv22i" path="res://Assets/AdjustedStandfordAssets/Paper.png" id="3_wdiv2"]
-[ext_resource type="Texture2D" uid="uid://dk36r1p8iamyn" path="res://Assets/AdjustedStandfordAssets/BlankFolder.png" id="4_xjfps"]
-=======
-<<<<<<< Updated upstream
-[ext_resource type="Texture2D" uid="uid://b3hufaeip8x6q" path="res://Assets/AdjustedStandfordAssets/Resizedpapers.png" id="2_scfko"]
-[ext_resource type="Texture2D" uid="uid://dpchufhoke5mj" path="res://Assets/AdjustedStandfordAssets/BlankFolder.png" id="4_xjfps"]
-=======
-[ext_resource type="Texture2D" uid="uid://bjoh0nhaqv22i" path="res://Assets/AdjustedStandfordAssets/Paper.png" id="3_wdiv2"]
-[ext_resource type="Texture2D" uid="uid://dk36r1p8iamyn" path="res://Assets/AdjustedStandfordAssets/BlankFolder.png" id="4_xjfps"]
-=======
-[ext_resource type="Texture2D" uid="uid://b3hufaeip8x6q" path="res://Assets/AdjustedStandfordAssets/Resizedpapers.png" id="2_scfko"]
-[ext_resource type="Texture2D" uid="uid://b2732qav008e6" path="res://Assets/AdjustedStandfordAssets/PowerButton.png" id="3_g4ss6"]
-[ext_resource type="Texture2D" uid="uid://dpchufhoke5mj" path="res://Assets/AdjustedStandfordAssets/BlankFolder.png" id="4_xjfps"]
->>>>>>> Stashed changes
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+[ext_resource type="Texture2D" uid="uid://dknkf6x7tenr3" path="res://Assets/AdjustedStandfordAssets/Resizedpapers.png" id="2_scfko"]
+[ext_resource type="Texture2D" uid="uid://0srob8smdmqn" path="res://Assets/AdjustedStandfordAssets/PowerButton.png" id="3_g4ss6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_aep5h"]
 font_size = 72
@@ -129,41 +112,6 @@ offset_right = 1280.0
 offset_bottom = 93.0
 color = Color(0.309804, 0.309804, 0.309804, 0.494118)
 
-<<<<<<< Updated upstream
-[node name="File1" type="TextureButton" parent="Files"]
-offset_left = 64.0
-offset_top = 328.0
-offset_right = 1490.0
-offset_bottom = 1958.0
-scale = Vector2(0.1, 0.1)
-texture_normal = ExtResource("3_wdiv2")
-
-[node name="File2" type="TextureButton" parent="Files"]
-offset_left = 67.0
-offset_top = 528.0
-offset_right = 1493.0
-offset_bottom = 2158.0
-scale = Vector2(0.1, 0.1)
-texture_normal = ExtResource("3_wdiv2")
-
-[node name="File3" type="TextureButton" parent="Files"]
-offset_left = 71.0
-offset_top = 144.0
-offset_right = 1497.0
-offset_bottom = 1774.0
-scale = Vector2(0.1, 0.1)
-texture_normal = ExtResource("3_wdiv2")
-
-[node name="File4" type="TextureButton" parent="Files"]
-offset_left = 74.0
-offset_top = 720.0
-offset_right = 1500.0
-offset_bottom = 2350.0
-scale = Vector2(0.1, 0.1)
-texture_normal = ExtResource("3_wdiv2")
-
-=======
->>>>>>> Stashed changes
 [node name="FileRead" type="ColorRect" parent="Files"]
 offset_left = 640.0
 offset_top = 328.0
@@ -209,14 +157,6 @@ offset_right = 474.0
 offset_bottom = 273.0
 text = "PRINT"
 
-[node name="Folder" type="TextureButton" parent="Files"]
-offset_left = 1668.0
-offset_top = 175.0
-offset_right = 3245.0
-offset_bottom = 1281.0
-scale = Vector2(0.1, 0.1)
-texture_normal = ExtResource("4_xjfps")
-
 [node name="File1" type="TextureButton" parent="Files"]
 offset_left = 64.0
 offset_top = 328.0
@@ -259,39 +199,11 @@ offset_bottom = 1060.0
 color = Color(0.180392, 0.215686, 0.290196, 0.74902)
 
 [node name="PowerButton" type="TextureButton" parent="."]
-<<<<<<< Updated upstream
-offset_left = 48.0
-offset_top = 976.0
-offset_right = 1968.0
-offset_bottom = 2056.0
-scale = Vector2(0.04, 0.066)
-texture_normal = ExtResource("2_a45ph")
-
-[node name="Folder" type="TextureButton" parent="."]
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
-offset_left = 1658.0
-offset_top = 112.0
-offset_right = 3235.0
-offset_bottom = 1218.0
-=======
->>>>>>> Stashed changes
-offset_left = 1670.0
-offset_top = 138.0
-offset_right = 3247.0
-offset_bottom = 1244.0
-<<<<<<< Updated upstream
-=======
-=======
-offset_left = 42.0
-offset_top = 968.0
-offset_right = 820.0
-offset_bottom = 1748.0
->>>>>>> Stashed changes
->>>>>>> Stashed changes
->>>>>>> Stashed changes
-scale = Vector2(0.1, 0.1)
+offset_left = 38.0
+offset_top = 962.0
+offset_right = 816.0
+offset_bottom = 1742.0
+scale = Vector2(0.12, 0.12)
 texture_normal = ExtResource("3_g4ss6")
 
 [connection signal="pressed" from="Login/Button" to="." method="on_button_pressed"]

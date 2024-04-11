@@ -16,6 +16,7 @@ func _ready():
 
 	for slot in $OrganizeFiles/Slots.get_children():
 		slot.gathered_data.connect(_on_drop_item.bind(slot))
+		print("connected")
 
 	correct_order = {"Slot1" : $OrganizeFiles/Items/Item1,
 					"Slot2" : $OrganizeFiles/Items/Item2,
@@ -95,7 +96,7 @@ func check_win():
 func reset():
 	for slot in $OrganizeFiles/Slots.get_children():
 			slot.texture = slot.original_texture
-			slot.scale = Vector2(2.5, 2.5)
+			slot.scale = Vector2(0.17, 0.17)
 	
 	for item in $OrganizeFiles/Items.get_children():
 		item.texture = item.original_texture
