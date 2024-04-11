@@ -1,7 +1,7 @@
 class_name Drop
 extends TextureRect
 
-signal gathered_data(values)
+signal gathered_data
 
 @export var drag_partner : TextureRect
 

@@ -1,20 +1,25 @@
-[gd_scene load_steps=13 format=3 uid="uid://clucatw8d4xcx"]
+[gd_scene load_steps=17 format=3 uid="uid://clucatw8d4xcx"]
 
 [ext_resource type="Script" path="res://Scenes/rooms/room.gd" id="1_t37e3"]
 [ext_resource type="Texture2D" uid="uid://dwqw21d8i31b" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-01(1).png" id="2_m2fds"]
-[ext_resource type="Texture2D" uid="uid://cb2n58u7x5yje" path="res://Clickables/static_scene_btn/Sprites/Iteration 3 assets/Door.png" id="2_vtqet"]
 [ext_resource type="PackedScene" uid="uid://pn2l6ln2hl3j" path="res://Clickables/new_scene/new_scene_object.tscn" id="3_ts1c4"]
-[ext_resource type="Texture2D" uid="uid://cr6emhixd0qne" path="res://Assets/AdjustedStandfordAssets/ResizedLaptop.png" id="4_no767"]
+[ext_resource type="Texture2D" uid="uid://ci7deevjv20ji" path="res://Assets/AdjustedStandfordAssets/ResizedLaptop.png" id="4_no767"]
 [ext_resource type="Texture2D" uid="uid://d0g5gdljbiet3" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-04.png" id="5_xiio5"]
 [ext_resource type="PackedScene" uid="uid://bjqdr74ju46mx" path="res://Clickables/drag_and_drop/drag.tscn" id="6_4e2no"]
-[ext_resource type="Texture2D" uid="uid://f6cog0svtwyi" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/BloomsTaxMissingBottom.png" id="8_5g7rv"]
+[ext_resource type="Texture2D" uid="uid://rhd6d5w5hbji" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/BloomsTaxMissingBottom.png" id="8_5g7rv"]
 [ext_resource type="PackedScene" uid="uid://b5lhwjd1itais" path="res://Clickables/drag_and_drop/drop.tscn" id="8_cqran"]
-[ext_resource type="Texture2D" uid="uid://b4ua5dek0oras" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/BloomsTaxMissingTop.png" id="10_a2r7c"]
-[ext_resource type="Script" path="res://Clickables/drag_and_drop/drop.gd" id="10_wbjxs"]
-[ext_resource type="Texture2D" uid="uid://bmh7laikfh860" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/BloomsTaxTrans.png" id="12_vtjff"]
+[ext_resource type="Texture2D" uid="uid://d625im4kpqxs" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/BloomsTaxMissingTop.png" id="10_a2r7c"]
+[ext_resource type="Script" path="res://Scenes/mini_games/blooms_tax/blooms_room_drop.gd" id="11_8lwk0"]
+[ext_resource type="Texture2D" uid="uid://bvhnv7n3i6q5m" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/BloomsTaxTrans.png" id="12_vtjff"]
+[ext_resource type="Texture2D" uid="uid://c5aw2lgu2qldx" path="res://Assets/AdjustedStandfordAssets/ResizedPinBoard.png" id="12_yvgg8"]
+[ext_resource type="Script" path="res://Clickables/static_scene_btn/static_scene_button.gd" id="13_681er"]
+[ext_resource type="Texture2D" uid="uid://dhxim7wroyin3" path="res://Assets/Sprites/Room2/keypad.PNG" id="14_gxkoq"]
+[ext_resource type="Script" path="res://Clickables/room_unlocks/combo_button.gd" id="15_hfeqr"]
+[ext_resource type="AudioStream" uid="uid://bvml46igb4p5b" path="res://Assets/SFX/pickup_item.wav" id="16_47qld"]
 
-[node name="room_5" type="Node2D"]
+[node name="room_5" type="Node2D" node_paths=PackedStringArray("final_mini_game")]
 script = ExtResource("1_t37e3")
+final_mini_game = NodePath("Finale")
 
 [node name="BackgroundWall" type="ColorRect" parent="."]
 offset_right = 1920.0
@@ -45,7 +50,6 @@ metadata/_edit_use_anchors_ = true
 [node name="Door" type="Sprite2D" parent="."]
 position = Vector2(1719, 481)
 scale = Vector2(0.664634, 0.71875)
-texture = ExtResource("2_vtqet")
 
 [node name="Desk" type="Sprite2D" parent="."]
 position = Vector2(1250, 742)
@@ -59,6 +63,7 @@ offset_right = 4913.0
 offset_bottom = 3265.0
 scale = Vector2(0.05, 0.05)
 texture_normal = ExtResource("4_no767")
+scene_path = "res://Scenes/mini_games/text_edit_laptop/laptop_screen.tscn"
 
 [node name="Custom-illustrations-stanford-monuments-assets-04" type="Sprite2D" parent="."]
 position = Vector2(1075, 590)
@@ -74,21 +79,42 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("8_5g7rv")
 stretch_mode = 2
 
-[node name="BloomsBottom" parent="." node_paths=PackedStringArray("drag_partner") instance=ExtResource("8_cqran")]
-offset_left = 107.0
-offset_top = 118.0
-offset_right = 527.0
-offset_bottom = 448.0
+[node name="BloomsBottom" parent="." instance=ExtResource("8_cqran")]
+offset_left = 106.0
+offset_top = 161.0
+offset_right = 526.0
+offset_bottom = 491.0
 texture = ExtResource("10_a2r7c")
-script = ExtResource("10_wbjxs")
-drag_partner = NodePath("../BloomsTop")
+script = ExtResource("11_8lwk0")
 
 [node name="BloomsGame" parent="." instance=ExtResource("3_ts1c4")]
 visible = false
-offset_left = 93.0
-offset_top = 114.0
-offset_right = 760.0
-offset_bottom = 590.0
+offset_left = 84.0
+offset_top = 165.0
+offset_right = 751.0
+offset_bottom = 641.0
 scale = Vector2(0.7, 0.7)
 texture_normal = ExtResource("12_vtjff")
 scene_path = "res://Scenes/mini_games/blooms_tax/blooms_tax_game.tscn"
+
+[node name="BulletinBoard" type="TextureButton" parent="."]
+offset_left = 761.0
+offset_top = 145.0
+offset_right = 2566.0
+offset_bottom = 1492.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("12_yvgg8")
+script = ExtResource("13_681er")
+scene_path = "res://Scenes/static_scene/bulletin_board.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="Finale" type="TextureButton" parent="."]
+offset_left = 1407.0
+offset_top = 313.0
+offset_right = 2042.0
+offset_bottom = 1070.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("14_gxkoq")
+script = ExtResource("15_hfeqr")
+scene_path = "res://Scenes/static_scene/letter_unlock_final.tscn"
+sound = ExtResource("16_47qld")
