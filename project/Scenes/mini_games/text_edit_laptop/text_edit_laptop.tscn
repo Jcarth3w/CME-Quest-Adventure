@@ -6,8 +6,8 @@
 [sub_resource type="LabelSettings" id="LabelSettings_vfyi8"]
 font_size = 55
 font_color = Color(0, 0, 0, 1)
-shadow_size = 3
-shadow_color = Color(0, 0, 0, 0.619608)
+shadow_size = 2
+shadow_color = Color(0.67451, 0.67451, 0.67451, 0.619608)
 shadow_offset = Vector2(3, 3)
 
 [sub_resource type="LabelSettings" id="LabelSettings_c5xba"]
@@ -28,6 +28,7 @@ font_color = Color(0, 0, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_c7lac"]
 font_color = Color(0, 0, 0, 1)
 outline_size = 6
+outline_color = Color(0.878431, 0.878431, 0.878431, 1)
 
 [node name="TextEditLaptop" type="Node2D"]
 position = Vector2(237, 143)
@@ -39,7 +40,15 @@ offset_left = 256.0
 offset_top = 128.0
 offset_right = 1664.0
 offset_bottom = 1024.0
-color = Color(0.792157, 0.756863, 0.917647, 1)
+color = Color(1, 0.768627, 0.643137, 1)
+
+[node name="Foreground" type="ColorRect" parent="Background"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 23.0
+offset_right = 1388.0
+offset_bottom = 873.0
+color = Color(1, 1, 0.913725, 1)
 
 [node name="Page1" type="Node2D" parent="."]
 script = ExtResource("3_72agi")
@@ -62,17 +71,16 @@ offset_left = 320.0
 offset_top = 282.0
 offset_right = 1601.0
 offset_bottom = 376.0
-text = "The program successfully ______________________ by involving members of interprofessional
-teams in the planning and delivering of interprofessional continuing education (IPCE)."
+text = "The hospital's initiative engages ____________________ of doctors, nurses, and pharmacists
+to collaborate on patient care."
 label_settings = SubResource("LabelSettings_c5xba")
 
 [node name="Answer1" type="LineEdit" parent="Page1"]
-offset_left = 705.0
-offset_top = 267.0
-offset_right = 878.0
-offset_bottom = 298.0
+offset_left = 787.5
+offset_top = 267.5
+offset_right = 960.5
+offset_bottom = 298.5
 scale = Vector2(1.5, 1.5)
-text = "Engages Teams"
 alignment = 1
 
 [node name="Sentence2" type="Label" parent="Page1"]
@@ -80,42 +88,44 @@ offset_left = 322.0
 offset_top = 451.0
 offset_right = 1538.0
 offset_bottom = 592.0
-text = "The initiative not only ______________________ but also ensures their active participation
-in the planning and delivery of CME, making the educational content more relevant
-and impactful"
+text = "The university's medical school engages ____________________ in hands-on learning 
+experiences through clinical rotations and research projects."
 label_settings = SubResource("LabelSettings_wimi6")
 
 [node name="Answer2" type="LineEdit" parent="Page1"]
-offset_left = 652.0
-offset_top = 435.0
-offset_right = 825.0
-offset_bottom = 466.0
+offset_left = 905.0
+offset_top = 437.5
+offset_right = 1078.0
+offset_bottom = 468.5
 scale = Vector2(1.5, 1.5)
-text = "Engages Teams"
 alignment = 1
 
 [node name="Sentence3" type="Label" parent="Page1"]
 offset_left = 320.0
-offset_top = 675.0
+offset_top = 645.0
 offset_right = 1535.0
-offset_bottom = 816.0
-text = "A key aspect of our CME strategy is to ______________________ of the health professions,
-integrating them into the planning and delivery process to foster a collaborative
-and comprehensive learning environment"
+offset_bottom = 786.0
+text = "Our community health program engages ____________________ by organizing health
+awareness campaigns and free screenings."
 label_settings = SubResource("LabelSettings_s6po7")
 
 [node name="Answer3" type="LineEdit" parent="Page1"]
-offset_left = 891.0
-offset_top = 660.0
-offset_right = 1064.0
-offset_bottom = 691.0
+offset_left = 917.5
+offset_top = 632.5
+offset_right = 1090.5
+offset_bottom = 663.5
 scale = Vector2(1.5, 1.5)
-text = "Engages Teams"
+text = " "
 alignment = 1
 
 [node name="Page2" type="Node2D" parent="."]
 visible = false
 script = ExtResource("3_72agi")
+answers = {
+"Answer1": "Data Use",
+"Answer2": "Population Health",
+"Answer3": "Collaborates"
+}
 
 [node name="Title" type="Label" parent="Page2"]
 offset_left = 656.0
@@ -130,17 +140,16 @@ offset_left = 320.0
 offset_top = 282.0
 offset_right = 1601.0
 offset_bottom = 376.0
-text = "The program successfully ______________________ by involving members of interprofessional
-teams in the planning and delivering of interprofessional continuing education (IPCE)."
+text = "The healthcare institution advances ____________________ by implementing electronic 
+health record systems and analyzing patient outcomes."
 label_settings = SubResource("LabelSettings_c5xba")
 
 [node name="Answer1" type="LineEdit" parent="Page2"]
-offset_left = 705.0
-offset_top = 267.0
-offset_right = 878.0
-offset_bottom = 298.0
+offset_left = 842.5
+offset_top = 267.5
+offset_right = 1015.5
+offset_bottom = 298.5
 scale = Vector2(1.5, 1.5)
-text = "Engages Teams"
 alignment = 1
 
 [node name="Sentence2" type="Label" parent="Page2"]
@@ -148,42 +157,44 @@ offset_left = 322.0
 offset_top = 451.0
 offset_right = 1538.0
 offset_bottom = 592.0
-text = "The initiative not only ______________________ but also ensures their active participation
-in the planning and delivery of CME, making the educational content more relevant
-and impactful"
+text = "Our public health program adresses  ____________________ by focusing on social 
+determinants and access to healthcare services"
 label_settings = SubResource("LabelSettings_wimi6")
 
 [node name="Answer2" type="LineEdit" parent="Page2"]
-offset_left = 652.0
-offset_top = 435.0
-offset_right = 825.0
-offset_bottom = 466.0
+offset_left = 860.0
+offset_top = 436.25
+offset_right = 1033.0
+offset_bottom = 467.25
 scale = Vector2(1.5, 1.5)
-text = "Engages Teams"
 alignment = 1
 
 [node name="Sentence3" type="Label" parent="Page2"]
 offset_left = 320.0
-offset_top = 675.0
+offset_top = 650.0
 offset_right = 1535.0
-offset_bottom = 816.0
-text = "A key aspect of our CME strategy is to ______________________ of the health professions,
-integrating them into the planning and delivery process to foster a collaborative
-and comprehensive learning environment"
+offset_bottom = 791.0
+text = "The healthcare coalition ____________________ effectively with local governments 
+and nonprofits to improve community health initiatives."
 label_settings = SubResource("LabelSettings_s6po7")
 
 [node name="Answer3" type="LineEdit" parent="Page2"]
-offset_left = 891.0
-offset_top = 660.0
-offset_right = 1064.0
-offset_bottom = 691.0
+offset_left = 673.75
+offset_top = 636.25
+offset_right = 846.75
+offset_bottom = 667.25
 scale = Vector2(1.5, 1.5)
-text = "Engages Teams"
 alignment = 1
 
 [node name="Page3" type="Node2D" parent="."]
 visible = false
 script = ExtResource("3_72agi")
+answers = {
+"Answer1": "Communication",
+"Answer2": "Technical",
+"Answer3": "Individualized Learning",
+"Answer4": "Support Strategies"
+}
 
 [node name="Title" type="Label" parent="Page3"]
 offset_left = 656.0
@@ -192,66 +203,84 @@ offset_right = 1258.0
 offset_bottom = 226.0
 text = "Enhances Skills"
 label_settings = SubResource("LabelSettings_vfyi8")
+horizontal_alignment = 1
 
 [node name="Sentence1" type="Label" parent="Page3"]
 offset_left = 320.0
 offset_top = 282.0
 offset_right = 1601.0
 offset_bottom = 376.0
-text = "The program successfully ______________________ by involving members of interprofessional
-teams in the planning and delivering of interprofessional continuing education (IPCE)."
+text = "Our training program optimizes ____________________ skills through workshops and 
+simulations focusing on effective patient interaction."
 label_settings = SubResource("LabelSettings_c5xba")
 
 [node name="Answer1" type="LineEdit" parent="Page3"]
-offset_left = 705.0
-offset_top = 267.0
-offset_right = 878.0
-offset_bottom = 298.0
+offset_left = 786.25
+offset_top = 270.0
+offset_right = 959.25
+offset_bottom = 301.0
 scale = Vector2(1.5, 1.5)
-text = "Engages Teams"
 alignment = 1
 
 [node name="Sentence2" type="Label" parent="Page3"]
 offset_left = 322.0
-offset_top = 451.0
+offset_top = 418.5
 offset_right = 1538.0
-offset_bottom = 592.0
-text = "The initiative not only ______________________ but also ensures their active participation
-in the planning and delivery of CME, making the educational content more relevant
-and impactful"
+offset_bottom = 559.5
+text = "The advanced course optimizes ____________________ skills by offering hands-on training 
+with state-of-the-art equipment."
 label_settings = SubResource("LabelSettings_wimi6")
 
 [node name="Answer2" type="LineEdit" parent="Page3"]
-offset_left = 652.0
-offset_top = 435.0
-offset_right = 825.0
-offset_bottom = 466.0
+offset_left = 783.75
+offset_top = 406.25
+offset_right = 956.75
+offset_bottom = 437.25
 scale = Vector2(1.5, 1.5)
-text = "Engages Teams"
 alignment = 1
 
 [node name="Sentence3" type="Label" parent="Page3"]
 offset_left = 320.0
-offset_top = 675.0
+offset_top = 562.5
 offset_right = 1535.0
-offset_bottom = 816.0
-text = "A key aspect of our CME strategy is to ______________________ of the health professions,
-integrating them into the planning and delivery process to foster a collaborative
-and comprehensive learning environment"
+offset_bottom = 703.5
+text = "The educational institution creates ____________________  plans for each student 
+based on their strengths and areas for improvement."
 label_settings = SubResource("LabelSettings_s6po7")
 
 [node name="Answer3" type="LineEdit" parent="Page3"]
-offset_left = 891.0
-offset_top = 660.0
-offset_right = 1064.0
-offset_bottom = 691.0
+offset_left = 831.25
+offset_top = 550.0
+offset_right = 1004.25
+offset_bottom = 581.0
 scale = Vector2(1.5, 1.5)
-text = "Engages Teams"
+alignment = 1
+
+[node name="Sentence4" type="Label" parent="Page3"]
+offset_left = 320.0
+offset_top = 733.75
+offset_right = 1535.0
+offset_bottom = 874.75
+text = "The organization utilizes ____________________ such as mentorship programs and online 
+resources to complement its CME offerings."
+label_settings = SubResource("LabelSettings_s6po7")
+
+[node name="Answer4" type="LineEdit" parent="Page3"]
+offset_left = 678.75
+offset_top = 720.0
+offset_right = 851.75
+offset_bottom = 751.0
+scale = Vector2(1.5, 1.5)
 alignment = 1
 
 [node name="Page4" type="Node2D" parent="."]
 visible = false
 script = ExtResource("3_72agi")
+answers = {
+"Answer1": "Research",
+"Answer2": "CPD",
+"Answer3": "Creativity"
+}
 
 [node name="Title" type="Label" parent="Page4"]
 offset_left = 656.0
@@ -266,17 +295,16 @@ offset_left = 320.0
 offset_top = 282.0
 offset_right = 1601.0
 offset_bottom = 376.0
-text = "The program successfully ______________________ by involving members of interprofessional
-teams in the planning and delivering of interprofessional continuing education (IPCE)."
+text = "The academic institution engages in ____________________ to enhance the evidence 
+base for its CME programs."
 label_settings = SubResource("LabelSettings_c5xba")
 
 [node name="Answer1" type="LineEdit" parent="Page4"]
-offset_left = 705.0
-offset_top = 267.0
-offset_right = 878.0
-offset_bottom = 298.0
+offset_left = 846.25
+offset_top = 268.75
+offset_right = 1019.25
+offset_bottom = 299.75
 scale = Vector2(1.5, 1.5)
-text = "Engages Teams"
 alignment = 1
 
 [node name="Sentence2" type="Label" parent="Page4"]
@@ -284,42 +312,43 @@ offset_left = 322.0
 offset_top = 451.0
 offset_right = 1538.0
 offset_bottom = 592.0
-text = "The initiative not only ______________________ but also ensures their active participation
-in the planning and delivery of CME, making the educational content more relevant
-and impactful"
+text = "The organization supports ____________________ for its CME team by offering 
+opportunities for ongoing training and professional growth."
 label_settings = SubResource("LabelSettings_wimi6")
 
 [node name="Answer2" type="LineEdit" parent="Page4"]
-offset_left = 652.0
-offset_top = 435.0
-offset_right = 825.0
-offset_bottom = 466.0
+offset_left = 708.75
+offset_top = 437.5
+offset_right = 881.75
+offset_bottom = 468.5
 scale = Vector2(1.5, 1.5)
-text = "Engages Teams"
 alignment = 1
 
 [node name="Sentence3" type="Label" parent="Page4"]
 offset_left = 320.0
-offset_top = 675.0
+offset_top = 626.25
 offset_right = 1535.0
-offset_bottom = 816.0
-text = "A key aspect of our CME strategy is to ______________________ of the health professions,
-integrating them into the planning and delivery process to foster a collaborative
-and comprehensive learning environment"
+offset_bottom = 767.25
+text = "Our CME provider demonstrates ____________________ by incorporating interactive 
+simulations and gamification into its learning modules."
 label_settings = SubResource("LabelSettings_s6po7")
 
 [node name="Answer3" type="LineEdit" parent="Page4"]
-offset_left = 891.0
-offset_top = 660.0
-offset_right = 1064.0
-offset_bottom = 691.0
+offset_left = 797.5
+offset_top = 612.5
+offset_right = 970.5
+offset_bottom = 643.5
 scale = Vector2(1.5, 1.5)
-text = "Engages Teams"
 alignment = 1
 
 [node name="Page5" type="Node2D" parent="."]
 visible = false
 script = ExtResource("3_72agi")
+answers = {
+"Answer1": "Performance",
+"Answer2": "Healthcare",
+"Answer3": "Patient"
+}
 
 [node name="Title" type="Label" parent="Page5"]
 offset_left = 656.0
@@ -328,23 +357,23 @@ offset_right = 1258.0
 offset_bottom = 226.0
 text = "Achieves Outcomes"
 label_settings = SubResource("LabelSettings_vfyi8")
+horizontal_alignment = 1
 
 [node name="Sentence1" type="Label" parent="Page5"]
 offset_left = 320.0
 offset_top = 282.0
 offset_right = 1601.0
 offset_bottom = 376.0
-text = "The program successfully ______________________ by involving members of interprofessional
-teams in the planning and delivering of interprofessional continuing education (IPCE)."
+text = "Our training program improves ____________________ by providing regular feedback 
+and opportunities for skills practice."
 label_settings = SubResource("LabelSettings_c5xba")
 
 [node name="Answer1" type="LineEdit" parent="Page5"]
-offset_left = 705.0
-offset_top = 267.0
-offset_right = 878.0
-offset_bottom = 298.0
+offset_left = 782.5
+offset_top = 270.0
+offset_right = 955.5
+offset_bottom = 301.0
 scale = Vector2(1.5, 1.5)
-text = "Engages Teams"
 alignment = 1
 
 [node name="Sentence2" type="Label" parent="Page5"]
@@ -352,37 +381,33 @@ offset_left = 322.0
 offset_top = 451.0
 offset_right = 1538.0
 offset_bottom = 592.0
-text = "The initiative not only ______________________ but also ensures their active participation
-in the planning and delivery of CME, making the educational content more relevant
-and impactful"
+text = "The healthcare institution improves ____________________ quality by implementing 
+evidence-based practices and continuous quality monitoring."
 label_settings = SubResource("LabelSettings_wimi6")
 
 [node name="Answer2" type="LineEdit" parent="Page5"]
-offset_left = 652.0
-offset_top = 435.0
-offset_right = 825.0
-offset_bottom = 466.0
+offset_left = 847.5
+offset_top = 438.75
+offset_right = 1020.5
+offset_bottom = 469.75
 scale = Vector2(1.5, 1.5)
-text = "Engages Teams"
 alignment = 1
 
 [node name="Sentence3" type="Label" parent="Page5"]
 offset_left = 320.0
-offset_top = 675.0
+offset_top = 636.25
 offset_right = 1535.0
-offset_bottom = 816.0
-text = "A key aspect of our CME strategy is to ______________________ of the health professions,
-integrating them into the planning and delivery process to foster a collaborative
-and comprehensive learning environment"
+offset_bottom = 777.25
+text = "Our community outreach program improves ____________________ health by offering 
+education on preventive care and access to resources."
 label_settings = SubResource("LabelSettings_s6po7")
 
 [node name="Answer3" type="LineEdit" parent="Page5"]
-offset_left = 891.0
-offset_top = 660.0
-offset_right = 1064.0
-offset_bottom = 691.0
+offset_left = 971.25
+offset_top = 623.75
+offset_right = 1144.25
+offset_bottom = 654.75
 scale = Vector2(1.5, 1.5)
-text = "Engages Teams"
 alignment = 1
 
 [node name="Selector" type="Node2D" parent="."]
