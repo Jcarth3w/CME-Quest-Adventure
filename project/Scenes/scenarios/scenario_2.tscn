@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cknyxopjpq58i"]
+[gd_scene load_steps=9 format=3 uid="uid://cknyxopjpq58i"]
 
 [ext_resource type="Script" path="res://Scenes/scenarios/scenario.gd" id="1_0b13o"]
 [ext_resource type="AudioStream" uid="uid://bmewjqq14bmh0" path="res://Assets/SFX/game_win.wav" id="2_8fe0y"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bp3esxqwlfxd0" path="res://Scenes/gui/popup/popup_gui.tscn" id="3_208rw"]
 [ext_resource type="PackedScene" uid="uid://b8xl3wqxn7v5d" path="res://Scenes/gui/HUD.tscn" id="3_ac87f"]
 [ext_resource type="PackedScene" uid="uid://wbewelwvsha2" path="res://Components/post_score.tscn" id="4_g1nls"]
+[ext_resource type="AudioStream" uid="uid://1a6etxf0avel" path="res://Assets/SFX/Room1Background.wav" id="8_10hdl"]
 
 [node name="scenario_2" type="Node2D" node_paths=PackedStringArray("current_room")]
 script = ExtResource("1_0b13o")
@@ -26,3 +27,5 @@ final_sound = ExtResource("2_8fe0y")
 [node name="DBoperations" parent="." instance=ExtResource("4_g1nls")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_10hdl")
+autoplay = true

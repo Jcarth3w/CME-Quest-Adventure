@@ -69,7 +69,7 @@ func _on_room_final() -> void:
 	end_screen_inst.username = username
 	end_screen_inst.scen_num = scenario_num
 	end_screen_inst.time_val = $HUD/Timer/Label.text
-	play_sound(final_sound)
+	##play_sound(final_sound)
 	add_child(end_screen_inst)
 
 
@@ -86,6 +86,6 @@ func on_username_recieved(current_username):
 	username = current_username
 
 
-func play_sound(sound):
-	$AudioStreamPlayer.stream = sound
-	$AudioStreamPlayer.play()
+##func play_sound(sound):
+	##$AudioStreamPlayer.stream = sound
+	##$AudioStreamPlayer.play()
