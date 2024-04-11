@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://boq7hqgj3oxtn"]
+[gd_scene load_steps=9 format=3 uid="uid://boq7hqgj3oxtn"]
 
 [ext_resource type="Script" path="res://Scenes/main_menus/main_menu.gd" id="1_q4rsi"]
 [ext_resource type="PackedScene" uid="uid://cll8mywp4rc6a" path="res://Scenes/main_menus/Scenario_Select.tscn" id="2_acw4n"]
 [ext_resource type="Texture2D" uid="uid://w10bfogg4ojl" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-09.png" id="2_uv7yu"]
 [ext_resource type="PackedScene" uid="uid://b0yb0aod8hxnd" path="res://Scenes/main_menus/Leader_Board.tscn" id="3_go8oe"]
-[ext_resource type="AudioStream" uid="uid://u156v3dg1dkh" path="res://Assets/SFX/Main_Menu.wav" id="3_t7yfr"]
+[ext_resource type="Script" path="res://Scenes/main_menus/leader_board.gd" id="3_prpgj"]
+[ext_resource type="AudioStream" uid="uid://burp87c52xtxl" path="res://Assets/SFX/Main_Menu.wav" id="3_t7yfr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xcyt8"]
 font_size = 140
@@ -105,15 +106,15 @@ offset_top = -8.0
 offset_right = 673.0
 offset_bottom = 215.0
 
-[node name="Leaderboard" type="ColorRect" parent="Main"]
+[node name="LeaderBoardDesign" type="ColorRect" parent="Main"]
 offset_left = 688.0
-offset_top = 648.0
+offset_top = 644.0
 offset_right = 1371.0
-offset_bottom = 872.0
+offset_bottom = 868.0
 scale = Vector2(0.8, 0.8)
 color = Color(0, 0, 0, 1)
 
-[node name="RedRectangle" type="ColorRect" parent="Main/Leaderboard"]
+[node name="RedRectangle" type="ColorRect" parent="Main/LeaderBoardDesign"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -128,24 +129,22 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.737255, 0, 0.203922, 1)
 
-[node name="Label" type="Label" parent="Main/Leaderboard/RedRectangle"]
+[node name="Label" type="Label" parent="Main/LeaderBoardDesign/RedRectangle"]
 layout_mode = 0
 offset_left = -9.0
 offset_top = -9.0
 offset_right = 676.0
 offset_bottom = 216.0
-text = "Leaderboard
-"
+text = "Leaderboard"
 label_settings = SubResource("LabelSettings_ixev0")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LeaderBoardButton" type="TextureButton" parent="Main/Leaderboard/RedRectangle"]
-layout_mode = 0
-offset_left = -8.0
-offset_top = -8.0
-offset_right = 673.0
-offset_bottom = 215.0
+[node name="LeaderBoardButton" type="TextureButton" parent="Main/LeaderBoardDesign/RedRectangle"]
+offset_left = -1.50012
+offset_top = -11.5001
+offset_right = 679.5
+offset_bottom = 211.5
 
 [node name="StartDesign" type="ColorRect" parent="Main"]
 offset_left = 688.0
@@ -197,12 +196,12 @@ visible = false
 
 [node name="Leader_Board" parent="." instance=ExtResource("3_go8oe")]
 visible = false
-script = null
+script = ExtResource("3_prpgj")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_t7yfr")
 autoplay = true
 
 [connection signal="pressed" from="Main/QuitDesign/RedRectangle/QuitButton" to="." method="_on_quit_button_pressed"]
-[connection signal="pressed" from="Main/Leaderboard/RedRectangle/LeaderBoardButton" to="." method="_on_leader_board_button_pressed"]
+[connection signal="pressed" from="Main/LeaderBoardDesign/RedRectangle/LeaderBoardButton" to="." method="_on_leader_board_button_pressed"]
 [connection signal="pressed" from="Main/StartDesign/RedRectangle/StartButton" to="." method="_on_start_button_pressed"]

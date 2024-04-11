@@ -53,7 +53,7 @@ func populate_leader_board(scenario_number):
 
 
 func _on_back_button_pressed():
-	get_tree().change_scene_to_file("res://Scenes/main_menus/main_menu.tscn")
+	visible = false
 
 
 func _on_scenario_1_button_pressed():
