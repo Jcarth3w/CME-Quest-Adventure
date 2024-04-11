@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjqdr74ju46mx"]
+[gd_scene load_steps=3 format=3 uid="uid://bjqdr74ju46mx"]
 
 [ext_resource type="Script" path="res://Clickables/drag_and_drop/drag.gd" id="1_hqy0i"]
+[ext_resource type="AudioStream" uid="uid://bs5qnyl1x4anh" path="res://Assets/SFX/pickup_item.wav" id="2_bbhi7"]
 
 [node name="Drag" type="TextureRect"]
 script = ExtResource("1_hqy0i")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_bbhi7")

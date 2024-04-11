@@ -13,6 +13,7 @@ func _ready() -> void:
 
 
 func _get_drag_data(_at_position):
+	$AudioStreamPlayer.play()
 	var preview = create_preview()
 	data_dropped.emit(self, original_texture)
 	set_drag_preview(preview)

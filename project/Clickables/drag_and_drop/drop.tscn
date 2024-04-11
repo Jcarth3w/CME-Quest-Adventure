@@ -1,6 +1,11 @@
-[gd_scene format=3 uid="uid://b5lhwjd1itais"]
+[gd_scene load_steps=2 format=3 uid="uid://b5lhwjd1itais"]
+
+[ext_resource type="AudioStream" uid="uid://b4h5c5tpxusug" path="res://Assets/SFX/drop.wav" id="1_piy3e"]
 
 [node name="Drop" type="TextureRect"]
 offset_right = 40.0
 offset_bottom = 40.0
 expand_mode = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_piy3e")

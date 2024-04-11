@@ -18,6 +18,7 @@ func on_button_press(button) -> void:
 		"CLEAR":
 			$Display.text = ""
 		"X":
+			get_parent().get_node("Room3Unlock").on_mouse_exited()
 			queue_free()
 			get_parent().resume_room()
 		_:
@@ -29,6 +30,7 @@ func on_button_press(button) -> void:
 
 func check_answer(player_answer) -> void:
 	if player_answer == answer:
+		$AudioStreamPlayer.play()
 		$Display.text = "unlocked room 3"
 		get_parent().unlock(room_number)
 		finished.emit()

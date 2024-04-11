@@ -1,25 +1,25 @@
 extends Timer
 
 
-var seconds = 0;
-var ten_seconds = 0;
-var minutes = 0;
-var ten_minutes = 0;
+var seconds = 9;
+var ten_seconds = 5;
+var minutes = 9;
+var ten_minutes = 2;
 
 
 func _on_timeout():
 	update_label()
 
 func update_label():
-	seconds += 1
-	if seconds == 10:
-		ten_seconds += 1
-		seconds = 0
-	if ten_seconds == 6:
-		minutes += 1
-		ten_seconds = 0
-	if minutes == 10:
-		ten_minutes += 1
-		minutes = 0
+	seconds -= 1
+	if seconds == -1:
+		ten_seconds -= 1
+		seconds = 9
+	if ten_seconds == -1:
+		minutes -= 1
+		ten_seconds = 5
+	if minutes == -1:
+		ten_minutes -= 1
+		minutes = 9
 
 	$Label.text = str(ten_minutes) + str(minutes) + ":" + str(ten_seconds) + str(seconds)
