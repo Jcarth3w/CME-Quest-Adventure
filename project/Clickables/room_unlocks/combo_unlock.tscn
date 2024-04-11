@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://vwf5vvr4lo6s" path="res://Assets/Sprites/Iteration 3 assets/RedStickyNote.png" id="2_gbo8g"]
 [ext_resource type="AudioStream" uid="uid://bd1y5wcxcnxr0" path="res://Assets/SFX/combo_unlock.wav" id="3_2ah07"]
 
+
 [sub_resource type="LabelSettings" id="LabelSettings_26263"]
 font_size = 32
 font_color = Color(0.941176, 0, 0, 1)

@@ -1,3 +1,4 @@
+class_name Drag
 extends TextureRect
 
 signal data_dropped
