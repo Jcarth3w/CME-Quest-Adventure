@@ -13,7 +13,8 @@ func _on_room_two_button_pressed():
 	get_tree().change_scene_to_file(scenario_two)
 
 func _on_room_three_button_pressed():
-	get_tree().change_scene_to_file(scenario_three)
+	get_parent().get_node("Main").visible = true
+	get_parent().get_node("Scenario_Select").visible = false
 
 
 func scene_change():

@@ -18,6 +18,7 @@ func _ready() -> void:
 	
 func _drop_data(at_position, _data):
 	if is_position_in_designated_area(at_position):
+		$AudioStreamPlayer.play()
 		texture = current_texture
 		gathered_data.emit()
 		current_item.texture = null

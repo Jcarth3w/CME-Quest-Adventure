@@ -16,6 +16,7 @@ var end_screen_path = "res://Scenes/static_scene/end_screen.tscn"
 
 
 func _ready():
+	
 	var open_screen = load(open_screen_path)
 	var open_scrn_inst = open_screen.instantiate()
 	open_scrn_inst.get_node("ContinueButton").pressed.connect(on_open_screen_close)
@@ -62,6 +63,7 @@ func on_open_screen_close() -> void:
 
 func _on_room_final() -> void:
 	$HUD/Timer.stop()
+	$BackgroundPlayer.stop()
 	var end_screen = load(end_screen_path)
 	var end_screen_inst = end_screen.instantiate()
 	end_screen_inst.username = username

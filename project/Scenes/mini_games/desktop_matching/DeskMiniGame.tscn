@@ -2,17 +2,17 @@
 
 [ext_resource type="Script" path="res://Scenes/mini_games/desktop_matching/match_game_manager.gd" id="1_0xnwf"]
 [ext_resource type="Script" path="res://Scenes/mini_games/desktop_matching/pair.gd" id="2_lge7s"]
-[ext_resource type="Texture2D" uid="uid://berygyrnrk0u5" path="res://Assets/StanfordAssets/Card_back.png" id="3_hhyvw"]
+[ext_resource type="Texture2D" uid="uid://cvl8sj1xlt4ip" path="res://Assets/StanfordAssets/Card_back.png" id="3_hhyvw"]
 [ext_resource type="Script" path="res://Scenes/mini_games/desktop_matching/matching_object.gd" id="4_nsjif"]
-[ext_resource type="Texture2D" uid="uid://dg850in2jf3d" path="res://Card_front.png" id="5_xtxdn"]
-[ext_resource type="Texture2D" uid="uid://c4jko5jnnpkg5" path="res://Assets/StanfordAssets/checklist.png" id="6_dp5pl"]
-[ext_resource type="Texture2D" uid="uid://mvix0xvqasmw" path="res://Assets/StanfordAssets/magnifying_glass.png" id="7_rlax6"]
+[ext_resource type="Texture2D" uid="uid://bmfcrgkwrb41e" path="res://Card_front.png" id="5_xtxdn"]
+[ext_resource type="Texture2D" uid="uid://dsvw1djkbxj08" path="res://Assets/StanfordAssets/checklist.png" id="6_dp5pl"]
+[ext_resource type="Texture2D" uid="uid://qyagurvjhwqu" path="res://Assets/StanfordAssets/magnifying_glass.png" id="7_rlax6"]
 [ext_resource type="Texture2D" uid="uid://bnmarmnacxlxl" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-08.png" id="8_i6xat"]
-[ext_resource type="Texture2D" uid="uid://cwcxsfslcneqx" path="res://Assets/StanfordAssets/puzzle_piece.png" id="9_5sujp"]
+[ext_resource type="Texture2D" uid="uid://54ofe722owlk" path="res://Assets/StanfordAssets/puzzle_piece.png" id="9_5sujp"]
 [ext_resource type="Texture2D" uid="uid://bk1e6mbabiw36" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-22.png" id="9_lyuf3"]
-[ext_resource type="Texture2D" uid="uid://dwws10go58xox" path="res://Assets/StanfordAssets/megaphone.png" id="10_bx1vf"]
-[ext_resource type="Texture2D" uid="uid://dt7sy0crl46pu" path="res://Assets/StanfordAssets/target.png" id="11_u0tca"]
-[ext_resource type="Texture2D" uid="uid://bovqulmlnpff" path="res://Assets/StanfordAssets/chicken.png" id="13_km731"]
+[ext_resource type="Texture2D" uid="uid://bxsubhjg10eex" path="res://Assets/StanfordAssets/megaphone.png" id="10_bx1vf"]
+[ext_resource type="Texture2D" uid="uid://brj4m8xlx3blk" path="res://Assets/StanfordAssets/target.png" id="11_u0tca"]
+[ext_resource type="Texture2D" uid="uid://cohpul0fnryhx" path="res://Assets/StanfordAssets/chicken.png" id="13_km731"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_o70vy"]
 font_size = 64
@@ -43,10 +43,10 @@ color = Color(0.760784, 0.592157, 0.984314, 1)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 557.0
-offset_top = 159.0
-offset_right = 1343.0
-offset_bottom = 250.0
+offset_left = 396.5
+offset_top = 139.0
+offset_right = 1503.5
+offset_bottom = 230.0
 grow_horizontal = 2
 text = "Match the image to its related word"
 label_settings = SubResource("LabelSettings_o70vy")
@@ -72,6 +72,7 @@ hide_image = ExtResource("3_hhyvw")
 
 [node name="Label" type="Label" parent="Pair 1/Card 1"]
 visible = false
+layout_mode = 0
 offset_left = 306.924
 offset_top = 45.5499
 offset_right = 1059.92
@@ -119,6 +120,7 @@ hide_image = ExtResource("3_hhyvw")
 
 [node name="Label" type="Label" parent="Pair 2/Card 3"]
 visible = false
+layout_mode = 0
 offset_left = 302.453
 offset_top = 30.4788
 offset_right = 1055.45
@@ -163,6 +165,7 @@ hide_image = ExtResource("3_hhyvw")
 
 [node name="Label" type="Label" parent="Pair3/Card 5"]
 visible = false
+layout_mode = 0
 offset_left = 299.832
 offset_top = 17.2588
 offset_right = 1064.83
@@ -207,6 +210,7 @@ hide_image = ExtResource("3_hhyvw")
 
 [node name="Label" type="Label" parent="Pair4/Card 7"]
 visible = false
+layout_mode = 0
 offset_left = 298.424
 offset_top = 18.4868
 offset_right = 1072.42
@@ -251,6 +255,7 @@ hide_image = ExtResource("3_hhyvw")
 
 [node name="Label" type="Label" parent="Pair5/Card 9"]
 visible = false
+layout_mode = 0
 offset_left = 297.418
 offset_top = 37.0315
 offset_right = 1050.42
@@ -295,6 +300,7 @@ hide_image = ExtResource("3_hhyvw")
 
 [node name="Label" type="Label" parent="Pair6/Card 11"]
 visible = false
+layout_mode = 0
 offset_left = 410.919
 offset_top = -29.6243
 offset_right = 1163.92
@@ -340,6 +346,7 @@ hide_image = ExtResource("3_hhyvw")
 
 [node name="Label" type="Label" parent="Pair7/Card 13"]
 visible = false
+layout_mode = 0
 offset_left = 286.28
 offset_top = 28.146
 offset_right = 1039.28
@@ -385,6 +392,7 @@ hide_image = ExtResource("3_hhyvw")
 
 [node name="Label" type="Label" parent="Pair8/Card 15"]
 visible = false
+layout_mode = 0
 offset_left = 312.809
 offset_top = 39.7114
 offset_right = 1065.81

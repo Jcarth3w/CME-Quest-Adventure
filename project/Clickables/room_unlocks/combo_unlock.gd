@@ -30,6 +30,7 @@ func on_button_press(button) -> void:
 
 func check_answer(player_answer) -> void:
 	if player_answer == answer:
+		$AudioStreamPlayer.play()
 		$Display.text = "unlocked room 3"
 		get_parent().unlock(room_number)
 		finished.emit()
