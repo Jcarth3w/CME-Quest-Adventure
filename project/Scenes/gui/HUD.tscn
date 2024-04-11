@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scenes/gui/hud.gd" id="1_t3ngw"]
 [ext_resource type="PackedScene" uid="uid://c42tbugwn1rvm" path="res://Scenes/gui/timer.tscn" id="1_xoov4"]
-[ext_resource type="Texture2D" uid="uid://d2jkjc2gxd0c3" path="res://Assets/Sprites/generic_items/genericItem_color_007.png" id="2_37yr7"]
-[ext_resource type="Texture2D" uid="uid://3r554j2rqmu5" path="res://Assets/Sprites/generic_items/genericItem_color_133.png" id="4_q42xa"]
+[ext_resource type="Texture2D" uid="uid://7oaw44p4echw" path="res://Assets/AdjustedStandfordAssets/Wrench.png" id="3_6oej1"]
+[ext_resource type="Texture2D" uid="uid://6567vyirv8lp" path="res://Assets/AdjustedStandfordAssets/Map.png" id="4_w5v5u"]
 [ext_resource type="PackedScene" uid="uid://bariyy13viy8o" path="res://Scenes/gui/menus/in_game_menu.tscn" id="5_u1xjj"]
 [ext_resource type="PackedScene" uid="uid://vkq3eq2tcj2l" path="res://Scenes/gui/inventory.tscn" id="6_5kv35"]
 [ext_resource type="PackedScene" uid="uid://bdbogdf051mfk" path="res://Scenes/gui/menus/room_menu.tscn" id="7_sgu4t"]
@@ -58,19 +58,20 @@ label_settings = SubResource("LabelSettings_f47q1")
 metadata/_edit_use_anchors_ = true
 
 [node name="MenuButton" type="TextureButton" parent="."]
-offset_left = 1769.0
-offset_top = 15.0
-offset_right = 1829.0
-offset_bottom = 110.0
-texture_normal = ExtResource("2_37yr7")
+offset_left = 1760.0
+offset_top = 18.0
+offset_right = 2449.0
+offset_bottom = 759.0
+scale = Vector2(0.12, 0.12)
+texture_normal = ExtResource("3_6oej1")
 
 [node name="MapButton" type="TextureButton" parent="."]
-offset_left = 1602.0
-offset_top = 9.0
-offset_right = 1747.0
-offset_bottom = 156.0
-scale = Vector2(0.786237, 0.73618)
-texture_normal = ExtResource("4_q42xa")
+offset_left = 1603.0
+offset_top = 12.0
+offset_right = 2349.0
+offset_bottom = 852.0
+scale = Vector2(0.12, 0.12)
+texture_normal = ExtResource("4_w5v5u")
 
 [node name="InGameMenu" parent="." instance=ExtResource("5_u1xjj")]
 visible = false
