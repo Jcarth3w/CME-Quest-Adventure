@@ -1,5 +1,7 @@
 extends Node2D
 
+signal completed
+
 @onready var current_page = 0
 var pages = []
 var completed_pages = 0
@@ -15,7 +17,7 @@ func _ready():
 func on_page_complete():
 	completed_pages += 1
 	if completed_pages == pages.size():
-		print("You Fuckin Wonnn")
+		completed.emit()
 
 
 func _on_previous_pressed():
