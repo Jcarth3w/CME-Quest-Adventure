@@ -92,7 +92,7 @@ offset_left = 25.0
 offset_top = 18.0
 offset_right = 384.0
 offset_bottom = 56.0
-text = "blah blah blah blah blah blah"
+text = "JAC 1"
 label_settings = SubResource("LabelSettings_ep5he")
 
 [node name="Real2" type="ColorRect" parent="JAC"]
@@ -118,7 +118,7 @@ offset_left = 25.0
 offset_top = 18.0
 offset_right = 384.0
 offset_bottom = 56.0
-text = "blah blah blah blah blah blah"
+text = "Fake"
 label_settings = SubResource("LabelSettings_ep5he")
 
 [node name="Real3" type="ColorRect" parent="JAC"]
@@ -144,7 +144,7 @@ offset_left = 25.0
 offset_top = 18.0
 offset_right = 384.0
 offset_bottom = 56.0
-text = "blah blah blah blah blah blah"
+text = "Fake"
 label_settings = SubResource("LabelSettings_ep5he")
 
 [node name="Real4" type="ColorRect" parent="JAC"]
@@ -170,7 +170,7 @@ offset_left = 25.0
 offset_top = 18.0
 offset_right = 384.0
 offset_bottom = 56.0
-text = "blah blah blah blah blah blah"
+text = "JAC 4"
 label_settings = SubResource("LabelSettings_ep5he")
 
 [node name="Real5" type="ColorRect" parent="JAC"]
@@ -196,7 +196,7 @@ offset_left = 25.0
 offset_top = 18.0
 offset_right = 384.0
 offset_bottom = 56.0
-text = "blah blah blah blah blah blah"
+text = "Fake"
 label_settings = SubResource("LabelSettings_ep5he")
 
 [node name="Real6" type="ColorRect" parent="JAC"]
@@ -222,7 +222,7 @@ offset_left = 25.0
 offset_top = 18.0
 offset_right = 384.0
 offset_bottom = 56.0
-text = "blah blah blah blah blah blah"
+text = "Fake"
 label_settings = SubResource("LabelSettings_ep5he")
 
 [node name="Real7" type="ColorRect" parent="JAC"]
@@ -248,7 +248,7 @@ offset_left = 25.0
 offset_top = 18.0
 offset_right = 384.0
 offset_bottom = 56.0
-text = "blah blah blah blah blah blah"
+text = "Fake"
 label_settings = SubResource("LabelSettings_ep5he")
 
 [node name="Real8" type="ColorRect" parent="JAC"]
@@ -274,7 +274,7 @@ offset_left = 25.0
 offset_top = 18.0
 offset_right = 384.0
 offset_bottom = 56.0
-text = "blah blah blah blah blah blah"
+text = "JAC 2"
 label_settings = SubResource("LabelSettings_ep5he")
 
 [node name="Real9" type="ColorRect" parent="JAC"]
@@ -300,7 +300,7 @@ offset_left = 25.0
 offset_top = 18.0
 offset_right = 384.0
 offset_bottom = 56.0
-text = "blah blah blah blah blah blah"
+text = "JAC 3"
 label_settings = SubResource("LabelSettings_ep5he")
 
 [node name="Real10" type="ColorRect" parent="JAC"]
@@ -326,7 +326,7 @@ offset_left = 25.0
 offset_top = 18.0
 offset_right = 384.0
 offset_bottom = 56.0
-text = "blah blah blah blah blah blah"
+text = "Fake"
 label_settings = SubResource("LabelSettings_ep5he")
 
 [node name="Real11" type="ColorRect" parent="JAC"]
@@ -352,7 +352,7 @@ offset_left = 25.0
 offset_top = 18.0
 offset_right = 384.0
 offset_bottom = 56.0
-text = "blah blah blah blah blah blah"
+text = "JAC 5"
 label_settings = SubResource("LabelSettings_ep5he")
 
 [node name="Real12" type="ColorRect" parent="JAC"]
@@ -378,7 +378,7 @@ offset_left = 25.0
 offset_top = 18.0
 offset_right = 384.0
 offset_bottom = 56.0
-text = "blah blah blah blah blah blah"
+text = "JAC 6"
 label_settings = SubResource("LabelSettings_ep5he")
 
 [node name="Directions" type="ColorRect" parent="."]

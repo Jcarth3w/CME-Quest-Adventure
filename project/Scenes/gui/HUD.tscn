@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scenes/gui/hud.gd" id="1_t3ngw"]
 [ext_resource type="PackedScene" uid="uid://c42tbugwn1rvm" path="res://Scenes/gui/timer.tscn" id="1_xoov4"]
-[ext_resource type="Texture2D" uid="uid://7oaw44p4echw" path="res://Assets/AdjustedStandfordAssets/Wrench.png" id="3_6oej1"]
-[ext_resource type="Texture2D" uid="uid://6567vyirv8lp" path="res://Assets/AdjustedStandfordAssets/Map.png" id="4_w5v5u"]
+[ext_resource type="Texture2D" uid="uid://dlohex5rfprr0" path="res://Assets/AdjustedStandfordAssets/Wrench.png" id="3_6oej1"]
+[ext_resource type="Texture2D" uid="uid://b08sxan3tqwpx" path="res://Assets/AdjustedStandfordAssets/Map.png" id="4_w5v5u"]
 [ext_resource type="PackedScene" uid="uid://bariyy13viy8o" path="res://Scenes/gui/menus/in_game_menu.tscn" id="5_u1xjj"]
 [ext_resource type="PackedScene" uid="uid://vkq3eq2tcj2l" path="res://Scenes/gui/inventory.tscn" id="6_5kv35"]
 [ext_resource type="PackedScene" uid="uid://bdbogdf051mfk" path="res://Scenes/gui/menus/room_menu.tscn" id="7_sgu4t"]
