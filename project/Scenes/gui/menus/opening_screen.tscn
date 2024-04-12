@@ -51,12 +51,16 @@ scale = Vector2(31.0459, 10.0365)
 color = Color(0, 0, 0, 0.223529)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 853.0
-offset_top = 177.0
-offset_right = 1070.0
-offset_bottom = 252.0
-text = "Scenario"
+anchors_preset = -1
+anchor_left = 0.444271
+anchor_top = 0.163889
+anchor_right = 0.557292
+anchor_bottom = 0.233333
+offset_left = -16.0
+offset_right = 28.0
+text = "Scenario 1"
 label_settings = SubResource("LabelSettings_lsamv")
+metadata/_edit_use_anchors_ = true
 
 [node name="ContinueButton" type="Button" parent="."]
 offset_left = 840.0

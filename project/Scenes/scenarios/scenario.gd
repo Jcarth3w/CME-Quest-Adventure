@@ -3,6 +3,8 @@ extends Node2D
 
 @export var scenario_num : int
 @export var max_items : int
+@export var scenario_title : String
+@export var scenario_description : String
 @export var current_room : Node2D
 @export var final_sound : AudioStream
 
@@ -16,9 +18,10 @@ var end_screen_path = "res://Scenes/static_scene/end_screen.tscn"
 
 
 func _ready():
-	
 	var open_screen = load(open_screen_path)
 	var open_scrn_inst = open_screen.instantiate()
+	open_scrn_inst.title = scenario_title
+	open_scrn_inst.description = scenario_description
 	open_scrn_inst.get_node("ContinueButton").pressed.connect(on_open_screen_close)
 	open_scrn_inst.send_username.connect(on_username_recieved)
 	add_child(open_scrn_inst)
@@ -30,6 +33,8 @@ func _ready():
 	if FileAccess.file_exists("res://Scenes/mini_games/Crossword_Puzzle/saved_puzzle.txt"):
 		var dir = DirAccess.open("res://Scenes/mini_games/Crossword_Puzzle/")
 		dir.remove("saved_puzzle.txt")
+	$HUD.scenario_menu_title = scenario_title
+	$HUD.scenario_menu_description = scenario_description
 
 
 func enter_room(new_room):
@@ -69,7 +74,7 @@ func _on_room_final() -> void:
 	end_screen_inst.username = username
 	end_screen_inst.scen_num = scenario_num
 	end_screen_inst.time_val = $HUD/Timer/Label.text
-	##play_sound(final_sound)
+	play_sound(final_sound)
 	add_child(end_screen_inst)
 
 
@@ -86,6 +91,6 @@ func on_username_recieved(current_username):
 	username = current_username
 
 
-##func play_sound(sound):
-	##$AudioStreamPlayer.stream = sound
-	##$AudioStreamPlayer.play()
+func play_sound(sound):
+	$AudioStreamPlayer.stream = sound
+	$AudioStreamPlayer.play()

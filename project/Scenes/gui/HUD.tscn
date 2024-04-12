@@ -119,3 +119,18 @@ offset_left = 116.0
 offset_top = 21.0
 offset_right = 478.0
 offset_bottom = 103.0
+
+[node name="ObjectivesTextVar" type="Label" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "
+Find the Promotional Papers 
+
+Find the Adult Learning Resources Books
+
+Print the Remaining Document
+
+Find the Boss's filing cabinet.
+
+Organize and put everything in the Promotional Folder"

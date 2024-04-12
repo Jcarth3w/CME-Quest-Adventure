@@ -3,7 +3,6 @@ extends Node2D
 
 signal pause
 
-@export var objectives_label : String
 var items = []
 var item_slots = []
 var current_item := 0
@@ -12,6 +11,8 @@ var menu_active = true
 var return_main_menu = "res://Scenes/main_menus/main_menu.tscn"
 var scenario_menu = preload("res://Scenes/gui/menus/scenario_menu.tscn")
 var objectives_color
+var scenario_menu_title
+var scenario_menu_description
 
 func _ready():
 	connect_buttons()
@@ -20,6 +21,7 @@ func _ready():
 		if child is Sprite2D:
 			item_slots.append(child)
 	objectives_color = $BlackBorderRectangle/RedFillRectangle.color
+	$ObjectiveMenu/Label.text = get_parent().get_node("ObjectivesText").text
 
 
 func add_item_image(sprite_path) -> void:
@@ -84,6 +86,8 @@ func in_game_menu_press(button_name):
 			$InGameMenu.visible = false
 		"Scenario":
 			var scenario_menu_inst = scenario_menu.instantiate()
+			scenario_menu_inst.title = scenario_menu_title
+			scenario_menu_inst.description = scenario_menu_description
 			add_child(scenario_menu_inst)
 		"Quit":
 			get_parent().send_data(0)

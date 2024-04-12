@@ -1,6 +1,12 @@
 extends Node
 
 signal send_username
+var title : String
+var description : String
+
+func _ready():
+	$Label.text = title
+	$ScenarioLabel2.text = description
 
 
 func _on_continue_button_pressed():
