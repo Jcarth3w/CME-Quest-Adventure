@@ -1,6 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://btrq7xlbfn1gb"]
-
-[ext_resource type="Script" path="res://Scenes/gui/menus/objectives_menu.gd" id="1_5tovu"]
+[gd_scene load_steps=2 format=3 uid="uid://btrq7xlbfn1gb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2f4ns"]
 font_size = 22
@@ -8,7 +6,6 @@ outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
 [node name="ObjectiveMenu" type="CanvasLayer"]
-script = ExtResource("1_5tovu")
 
 [node name="BlackBorder" type="ColorRect" parent="."]
 offset_left = 112.0

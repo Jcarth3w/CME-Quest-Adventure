@@ -7,12 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://bp3esxqwlfxd0" path="res://Scenes/gui/popup/popup_gui.tscn" id="3_208rw"]
 [ext_resource type="PackedScene" uid="uid://b8xl3wqxn7v5d" path="res://Scenes/gui/HUD.tscn" id="3_ac87f"]
 [ext_resource type="PackedScene" uid="uid://wbewelwvsha2" path="res://Components/post_score.tscn" id="4_g1nls"]
-[ext_resource type="AudioStream" uid="uid://1a6etxf0avel" path="res://Assets/SFX/Room1Background.wav" id="8_10hdl"]
+[ext_resource type="AudioStream" uid="uid://ceubfmwnj1kti" path="res://Assets/SFX/Room2_Background.wav" id="8_j8io1"]
 
 [node name="scenario_2" type="Node2D" node_paths=PackedStringArray("current_room")]
 script = ExtResource("1_0b13o")
 scenario_num = 2
 max_items = 1
+scenario_title = "Scenario 2"
+scenario_description = "This is the second escape room that we've made, and it's really cool."
 current_room = NodePath("Room1")
 final_sound = ExtResource("2_8fe0y")
 
@@ -24,8 +26,26 @@ final_sound = ExtResource("2_8fe0y")
 
 [node name="HUD" parent="." instance=ExtResource("3_ac87f")]
 
+[node name="ObjectivesText" type="Label" parent="."]
+visible = false
+offset_right = 422.0
+offset_bottom = 182.0
+text = "
+Fill out the Clipboard
+
+Complete the Pyramid
+
+Find the USB Drive
+
+Finish Document on Laptop
+
+Find the Keyword to Escape"
+
 [node name="DBoperations" parent="." instance=ExtResource("4_g1nls")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_10hdl")
+autoplay = true
+
+[node name="BackgroundPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_j8io1")
 autoplay = true

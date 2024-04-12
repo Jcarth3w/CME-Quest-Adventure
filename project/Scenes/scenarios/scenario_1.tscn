@@ -1,19 +1,21 @@
 [gd_scene load_steps=10 format=3 uid="uid://beginlf1sakva"]
 
 [ext_resource type="PackedScene" uid="uid://dxurrur4fkonu" path="res://Scenes/rooms/room_2.tscn" id="1_msoe2"]
-[ext_resource type="AudioStream" uid="uid://dq0157680r6ob" path="res://Assets/SFX/game_win.wav" id="2_8mdrn"]
+[ext_resource type="AudioStream" uid="uid://bmewjqq14bmh0" path="res://Assets/SFX/game_win.wav" id="2_8mdrn"]
 [ext_resource type="PackedScene" uid="uid://b302n6pq0hkk1" path="res://Scenes/rooms/room1.tscn" id="2_iqiqe"]
 [ext_resource type="PackedScene" uid="uid://cepvxyc5hm41t" path="res://Scenes/rooms/room_3.tscn" id="2_tbts0"]
 [ext_resource type="PackedScene" uid="uid://b8xl3wqxn7v5d" path="res://Scenes/gui/HUD.tscn" id="3_iim46"]
 [ext_resource type="Script" path="res://Components/post_score.gd" id="5_5jqvq"]
 [ext_resource type="PackedScene" uid="uid://bp3esxqwlfxd0" path="res://Scenes/gui/popup/popup_gui.tscn" id="6_kv0rk"]
 [ext_resource type="Script" path="res://Scenes/scenarios/scenario.gd" id="8_ar6hx"]
-[ext_resource type="AudioStream" uid="uid://bm2eive5rvne6" path="res://Assets/SFX/Room1Background.wav" id="9_qwi54"]
+[ext_resource type="AudioStream" uid="uid://1a6etxf0avel" path="res://Assets/SFX/Room1Background.wav" id="9_qwi54"]
 
 [node name="Scenario1" type="Node2D" node_paths=PackedStringArray("current_room")]
 script = ExtResource("8_ar6hx")
 scenario_num = 1
 max_items = 7
+scenario_title = "Scenario 1"
+scenario_description = "Welcome to the first floor of the CME Tower! Your mission begins here. Your team is known for promoting CME organizations, events, and resources. Unfortunately, important promotional materials have gone missing. You have one hour to recover these materials and set the stage for successful promotion."
 current_room = NodePath("Room1")
 final_sound = ExtResource("2_8mdrn")
 
@@ -26,6 +28,21 @@ visible = false
 [node name="Room1" parent="." instance=ExtResource("2_iqiqe")]
 
 [node name="HUD" parent="." instance=ExtResource("3_iim46")]
+
+[node name="ObjectivesText" type="Label" parent="."]
+visible = false
+offset_right = 422.0
+offset_bottom = 104.0
+text = "
+Find the Promotional Papers 
+
+Find the Adult Learning Resources Books
+
+Print the Remaining Document
+
+Find the Boss's filing cabinet.
+
+Organize and put everything in the Promotional Folder"
 
 [node name="popup_gui" parent="." instance=ExtResource("6_kv0rk")]
 

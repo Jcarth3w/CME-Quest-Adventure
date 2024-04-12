@@ -1,29 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://dy51fa3t4j81g"]
+[gd_scene load_steps=4 format=3 uid="uid://dy51fa3t4j81g"]
 
 [ext_resource type="Script" path="res://Scenes/gui/menus/scenario_menu.gd" id="1_ax4fx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lsamv"]
-font_size = 52
+font_size = 88
 outline_size = 8
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_d7d2l"]
-font_size = 24
-outline_size = 4
-outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_4ml4y"]
-font_size = 52
-outline_size = 8
-outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_cngfu"]
-font_size = 24
-outline_size = 4
-outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_e6bax"]
-font_size = 24
+font_size = 33
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
@@ -52,27 +37,33 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.737255, 0, 0.203922, 1)
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-offset_left = 464.0
-offset_top = 552.0
-offset_right = 504.0
-offset_bottom = 592.0
-scale = Vector2(24.8247, 5.03592)
-color = Color(0, 0, 0, 0.223529)
-
 [node name="DarkRedRect" type="ColorRect" parent="."]
-offset_left = 464.0
-offset_top = 257.0
-offset_right = 496.0
-offset_bottom = 277.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -146.0
+offset_right = -468.0
+offset_bottom = -111.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(31.0459, 10.0365)
 color = Color(0, 0, 0, 0.223529)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 853.0
-offset_top = 177.0
-offset_right = 1070.0
-offset_bottom = 252.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -189.0
+offset_top = -296.5
+offset_right = 178.0
+offset_bottom = -172.5
+grow_horizontal = 2
+grow_vertical = 2
 text = "Scenario"
 label_settings = SubResource("LabelSettings_lsamv")
 
@@ -89,59 +80,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -464.0
-offset_top = -260.0
-offset_right = 462.0
-offset_bottom = -112.0
+offset_left = -463.0
+offset_top = -120.0
+offset_right = 463.0
+offset_bottom = 174.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Welcome to the first floor of the CME Tower! Your mission begins here. Your team is known for promoting CME organizations, events, and resources. Unfortunately, important promotional materials have gone missing. You have one hour to recover these materials and set the stage for successful promotion."
 label_settings = SubResource("LabelSettings_d7d2l")
 autowrap_mode = 2
-
-[node name="Objective List" type="Label" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -42.0
-offset_top = -48.0
-offset_right = 39.0
-offset_bottom = -22.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Objectives"
-label_settings = SubResource("LabelSettings_4ml4y")
-
-[node name="Objective1" type="Label" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -444.0
-offset_top = 59.0
-offset_right = 443.0
-offset_bottom = 96.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Locate the missing promotional materials for the upcoming CME conference."
-label_settings = SubResource("LabelSettings_cngfu")
-
-[node name="Objective2" type="Label" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -328.0
-offset_top = 132.0
-offset_right = 337.0
-offset_bottom = 169.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Discover the vanished Adult Learning Theories resources."
-label_settings = SubResource("LabelSettings_e6bax")
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
