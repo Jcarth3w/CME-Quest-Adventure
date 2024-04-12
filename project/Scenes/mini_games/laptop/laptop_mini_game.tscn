@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://6f7f3ik8hlfv"]
 
 [ext_resource type="Script" path="res://Scenes/mini_games/laptop/laptop_mini_game.gd" id="1_mdm6b"]
-[ext_resource type="Texture2D" uid="uid://dknkf6x7tenr3" path="res://Assets/AdjustedStandfordAssets/Resizedpapers.png" id="2_scfko"]
-[ext_resource type="Texture2D" uid="uid://0srob8smdmqn" path="res://Assets/AdjustedStandfordAssets/PowerButton.png" id="3_g4ss6"]
+[ext_resource type="Texture2D" uid="uid://bab1meug5xb07" path="res://Assets/AdjustedStandfordAssets/Resizedpapers.png" id="2_scfko"]
+[ext_resource type="Texture2D" uid="uid://t788mk7kwfwi" path="res://Assets/AdjustedStandfordAssets/PowerButton.png" id="3_g4ss6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_aep5h"]
 font_size = 72
@@ -38,7 +38,6 @@ offset_bottom = 1060.0
 color = Color(0.0666667, 0.380392, 0.615686, 1)
 
 [node name="Login" type="Node2D" parent="."]
-visible = false
 
 [node name="Username" type="LineEdit" parent="Login"]
 offset_left = 784.0
@@ -97,6 +96,7 @@ text = "Password"
 label_settings = SubResource("LabelSettings_3x5dv")
 
 [node name="Files" type="Node2D" parent="."]
+visible = false
 
 [node name="ColorRect2" type="ColorRect" parent="Files"]
 offset_left = 320.0
@@ -123,7 +123,7 @@ offset_left = 656.0
 offset_top = 352.0
 offset_right = 1264.0
 offset_bottom = 880.0
-text = "placeholder text"
+text = "Please print the following file:"
 label_settings = SubResource("LabelSettings_hkkht")
 
 [node name="PrintFeedback" type="Label" parent="Files"]
@@ -150,46 +150,59 @@ offset_bottom = -600.0
 color = Color(0.831373, 0.831373, 0.831373, 1)
 
 [node name="Print" type="Button" parent="Files"]
-modulate = Color(0, 1, 0, 1)
-offset_left = 344.0
-offset_top = 216.0
-offset_right = 474.0
-offset_bottom = 273.0
+offset_left = 891.0
+offset_top = 213.0
+offset_right = 1021.0
+offset_bottom = 270.0
 text = "PRINT"
 
 [node name="File1" type="TextureButton" parent="Files"]
-offset_left = 64.0
-offset_top = 328.0
-offset_right = 1490.0
-offset_bottom = 1958.0
+offset_left = 104.0
+offset_top = 192.0
+offset_right = 1530.0
+offset_bottom = 1822.0
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("2_scfko")
 
 [node name="File2" type="TextureButton" parent="Files"]
-offset_left = 67.0
-offset_top = 528.0
-offset_right = 1493.0
-offset_bottom = 2158.0
+offset_left = 104.0
+offset_top = 400.0
+offset_right = 1530.0
+offset_bottom = 2030.0
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("2_scfko")
 
 [node name="File3" type="TextureButton" parent="Files"]
-offset_left = 71.0
-offset_top = 144.0
-offset_right = 1497.0
-offset_bottom = 1774.0
+offset_left = 104.0
+offset_top = 608.0
+offset_right = 1530.0
+offset_bottom = 2238.0
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("2_scfko")
 
 [node name="File4" type="TextureButton" parent="Files"]
-offset_left = 74.0
-offset_top = 720.0
-offset_right = 1500.0
-offset_bottom = 2350.0
+offset_left = 1688.0
+offset_top = 192.0
+offset_right = 3114.0
+offset_bottom = 1822.0
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("2_scfko")
 
-[node name="FolderContents" type="Node2D" parent="Files"]
+[node name="File5" type="TextureButton" parent="Files"]
+offset_left = 1688.0
+offset_top = 400.0
+offset_right = 3114.0
+offset_bottom = 2030.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("2_scfko")
+
+[node name="File6" type="TextureButton" parent="Files"]
+offset_left = 1688.0
+offset_top = 608.0
+offset_right = 3114.0
+offset_bottom = 2238.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("2_scfko")
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 offset_left = 22.0
@@ -200,10 +213,10 @@ color = Color(0.180392, 0.215686, 0.290196, 0.74902)
 
 [node name="PowerButton" type="TextureButton" parent="."]
 offset_left = 38.0
-offset_top = 962.0
+offset_top = 965.0
 offset_right = 816.0
-offset_bottom = 1742.0
-scale = Vector2(0.12, 0.12)
+offset_bottom = 1745.0
+scale = Vector2(0.11, 0.11)
 texture_normal = ExtResource("3_g4ss6")
 
 [connection signal="pressed" from="Login/Button" to="." method="on_button_pressed"]
