@@ -1,55 +1,41 @@
 extends Node2D
 
-var times = []
-var users = []
+var time_slots1 = []
+var time_slots2 = []
+
+var parsed_data = {}
+
+var scenario_num = 1
 
 func _ready():
-	organize_data(await $DBoperations.make_get_request())
-
-
+	for child in $Scenario1Times.get_children():
+		if child.has_node("Username") and child.has_node("Time"):
+			time_slots1.append(child)
+			
+	for child in $Scenario2Times.get_children():
+		if child.has_node("Username") and child.has_node("Time"):
+			time_slots2.append(child)
+	
 func organize_data(raw_string):
 	var json_array = JSON.parse_string(raw_string)
-	var organized = {}
-
-	for username in json_array.keys():
-		for entry in json_array[username]:
-			var time = entry["time"]
-			var scenario_num = entry["scenario"]
-
-			if username not in organized:
-				organized[username] = {}
-
-			if scenario_num not in organized[username]:
-				organized[username][scenario_num] = time
-				times.append(time)
-				users.append(users)
-
-			else:
-				if time > organized[username][scenario_num]:
-					organized[username][scenario_num] = time
-					times.append(time)
-					users.append(users)
-	print(organized)
-	return organized
+	for name in json_array.keys():
+		var records = json_array[name]
+		parsed_data[name] = records[0]["time"]
+	return parsed_data
 
 
-func populate_leader_board(scenario_number):
-	if scenario_number == 1:
-		var i = 0;
-		for child in $Scenario1Times.get_children():
-			if i < times.size():
-				if child.has_node("Username") and child.has_node("Time"):
-					child.get_node("Username").text = users[i]
-					child.get_node("Time").text =  times[i]
-					i = i+1
-	elif scenario_number == 2:
-		var i = 0;
-		for child in $Scenario2Times.get_children():
-			if i < times.size():
-				if child.has_node("Username") and child.has_node("Time"):
-					child.get_node("Username").text = users[i]
-					child.get_node("Time").text =  times[i]
-					i = i+1
+func populate_leader_board():
+	var counter = 0
+	if scenario_num == 1:
+		for name in parsed_data.keys():
+			time_slots1[counter].get_node("Username").text = name
+			time_slots1[counter].get_node("Time").text =  parsed_data[name]
+			counter += 1
+	elif scenario_num == 2:
+		for name in parsed_data.keys():
+			time_slots2[counter].get_node("Username").text = name
+			time_slots2[counter].get_node("Time").text =  parsed_data[name]
+			counter += 1
 
 
 func _on_back_button_pressed():
@@ -57,11 +43,20 @@ func _on_back_button_pressed():
 
 
 func _on_scenario_1_button_pressed():
+	parsed_data.clear()
 	if $Scenario1Times.visible == false:
-		populate_leader_board(1)
+		organize_data(await $DBoperations.make_get_request(1))
+		scenario_num = 1
+		populate_leader_board()
 		$Scenario1Times.visible = true
 		$Scenario2Times.visible = false
 
 
 func _on_scenario_2_button_pressed():
-	pass
+	parsed_data.clear()
+	if $Scenario2Times.visible == false:
+		organize_data(await $DBoperations.make_get_request(2))
+		scenario_num = 2
+		populate_leader_board()
+		$Scenario1Times.visible = false
+		$Scenario2Times.visible = true

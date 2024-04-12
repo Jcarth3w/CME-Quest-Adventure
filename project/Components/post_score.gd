@@ -40,13 +40,17 @@ func make_post_request(scenario, time, username, finished):
 		})
 
 
-func make_get_request() -> String:
+func make_get_request(scenario_num) -> String:
+	print(scenario_num)
 	var query: FirestoreQuery = FirestoreQuery.new()
 	query.from("scores")
-	query.where("finished", FirestoreQuery.OPERATOR.EQUAL, 1)
+	query.where("finished", FirestoreQuery.OPERATOR.EQUAL, 1).where("scenario", FirestoreQuery.OPERATOR.EQUAL, scenario_num)
 	query.order_by("time", FirestoreQuery.DIRECTION.ASCENDING)
+	query.limit(5)
 	var query_task: FirestoreTask = Firebase.Firestore.query(query)
 	var result: Array = await Firebase.Firestore.query(query).result_query
+
+	print(query)
 
 	var scores_dict: Dictionary = {}
 	for score in result:
@@ -57,5 +61,6 @@ func make_get_request() -> String:
 			scores_dict[username].append({"time": time, "scenario": scenario})
 		else:
 			scores_dict[username] = [{"time": time, "scenario": scenario}]
+	print(JSON.stringify(scores_dict))
 	return JSON.stringify(scores_dict)
 
