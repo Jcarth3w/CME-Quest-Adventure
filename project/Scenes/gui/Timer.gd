@@ -2,10 +2,10 @@ extends Timer
 
 signal zero
 
-var seconds = 5;
-var ten_seconds = 0;
-var minutes = 0;
-var ten_minutes = 0;
+var seconds = 9;
+var ten_seconds = 5;
+var minutes = 9;
+var ten_minutes = 2;
 
 
 func _on_timeout():

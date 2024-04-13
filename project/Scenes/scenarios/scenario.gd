@@ -111,5 +111,5 @@ func on_game_over():
 	var lose_screen_inst = lose_screen.instantiate()
 	lose_screen_inst.username = username
 	lose_screen_inst.scen_num = scenario_num
-	lose_screen_inst.time_val = calculate_time($HUD/Timer/Label.text)
+	lose_screen_inst.time_val = "00:00"
 	add_child(lose_screen_inst)
