@@ -74,13 +74,13 @@ func _on_room_final() -> void:
 	var end_screen_inst = end_screen.instantiate()
 	end_screen_inst.username = username
 	end_screen_inst.scen_num = scenario_num
-	end_screen_inst.time_val = $HUD/Timer/Label.text
+	end_screen_inst.time_val = calculate_time($HUD/Timer/Label.text)
 	play_sound(final_sound)
 	add_child(end_screen_inst)
 
 
 func send_data(completed):
-	finished_time = $HUD/Timer/Label.text
+	finished_time = calculate_time($HUD/Timer/Label.text)
 	$DBoperations.make_post_request(1, finished_time, username, completed)
 
 
@@ -102,5 +102,14 @@ func on_game_over():
 	var lose_screen_inst = lose_screen.instantiate()
 	lose_screen_inst.username = username
 	lose_screen_inst.scen_num = scenario_num
-	lose_screen_inst.time_val = $HUD/Timer/Label.text
+	lose_screen_inst.time_val = calculate_time($HUD/Timer/Label.text)
 	add_child(lose_screen_inst)
+
+
+func calculate_time(time):
+	var minutes =  (time[0].to_int() * 10) + time[1].to_int()
+	var seconds = (time[3].to_int() * 10) + time[4].to_int()
+	var caluculatedMinutes = 29 - minutes
+	var calculatedSeconds = 60 - seconds
+	var caluclatedTimeString = str(caluculatedMinutes) + ":" + str(calculatedSeconds)
+	return caluclatedTimeString

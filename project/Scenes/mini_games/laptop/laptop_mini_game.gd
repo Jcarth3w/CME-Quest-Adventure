@@ -16,7 +16,8 @@ func _ready() -> void:
 			child.pressed.connect(on_file_press.bind(child))
 
 	file_contents = {$Files/File1 : "one.txt", $Files/File2 : "two.txt",
-	$Files/File3 : "three.txt", $Files/File4 : "four.txt" }
+	$Files/File3 : "three.txt", $Files/File4 : "four.txt", $Files/File5 : "five.txt",
+	$Files/File6 : "six.txt"}
 
 
 func change_screen(new_screen) -> void:
@@ -54,8 +55,13 @@ func on_print_pressed():
 	if check_correct():
 		print_paper()
 	else:
-		$Files/PrintFeedback.text = "INCORRECT FILE: PRINT FAILED"
+		$Files/Print.modulate = Color(1.0, 0, 0)
+		$Files/PrintFeedback.text = "PRINT FAILED"
 		$Files/PrintFeedback.visible = true
+		await get_tree().create_timer(1.0).timeout
+		$Files/Print.modulate = Color(1.0, 1.0, 1.0)
+		$Files/PrintFeedback.text = ""
+		
 
 
 func print_paper() -> void:
@@ -68,7 +74,8 @@ func print_paper() -> void:
 	print_inst.visible = false
 	get_parent().add_child(print_inst)
 	get_parent().connect_clickable(print_inst)
-	$Files/PrintFeedback.text = "CORRECT FILE: PRINT SUCCESSFUL"
+	$Files/Print.modulate = Color(0, 1.0, 0)
+	$Files/PrintFeedback.text = "PRINT SUCCESSFUL"
 	$Files/PrintFeedback.visible = true
 	finished.emit()
 

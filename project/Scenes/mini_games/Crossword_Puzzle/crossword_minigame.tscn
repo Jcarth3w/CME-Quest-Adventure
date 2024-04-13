@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://ck7p0h0yl242b"]
+[gd_scene load_steps=10 format=3 uid="uid://ck7p0h0yl242b"]
 
 [ext_resource type="Script" path="res://Scenes/mini_games/Crossword_Puzzle/crossword_minigame.gd" id="1_2buhs"]
-[ext_resource type="Texture2D" uid="uid://dcm6p18p7lslf" path="res://Assets/Sprites/generic_items/genericItem_color_160.png" id="2_u0irq"]
+[ext_resource type="Texture2D" uid="uid://bwlaxk85h7843" path="res://Assets/Sprites/Iteration 3 assets/Blue button.png" id="2_ljmo2"]
+[ext_resource type="Texture2D" uid="uid://d0b3626pdcr4q" path="res://Assets/Sprites/Iteration 3 assets/Red Button.png" id="3_a4uug"]
 [ext_resource type="Texture2D" uid="uid://u7sc0sv2fhxo" path="res://Assets/Crossword_Assets/Andragogy_Empty.png" id="3_xacx7"]
 [ext_resource type="Texture2D" uid="uid://d3stlj5vd25u" path="res://Assets/Crossword_Assets/Constructivism_Empty.png" id="4_totf0"]
 [ext_resource type="Texture2D" uid="uid://gx0omo1aenxk" path="res://Assets/Crossword_Assets/Cognitivism_Empty.png" id="5_1n2sm"]
@@ -44,20 +45,19 @@ color = Color(0.952941, 0.992157, 0.996078, 1)
 
 [node name="CheckButton" type="TextureButton" parent="."]
 offset_left = 1176.0
-offset_top = 960.0
-offset_right = 1216.0
-offset_bottom = 1000.0
-scale = Vector2(1.99352, 1.88344)
-texture_normal = ExtResource("2_u0irq")
+offset_top = 947.0
+offset_right = 1767.0
+offset_bottom = 1540.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("2_ljmo2")
 
 [node name="ExitButton" type="TextureButton" parent="."]
-modulate = Color(1, 0, 0, 1)
 offset_left = 1749.0
-offset_top = 208.0
-offset_right = 1787.0
-offset_bottom = 248.0
-scale = Vector2(1.79705, 1.83249)
-texture_normal = ExtResource("2_u0irq")
+offset_top = 196.0
+offset_right = 2340.0
+offset_bottom = 789.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("3_a4uug")
 
 [node name="UserText" type="LineEdit" parent="."]
 offset_left = 768.0
