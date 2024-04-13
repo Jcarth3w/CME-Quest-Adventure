@@ -41,7 +41,6 @@ offset_bottom = 96.0
 color = Color(0, 0, 0, 0.223529)
 
 [node name="Timer" parent="." instance=ExtResource("1_xoov4")]
-wait_time = 1.0
 
 [node name="Label" type="Label" parent="Timer"]
 anchors_preset = -1
@@ -134,3 +133,5 @@ Print the Remaining Document
 Find the Boss's filing cabinet.
 
 Organize and put everything in the Promotional Folder"
+
+[connection signal="zero" from="Timer" to="." method="_on_timer_zero"]

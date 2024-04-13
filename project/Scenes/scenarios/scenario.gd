@@ -15,6 +15,7 @@ var finished = 0
 var rooms = []
 var open_screen_path = "res://Scenes/gui/menus/opening_screen.tscn"
 var end_screen_path = "res://Scenes/static_scene/end_screen.tscn"
+var lose_screen_path = "res://Scenes/static_scene/lose_screen.tscn"
 
 
 func _ready():
@@ -99,8 +100,16 @@ func play_sound(sound):
 func calculate_time(time):
 	var minutes =  (time[0].to_int() * 10) + time[1].to_int()
 	var seconds = (time[3].to_int() * 10) + time[4].to_int()
-	
 	var caluculatedMinutes = 29 - minutes
 	var calculatedSeconds = 60 - seconds
 	var caluclatedTimeString = str(caluculatedMinutes) + ":" + str(calculatedSeconds)
 	return caluclatedTimeString
+
+
+func on_game_over():
+	var lose_screen = load(lose_screen_path)
+	var lose_screen_inst = lose_screen.instantiate()
+	lose_screen_inst.username = username
+	lose_screen_inst.scen_num = scenario_num
+	lose_screen_inst.time_val = "00:00"
+	add_child(lose_screen_inst)

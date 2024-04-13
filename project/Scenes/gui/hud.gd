@@ -2,6 +2,7 @@ class_name HUD
 extends Node2D
 
 signal pause
+signal game_over
 
 var items = []
 var item_slots = []
@@ -139,3 +140,8 @@ func connect_room_signals() -> void:
 				child.activate_menus.connect(on_activate_menus)
 				child.disable_menus.connect(on_disable_menus)
 				child.item_add.connect(on_item_add)
+
+
+func _on_timer_zero():
+	get_parent().on_game_over()
+	print("function called")

@@ -13,6 +13,6 @@ func _ready():
 
 
 func _on_main_menu_pressed():
-	get_parent().send_data(1)
+	get_parent().send_data(0)
 	await get_tree().create_timer(1).timeout
 	get_tree().change_scene_to_file("res://Scenes/main_menus/main_menu.tscn")
