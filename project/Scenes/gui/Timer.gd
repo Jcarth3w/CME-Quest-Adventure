@@ -1,14 +1,20 @@
 extends Timer
 
+signal zero
 
-var seconds = 9;
-var ten_seconds = 5;
-var minutes = 9;
-var ten_minutes = 2;
+var seconds = 5;
+var ten_seconds = 0;
+var minutes = 0;
+var ten_minutes = 0;
 
 
 func _on_timeout():
 	update_label()
+	var total_time = ((ten_minutes * 10) + minutes) + ((ten_seconds * 10) + seconds)
+	if total_time == 0:
+		zero.emit()
+		stop()
+		
 
 func update_label():
 	seconds -= 1

@@ -15,6 +15,7 @@ var finished = 0
 var rooms = []
 var open_screen_path = "res://Scenes/gui/menus/opening_screen.tscn"
 var end_screen_path = "res://Scenes/static_scene/end_screen.tscn"
+var lose_screen_path = "res://Scenes/static_scene/lose_screen.tscn"
 
 
 func _ready():
@@ -94,3 +95,12 @@ func on_username_recieved(current_username):
 func play_sound(sound):
 	$AudioStreamPlayer.stream = sound
 	$AudioStreamPlayer.play()
+
+
+func on_game_over():
+	var lose_screen = load(lose_screen_path)
+	var lose_screen_inst = lose_screen.instantiate()
+	lose_screen_inst.username = username
+	lose_screen_inst.scen_num = scenario_num
+	lose_screen_inst.time_val = $HUD/Timer/Label.text
+	add_child(lose_screen_inst)

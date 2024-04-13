@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://ck2ksk2fhxohl"]
+[gd_scene load_steps=7 format=3 uid="uid://dw7dv8dhwuv73"]
 
-[ext_resource type="Script" path="res://Scenes/static_scene/end_screen.gd" id="1_luu4i"]
+[ext_resource type="Script" path="res://Scenes/static_scene/end_screen.gd" id="1_q7owr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_rkqva"]
 font_size = 56
@@ -24,7 +24,7 @@ font_size = 32
 font_color = Color(0, 0, 0, 1)
 
 [node name="EndScreen" type="CanvasLayer"]
-script = ExtResource("1_luu4i")
+script = ExtResource("1_q7owr")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 351.0
@@ -71,7 +71,7 @@ anchor_bottom = 0.212963
 offset_bottom = -1.52588e-05
 grow_horizontal = 2
 grow_vertical = 2
-text = "CONGRATULATIONS!"
+text = "OUT OF TIME!"
 label_settings = SubResource("LabelSettings_rkqva")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -102,8 +102,9 @@ offset_top = 12.0001
 offset_bottom = 12.0001
 grow_horizontal = 2
 grow_vertical = 2
-text = "Completed Scenario # "
+text = "Scenario # "
 label_settings = SubResource("LabelSettings_8gjyi")
+horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="ScenNum" type="Label" parent="."]
@@ -160,4 +161,4 @@ anchor_bottom = 0.838889
 text = "Exit to Main Menu"
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed" flags=18]
