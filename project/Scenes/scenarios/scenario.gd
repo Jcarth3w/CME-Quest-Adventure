@@ -97,15 +97,6 @@ func play_sound(sound):
 	$AudioStreamPlayer.play()
 
 
-func on_game_over():
-	var lose_screen = load(lose_screen_path)
-	var lose_screen_inst = lose_screen.instantiate()
-	lose_screen_inst.username = username
-	lose_screen_inst.scen_num = scenario_num
-	lose_screen_inst.time_val = calculate_time($HUD/Timer/Label.text)
-	add_child(lose_screen_inst)
-
-
 func calculate_time(time):
 	var minutes =  (time[0].to_int() * 10) + time[1].to_int()
 	var seconds = (time[3].to_int() * 10) + time[4].to_int()
@@ -113,3 +104,12 @@ func calculate_time(time):
 	var calculatedSeconds = 60 - seconds
 	var caluclatedTimeString = str(caluculatedMinutes) + ":" + str(calculatedSeconds)
 	return caluclatedTimeString
+
+
+func on_game_over():
+	var lose_screen = load(lose_screen_path)
+	var lose_screen_inst = lose_screen.instantiate()
+	lose_screen_inst.username = username
+	lose_screen_inst.scen_num = scenario_num
+	lose_screen_inst.time_val = calculate_time($HUD/Timer/Label.text)
+	add_child(lose_screen_inst)
