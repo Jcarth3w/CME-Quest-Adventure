@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://kddw2eyutlhd" path="res://Assets/Sprites/room_1_custom_placeholders/Wrongpaper3.png" id="10_th7a5"]
 [ext_resource type="Texture2D" uid="uid://coqy5g3l5jkhq" path="res://Assets/Sprites/room_1_custom_placeholders/Wrongpaper5.png" id="11_rtk6o"]
 [ext_resource type="Texture2D" uid="uid://c2eijailvc6fo" path="res://Assets/Sprites/room_1_custom_placeholders/Wrongpaper4.png" id="12_vf57k"]
-[ext_resource type="Texture2D" uid="uid://bwlaxk85h7843" path="res://Assets/Sprites/Iteration 3 assets/Blue button.png" id="13_j611p"]
+[ext_resource type="Texture2D" uid="uid://bv6dh4mavp8a8" path="res://Assets/Sprites/Iteration 3 assets/Blue button.png" id="13_j611p"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0gbm7"]
 font_size = 40
@@ -36,23 +36,23 @@ offset_bottom = 1050.0
 color = Color(0, 0.54902, 0.407843, 1)
 
 [node name="ClipBoard" type="Sprite2D" parent="." node_paths=PackedStringArray("winning_combo")]
-position = Vector2(204, 411)
-rotation = 0.242072
-scale = Vector2(2.6129, 4.46109)
+position = Vector2(204.159, 410.357)
+rotation = -0.00503684
+scale = Vector2(2.6129, 4.47313)
 texture = ExtResource("2_ptm7d")
 script = ExtResource("3_rochj")
 winning_combo = [NodePath("../Shred 1"), NodePath("../Shred 2"), NodePath("../Shred 3")]
 
 [node name="Check1" type="Marker2D" parent="ClipBoard"]
-position = Vector2(-75.8809, -16.8568)
+position = Vector2(-57.2952, -20.1453)
 scale = Vector2(0.5, 0.5)
 
 [node name="Check2" type="Marker2D" parent="ClipBoard"]
-position = Vector2(-33.9834, -23.629)
+position = Vector2(-11.6966, -26.4944)
 scale = Vector2(0.5, 0.5)
 
 [node name="Check3" type="Marker2D" parent="ClipBoard"]
-position = Vector2(13.5045, -27.813)
+position = Vector2(30.8248, -31.064)
 scale = Vector2(0.5, 0.5)
 
 [node name="Shred 1" type="TextureButton" parent="."]

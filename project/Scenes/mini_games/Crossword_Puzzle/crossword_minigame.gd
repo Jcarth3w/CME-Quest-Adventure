@@ -39,11 +39,17 @@ func check_answer():
 	var guess = space_to_underscore($UserText.text).capitalize()
 	print(guess)
 	if guess in answers:
+		$CheckButton.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Green button.png")
 		answers.get(guess).texture = load("res://Assets/Crossword_Assets/" + guess + ".png")
 		answers.erase(guess)
 		completed.append(guess)
 		$UserText.clear()
-
+		await get_tree().create_timer(1).timeout
+		$CheckButton.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Blue button.png")
+	else: 
+		$CheckButton.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Red button.png")
+		await get_tree().create_timer(1).timeout
+		$CheckButton.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Blue button.png")
 
 func check_win():
 	if answers.size() == 0:
