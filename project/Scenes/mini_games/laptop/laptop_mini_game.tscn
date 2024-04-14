@@ -38,6 +38,7 @@ offset_bottom = 1060.0
 color = Color(0.0666667, 0.380392, 0.615686, 1)
 
 [node name="Login" type="Node2D" parent="."]
+visible = false
 
 [node name="Username" type="LineEdit" parent="Login"]
 offset_left = 784.0
@@ -96,7 +97,6 @@ text = "Password"
 label_settings = SubResource("LabelSettings_3x5dv")
 
 [node name="Files" type="Node2D" parent="."]
-visible = false
 
 [node name="ColorRect2" type="ColorRect" parent="Files"]
 offset_left = 320.0
@@ -123,14 +123,16 @@ offset_left = 656.0
 offset_top = 352.0
 offset_right = 1264.0
 offset_bottom = 880.0
-text = "Please print the following file:"
+text = "Please print the following file:
+
+Promotional material list for new events"
 label_settings = SubResource("LabelSettings_hkkht")
 
 [node name="PrintFeedback" type="Label" parent="Files"]
-offset_left = 1387.0
-offset_top = 912.0
-offset_right = 1642.0
-offset_bottom = 1035.0
+offset_left = 832.0
+offset_top = 808.0
+offset_right = 1087.0
+offset_bottom = 877.0
 label_settings = SubResource("LabelSettings_7l6lw")
 horizontal_alignment = 1
 vertical_alignment = 1
