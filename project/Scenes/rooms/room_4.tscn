@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d02w8tm7p5omg"]
+[gd_scene load_steps=20 format=3 uid="uid://d02w8tm7p5omg"]
 
 [ext_resource type="Texture2D" uid="uid://dwqw21d8i31b" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-01(1).png" id="1_jnk3n"]
 [ext_resource type="Script" path="res://Scenes/rooms/room.gd" id="1_ko1mr"]
@@ -7,14 +7,18 @@
 [ext_resource type="Script" path="res://Clickables/static_scene_btn/static_scene_button.gd" id="5_cg667"]
 [ext_resource type="Script" path="res://Clickables/new_scene/new_scene_object.gd" id="5_uh2m8"]
 [ext_resource type="Texture2D" uid="uid://b1r2tcmopop8o" path="res://Assets/AdjustedStandfordAssets/ResizedPlant.png" id="6_553eh"]
-[ext_resource type="Script" path="res://Clickables/clickable.gd" id="7_5day1"]
+[ext_resource type="Texture2D" uid="uid://du4hkf0tcpqd3" path="res://Assets/Sprites/numbers/one_yellow.jpg" id="7_hmy01"]
+[ext_resource type="Script" path="res://Clickables/pickup/pickup.gd" id="8_ncqvr"]
 [ext_resource type="Texture2D" uid="uid://bn3kp4ijyl0oa" path="res://Assets/Sprites/room_1_custom_placeholders/filecabinet.jpg" id="9_hb4pp"]
+[ext_resource type="Script" path="res://Clickables/movement/movement_object.gd" id="10_88hya"]
 [ext_resource type="Texture2D" uid="uid://c3g5irvmxvur7" path="res://Assets/AdjustedStandfordAssets/ResizedClipBoard.png" id="11_e37d3"]
-[ext_resource type="Texture2D" uid="uid://dcmfxrepy3txx" path="res://Assets/Sprites/Iteration 3 assets/SocialMediaGraphics.png" id="12_julch"]
-[ext_resource type="Texture2D" uid="uid://dhxim7wroyin3" path="res://Assets/Sprites/Room2/keypad.PNG" id="13_0ms53"]
+[ext_resource type="Texture2D" uid="uid://blvd2834jr6tn" path="res://Assets/Sprites/numbers/nine.jpg" id="12_kcr4r"]
 [ext_resource type="AudioStream" uid="uid://dfoyl604qjd56" path="res://Assets/SFX/minigame_win.wav" id="13_g2p3u"]
+[ext_resource type="Texture2D" uid="uid://dncm8h8vqxkca" path="res://Assets/Sprites/letter_unlock.PNG" id="13_ngcgc"]
 [ext_resource type="Script" path="res://Clickables/room_unlocks/combo_button.gd" id="14_v3p5n"]
 [ext_resource type="AudioStream" uid="uid://bvml46igb4p5b" path="res://Assets/SFX/pickup_item.wav" id="15_ui2v5"]
+[ext_resource type="Texture2D" uid="uid://cesepodioiyal" path="res://Assets/Sprites/numbers/one_pink.jpg" id="18_yqydn"]
+[ext_resource type="Texture2D" uid="uid://k7tyhsc5hvsx" path="res://Assets/Sprites/room_1_custom_placeholders/chair.png" id="19_ruk10"]
 
 [node name="room4" type="Node2D"]
 script = ExtResource("1_ko1mr")
@@ -64,16 +68,28 @@ scale = Vector2(0.25, 0.25)
 texture_normal = ExtResource("3_rudau")
 script = ExtResource("5_cg667")
 scene_path = "res://Scenes/static_scene/bulletin_board.tscn"
+sound = ExtResource("15_ui2v5")
 metadata/_edit_use_anchors_ = true
 
+[node name="OneYellow" type="TextureButton" parent="."]
+offset_left = 1240.0
+offset_top = 724.0
+offset_right = 2040.0
+offset_bottom = 1539.0
+scale = Vector2(0.12, 0.12)
+texture_normal = ExtResource("7_hmy01")
+script = ExtResource("8_ncqvr")
+
 [node name="Plant" type="TextureButton" parent="."]
-offset_left = 1208.0
-offset_top = 546.0
-offset_right = 2279.0
-offset_bottom = 2606.0
+offset_left = 1216.0
+offset_top = 584.0
+offset_right = 2287.0
+offset_bottom = 2644.0
 scale = Vector2(0.15, 0.15)
 texture_normal = ExtResource("6_553eh")
-script = ExtResource("7_5day1")
+script = ExtResource("10_88hya")
+x_coordinate = 1420
+y_coordinate = 678
 metadata/_edit_use_anchors_ = true
 
 [node name="FileCabinet" type="TextureButton" parent="."]
@@ -83,7 +99,8 @@ offset_right = 1025.0
 offset_bottom = 1020.0
 scale = Vector2(0.75, 0.75)
 texture_normal = ExtResource("9_hb4pp")
-script = ExtResource("5_uh2m8")
+script = ExtResource("5_cg667")
+scene_path = "res://Scenes/static_scene/jac_hints.tscn"
 metadata/_edit_use_anchors_ = true
 
 [node name="ClipBoard" type="TextureButton" parent="."]
@@ -95,18 +112,37 @@ scale = Vector2(0.05, 0.05)
 texture_normal = ExtResource("11_e37d3")
 script = ExtResource("5_uh2m8")
 scene_path = "res://Scenes/mini_games/clip_board/clip_board_game.tscn"
-prize_texture = ExtResource("12_julch")
+prize_texture = ExtResource("12_kcr4r")
 prize_name = "clip_prize"
 sound = ExtResource("13_g2p3u")
 metadata/_edit_use_anchors_ = true
 
 [node name="Room2Unlock" type="TextureButton" parent="."]
-offset_left = 477.0
-offset_top = 488.0
-offset_right = 1112.0
-offset_bottom = 1245.0
-scale = Vector2(0.1, 0.1)
-texture_normal = ExtResource("13_0ms53")
+offset_left = 432.0
+offset_top = 425.0
+offset_right = 1289.0
+offset_bottom = 934.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("13_ngcgc")
 script = ExtResource("14_v3p5n")
 scene_path = "res://Scenes/static_scene/letter_unlock.tscn"
 sound = ExtResource("15_ui2v5")
+
+[node name="OnePink" type="TextureButton" parent="."]
+offset_left = 310.0
+offset_top = 716.0
+offset_right = 1110.0
+offset_bottom = 1531.0
+scale = Vector2(0.12, 0.12)
+texture_normal = ExtResource("18_yqydn")
+script = ExtResource("8_ncqvr")
+
+[node name="Chair" type="TextureButton" parent="."]
+offset_left = 248.0
+offset_top = 548.0
+offset_right = 469.0
+offset_bottom = 896.0
+texture_normal = ExtResource("19_ruk10")
+script = ExtResource("10_88hya")
+x_coordinate = 448
+y_coordinate = 628

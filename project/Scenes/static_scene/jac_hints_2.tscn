@@ -1,0 +1,121 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd45yo40f0odk"]
+
+[ext_resource type="Script" path="res://Scenes/static_scene/whiteboard.gd" id="1_vgx4j"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_p40mj"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_opwlu"]
+font_size = 18
+font_color = Color(0, 0, 0, 1)
+
+[node name="JACHints2" type="CanvasLayer"]
+script = ExtResource("1_vgx4j")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -389.0
+offset_right = 400.0
+offset_bottom = 611.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+
+[node name="Title" type="Label" parent="."]
+offset_left = 714.0
+offset_top = 148.0
+offset_right = 1210.0
+offset_bottom = 244.0
+scale = Vector2(0.9, 0.9)
+text = "Joint Accredidation Criteria
+6-12"
+label_settings = SubResource("LabelSettings_p40mj")
+horizontal_alignment = 1
+
+[node name="blue" type="ColorRect" parent="."]
+offset_left = 566.0
+offset_top = 396.0
+offset_right = 606.0
+offset_bottom = 422.0
+color = Color(0.290196, 1, 1, 1)
+
+[node name="green" type="ColorRect" parent="."]
+offset_left = 567.0
+offset_top = 576.0
+offset_right = 607.0
+offset_bottom = 602.0
+color = Color(0.290196, 1, 0.333333, 1)
+
+[node name="red" type="ColorRect" parent="."]
+offset_left = 566.0
+offset_top = 681.0
+offset_right = 618.0
+offset_bottom = 707.0
+color = Color(1, 0.223529, 0.141176, 1)
+
+[node name="pink" type="ColorRect" parent="."]
+offset_left = 566.0
+offset_top = 787.0
+offset_right = 618.0
+offset_bottom = 813.0
+color = Color(1, 0.223529, 0.678431, 1)
+
+[node name="yellow" type="ColorRect" parent="."]
+offset_left = 566.0
+offset_top = 892.0
+offset_right = 618.0
+offset_bottom = 918.0
+color = Color(1, 0.937255, 0.141176, 1)
+
+[node name="Criteria" type="Label" parent="."]
+offset_left = 567.0
+offset_top = 267.0
+offset_right = 1429.0
+offset_bottom = 1195.0
+scale = Vector2(0.9, 0.9)
+text = "JAC 7
+The provider designs education that promotes active learning – 
+so that teams learn from, with, and about each other – consistent 
+with the desired results of the activity.
+
+JAC 8
+The provider develops activities/educational interventions in 
+the context of desirable attributes of the healthcare team (e.g., 
+Institute of Medicine competencies, professional competencies, healthcare
+team competencies: values/ethics, roles and responsibilities, interprofessional 
+communication, teams and teamwork).
+
+JAC 9
+The provider utilizes support strategies to sustain change as an adjunct to 
+its educational interventions (e.g., reminders, patient feedback).
+
+JAC 10
+The provider implements strategies to remove, overcome, or address barriers 
+to change in the skills/strategy or performance of the healthcare team.
+
+JAC 11
+The provider analyzes changes in the healthcare team (skills/strategy, performance) 
+and/or patient outcomes achieved as a result of its IPCE activities/educational interventions.
+
+JAC 12
+The provider develops activities/interventions that comply with the Standards for Integrity 
+and Independence in Accredited Continuing Education
+
+(use the colors to help you in this room somewhere...)"
+label_settings = SubResource("LabelSettings_opwlu")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1217.0
+offset_top = 158.0
+offset_right = 1263.0
+offset_bottom = 195.0
+scale = Vector2(0.9, 0.9)
+text = "X"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed" flags=18]

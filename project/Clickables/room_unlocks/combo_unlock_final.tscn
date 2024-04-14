@@ -1,0 +1,150 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4dbkrse3y2so"]
+
+[ext_resource type="Script" path="res://Clickables/room_unlocks/combo_unlock_final.gd" id="1_mfwg4"]
+[ext_resource type="AudioStream" uid="uid://bvugpofds6op2" path="res://Assets/SFX/combo_unlock.wav" id="2_cvgyd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_26263"]
+font_size = 32
+font_color = Color(0.941176, 0, 0, 1)
+
+[node name="ComboUnlockFinal" type="Node2D"]
+position = Vector2(917, 584)
+script = ExtResource("1_mfwg4")
+
+[node name="Back" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -337.0
+offset_top = -421.0
+offset_right = 339.0
+offset_bottom = 422.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.364706, 0.364706, 0.364706, 1)
+
+[node name="Front" type="ColorRect" parent="Back"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 47.0
+offset_top = 26.0
+offset_right = -47.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.592157, 0.592157, 0.592157, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Back"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 62.0
+offset_right = 577.0
+offset_bottom = 136.0
+color = Color(0.0705882, 0.0705882, 0.0705882, 1)
+
+[node name="Display" type="Label" parent="."]
+offset_left = -227.0
+offset_top = -349.0
+offset_right = 227.0
+offset_bottom = -300.0
+label_settings = SubResource("LabelSettings_26263")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="1" type="Button" parent="."]
+offset_left = -207.0
+offset_top = -199.0
+offset_right = -107.0
+offset_bottom = -99.0
+text = "1"
+
+[node name="2" type="Button" parent="."]
+offset_left = -47.0
+offset_top = -199.0
+offset_right = 53.0
+offset_bottom = -99.0
+text = "2"
+
+[node name="3" type="Button" parent="."]
+offset_left = 113.0
+offset_top = -199.0
+offset_right = 213.0
+offset_bottom = -99.0
+text = "3"
+
+[node name="4" type="Button" parent="."]
+offset_left = -207.0
+offset_top = -55.0
+offset_right = -107.0
+offset_bottom = 45.0
+text = "4"
+
+[node name="5" type="Button" parent="."]
+offset_left = -47.0
+offset_top = -55.0
+offset_right = 53.0
+offset_bottom = 45.0
+text = "5"
+
+[node name="6" type="Button" parent="."]
+offset_left = 113.0
+offset_top = -55.0
+offset_right = 213.0
+offset_bottom = 45.0
+text = "6"
+
+[node name="7" type="Button" parent="."]
+offset_left = -207.0
+offset_top = 89.0
+offset_right = -107.0
+offset_bottom = 189.0
+text = "7"
+
+[node name="8" type="Button" parent="."]
+offset_left = -47.0
+offset_top = 89.0
+offset_right = 53.0
+offset_bottom = 189.0
+text = "8"
+
+[node name="9" type="Button" parent="."]
+offset_left = 113.0
+offset_top = 89.0
+offset_right = 213.0
+offset_bottom = 189.0
+text = "9"
+
+[node name="0" type="Button" parent="."]
+offset_left = -47.0
+offset_top = 233.0
+offset_right = 53.0
+offset_bottom = 333.0
+text = "0"
+
+[node name="Enter" type="Button" parent="."]
+offset_left = 113.0
+offset_top = 233.0
+offset_right = 213.0
+offset_bottom = 333.0
+text = "ENTER"
+
+[node name="Clear" type="Button" parent="."]
+offset_left = -207.0
+offset_top = 233.0
+offset_right = -107.0
+offset_bottom = 333.0
+text = "CLEAR"
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 393.0
+offset_top = -437.0
+offset_right = 506.0
+offset_bottom = -336.0
+text = "X"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_cvgyd")

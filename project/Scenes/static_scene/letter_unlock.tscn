@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://dy873gf8n76qj"]
+[gd_scene load_steps=4 format=3 uid="uid://dy873gf8n76qj"]
 
 [ext_resource type="Script" path="res://Scenes/static_scene/letter_unlock.gd" id="1_iybw2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3ta0l"]
 font_size = 26
+
+[sub_resource type="LabelSettings" id="LabelSettings_m1pd7"]
+font_color = Color(0, 0, 0, 1)
 
 [node name="LetterUnlock" type="Node2D"]
 position = Vector2(917, 584)
@@ -18,7 +21,7 @@ anchor_bottom = 0.5
 offset_left = -337.0
 offset_top = -421.0
 offset_right = 339.0
-offset_bottom = 422.0
+offset_bottom = -21.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.364706, 0.364706, 0.364706, 1)
@@ -41,7 +44,7 @@ layout_mode = 0
 offset_left = 95.0
 offset_top = 49.0
 offset_right = 577.0
-offset_bottom = 354.0
+offset_bottom = 179.0
 color = Color(0.0705882, 0.0705882, 0.0705882, 1)
 
 [node name="Exit" type="Button" parent="."]
@@ -61,19 +64,253 @@ label_settings = SubResource("LabelSettings_3ta0l")
 
 [node name="RoomUnlocked" type="Label" parent="."]
 visible = false
+modulate = Color(0.529412, 1, 0.545098, 1)
 offset_left = -125.0
-offset_top = -224.0
+offset_top = -295.0
 offset_right = 110.0
-offset_bottom = -185.0
+offset_bottom = -256.0
 text = "Room 2 Unlocked!!"
 label_settings = SubResource("LabelSettings_3ta0l")
 
 [node name="LineEdit" type="LineEdit" parent="."]
+modulate = Color(0.545098, 1, 0.552941, 1)
 offset_left = -26.0
 offset_top = -361.0
 offset_right = 123.0
 offset_bottom = -330.0
 scale = Vector2(1.5, 1.5)
+placeholder_text = "TYPE HERE"
+alignment = 1
+
+[node name="FakeKeyboard" type="ColorRect" parent="."]
+offset_left = -248.0
+offset_top = -226.0
+offset_right = 252.0
+offset_bottom = -76.0
+color = Color(0.32549, 0.32549, 0.32549, 1)
+
+[node name="Key" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 45.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key2" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 55.0
+offset_right = 95.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key3" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 105.0
+offset_right = 145.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key4" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 155.0
+offset_right = 195.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key5" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 205.0
+offset_right = 245.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key6" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 255.0
+offset_right = 295.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key7" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 305.0
+offset_right = 345.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key8" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 355.0
+offset_right = 395.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key9" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 405.0
+offset_right = 445.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key10" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 455.0
+offset_right = 495.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key11" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 5.0
+offset_top = 52.0
+offset_right = 45.0
+offset_bottom = 92.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key12" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 55.0
+offset_top = 52.0
+offset_right = 95.0
+offset_bottom = 92.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key13" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 105.0
+offset_top = 52.0
+offset_right = 145.0
+offset_bottom = 92.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key14" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 155.0
+offset_top = 52.0
+offset_right = 195.0
+offset_bottom = 92.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key15" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 205.0
+offset_top = 52.0
+offset_right = 245.0
+offset_bottom = 92.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key16" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 255.0
+offset_top = 52.0
+offset_right = 295.0
+offset_bottom = 92.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key17" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 305.0
+offset_top = 52.0
+offset_right = 345.0
+offset_bottom = 92.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key18" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 355.0
+offset_top = 52.0
+offset_right = 395.0
+offset_bottom = 92.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key19" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 405.0
+offset_top = 52.0
+offset_right = 445.0
+offset_bottom = 92.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key20" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 455.0
+offset_top = 52.0
+offset_right = 495.0
+offset_bottom = 92.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key21" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 5.0
+offset_top = 99.0
+offset_right = 45.0
+offset_bottom = 139.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key22" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 55.0
+offset_top = 99.0
+offset_right = 95.0
+offset_bottom = 139.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key23" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 105.0
+offset_top = 99.0
+offset_right = 145.0
+offset_bottom = 139.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key24" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 155.0
+offset_top = 99.0
+offset_right = 195.0
+offset_bottom = 139.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key25" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 205.0
+offset_top = 99.0
+offset_right = 245.0
+offset_bottom = 139.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key26" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 255.0
+offset_top = 99.0
+offset_right = 295.0
+offset_bottom = 139.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key27" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 305.0
+offset_top = 99.0
+offset_right = 345.0
+offset_bottom = 139.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key28" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 355.0
+offset_top = 99.0
+offset_right = 395.0
+offset_bottom = 139.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key29" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 405.0
+offset_top = 99.0
+offset_right = 445.0
+offset_bottom = 139.0
+color = Color(0, 0, 0, 1)
+
+[node name="Key30" type="ColorRect" parent="FakeKeyboard"]
+offset_left = 455.0
+offset_top = 99.0
+offset_right = 495.0
+offset_bottom = 139.0
+color = Color(0, 0, 0, 1)
+
+[node name="StickyNote" type="ColorRect" parent="."]
+offset_left = -335.0
+offset_top = -94.9999
+offset_right = -158.0
+offset_bottom = 62.0001
+rotation = 0.265593
+color = Color(0.356863, 1, 1, 1)
+
+[node name="Label" type="Label" parent="StickyNote"]
+layout_mode = 0
+offset_left = -37.895
+offset_top = 9.27179
+offset_right = 216.105
+offset_bottom = 139.272
+text = "Click into the 
+TYPE HERE to 
+begin entering a word. 
+Make sure its the
+ right one!"
+label_settings = SubResource("LabelSettings_m1pd7")
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
