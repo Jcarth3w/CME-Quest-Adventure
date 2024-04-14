@@ -11,3 +11,6 @@ func _on_quit_button_pressed():
 
 func _on_leader_board_button_pressed():
 	$Leader_Board.visible = true
+
+func _on_credits_button_pressed():
+	$Credits_Board.visible = true
