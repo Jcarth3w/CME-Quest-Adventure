@@ -23,16 +23,25 @@ func add_shred(shred) -> void:
 
 
 func check_win() -> bool:
-	if shreds.size() == 3:
-		if shreds == winning_combo:
-			return true
-		reset_shreds()
+	if shreds == winning_combo:
+		return true
+	reset_shreds()
 	return false
 
 
 func reset_shreds() -> void:
-	shreds[0].reset_shred()
-	shreds[1].reset_shred()
-	shreds[2].reset_shred()
-	shreds.clear()
-	current_shred = 0
+	if shreds.size() == 3:
+		shreds[0].reset_shred()
+		shreds[1].reset_shred()
+		shreds[2].reset_shred()
+		shreds.clear()
+		current_shred = 0
+	if shreds.size() == 2:
+		shreds[0].reset_shred()
+		shreds[1].reset_shred()
+		shreds.clear()
+		current_shred = 0
+	if shreds.size() == 1:
+		shreds[0].reset_shred()
+		shreds.clear()
+		current_shred = 0
