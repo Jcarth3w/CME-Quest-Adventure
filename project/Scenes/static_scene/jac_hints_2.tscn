@@ -38,6 +38,41 @@ text = "Joint Accredidation Criteria
 label_settings = SubResource("LabelSettings_p40mj")
 horizontal_alignment = 1
 
+[node name="blue" type="ColorRect" parent="."]
+offset_left = 566.0
+offset_top = 396.0
+offset_right = 606.0
+offset_bottom = 422.0
+color = Color(0.290196, 1, 1, 1)
+
+[node name="green" type="ColorRect" parent="."]
+offset_left = 567.0
+offset_top = 576.0
+offset_right = 607.0
+offset_bottom = 602.0
+color = Color(0.290196, 1, 0.333333, 1)
+
+[node name="red" type="ColorRect" parent="."]
+offset_left = 566.0
+offset_top = 681.0
+offset_right = 618.0
+offset_bottom = 707.0
+color = Color(1, 0.223529, 0.141176, 1)
+
+[node name="pink" type="ColorRect" parent="."]
+offset_left = 566.0
+offset_top = 787.0
+offset_right = 618.0
+offset_bottom = 813.0
+color = Color(1, 0.223529, 0.678431, 1)
+
+[node name="yellow" type="ColorRect" parent="."]
+offset_left = 566.0
+offset_top = 892.0
+offset_right = 618.0
+offset_bottom = 918.0
+color = Color(1, 0.937255, 0.141176, 1)
+
 [node name="Criteria" type="Label" parent="."]
 offset_left = 567.0
 offset_top = 267.0
@@ -70,7 +105,9 @@ and/or patient outcomes achieved as a result of its IPCE activities/educational 
 
 JAC 12
 The provider develops activities/interventions that comply with the Standards for Integrity 
-and Independence in Accredited Continuing Education"
+and Independence in Accredited Continuing Education
+
+(use the colors to help you in this room somewhere...)"
 label_settings = SubResource("LabelSettings_opwlu")
 
 [node name="Button" type="Button" parent="."]
