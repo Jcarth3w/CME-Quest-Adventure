@@ -1,0 +1,149 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5ia11hc5jf6x"]
+
+[ext_resource type="Texture2D" uid="uid://b163i61tk4bs7" path="res://Assets/AdjustedStandfordAssets/ResizedPinBoard.png" id="1_7loxj"]
+[ext_resource type="Script" path="res://Scenes/main_menus/Credit_Board.gd" id="1_kvr5m"]
+[ext_resource type="Texture2D" uid="uid://cve3tuw3skqvt" path="res://Assets/AdjustedStandfordAssets/ResizedBookshelf.png" id="2_vwj2s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8u4ni"]
+font_size = 140
+font_color = Color(0.796078, 0, 0.203922, 1)
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_oke23"]
+font_size = 60
+font_color = Color(0.796078, 0, 0.203922, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_x1qvm"]
+font_size = 80
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_kvr5m")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1918.0
+offset_bottom = 1079.0
+
+[node name="Label" type="Label" parent="Background"]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 32.0
+offset_right = 1503.0
+offset_bottom = 227.0
+text = "Credits"
+label_settings = SubResource("LabelSettings_8u4ni")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Right Border" type="ColorRect" parent="Background"]
+layout_mode = 0
+offset_left = 1863.0
+offset_right = 1920.0
+offset_bottom = 1087.0
+color = Color(0.796078, 0, 0.203922, 1)
+
+[node name="Left Border" type="ColorRect" parent="Background"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 57.0
+offset_bottom = 1083.0
+color = Color(0.796078, 0, 0.203922, 1)
+
+[node name="EthanHooper" type="Label" parent="."]
+offset_left = 766.0
+offset_top = 269.0
+offset_right = 1167.0
+offset_bottom = 355.0
+text = "Ethan Hooper"
+label_settings = SubResource("LabelSettings_oke23")
+
+[node name="JackCarthew" type="Label" parent="."]
+offset_left = 774.0
+offset_top = 360.0
+offset_right = 1152.0
+offset_bottom = 446.0
+text = "Jack Carthew"
+label_settings = SubResource("LabelSettings_oke23")
+
+[node name="JaredBowman" type="Label" parent="."]
+offset_left = 753.0
+offset_top = 451.0
+offset_right = 1192.0
+offset_bottom = 537.0
+text = "Jared Bowman "
+label_settings = SubResource("LabelSettings_oke23")
+
+[node name="JustynFox" type="Label" parent="."]
+offset_left = 810.0
+offset_top = 538.0
+offset_right = 1107.0
+offset_bottom = 624.0
+text = "Justyn Fox"
+label_settings = SubResource("LabelSettings_oke23")
+
+[node name="MicahHarker" type="Label" parent="."]
+offset_left = 762.0
+offset_top = 629.0
+offset_right = 1154.0
+offset_bottom = 715.0
+text = "Micah Harker"
+label_settings = SubResource("LabelSettings_oke23")
+
+[node name="MicahHarker2" type="Label" parent="."]
+offset_left = 538.0
+offset_top = 720.0
+offset_right = 1400.0
+offset_bottom = 806.0
+text = "And the wonderful CME Team"
+label_settings = SubResource("LabelSettings_oke23")
+
+[node name="CreditsButton" type="ColorRect" parent="."]
+offset_left = 721.0
+offset_top = 841.0
+offset_right = 1179.0
+offset_bottom = 1001.0
+color = Color(0, 0, 0, 1)
+
+[node name="ButtonBackground" type="ColorRect" parent="CreditsButton"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 451.0
+offset_bottom = 153.0
+color = Color(0.796078, 0, 0.203922, 1)
+
+[node name="Label" type="Label" parent="CreditsButton"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 451.0
+offset_bottom = 153.0
+text = "Menu"
+label_settings = SubResource("LabelSettings_x1qvm")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CreditsButton" type="TextureButton" parent="CreditsButton"]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 458.0
+offset_bottom = 161.0
+
+[node name="ResizedPinBoard" type="Sprite2D" parent="."]
+position = Vector2(400, 404)
+rotation = -0.181875
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_7loxj")
+
+[node name="ResizedBookshelf" type="Sprite2D" parent="."]
+position = Vector2(1512, 440)
+rotation = 0.277381
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_vwj2s")
+
+[connection signal="pressed" from="CreditsButton/CreditsButton" to="." method="CreditsButton"]

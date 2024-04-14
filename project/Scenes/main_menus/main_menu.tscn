@@ -1,11 +1,18 @@
-[gd_scene load_steps=9 format=3 uid="uid://boq7hqgj3oxtn"]
+[gd_scene load_steps=13 format=3 uid="uid://boq7hqgj3oxtn"]
 
 [ext_resource type="Script" path="res://Scenes/main_menus/main_menu.gd" id="1_q4rsi"]
 [ext_resource type="PackedScene" uid="uid://cll8mywp4rc6a" path="res://Scenes/main_menus/Scenario_Select.tscn" id="2_acw4n"]
 [ext_resource type="Texture2D" uid="uid://w10bfogg4ojl" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-09.png" id="2_uv7yu"]
 [ext_resource type="PackedScene" uid="uid://b0yb0aod8hxnd" path="res://Scenes/main_menus/Leader_Board.tscn" id="3_go8oe"]
 [ext_resource type="Script" path="res://Scenes/main_menus/leader_board.gd" id="3_prpgj"]
-[ext_resource type="AudioStream" uid="uid://burp87c52xtxl" path="res://Assets/SFX/Main_Menu.wav" id="3_t7yfr"]
+[ext_resource type="AudioStream" uid="uid://dr08kb3sp142n" path="res://Assets/SFX/Main_Menu.wav" id="3_t7yfr"]
+[ext_resource type="PackedScene" uid="uid://b5ia11hc5jf6x" path="res://Scenes/main_menus/Credit_Board.tscn" id="7_7c8jh"]
+[ext_resource type="Texture2D" uid="uid://b7rwyx3begmk" path="res://Assets/Scenario_2_assests/ResizedClipBoardForGame.png" id="7_c1dfy"]
+[ext_resource type="Script" path="res://Scenes/main_menus/Credit_Board.gd" id="8_dysln"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ixnf7"]
+font_size = 400
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_xcyt8"]
 font_size = 140
@@ -26,6 +33,25 @@ script = ExtResource("1_q4rsi")
 [node name="Background" type="ColorRect" parent="Main"]
 offset_right = 1918.0
 offset_bottom = 1079.0
+
+[node name="CreditsButton" type="TextureButton" parent="Main/Background"]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 436.0
+offset_right = 2524.0
+offset_bottom = 3651.0
+rotation = -0.213579
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("7_c1dfy")
+
+[node name="Label" type="Label" parent="Main/Background/CreditsButton"]
+layout_mode = 0
+offset_left = 475.307
+offset_top = 1535.64
+offset_right = 1844.31
+offset_bottom = 2084.64
+text = "Credits"
+label_settings = SubResource("LabelSettings_ixnf7")
 
 [node name="Label" type="Label" parent="Main/Background"]
 layout_mode = 0
@@ -53,14 +79,8 @@ offset_right = 57.0
 offset_bottom = 1083.0
 color = Color(0.796078, 0, 0.203922, 1)
 
-[node name="Custom-illustrations-stanford-monuments-assets-10" type="Sprite2D" parent="Main/Background"]
-position = Vector2(390, 556)
-rotation = -0.261799
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_uv7yu")
-
 [node name="Custom-illustrations-stanford-monuments-assets-09" type="Sprite2D" parent="Main/Background"]
-position = Vector2(1536, 560)
+position = Vector2(1536, 531)
 rotation = 0.261799
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_uv7yu")
@@ -199,10 +219,15 @@ visible = false
 visible = false
 script = ExtResource("3_prpgj")
 
+[node name="Credits_Board" parent="." instance=ExtResource("7_7c8jh")]
+visible = false
+script = ExtResource("8_dysln")
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_t7yfr")
 autoplay = true
 
+[connection signal="pressed" from="Main/Background/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="Main/QuitDesign/RedRectangle/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="Main/LeaderBoardDesign/RedRectangle/LeaderBoardButton" to="." method="_on_leader_board_button_pressed"]
 [connection signal="pressed" from="Main/StartDesign/RedRectangle/StartButton" to="." method="_on_start_button_pressed"]

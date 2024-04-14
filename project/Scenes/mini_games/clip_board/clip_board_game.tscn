@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=3 uid="uid://bw3fffy0nho5u"]
 
 [ext_resource type="Script" path="res://Scenes/mini_games/clip_board/clip_board_game.gd" id="1_cquph"]
-[ext_resource type="Texture2D" uid="uid://dts06exqbibod" path="res://Assets/Scenario_2_assests/ResizedClipBoardForGame.png" id="2_alwfk"]
+[ext_resource type="Texture2D" uid="uid://b7rwyx3begmk" path="res://Assets/Scenario_2_assests/ResizedClipBoardForGame.png" id="2_alwfk"]
 [ext_resource type="Script" path="res://Scenes/mini_games/clip_board/clip_board_minigame.gd" id="2_ngvx4"]
 [ext_resource type="Texture2D" uid="uid://28qc845w0nmj" path="res://Assets/Sprites/generic_items/genericItem_color_038.png" id="2_qdqgh"]
 [ext_resource type="Script" path="res://Scenes/mini_games/clip_board/clip_board_game_item.gd" id="3_phv8i"]
-[ext_resource type="Texture2D" uid="uid://dcm6p18p7lslf" path="res://Assets/Sprites/generic_items/genericItem_color_160.png" id="5_5gcnl"]
+[ext_resource type="Texture2D" uid="uid://bwlaxk85h7843" path="res://Assets/Sprites/Iteration 3 assets/Blue button.png" id="6_ehver"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xvtdb"]
 font_size = 22
@@ -19,11 +19,12 @@ font_color = Color(0, 0, 0, 1)
 font_size = 20
 font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_jak64"]
+[sub_resource type="LabelSettings" id="LabelSettings_qstqw"]
+font_size = 30
 font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_qstqw"]
-font_size = 10
+[sub_resource type="LabelSettings" id="LabelSettings_jak64"]
+font_size = 40
 font_color = Color(0, 0, 0, 1)
 
 [node name="clip_board_game" type="Node2D"]
@@ -331,38 +332,42 @@ IMPROVEMENTS"
 label_settings = SubResource("LabelSettings_mh8x6")
 horizontal_alignment = 1
 
-[node name="CheckWinButton" type="TextureButton" parent="."]
-offset_left = 565.333
-offset_top = 780.0
-offset_right = 605.333
-offset_bottom = 820.0
-scale = Vector2(3, 3)
-texture_normal = ExtResource("5_5gcnl")
-metadata/_edit_use_anchors_ = true
-
-[node name="Title" type="Label" parent="CheckWinButton"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.0888885
-anchor_top = 1.41667
-anchor_right = -0.0388886
-anchor_bottom = 1.41667
-offset_right = 282.0
-offset_bottom = 26.0
-text = "Match the Words to their Definitions"
-label_settings = SubResource("LabelSettings_jak64")
-metadata/_edit_use_anchors_ = true
-
-[node name="Label2" type="Label" parent="CheckWinButton"]
-layout_mode = 1
+[node name="Label" type="Label" parent="."]
 anchors_preset = -1
 anchor_left = -0.444444
 anchor_top = 1.0
 anchor_right = 1.33056
 anchor_bottom = 1.475
+offset_left = 521.333
+offset_top = 898.75
+offset_right = 725.333
+offset_bottom = 943.75
 text = "Check Answer"
 label_settings = SubResource("LabelSettings_qstqw")
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = -0.0888885
+anchor_top = 1.41667
+anchor_right = -0.0388886
+anchor_bottom = 1.41667
+offset_left = 617.333
+offset_top = 960.0
+offset_right = 1316.33
+offset_bottom = 1018.0
+text = "Match the Words to their Definitions"
+label_settings = SubResource("LabelSettings_jak64")
+metadata/_edit_use_anchors_ = true
+
+[node name="CheckWinButton" type="TextureButton" parent="."]
+offset_left = 565.333
+offset_top = 763.75
+offset_right = 1156.33
+offset_bottom = 1356.75
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("6_ehver")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="CheckWinButton" to="." method="_on_check_win_button_pressed"]

@@ -34,13 +34,18 @@ func _on_spot_gathered_data(drop):
 
 func check_win_button_pressed():
 	if compare_dict(correct_order, player_order):
-		label.text = "You win!"
+		$CheckWinButton.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Green button.png")
+		$Label2.text = "You win!"
 		finished.emit()
 		await get_tree().create_timer(1).timeout
 		queue_free()
 	else:
-		label.text = "Try again..."
+		$CheckWinButton.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Red button.png")
+		$Label2.text = "Try again..."
 		reset()
+		await get_tree().create_timer(1).timeout
+		$CheckWinButton.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Blue button.png")
+		
 
 
 func reset():
