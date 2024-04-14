@@ -1,53 +1,35 @@
-[gd_scene load_steps=22 format=3 uid="uid://bdtol8suwnlv7"]
+[gd_scene load_steps=24 format=3 uid="uid://bdtol8suwnlv7"]
 
 [ext_resource type="Script" path="res://Scenes/mini_games/file_finder/file_minigame_manager.gd" id="1_uttu5"]
-[ext_resource type="Texture2D" uid="uid://cs0qitpdt2ltj" path="res://Assets/AdjustedStandfordAssets/ComplianceFolder.png" id="2_wwggp"]
-[ext_resource type="Texture2D" uid="uid://dx6x8esqdxul2" path="res://Assets/AdjustedStandfordAssets/SafetyFolder.png" id="3_2fy7v"]
-[ext_resource type="Texture2D" uid="uid://b30n0728hcs7x" path="res://Assets/AdjustedStandfordAssets/MarketingFolder.png" id="4_j8qpf"]
-[ext_resource type="Texture2D" uid="uid://dc7f5ht1vq2mk" path="res://Assets/AdjustedStandfordAssets/PromotionalFolder.png" id="5_d72pe"]
-[ext_resource type="Texture2D" uid="uid://cgmgwee03d24m" path="res://Assets/AdjustedStandfordAssets/LearningFolder.png" id="6_xsvny"]
+[ext_resource type="Texture2D" uid="uid://b70odmdckfuf0" path="res://Assets/AdjustedStandfordAssets/ComplianceFolder.png" id="2_wwggp"]
+[ext_resource type="Texture2D" uid="uid://7ihrcj0hto85" path="res://Assets/AdjustedStandfordAssets/SafetyFolder.png" id="3_2fy7v"]
+[ext_resource type="Texture2D" uid="uid://cbbldglpxmqtb" path="res://Assets/AdjustedStandfordAssets/MarketingFolder.png" id="4_j8qpf"]
+[ext_resource type="Texture2D" uid="uid://6i7cn4wx0cf" path="res://Assets/AdjustedStandfordAssets/PromotionalFolder.png" id="5_d72pe"]
+[ext_resource type="Texture2D" uid="uid://b0uwfiulbrmf2" path="res://Assets/AdjustedStandfordAssets/LearningFolder.png" id="6_xsvny"]
 [ext_resource type="Script" path="res://Scenes/mini_games/file_finder/file_drop.gd" id="7_6foqy"]
 [ext_resource type="Script" path="res://Clickables/drag_and_drop/drag.gd" id="7_no75i"]
-[ext_resource type="Texture2D" uid="uid://blmunjistx21t" path="res://Assets/AdjustedStandfordAssets/BlankFolder.png" id="7_uejaq"]
-[ext_resource type="Texture2D" uid="uid://bhuyw2kfk5ybm" path="res://Assets/Sprites/Iteration 3 assets/Brochure.png" id="8_v3vra"]
-[ext_resource type="Texture2D" uid="uid://d2exdrfmom6g5" path="res://Assets/Sprites/Iteration 3 assets/Poster.png" id="9_k6ic3"]
-[ext_resource type="Texture2D" uid="uid://cwsl3d0j4hiu7" path="res://Assets/Sprites/Iteration 3 assets/PrintedDocument.png" id="10_ld2li"]
-[ext_resource type="Texture2D" uid="uid://dyy6kieu74jiw" path="res://Assets/Sprites/Iteration 3 assets/RegistrationPaper.png" id="11_f607e"]
-[ext_resource type="Texture2D" uid="uid://dqo0k8028asee" path="res://Assets/Sprites/Iteration 3 assets/SavePostcard.png" id="12_1gixw"]
-[ext_resource type="Texture2D" uid="uid://dcmfxrepy3txx" path="res://Assets/Sprites/Iteration 3 assets/SocialMediaGraphics.png" id="13_nm5vl"]
+[ext_resource type="Texture2D" uid="uid://bo45c6gjq0l11" path="res://Assets/Sprites/Iteration 3 assets/FileEdge.png" id="7_rvg05"]
+[ext_resource type="Texture2D" uid="uid://ccvim0to6s5l" path="res://Assets/AdjustedStandfordAssets/Brochuretext.png" id="8_aufhj"]
+[ext_resource type="Texture2D" uid="uid://m4duyp5rkxs4" path="res://Assets/Sprites/Iteration 3 assets/Brochure.png" id="8_v3vra"]
+[ext_resource type="Texture2D" uid="uid://dbvywqj0kjdyv" path="res://Assets/Sprites/Iteration 3 assets/Poster.png" id="9_k6ic3"]
+[ext_resource type="Texture2D" uid="uid://bbnt67gom8cmg" path="res://Assets/AdjustedStandfordAssets/Printtext.png" id="10_j4lk0"]
+[ext_resource type="Texture2D" uid="uid://c0lr84v7p8ek1" path="res://Assets/Sprites/Iteration 3 assets/PrintedDocument.png" id="10_ld2li"]
+[ext_resource type="Texture2D" uid="uid://ddigqy2tvat7j" path="res://Assets/AdjustedStandfordAssets/Registrationtext.png" id="11_8b80p"]
+[ext_resource type="Texture2D" uid="uid://cuy7kvxdepdl0" path="res://Assets/Sprites/Iteration 3 assets/RegistrationPaper.png" id="11_f607e"]
+[ext_resource type="Texture2D" uid="uid://btv06d3005rb" path="res://Assets/Sprites/Iteration 3 assets/SavePostcard.png" id="12_1gixw"]
+[ext_resource type="Texture2D" uid="uid://bioj27hgoygq8" path="res://Assets/AdjustedStandfordAssets/Socialtext.png" id="12_p1jpd"]
+[ext_resource type="Texture2D" uid="uid://c1t1yyd3by7q7" path="res://Assets/AdjustedStandfordAssets/SaveText.png" id="13_ax7bp"]
+[ext_resource type="Texture2D" uid="uid://ckrhn43uqw2b2" path="res://Assets/Sprites/Iteration 3 assets/SocialMediaGraphics.png" id="13_nm5vl"]
+[ext_resource type="Texture2D" uid="uid://cxdxljtkyiu4a" path="res://Assets/AdjustedStandfordAssets/Event_text.png" id="14_q63w0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_js1u7"]
-font_size = 60
-outline_size = 12
+font_size = 80
+outline_size = 14
 outline_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_64bt4"]
-line_spacing = 0.0
-font_size = 40
-outline_size = 8
-outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_firq8"]
-line_spacing = 0.0
-font_size = 38
-outline_size = 8
-outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_a7no2"]
-font_size = 35
-outline_size = 8
-outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_8wod8"]
-line_spacing = 0.0
-font_size = 40
-outline_size = 8
-outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_lsoog"]
-line_spacing = 0.0
-font_size = 37
-outline_size = 8
+[sub_resource type="LabelSettings" id="LabelSettings_dr838"]
+font_size = 80
+outline_size = 14
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Scenario1Final" type="Node2D"]
@@ -55,7 +37,6 @@ script = ExtResource("1_uttu5")
 file_textures = Array[Texture]([ExtResource("2_wwggp"), ExtResource("3_2fy7v"), ExtResource("4_j8qpf"), ExtResource("5_d72pe"), ExtResource("6_xsvny")])
 
 [node name="FileFind" type="Node2D" parent="."]
-visible = false
 
 [node name="EdgeBackground" type="ColorRect" parent="FileFind"]
 custom_minimum_size = Vector2(1920, 1080)
@@ -124,6 +105,7 @@ offset_bottom = 423.0
 scale = Vector2(0.3, 0.3)
 
 [node name="OrganizeFiles" type="Node2D" parent="."]
+visible = false
 
 [node name="EdgeBackground" type="ColorRect" parent="OrganizeFiles"]
 custom_minimum_size = Vector2(1920, 1080)
@@ -135,118 +117,178 @@ color = Color(0, 0.427451, 0.615686, 1)
 offset_left = 21.0
 offset_top = 146.0
 offset_right = 1902.0
-offset_bottom = 1061.0
+offset_bottom = 1080.0
 color = Color(0.294118, 0.588235, 0.898039, 1)
 
-[node name="Label" type="Label" parent="OrganizeFiles"]
-offset_left = 100.0
-offset_top = 979.0
-offset_right = 277.0
-offset_bottom = 1037.0
-text = "Brochure"
-label_settings = SubResource("LabelSettings_64bt4")
+[node name="FileEdge" type="Sprite2D" parent="OrganizeFiles"]
+position = Vector2(212.25, 807.5)
+scale = Vector2(0.779642, 0.701058)
+texture = ExtResource("7_rvg05")
 
-[node name="Label2" type="Label" parent="OrganizeFiles"]
-offset_left = 357.0
-offset_top = 953.0
-offset_right = 552.0
-offset_bottom = 1065.0
-text = "Event
-Poster"
-label_settings = SubResource("LabelSettings_firq8")
-horizontal_alignment = 1
+[node name="ColorRect2" type="ColorRect" parent="OrganizeFiles/FileEdge"]
+offset_left = -218.0
+offset_top = -88.0
+offset_right = 216.0
+offset_bottom = 81.0
+color = Color(0.933333, 0.682353, 0.882353, 1)
 
-[node name="Label3" type="Label" parent="OrganizeFiles"]
-offset_left = 634.0
-offset_top = 983.0
-offset_right = 838.0
-offset_bottom = 1041.0
-text = "Registration"
-label_settings = SubResource("LabelSettings_a7no2")
+[node name="ColorRect" type="ColorRect" parent="OrganizeFiles/FileEdge"]
+offset_left = 168.0
+offset_top = -88.0
+offset_right = 175.0
+offset_bottom = 81.0
+color = Color(0, 0, 0, 0.254902)
 
-[node name="Label4" type="Label" parent="OrganizeFiles"]
-offset_left = 952.0
-offset_top = 972.0
-offset_right = 1129.0
-offset_bottom = 1030.0
-text = "Printed"
-label_settings = SubResource("LabelSettings_64bt4")
+[node name="FileEdge2" type="Sprite2D" parent="OrganizeFiles"]
+position = Vector2(520, 807.25)
+scale = Vector2(0.779642, 0.701058)
+texture = ExtResource("7_rvg05")
 
-[node name="Label5" type="Label" parent="OrganizeFiles"]
-offset_left = 1261.0
-offset_top = 960.0
-offset_right = 1438.0
-offset_bottom = 1070.0
-text = "Save the
-Date"
-label_settings = SubResource("LabelSettings_8wod8")
-horizontal_alignment = 1
+[node name="ColorRect2" type="ColorRect" parent="OrganizeFiles/FileEdge2"]
+offset_left = -218.0
+offset_top = -87.0
+offset_right = 216.0
+offset_bottom = 81.0
+color = Color(0.733333, 0.752941, 0.980392, 1)
 
-[node name="Label6" type="Label" parent="OrganizeFiles"]
-offset_left = 1562.0
-offset_top = 956.0
-offset_right = 1739.0
-offset_bottom = 1058.0
-text = "Media
-Graphic"
-label_settings = SubResource("LabelSettings_lsoog")
-horizontal_alignment = 1
+[node name="ColorRect" type="ColorRect" parent="OrganizeFiles/FileEdge2"]
+offset_left = 158.0
+offset_top = -87.0
+offset_right = 165.0
+offset_bottom = 82.0
+color = Color(0, 0, 0, 0.254902)
+
+[node name="FileEdge3" type="Sprite2D" parent="OrganizeFiles"]
+position = Vector2(820, 807.25)
+scale = Vector2(0.779642, 0.701058)
+texture = ExtResource("7_rvg05")
+
+[node name="ColorRect2" type="ColorRect" parent="OrganizeFiles/FileEdge3"]
+offset_left = -218.0
+offset_top = -87.0
+offset_right = 216.0
+offset_bottom = 82.0
+color = Color(0.498039, 0.823529, 0.972549, 1)
+
+[node name="ColorRect" type="ColorRect" parent="OrganizeFiles/FileEdge3"]
+offset_left = 153.0
+offset_top = -87.0
+offset_right = 159.0
+offset_bottom = 82.0
+color = Color(0, 0, 0, 0.254902)
+
+[node name="FileEdge4" type="Sprite2D" parent="OrganizeFiles"]
+position = Vector2(1116, 807.25)
+scale = Vector2(0.779642, 0.701058)
+texture = ExtResource("7_rvg05")
+
+[node name="ColorRect2" type="ColorRect" parent="OrganizeFiles/FileEdge4"]
+offset_left = -218.0
+offset_top = -87.0
+offset_right = 216.0
+offset_bottom = 82.0
+color = Color(0.360784, 0.882353, 0.705882, 1)
+
+[node name="ColorRect" type="ColorRect" parent="OrganizeFiles/FileEdge4"]
+offset_left = 153.0
+offset_top = -87.0
+offset_right = 161.0
+offset_bottom = 82.0
+color = Color(0, 0, 0, 0.254902)
+
+[node name="FileEdge5" type="Sprite2D" parent="OrganizeFiles"]
+position = Vector2(1413, 807)
+scale = Vector2(0.779642, 0.701058)
+texture = ExtResource("7_rvg05")
+
+[node name="ColorRect2" type="ColorRect" parent="OrganizeFiles/FileEdge5"]
+offset_left = -218.0
+offset_top = -87.0
+offset_right = 216.0
+offset_bottom = 81.0
+color = Color(0.760784, 0.823529, 0.254902, 1)
+
+[node name="ColorRect" type="ColorRect" parent="OrganizeFiles/FileEdge5"]
+offset_left = 162.0
+offset_top = -87.0
+offset_right = 169.0
+offset_bottom = 82.0
+color = Color(0, 0, 0, 0.254902)
+
+[node name="FileEdge6" type="Sprite2D" parent="OrganizeFiles"]
+position = Vector2(1717, 806.25)
+scale = Vector2(0.779642, 0.701058)
+texture = ExtResource("7_rvg05")
+
+[node name="ColorRect2" type="ColorRect" parent="OrganizeFiles/FileEdge6"]
+offset_left = -218.0
+offset_top = -87.0
+offset_right = 218.0
+offset_bottom = 94.0
+color = Color(0.929412, 0.654902, 0.203922, 1)
 
 [node name="Slots" type="Node2D" parent="OrganizeFiles"]
 position = Vector2(87, 104)
 
 [node name="Slot1" type="TextureRect" parent="OrganizeFiles/Slots"]
-offset_left = -28.0
-offset_top = 670.0
-offset_right = 1549.0
-offset_bottom = 1776.0
+offset_left = -40.0
+offset_top = 642.0
+offset_right = 1695.0
+offset_bottom = 1766.0
 scale = Vector2(0.17, 0.17)
-texture = ExtResource("7_uejaq")
+texture = ExtResource("8_aufhj")
 script = ExtResource("7_6foqy")
 
 [node name="Slot2" type="TextureRect" parent="OrganizeFiles/Slots"]
-offset_left = 264.0
-offset_top = 664.0
-offset_right = 1841.0
-offset_bottom = 1770.0
+offset_left = 861.0
+offset_top = 645.0
+offset_right = 2550.0
+offset_bottom = 1769.0
 scale = Vector2(0.17, 0.17)
-texture = ExtResource("7_uejaq")
+texture = ExtResource("14_q63w0")
 script = ExtResource("7_6foqy")
 
 [node name="Slot3" type="TextureRect" parent="OrganizeFiles/Slots"]
-offset_left = 541.0
-offset_top = 669.0
-offset_right = 2118.0
-offset_bottom = 1775.0
+offset_left = 566.0
+offset_top = 638.0
+offset_right = 2236.0
+offset_bottom = 1621.0
 scale = Vector2(0.17, 0.17)
-texture = ExtResource("7_uejaq")
+texture = ExtResource("11_8b80p")
 script = ExtResource("7_6foqy")
 
 [node name="Slot4" type="TextureRect" parent="OrganizeFiles/Slots"]
-offset_left = 836.0
-offset_top = 668.0
-offset_right = 2413.0
-offset_bottom = 1774.0
+offset_left = 1467.0
+offset_top = 647.0
+offset_right = 3384.0
+offset_bottom = 1759.0
 scale = Vector2(0.17, 0.17)
-texture = ExtResource("7_uejaq")
+texture = ExtResource("10_j4lk0")
 script = ExtResource("7_6foqy")
 
 [node name="Slot5" type="TextureRect" parent="OrganizeFiles/Slots"]
-offset_left = 1150.0
-offset_top = 686.0
-offset_right = 2727.0
-offset_bottom = 1792.0
+offset_left = 1161.0
+offset_top = 643.0
+offset_right = 2866.0
+offset_bottom = 1749.0
 scale = Vector2(0.17, 0.17)
-texture = ExtResource("7_uejaq")
+texture = ExtResource("13_ax7bp")
 script = ExtResource("7_6foqy")
 
 [node name="Slot6" type="TextureRect" parent="OrganizeFiles/Slots"]
-offset_left = 1451.0
-offset_top = 674.0
-offset_right = 3028.0
-offset_bottom = 1780.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 279.0
+offset_top = 625.0
+offset_right = 1856.0
+offset_bottom = 1731.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(0.17, 0.17)
-texture = ExtResource("7_uejaq")
+texture = ExtResource("12_p1jpd")
 script = ExtResource("7_6foqy")
 metadata/_edit_use_anchors_ = true
 
@@ -254,59 +296,99 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(215, 319)
 
 [node name="Item1" type="TextureRect" parent="OrganizeFiles/Items"]
-offset_left = 1356.0
-offset_top = -50.0
-offset_right = 1755.0
-offset_bottom = 648.0
+offset_left = 1350.0
+offset_top = 39.0
+offset_right = 1749.0
+offset_bottom = 737.0
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("8_v3vra")
 script = ExtResource("7_no75i")
 
 [node name="Item2" type="TextureRect" parent="OrganizeFiles/Items"]
-offset_left = 223.0
-offset_top = 5.0
-offset_right = 1223.0
-offset_bottom = 1005.0
+offset_left = 217.0
+offset_top = 94.0
+offset_right = 1217.0
+offset_bottom = 1094.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("9_k6ic3")
 script = ExtResource("7_no75i")
 metadata/_edit_use_anchors_ = true
 
 [node name="Item3" type="TextureRect" parent="OrganizeFiles/Items"]
-offset_left = 1076.0
-offset_top = -20.0
-offset_right = 1868.0
-offset_bottom = 904.0
+offset_left = 1070.0
+offset_top = 69.0
+offset_right = 1862.0
+offset_bottom = 993.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("11_f607e")
 script = ExtResource("7_no75i")
 
 [node name="Item4" type="TextureRect" parent="OrganizeFiles/Items"]
-offset_left = 785.0
-offset_top = -22.0
-offset_right = 1649.0
-offset_bottom = 902.0
+offset_left = 794.0
+offset_top = 86.0
+offset_right = 1658.0
+offset_bottom = 1010.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("10_ld2li")
 script = ExtResource("7_no75i")
 
 [node name="Item5" type="TextureRect" parent="OrganizeFiles/Items"]
-offset_left = -34.0
-offset_top = 56.0
-offset_right = 830.0
-offset_bottom = 564.0
+offset_left = -40.0
+offset_top = 145.0
+offset_right = 824.0
+offset_bottom = 653.0
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("12_1gixw")
 script = ExtResource("7_no75i")
 
 [node name="Item6" type="TextureRect" parent="OrganizeFiles/Items"]
-offset_left = 498.0
-offset_top = 43.0
-offset_right = 1264.0
-offset_bottom = 603.0
+offset_left = 476.0
+offset_top = 136.0
+offset_right = 1340.0
+offset_bottom = 696.0
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("13_nm5vl")
 script = ExtResource("7_no75i")
+
+[node name="BlackBorder Top" type="ColorRect" parent="OrganizeFiles"]
+top_level = true
+offset_left = 41.0
+offset_top = 863.0
+offset_right = 1887.0
+offset_bottom = 865.0
+color = Color(0, 0, 0, 1)
+
+[node name="BlackBorderLeft" type="ColorRect" parent="OrganizeFiles"]
+top_level = true
+offset_left = 40.0
+offset_top = 864.0
+offset_right = 43.0
+offset_bottom = 1081.0
+color = Color(0, 0, 0, 1)
+
+[node name="BlackBorderRight" type="ColorRect" parent="OrganizeFiles"]
+top_level = true
+offset_left = 1886.0
+offset_top = 862.0
+offset_right = 1890.0
+offset_bottom = 1081.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="OrganizeFiles"]
+top_level = true
+offset_left = 43.0
+offset_top = 865.0
+offset_right = 1887.0
+offset_bottom = 1080.0
+color = Color(0.976471, 0.721569, 0.337255, 1)
+
+[node name="Label" type="Label" parent="OrganizeFiles"]
+offset_left = 276.0
+offset_top = 195.0
+offset_right = 1666.0
+offset_bottom = 308.0
+text = "Place the Papers in the right Section"
+label_settings = SubResource("LabelSettings_dr838")
 
 [connection signal="pressed" from="FileFind/Previous" to="." method="_on_previous_pressed"]
 [connection signal="pressed" from="FileFind/Next" to="." method="_on_next_pressed"]
