@@ -1,1 +1,8 @@
-Recipe for eggnog
+Grocery List:
+	
+- Deli Turkey
+- Cheese
+- Whole Grain Bread
+- Tomatoes
+- Lemonade
+- Chips
