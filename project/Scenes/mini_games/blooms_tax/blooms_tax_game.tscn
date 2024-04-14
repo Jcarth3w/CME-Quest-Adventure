@@ -2,15 +2,15 @@
 
 [ext_resource type="Script" path="res://Scenes/mini_games/blooms_tax/blooms_tax_game.gd" id="1_lu4bo"]
 [ext_resource type="PackedScene" uid="uid://b5lhwjd1itais" path="res://Clickables/drag_and_drop/drop.tscn" id="2_5m88u"]
-[ext_resource type="Texture2D" uid="uid://bmh7laikfh860" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/BloomsTaxTrans.png" id="2_jr6vx"]
+[ext_resource type="Texture2D" uid="uid://bvhnv7n3i6q5m" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/BloomsTaxTrans.png" id="2_jr6vx"]
 [ext_resource type="PackedScene" uid="uid://bjqdr74ju46mx" path="res://Clickables/drag_and_drop/drag.tscn" id="4_bw5tn"]
 [ext_resource type="Script" path="res://Scenes/mini_games/blooms_tax/blooms_drop.gd" id="4_hl1ha"]
-[ext_resource type="Texture2D" uid="uid://c7427imjacdaf" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/CreateBlooms.png" id="6_1bn1f"]
-[ext_resource type="Texture2D" uid="uid://cerxfs6fnd282" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/EvaluateBlooms.png" id="7_fiaqf"]
-[ext_resource type="Texture2D" uid="uid://l3vqo2rsiqcw" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/AnalyzeBlooms.png" id="8_br1ip"]
-[ext_resource type="Texture2D" uid="uid://vxe44o6orbyh" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/ApplyBlooms.png" id="9_sk0kv"]
-[ext_resource type="Texture2D" uid="uid://cbbehvgbe1bs" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/UnderstandBlooms.png" id="10_0fgqw"]
-[ext_resource type="Texture2D" uid="uid://baje00i3r7hc5" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/RememberBlooms.png" id="11_yr4mb"]
+[ext_resource type="Texture2D" uid="uid://bnsrjri67c5qb" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/CreateBlooms.png" id="6_1bn1f"]
+[ext_resource type="Texture2D" uid="uid://ypwl0ykv5jdb" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/EvaluateBlooms.png" id="7_fiaqf"]
+[ext_resource type="Texture2D" uid="uid://cpnd2nt41c0gg" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/AnalyzeBlooms.png" id="8_br1ip"]
+[ext_resource type="Texture2D" uid="uid://qkug71byf2fp" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/ApplyBlooms.png" id="9_sk0kv"]
+[ext_resource type="Texture2D" uid="uid://dkh1vk12hhvbv" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/UnderstandBlooms.png" id="10_0fgqw"]
+[ext_resource type="Texture2D" uid="uid://cffm001dhlq8i" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/RememberBlooms.png" id="11_yr4mb"]
 [ext_resource type="Texture2D" uid="uid://dcm6p18p7lslf" path="res://Assets/Sprites/generic_items/genericItem_color_160.png" id="12_gkd27"]
 
 [sub_resource type="SystemFont" id="SystemFont_qoytp"]
@@ -56,6 +56,7 @@ color = Color(0.882353, 0.45098, 0.737255, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="BloomsTaxTrans" type="Sprite2D" parent="."]
+modulate = Color(0.0901961, 1, 1, 1)
 position = Vector2(722.875, 566.5)
 scale = Vector2(1.69153, 1.7416)
 texture = ExtResource("2_jr6vx")

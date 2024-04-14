@@ -14,7 +14,7 @@ font_color = Color(0, 0, 0, 1)
 font_size = 17
 
 [sub_resource type="LabelSettings" id="LabelSettings_y0hv3"]
-font_size = 20
+font_size = 18
 font_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
 
 [node name="BulletinBoard" type="Node2D"]
@@ -46,8 +46,9 @@ anchor_left = 0.0752158
 anchor_top = 0.025974
 anchor_right = 0.930949
 anchor_bottom = 1.01299
-text = "Joint Accredidation Criteria"
+text = "Secret Word"
 label_settings = SubResource("LabelSettings_t0jvt")
+horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="JAC" type="ColorRect" parent="."]
@@ -469,18 +470,17 @@ color = Color(1, 0.486275, 1, 1)
 [node name="Label" type="Label" parent="Directions"]
 layout_mode = 0
 offset_left = -28.0
-offset_top = 2.0
+offset_top = 18.0
 offset_right = 364.0
-offset_bottom = 281.0
+offset_bottom = 297.0
 text = "In each row there are two
- possible criteria listed. 
-One is actually a criteria,
-and one is a fake. Use your 
+possible joint accredidation
+criteria listed. One is actually a 
+criteria, and one is a fake. Use your 
 knowledge of CME to choose 
-the correct one. Put the
- associated  letters together
- to unlock the secrets 
-of this room"
+the correct one. Put the associated
+letters together to unlock the
+SECRET WORD"
 label_settings = SubResource("LabelSettings_y0hv3")
 horizontal_alignment = 1
 
