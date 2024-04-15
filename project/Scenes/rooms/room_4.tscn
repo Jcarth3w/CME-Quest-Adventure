@@ -81,6 +81,7 @@ offset_bottom = 1539.0
 scale = Vector2(0.12, 0.12)
 texture_normal = ExtResource("7_hmy01")
 script = ExtResource("8_ncqvr")
+sound = ExtResource("15_ui2v5")
 
 [node name="Plant" type="TextureButton" parent="."]
 offset_left = 1216.0
@@ -138,6 +139,7 @@ offset_bottom = 1531.0
 scale = Vector2(0.12, 0.12)
 texture_normal = ExtResource("18_yqydn")
 script = ExtResource("8_ncqvr")
+sound = ExtResource("15_ui2v5")
 
 [node name="Chair" type="TextureButton" parent="."]
 offset_left = 248.0

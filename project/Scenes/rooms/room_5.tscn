@@ -141,6 +141,7 @@ offset_bottom = 1403.0
 scale = Vector2(0.12, 0.12)
 texture_normal = ExtResource("21_ftvv8")
 script = ExtResource("22_dulya")
+sound = ExtResource("16_47qld")
 
 [node name="Box" type="Sprite2D" parent="."]
 position = Vector2(1094, 601)
