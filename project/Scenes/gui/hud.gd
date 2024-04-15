@@ -56,7 +56,6 @@ func on_hud_button_pressed(button):
 		StringName("MenuButton"):
 			if menu_active:
 				pause.emit(true)
-				get_parent().get_data()
 				if $RoomMenu.visible == false:
 					$Timer.stop()
 					$InGameMenu.visible = true
