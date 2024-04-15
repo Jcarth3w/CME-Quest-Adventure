@@ -1,7 +1,7 @@
 extends MiniGame
 
 
-@onready var label = $CheckWinButton/Label2
+@onready var label = $Label2
 
 var correct_order = {}
 var player_order = {}
