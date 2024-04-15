@@ -31,9 +31,9 @@ func on_button_press(button) -> void:
 func check_answer(player_answer) -> void:
 	if player_answer == answer:
 		$AudioStreamPlayer.play()
-		$Display.text = "unlocked room 3"
-		get_parent().unlock(room_number)
+		$Display.text = "You've escaped! Congrats."
 		finished.emit()
+		get_parent().final.emit()
 		await get_tree().create_timer(0.5).timeout
 		queue_free()
 	else:

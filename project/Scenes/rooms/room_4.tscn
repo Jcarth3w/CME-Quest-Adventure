@@ -1,24 +1,26 @@
-[gd_scene load_steps=20 format=3 uid="uid://d02w8tm7p5omg"]
+[gd_scene load_steps=22 format=3 uid="uid://d02w8tm7p5omg"]
 
 [ext_resource type="Texture2D" uid="uid://dwqw21d8i31b" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-01(1).png" id="1_jnk3n"]
 [ext_resource type="Script" path="res://Scenes/rooms/room.gd" id="1_ko1mr"]
-[ext_resource type="Texture2D" uid="uid://c8bgmj0gqger2" path="res://Assets/Sprites/Iteration 3 assets/Door.png" id="2_c3hvj"]
-[ext_resource type="Texture2D" uid="uid://c5aw2lgu2qldx" path="res://Assets/AdjustedStandfordAssets/ResizedPinBoard.png" id="3_rudau"]
+[ext_resource type="Texture2D" uid="uid://mty4kqrvl4ib" path="res://Assets/Sprites/Iteration 3 assets/Door.png" id="2_c3hvj"]
+[ext_resource type="Texture2D" uid="uid://cr6k5jea7nj7g" path="res://Assets/AdjustedStandfordAssets/ResizedPinBoard.png" id="3_rudau"]
 [ext_resource type="Script" path="res://Clickables/static_scene_btn/static_scene_button.gd" id="5_cg667"]
 [ext_resource type="Script" path="res://Clickables/new_scene/new_scene_object.gd" id="5_uh2m8"]
-[ext_resource type="Texture2D" uid="uid://b1r2tcmopop8o" path="res://Assets/AdjustedStandfordAssets/ResizedPlant.png" id="6_553eh"]
-[ext_resource type="Texture2D" uid="uid://du4hkf0tcpqd3" path="res://Assets/Sprites/numbers/one_yellow.jpg" id="7_hmy01"]
+[ext_resource type="Texture2D" uid="uid://cloaaxl64yoe4" path="res://Assets/AdjustedStandfordAssets/ResizedPlant.png" id="6_553eh"]
+[ext_resource type="Texture2D" uid="uid://b0bu5ktjmbg3j" path="res://Assets/Sprites/numbers/one_yellow.jpg" id="7_hmy01"]
 [ext_resource type="Script" path="res://Clickables/pickup/pickup.gd" id="8_ncqvr"]
 [ext_resource type="Texture2D" uid="uid://bn3kp4ijyl0oa" path="res://Assets/Sprites/room_1_custom_placeholders/filecabinet.jpg" id="9_hb4pp"]
 [ext_resource type="Script" path="res://Clickables/movement/movement_object.gd" id="10_88hya"]
-[ext_resource type="Texture2D" uid="uid://c3g5irvmxvur7" path="res://Assets/AdjustedStandfordAssets/ResizedClipBoard.png" id="11_e37d3"]
-[ext_resource type="Texture2D" uid="uid://blvd2834jr6tn" path="res://Assets/Sprites/numbers/nine.jpg" id="12_kcr4r"]
-[ext_resource type="AudioStream" uid="uid://dfoyl604qjd56" path="res://Assets/SFX/minigame_win.wav" id="13_g2p3u"]
-[ext_resource type="Texture2D" uid="uid://dncm8h8vqxkca" path="res://Assets/Sprites/letter_unlock.PNG" id="13_ngcgc"]
+[ext_resource type="Texture2D" uid="uid://chft3udlki5e8" path="res://Assets/AdjustedStandfordAssets/ResizedClipBoard.png" id="11_e37d3"]
+[ext_resource type="Texture2D" uid="uid://ci3pyn4h3rpyn" path="res://Assets/Sprites/numbers/nine.jpg" id="12_kcr4r"]
+[ext_resource type="AudioStream" uid="uid://cypofas317dtq" path="res://Assets/SFX/minigame_win.wav" id="13_g2p3u"]
+[ext_resource type="Texture2D" uid="uid://bha7evdc2nvbi" path="res://Assets/Sprites/letter_unlock.PNG" id="13_ngcgc"]
 [ext_resource type="Script" path="res://Clickables/room_unlocks/combo_button.gd" id="14_v3p5n"]
-[ext_resource type="AudioStream" uid="uid://bvml46igb4p5b" path="res://Assets/SFX/pickup_item.wav" id="15_ui2v5"]
-[ext_resource type="Texture2D" uid="uid://cesepodioiyal" path="res://Assets/Sprites/numbers/one_pink.jpg" id="18_yqydn"]
+[ext_resource type="AudioStream" uid="uid://c3ec5e51oonk8" path="res://Assets/SFX/pickup_item.wav" id="15_ui2v5"]
+[ext_resource type="Texture2D" uid="uid://b7dqsdiw3f3v4" path="res://Assets/Sprites/numbers/one_pink.jpg" id="18_yqydn"]
 [ext_resource type="Texture2D" uid="uid://k7tyhsc5hvsx" path="res://Assets/Sprites/room_1_custom_placeholders/chair.png" id="19_ruk10"]
+[ext_resource type="Texture2D" uid="uid://8oqufxpc734l" path="res://Assets/EasterEggs/Custom Illustrations - Stanford Monuments-42.png" id="20_aj1rt"]
+[ext_resource type="Texture2D" uid="uid://dcy3jegw4eyym" path="res://Assets/EasterEggs/Custom Illustrations - Stanford Monuments-48.png" id="21_22h8w"]
 
 [node name="room4" type="Node2D"]
 script = ExtResource("1_ko1mr")
@@ -105,9 +107,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="ClipBoard" type="TextureButton" parent="."]
 offset_left = 79.0
-offset_top = 274.0
+offset_top = 414.0
 offset_right = 2360.0
-offset_bottom = 3489.0
+offset_bottom = 3629.0
 scale = Vector2(0.05, 0.05)
 texture_normal = ExtResource("11_e37d3")
 script = ExtResource("5_uh2m8")
@@ -146,3 +148,13 @@ texture_normal = ExtResource("19_ruk10")
 script = ExtResource("10_88hya")
 x_coordinate = 448
 y_coordinate = 628
+
+[node name="Certificate" type="Sprite2D" parent="."]
+position = Vector2(336, 298)
+scale = Vector2(0.123667, 0.103667)
+texture = ExtResource("20_aj1rt")
+
+[node name="Tissue" type="Sprite2D" parent="."]
+position = Vector2(866, 370)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("21_22h8w")
