@@ -2,16 +2,16 @@
 
 [ext_resource type="Script" path="res://Scenes/mini_games/blooms_tax/blooms_tax_game.gd" id="1_lu4bo"]
 [ext_resource type="PackedScene" uid="uid://b5lhwjd1itais" path="res://Clickables/drag_and_drop/drop.tscn" id="2_5m88u"]
-[ext_resource type="Texture2D" uid="uid://dqu2cyl1lm180" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/BloomsTaxTrans.png" id="2_jr6vx"]
+[ext_resource type="Texture2D" uid="uid://d1svx3pam1pa3" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/BloomsTaxTrans.png" id="2_jr6vx"]
 [ext_resource type="PackedScene" uid="uid://bjqdr74ju46mx" path="res://Clickables/drag_and_drop/drag.tscn" id="4_bw5tn"]
 [ext_resource type="Script" path="res://Scenes/mini_games/blooms_tax/blooms_drop.gd" id="4_hl1ha"]
-[ext_resource type="Texture2D" uid="uid://qsk1se3k34le" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/CreateBlooms.png" id="6_1bn1f"]
-[ext_resource type="Texture2D" uid="uid://dr1h7kld38pql" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/EvaluateBlooms.png" id="7_fiaqf"]
-[ext_resource type="Texture2D" uid="uid://djhrt1mjg8mnt" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/AnalyzeBlooms.png" id="8_br1ip"]
-[ext_resource type="Texture2D" uid="uid://bc8jomgcadrd2" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/ApplyBlooms.png" id="9_sk0kv"]
-[ext_resource type="Texture2D" uid="uid://b51iurvoacjc1" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/UnderstandBlooms.png" id="10_0fgqw"]
-[ext_resource type="Texture2D" uid="uid://dq2oe50g2ilhc" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/RememberBlooms.png" id="11_yr4mb"]
-[ext_resource type="Texture2D" uid="uid://bwlaxk85h7843" path="res://Assets/Sprites/Iteration 3 assets/Blue button.png" id="12_ewweo"]
+[ext_resource type="Texture2D" uid="uid://cgytpqsp70w6t" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/CreateBlooms.png" id="6_1bn1f"]
+[ext_resource type="Texture2D" uid="uid://rgmdkns1y30w" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/EvaluateBlooms.png" id="7_fiaqf"]
+[ext_resource type="Texture2D" uid="uid://xvtlh4oku3mb" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/AnalyzeBlooms.png" id="8_br1ip"]
+[ext_resource type="Texture2D" uid="uid://dqifbrtwk4n6" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/ApplyBlooms.png" id="9_sk0kv"]
+[ext_resource type="Texture2D" uid="uid://bg2a8tkuga44p" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/UnderstandBlooms.png" id="10_0fgqw"]
+[ext_resource type="Texture2D" uid="uid://8nflhljqev8g" path="res://Clickables/static_scene_btn/Sprites/Room_5_Assests/RememberBlooms.png" id="11_yr4mb"]
+[ext_resource type="Texture2D" uid="uid://ddcm2qnrmqo8l" path="res://Assets/Sprites/Iteration 3 assets/Blue button.png" id="12_ewweo"]
 
 [sub_resource type="SystemFont" id="SystemFont_qoytp"]
 
@@ -52,7 +52,7 @@ offset_left = 51.4157
 offset_top = -11.9261
 offset_right = 51.4156
 offset_bottom = -11.926
-color = Color(0.882353, 0.45098, 0.737255, 1)
+color = Color(0.976471, 0.894118, 0.737255, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="BloomsTaxTrans" type="Sprite2D" parent="."]
@@ -110,45 +110,45 @@ script = ExtResource("4_hl1ha")
 drag_partner = NodePath("../RememberDrag")
 
 [node name="CreateDrag" parent="." instance=ExtResource("4_bw5tn")]
-offset_left = 1450.0
-offset_top = 197.0
-offset_right = 1726.0
-offset_bottom = 300.0
+offset_left = 1481.0
+offset_top = 326.0
+offset_right = 1757.0
+offset_bottom = 429.0
 texture = ExtResource("6_1bn1f")
 
 [node name="EvaluateDrag" parent="." instance=ExtResource("4_bw5tn")]
-offset_left = 1455.0
-offset_top = 325.0
-offset_right = 1721.0
-offset_bottom = 428.0
+offset_left = 1481.0
+offset_top = 212.0
+offset_right = 1747.0
+offset_bottom = 315.0
 texture = ExtResource("7_fiaqf")
 
 [node name="AnalyzeDrag" parent="." instance=ExtResource("4_bw5tn")]
-offset_left = 1458.0
-offset_top = 458.0
-offset_right = 1727.0
-offset_bottom = 558.0
+offset_left = 1481.0
+offset_top = 446.0
+offset_right = 1750.0
+offset_bottom = 546.0
 texture = ExtResource("8_br1ip")
 
 [node name="ApplyDrag" parent="." instance=ExtResource("4_bw5tn")]
-offset_left = 1470.0
-offset_top = 599.0
-offset_right = 1738.0
-offset_bottom = 702.0
+offset_left = 1481.0
+offset_top = 803.0
+offset_right = 1749.0
+offset_bottom = 906.0
 texture = ExtResource("9_sk0kv")
 
 [node name="UnderstandDrag" parent="." instance=ExtResource("4_bw5tn")]
-offset_left = 1477.0
-offset_top = 723.0
-offset_right = 1742.0
-offset_bottom = 824.0
+offset_left = 1481.0
+offset_top = 685.0
+offset_right = 1746.0
+offset_bottom = 786.0
 texture = ExtResource("10_0fgqw")
 
 [node name="RememberDrag" parent="." instance=ExtResource("4_bw5tn")]
-offset_left = 1487.0
-offset_top = 854.0
-offset_right = 1750.0
-offset_bottom = 956.0
+offset_left = 1481.0
+offset_top = 571.0
+offset_right = 1744.0
+offset_bottom = 673.0
 texture = ExtResource("11_yr4mb")
 
 [node name="CheckWinButton" type="TextureButton" parent="."]
