@@ -1,23 +1,23 @@
 [gd_scene load_steps=19 format=3 uid="uid://dxurrur4fkonu"]
 
 [ext_resource type="Script" path="res://Scenes/rooms/room.gd" id="1_xmdg1"]
-[ext_resource type="Texture2D" uid="uid://cr6k5jea7nj7g" path="res://Assets/AdjustedStandfordAssets/ResizedPinBoard.png" id="2_4hu8h"]
-[ext_resource type="Texture2D" uid="uid://4hvcvkqw6uo" path="res://Assets/Sprites/Iteration 3 assets/OrderedStickyNotes.png" id="2_ff5rt"]
-[ext_resource type="Texture2D" uid="uid://mty4kqrvl4ib" path="res://Assets/Sprites/Iteration 3 assets/Door.png" id="2_koxut"]
-[ext_resource type="Texture2D" uid="uid://ckrxjcxedxqux" path="res://Assets/EasterEggs/Custom Illustrations - Stanford Monuments-54.png" id="3_r4bsp"]
+[ext_resource type="Texture2D" uid="uid://cq2a802dag8bo" path="res://Assets/AdjustedStandfordAssets/ResizedPinBoard.png" id="2_4hu8h"]
+[ext_resource type="Texture2D" uid="uid://b7lqlnrxhe0a2" path="res://Assets/Sprites/Iteration 3 assets/OrderedStickyNotes.png" id="2_ff5rt"]
+[ext_resource type="Texture2D" uid="uid://be0uissf4g8d4" path="res://Assets/Sprites/Iteration 3 assets/Door.png" id="2_koxut"]
+[ext_resource type="Texture2D" uid="uid://rg6m2n50pfqq" path="res://Assets/EasterEggs/Custom Illustrations - Stanford Monuments-54.png" id="3_r4bsp"]
 [ext_resource type="Script" path="res://Clickables/new_scene/new_scene_object.gd" id="5_q81bl"]
-[ext_resource type="Texture2D" uid="uid://d0g5gdljbiet3" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-04.png" id="5_rd7x1"]
-[ext_resource type="Texture2D" uid="uid://cy7lwmkjhwewn" path="res://Assets/AdjustedStandfordAssets/ResizedBookshelf.png" id="6_wkf6y"]
-[ext_resource type="AudioStream" uid="uid://cypofas317dtq" path="res://Assets/SFX/minigame_win.wav" id="7_iyhw7"]
+[ext_resource type="Texture2D" uid="uid://cv2dwu4k2w0op" path="res://Assets/AdjustedStandfordAssets/ResizedBookshelf.png" id="6_wkf6y"]
+[ext_resource type="AudioStream" uid="uid://dxf3jdpydkby" path="res://Assets/SFX/minigame_win.wav" id="7_iyhw7"]
 [ext_resource type="PackedScene" uid="uid://c7brg2hyybb7t" path="res://Clickables/static_scene_btn/static_scene_button.tscn" id="7_x8tk5"]
+[ext_resource type="Texture2D" uid="uid://cnl6nxdh7ewxt" path="res://Assets/StanfordAssets/resized_books.png" id="8_awyoc"]
 [ext_resource type="Texture2D" uid="uid://dmm1o4xemcxfx" path="res://Assets/Sprites/Room2/Desk.png" id="9_huuy6"]
-[ext_resource type="Texture2D" uid="uid://dooov1akxgos3" path="res://Assets/Sprites/Room2/keypad.PNG" id="9_tgu88"]
+[ext_resource type="Texture2D" uid="uid://bjngpdde7810p" path="res://Assets/Sprites/Room2/keypad.PNG" id="9_tgu88"]
 [ext_resource type="Texture2D" uid="uid://k7tyhsc5hvsx" path="res://Assets/Sprites/room_1_custom_placeholders/chair.png" id="10_dw2od"]
 [ext_resource type="Script" path="res://Clickables/room_unlocks/combo_button.gd" id="10_mgps6"]
 [ext_resource type="PackedScene" uid="uid://rksr0yf3cfrd" path="res://Clickables/movement/Movement_Object.tscn" id="11_a351n"]
 [ext_resource type="Texture2D" uid="uid://w10bfogg4ojl" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-09.png" id="12_jxi8s"]
 [ext_resource type="PackedScene" uid="uid://db6kx103okwhb" path="res://Clickables/pickup/pickup.tscn" id="13_8i57d"]
-[ext_resource type="Texture2D" uid="uid://umphlosjj5s" path="res://Assets/Sprites/Iteration 3 assets/Poster.png" id="15_nbiuo"]
+[ext_resource type="Texture2D" uid="uid://cy1mwbp0b6s1x" path="res://Assets/Sprites/Iteration 3 assets/Poster.png" id="15_nbiuo"]
 
 [node name="Room2" type="Node2D"]
 script = ExtResource("1_xmdg1")
@@ -71,7 +71,7 @@ scale = Vector2(0.3, 0.261)
 texture_normal = ExtResource("2_4hu8h")
 script = ExtResource("5_q81bl")
 scene_path = "res://Scenes/mini_games/Crossword_Puzzle/crossword_minigame.tscn"
-prize_texture = ExtResource("5_rd7x1")
+prize_texture = ExtResource("8_awyoc")
 prize_name = "books"
 sound = ExtResource("7_iyhw7")
 
