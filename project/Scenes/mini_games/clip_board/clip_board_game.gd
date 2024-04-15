@@ -1,6 +1,6 @@
 extends MiniGame
 
-@onready var label = $CheckWinButton/Label2
+@onready var label = $Label
 
 var correct_order = {"Spot1" : "Item2", "Spot2" : "Item1", "Spot3" : "Item3"}
 var player_order = {}

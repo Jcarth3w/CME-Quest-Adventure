@@ -22,7 +22,7 @@ script = ExtResource("1_0b13o")
 scenario_num = 2
 max_items = 6
 scenario_title = "Scenario 2"
-scenario_description = "This is the second escape room that we've made, and it's really cool."
+scenario_description = "In this escape room you will need to use your knowledge of compliance and accredidation to learn secret codes that will help you escape this locked up office."
 current_room = NodePath("Room1")
 final_sound = ExtResource("2_8fe0y")
 
