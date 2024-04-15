@@ -14,7 +14,7 @@ func _ready():
 
 
 func on_text_submit(player_answer, text_box):
-	if player_answer == answers.get(String(text_box.name)):
+	if player_answer.to_lower() == answers.get(String(text_box.name)).to_lower():
 		text_box.modulate = Color.GREEN
 		text_box.editable = false
 		correct_answers += 1
