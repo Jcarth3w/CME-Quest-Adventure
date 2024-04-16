@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://ck7p0h0yl242b"]
 
 [ext_resource type="Script" path="res://Scenes/mini_games/Crossword_Puzzle/crossword_minigame.gd" id="1_2buhs"]
-[ext_resource type="Texture2D" uid="uid://bv6dh4mavp8a8" path="res://Assets/Sprites/Iteration 3 assets/Blue button.png" id="2_ljmo2"]
-[ext_resource type="Texture2D" uid="uid://buhfk10qpvee" path="res://Assets/Sprites/Iteration 3 assets/Red Button.png" id="3_a4uug"]
+[ext_resource type="Texture2D" uid="uid://3ihxl6u4445a" path="res://Assets/Sprites/Iteration 3 assets/Blue button.png" id="2_ljmo2"]
+[ext_resource type="Texture2D" uid="uid://bsor0mc8ed41u" path="res://Assets/Sprites/Iteration 3 assets/Red Button.png" id="3_a4uug"]
 [ext_resource type="Texture2D" uid="uid://u7sc0sv2fhxo" path="res://Assets/Crossword_Assets/Andragogy_Empty.png" id="3_xacx7"]
 [ext_resource type="Texture2D" uid="uid://d3stlj5vd25u" path="res://Assets/Crossword_Assets/Constructivism_Empty.png" id="4_totf0"]
 [ext_resource type="Texture2D" uid="uid://gx0omo1aenxk" path="res://Assets/Crossword_Assets/Cognitivism_Empty.png" id="5_1n2sm"]
@@ -104,3 +104,4 @@ horizontal_alignment = 1
 
 [connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="text_submitted" from="UserText" to="." method="_on_user_text_text_submitted"]

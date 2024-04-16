@@ -22,7 +22,7 @@ func check_bttn_pressed():
 		await get_tree().create_timer(1).timeout
 		queue_free()
 	else:
-		$CheckBttn.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Red button.png")
+		$CheckBttn.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Red Button.png")
 		await get_tree().create_timer(1).timeout
 		$CheckBttn.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Blue button.png")
 		

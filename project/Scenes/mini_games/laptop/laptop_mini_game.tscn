@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://6f7f3ik8hlfv"]
 
 [ext_resource type="Script" path="res://Scenes/mini_games/laptop/laptop_mini_game.gd" id="1_mdm6b"]
-[ext_resource type="Texture2D" uid="uid://bab1meug5xb07" path="res://Assets/AdjustedStandfordAssets/Resizedpapers.png" id="2_scfko"]
-[ext_resource type="Texture2D" uid="uid://t788mk7kwfwi" path="res://Assets/AdjustedStandfordAssets/PowerButton.png" id="3_g4ss6"]
+[ext_resource type="Texture2D" uid="uid://dknkf6x7tenr3" path="res://Assets/AdjustedStandfordAssets/Resizedpapers.png" id="2_scfko"]
+[ext_resource type="Texture2D" uid="uid://0srob8smdmqn" path="res://Assets/AdjustedStandfordAssets/PowerButton.png" id="3_g4ss6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_aep5h"]
 font_size = 72

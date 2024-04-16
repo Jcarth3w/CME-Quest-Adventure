@@ -10,7 +10,7 @@ func _on_exit_pressed():
 
 
 func _on_line_edit_text_submitted(new_text):
-	if new_text == answer:
+	if new_text.to_lower() == answer.to_lower():
 		$RoomUnlocked.visible = true
 		get_parent().unlock(2)
 		finished.emit()

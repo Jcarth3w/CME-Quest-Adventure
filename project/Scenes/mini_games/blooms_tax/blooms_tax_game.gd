@@ -1,7 +1,7 @@
 extends MiniGame
 
 
-@onready var label = $CheckWinButton/Label2
+@onready var label = $Label2
 
 var correct_order = {}
 var player_order = {}
@@ -40,7 +40,7 @@ func check_win_button_pressed():
 		await get_tree().create_timer(1).timeout
 		queue_free()
 	else:
-		$CheckWinButton.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Red button.png")
+		$CheckWinButton.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Red Button.png")
 		$Label2.text = "Try again..."
 		reset()
 		await get_tree().create_timer(1).timeout

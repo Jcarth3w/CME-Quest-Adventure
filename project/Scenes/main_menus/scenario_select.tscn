@@ -1,0 +1,380 @@
+[gd_scene load_steps=9 format=3 uid="uid://cll8mywp4rc6a"]
+
+[ext_resource type="Script" path="res://Scenes/main_menus/scenario_select.gd" id="1_t1app"]
+[ext_resource type="Texture2D" uid="uid://bagapvd7n5fjh" path="res://Assets/Sprites/Iteration 3 assets/Left Arrow.png" id="2_ivuis"]
+[ext_resource type="Texture2D" uid="uid://cys4l1pqxmj57" path="res://Assets/Sprites/Iteration 3 assets/Right Arrow.png" id="3_8xqe1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jy4ff"]
+font_size = 140
+font_color = Color(0.796078, 0, 0.203922, 1)
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_yd1fp"]
+font_size = 50
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jog0t"]
+font_size = 40
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vtbt6"]
+font_size = 80
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_d7x22"]
+font_size = 80
+font_color = Color(0.796078, 0, 0.203922, 1)
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_t1app")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1918.0
+offset_bottom = 1079.0
+
+[node name="Label" type="Label" parent="Background"]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 32.0
+offset_right = 1503.0
+offset_bottom = 227.0
+text = "Scenario Select"
+label_settings = SubResource("LabelSettings_jy4ff")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Right Border" type="ColorRect" parent="Background"]
+layout_mode = 0
+offset_left = 1863.0
+offset_right = 1920.0
+offset_bottom = 1087.0
+color = Color(0.796078, 0, 0.203922, 1)
+
+[node name="Left Border" type="ColorRect" parent="Background"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 57.0
+offset_bottom = 1083.0
+color = Color(0.796078, 0, 0.203922, 1)
+
+[node name="Scenario1" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 329.0
+offset_top = 282.0
+offset_right = 1596.0
+offset_bottom = 898.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ScenarioBackground" type="ColorRect" parent="Scenario1"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 11.0
+offset_right = 1255.0
+offset_bottom = 605.0
+color = Color(0.796078, 0, 0.203922, 1)
+
+[node name="Label Seperator" type="ColorRect" parent="Scenario1"]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 122.0
+offset_right = 978.0
+offset_bottom = 135.0
+color = Color(0, 0, 0, 1)
+
+[node name="LevelName" type="Label" parent="Scenario1"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 66.0
+offset_right = 1173.0
+offset_bottom = 261.0
+text = "CME Events/Resources"
+label_settings = SubResource("LabelSettings_yd1fp")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="LevelTask" type="Label" parent="Scenario1"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 233.0
+offset_right = 1187.0
+offset_bottom = 389.0
+text = "Help CME find the missing promotional materials for events/resources."
+label_settings = SubResource("LabelSettings_jog0t")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ScenarioNumber" type="Label" parent="Scenario1"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = -24.0
+offset_right = 1177.0
+offset_bottom = 171.0
+text = "Marketing Madness"
+label_settings = SubResource("LabelSettings_vtbt6")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="StartButtonOne" type="ColorRect" parent="Scenario1"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 394.0
+offset_right = 858.0
+offset_bottom = 554.0
+color = Color(0, 0, 0, 1)
+
+[node name="ButtonBackground" type="ColorRect" parent="Scenario1/StartButtonOne"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 451.0
+offset_bottom = 153.0
+
+[node name="Label" type="Label" parent="Scenario1/StartButtonOne"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 451.0
+offset_bottom = 153.0
+text = "Start"
+label_settings = SubResource("LabelSettings_d7x22")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RoomOneButton" type="TextureButton" parent="Scenario1/StartButtonOne"]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 458.0
+offset_bottom = 161.0
+
+[node name="Scenario2" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 329.0
+offset_top = 282.0
+offset_right = 1596.0
+offset_bottom = 898.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ScenarioBackground" type="ColorRect" parent="Scenario2"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 11.0
+offset_right = 1255.0
+offset_bottom = 605.0
+color = Color(0.796078, 0, 0.203922, 1)
+
+[node name="Label Seperator" type="ColorRect" parent="Scenario2"]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 122.0
+offset_right = 978.0
+offset_bottom = 135.0
+color = Color(0, 0, 0, 1)
+
+[node name="LevelName" type="Label" parent="Scenario2"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 66.0
+offset_right = 1173.0
+offset_bottom = 261.0
+text = "Compliance/Accreditation"
+label_settings = SubResource("LabelSettings_yd1fp")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="LevelTask" type="Label" parent="Scenario2"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 233.0
+offset_right = 1187.0
+offset_bottom = 389.0
+text = "Look for the missing resources on Compliance and Accreditation"
+label_settings = SubResource("LabelSettings_jog0t")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ScenarioNumber" type="Label" parent="Scenario2"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = -24.0
+offset_right = 1177.0
+offset_bottom = 171.0
+text = "Compliance Crisis"
+label_settings = SubResource("LabelSettings_vtbt6")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="StartButtonTwo" type="ColorRect" parent="Scenario2"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 394.0
+offset_right = 858.0
+offset_bottom = 554.0
+color = Color(0, 0, 0, 1)
+
+[node name="ButtonBackground" type="ColorRect" parent="Scenario2/StartButtonTwo"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 451.0
+offset_bottom = 153.0
+
+[node name="Label" type="Label" parent="Scenario2/StartButtonTwo"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 451.0
+offset_bottom = 153.0
+text = "Start"
+label_settings = SubResource("LabelSettings_d7x22")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RoomTwoButton" type="TextureButton" parent="Scenario2/StartButtonTwo"]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 458.0
+offset_bottom = 161.0
+
+[node name="Scenario3" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 329.0
+offset_top = 282.0
+offset_right = 1596.0
+offset_bottom = 898.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ScenarioBackground" type="ColorRect" parent="Scenario3"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 11.0
+offset_right = 1255.0
+offset_bottom = 605.0
+color = Color(0.796078, 0, 0.203922, 1)
+
+[node name="Label Seperator" type="ColorRect" parent="Scenario3"]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 122.0
+offset_right = 978.0
+offset_bottom = 135.0
+color = Color(0, 0, 0, 1)
+
+[node name="LevelName" type="Label" parent="Scenario3"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 66.0
+offset_right = 1173.0
+offset_bottom = 261.0
+label_settings = SubResource("LabelSettings_yd1fp")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="LevelTask" type="Label" parent="Scenario3"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 203.0
+offset_right = 1187.0
+offset_bottom = 359.0
+text = "This will take you back to the previous screen."
+label_settings = SubResource("LabelSettings_jog0t")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ScenarioNumber" type="Label" parent="Scenario3"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = -24.0
+offset_right = 1177.0
+offset_bottom = 171.0
+text = "Return to Main Menu"
+label_settings = SubResource("LabelSettings_vtbt6")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="StartButtonThree" type="ColorRect" parent="Scenario3"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 394.0
+offset_right = 858.0
+offset_bottom = 554.0
+color = Color(0, 0, 0, 1)
+
+[node name="ButtonBackground" type="ColorRect" parent="Scenario3/StartButtonThree"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 451.0
+offset_bottom = 153.0
+
+[node name="Label" type="Label" parent="Scenario3/StartButtonThree"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 451.0
+offset_bottom = 153.0
+text = "Menu"
+label_settings = SubResource("LabelSettings_d7x22")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RoomThreeButton" type="TextureButton" parent="Scenario3/StartButtonThree"]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 458.0
+offset_bottom = 161.0
+
+[node name="LeftButton" type="TextureButton" parent="."]
+offset_left = 104.0
+offset_top = 466.0
+offset_right = 276.0
+offset_bottom = 675.0
+texture_normal = ExtResource("2_ivuis")
+
+[node name="RightButton" type="TextureButton" parent="."]
+offset_left = 1646.0
+offset_top = 470.0
+offset_right = 1818.0
+offset_bottom = 679.0
+texture_normal = ExtResource("3_8xqe1")
+
+[connection signal="pressed" from="Scenario1/StartButtonOne/RoomOneButton" to="." method="_on_room_one_button_pressed"]
+[connection signal="pressed" from="Scenario2/StartButtonTwo/RoomTwoButton" to="." method="_on_room_two_button_pressed"]
+[connection signal="pressed" from="Scenario3/StartButtonThree/RoomThreeButton" to="." method="_on_room_three_button_pressed"]
+[connection signal="pressed" from="LeftButton" to="." method="_on_left_button_pressed"]
+[connection signal="pressed" from="RightButton" to="." method="_on_right_button_pressed"]

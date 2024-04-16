@@ -33,7 +33,7 @@ offset_top = 148.0
 offset_right = 1210.0
 offset_bottom = 244.0
 scale = Vector2(0.9, 0.9)
-text = "Joint Accredidation Criteria
+text = "Joint Accreditation Criteria
 6-12"
 label_settings = SubResource("LabelSettings_p40mj")
 horizontal_alignment = 1
@@ -61,16 +61,16 @@ color = Color(1, 0.223529, 0.141176, 1)
 
 [node name="pink" type="ColorRect" parent="."]
 offset_left = 566.0
-offset_top = 787.0
+offset_top = 782.0
 offset_right = 618.0
-offset_bottom = 813.0
+offset_bottom = 808.0
 color = Color(1, 0.223529, 0.678431, 1)
 
 [node name="yellow" type="ColorRect" parent="."]
 offset_left = 566.0
-offset_top = 892.0
+offset_top = 887.0
 offset_right = 618.0
-offset_bottom = 918.0
+offset_bottom = 913.0
 color = Color(1, 0.937255, 0.141176, 1)
 
 [node name="Criteria" type="Label" parent="."]

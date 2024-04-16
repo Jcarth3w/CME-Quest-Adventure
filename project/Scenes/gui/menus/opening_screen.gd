@@ -14,7 +14,7 @@ func _on_continue_button_pressed():
 	queue_free()
 
 
-func _on_name_field_text_changed(new_text):
+func _on_name_field_text_changed(_new_text):
 	if not $NameField.text.is_empty():
 		$ContinueButton.disabled = false
 		$ContinueButton.text = "Begin"

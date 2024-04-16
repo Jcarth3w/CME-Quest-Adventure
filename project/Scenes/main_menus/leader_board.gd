@@ -18,23 +18,23 @@ func _ready():
 	
 func organize_data(raw_string):
 	var json_array = JSON.parse_string(raw_string)
-	for name in json_array.keys():
-		var records = json_array[name]
-		parsed_data[name] = records[0]["time"]
+	for username in json_array.keys():
+		var records = json_array[username]
+		parsed_data[username] = records[0]["time"]
 	return parsed_data
 
 
 func populate_leader_board():
 	var counter = 0
 	if scenario_num == 1:
-		for name in parsed_data.keys():
-			time_slots1[counter].get_node("Username").text = name
-			time_slots1[counter].get_node("Time").text =  parsed_data[name]
+		for username in parsed_data.keys():
+			time_slots1[counter].get_node("Username").text = username
+			time_slots1[counter].get_node("Time").text =  parsed_data[username]
 			counter += 1
 	elif scenario_num == 2:
-		for name in parsed_data.keys():
-			time_slots2[counter].get_node("Username").text = name
-			time_slots2[counter].get_node("Time").text =  parsed_data[name]
+		for username in parsed_data.keys():
+			time_slots2[counter].get_node("Username").text = username
+			time_slots2[counter].get_node("Time").text =  parsed_data[username]
 			counter += 1
 
 

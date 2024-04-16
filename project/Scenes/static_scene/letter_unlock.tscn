@@ -97,60 +97,70 @@ offset_bottom = 40.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key2" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 55.0
 offset_right = 95.0
 offset_bottom = 40.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key3" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 105.0
 offset_right = 145.0
 offset_bottom = 40.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key4" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 155.0
 offset_right = 195.0
 offset_bottom = 40.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key5" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 205.0
 offset_right = 245.0
 offset_bottom = 40.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key6" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 255.0
 offset_right = 295.0
 offset_bottom = 40.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key7" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 305.0
 offset_right = 345.0
 offset_bottom = 40.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key8" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 355.0
 offset_right = 395.0
 offset_bottom = 40.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key9" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 405.0
 offset_right = 445.0
 offset_bottom = 40.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key10" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 455.0
 offset_right = 495.0
 offset_bottom = 40.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key11" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 5.0
 offset_top = 52.0
 offset_right = 45.0
@@ -158,6 +168,7 @@ offset_bottom = 92.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key12" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 55.0
 offset_top = 52.0
 offset_right = 95.0
@@ -165,6 +176,7 @@ offset_bottom = 92.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key13" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 105.0
 offset_top = 52.0
 offset_right = 145.0
@@ -172,6 +184,7 @@ offset_bottom = 92.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key14" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 155.0
 offset_top = 52.0
 offset_right = 195.0
@@ -179,6 +192,7 @@ offset_bottom = 92.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key15" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 205.0
 offset_top = 52.0
 offset_right = 245.0
@@ -186,6 +200,7 @@ offset_bottom = 92.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key16" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 255.0
 offset_top = 52.0
 offset_right = 295.0
@@ -193,6 +208,7 @@ offset_bottom = 92.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key17" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 305.0
 offset_top = 52.0
 offset_right = 345.0
@@ -200,6 +216,7 @@ offset_bottom = 92.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key18" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 355.0
 offset_top = 52.0
 offset_right = 395.0
@@ -207,6 +224,7 @@ offset_bottom = 92.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key19" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 405.0
 offset_top = 52.0
 offset_right = 445.0
@@ -214,6 +232,7 @@ offset_bottom = 92.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key20" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 455.0
 offset_top = 52.0
 offset_right = 495.0
@@ -221,6 +240,7 @@ offset_bottom = 92.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key21" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 5.0
 offset_top = 99.0
 offset_right = 45.0
@@ -228,6 +248,7 @@ offset_bottom = 139.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key22" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 55.0
 offset_top = 99.0
 offset_right = 95.0
@@ -235,6 +256,7 @@ offset_bottom = 139.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key23" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 105.0
 offset_top = 99.0
 offset_right = 145.0
@@ -242,6 +264,7 @@ offset_bottom = 139.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key24" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 155.0
 offset_top = 99.0
 offset_right = 195.0
@@ -249,6 +272,7 @@ offset_bottom = 139.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key25" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 205.0
 offset_top = 99.0
 offset_right = 245.0
@@ -256,6 +280,7 @@ offset_bottom = 139.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key26" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 255.0
 offset_top = 99.0
 offset_right = 295.0
@@ -263,6 +288,7 @@ offset_bottom = 139.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key27" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 305.0
 offset_top = 99.0
 offset_right = 345.0
@@ -270,6 +296,7 @@ offset_bottom = 139.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key28" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 355.0
 offset_top = 99.0
 offset_right = 395.0
@@ -277,6 +304,7 @@ offset_bottom = 139.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key29" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 405.0
 offset_top = 99.0
 offset_right = 445.0
@@ -284,6 +312,7 @@ offset_bottom = 139.0
 color = Color(0, 0, 0, 1)
 
 [node name="Key30" type="ColorRect" parent="FakeKeyboard"]
+layout_mode = 0
 offset_left = 455.0
 offset_top = 99.0
 offset_right = 495.0

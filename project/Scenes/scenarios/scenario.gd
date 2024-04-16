@@ -75,13 +75,14 @@ func _on_room_final() -> void:
 	end_screen_inst.username = username
 	end_screen_inst.scen_num = scenario_num
 	end_screen_inst.time_val = calculate_time($HUD/Timer/Label.text)
+	send_data(1)
 	play_sound(final_sound)
 	add_child(end_screen_inst)
 
 
 func send_data(completed):
 	finished_time = calculate_time($HUD/Timer/Label.text)
-	$DBoperations.make_post_request(1, finished_time, username, completed)
+	$DBoperations.make_post_request(scenario_num, finished_time, username, completed)
 
 
 func get_data():
@@ -102,7 +103,12 @@ func calculate_time(time):
 	var seconds = (time[3].to_int() * 10) + time[4].to_int()
 	var caluculatedMinutes = 29 - minutes
 	var calculatedSeconds = 60 - seconds
-	var caluclatedTimeString = str(caluculatedMinutes) + ":" + str(calculatedSeconds)
+	var stringSeconds = ""
+	if calculatedSeconds < 10:
+		stringSeconds = "0" + str(calculatedSeconds)
+	else:
+		stringSeconds = calculatedSeconds
+	var caluclatedTimeString = str(caluculatedMinutes) + ":" + str(stringSeconds)
 	return caluclatedTimeString
 
 

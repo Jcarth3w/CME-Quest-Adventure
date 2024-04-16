@@ -33,7 +33,7 @@ offset_top = 148.0
 offset_right = 1210.0
 offset_bottom = 244.0
 scale = Vector2(0.9, 0.9)
-text = "Joint Accredidation Criteria
+text = "Joint Accreditation Criteria
 1-6"
 label_settings = SubResource("LabelSettings_p40mj")
 horizontal_alignment = 1

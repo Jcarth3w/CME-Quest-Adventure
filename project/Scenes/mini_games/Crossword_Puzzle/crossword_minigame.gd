@@ -27,7 +27,7 @@ func check_completed():
 func _on_exit_button_pressed():
 	save_state(completed)
 	get_tree().get_root().get_node("Scenario1").get_node("Room2").resume_room()
-	queue_free()
+	visible = false
 
 
 func _on_check_button_pressed():
@@ -47,7 +47,7 @@ func check_answer():
 		await get_tree().create_timer(1).timeout
 		$CheckButton.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Blue button.png")
 	else: 
-		$CheckButton.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Red button.png")
+		$CheckButton.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Red Button.png")
 		await get_tree().create_timer(1).timeout
 		$CheckButton.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Blue button.png")
 
@@ -73,3 +73,8 @@ func load_state():
 
 func space_to_underscore(text):
 	return text.replace(" ", "_")
+
+
+func _on_user_text_text_submitted(new_text):
+	check_answer()
+	check_win()

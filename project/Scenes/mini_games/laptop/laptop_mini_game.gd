@@ -5,6 +5,7 @@ var password = "Complianc3"
 var screens = []
 var file_contents = {}
 var current_file
+var file_printed = false
 
 
 func _ready() -> void:
@@ -34,7 +35,7 @@ func change_file_reader(text_file) -> void:
 
 
 func on_power_button_pressed() -> void:
-	if check_correct():
+	if file_printed:
 		get_parent().get_node("printed").visible = true
 	queue_free()
 
@@ -77,6 +78,7 @@ func print_paper() -> void:
 	$Files/Print.modulate = Color(0, 1.0, 0)
 	$Files/PrintFeedback.text = "PRINT SUCCESSFUL"
 	$Files/PrintFeedback.visible = true
+	file_printed = true
 	finished.emit()
 
 

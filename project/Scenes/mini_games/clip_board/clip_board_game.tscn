@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=3 uid="uid://bw3fffy0nho5u"]
 
 [ext_resource type="Script" path="res://Scenes/mini_games/clip_board/clip_board_game.gd" id="1_cquph"]
-[ext_resource type="Texture2D" uid="uid://b7rwyx3begmk" path="res://Assets/Scenario_2_assests/ResizedClipBoardForGame.png" id="2_alwfk"]
+[ext_resource type="Texture2D" uid="uid://cr175ljna7wwa" path="res://Assets/Scenario_2_assests/ResizedClipBoardForGame.png" id="2_alwfk"]
 [ext_resource type="Script" path="res://Scenes/mini_games/clip_board/clip_board_minigame.gd" id="2_ngvx4"]
 [ext_resource type="Texture2D" uid="uid://28qc845w0nmj" path="res://Assets/Sprites/generic_items/genericItem_color_038.png" id="2_qdqgh"]
 [ext_resource type="Script" path="res://Scenes/mini_games/clip_board/clip_board_game_item.gd" id="3_phv8i"]
-[ext_resource type="Texture2D" uid="uid://bwlaxk85h7843" path="res://Assets/Sprites/Iteration 3 assets/Blue button.png" id="6_ehver"]
+[ext_resource type="Texture2D" uid="uid://cm5hlujmxirvj" path="res://Assets/Sprites/Iteration 3 assets/Blue button.png" id="6_ehver"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xvtdb"]
 font_size = 22
