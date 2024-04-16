@@ -51,6 +51,7 @@ offset_bottom = 873.0
 color = Color(1, 1, 0.913725, 1)
 
 [node name="Page1" type="Node2D" parent="."]
+visible = false
 script = ExtResource("3_72agi")
 answers = {
 "Answer1": "Teams",
@@ -119,7 +120,6 @@ text = " "
 alignment = 1
 
 [node name="Page2" type="Node2D" parent="."]
-visible = false
 script = ExtResource("3_72agi")
 answers = {
 "Answer1": "Data Use",
@@ -157,14 +157,14 @@ offset_left = 322.0
 offset_top = 451.0
 offset_right = 1538.0
 offset_bottom = 592.0
-text = "Our public health program adresses  ____________________ by focusing on social 
+text = "Our public health program addresses  ____________________ by focusing on social 
 determinants and access to healthcare services"
 label_settings = SubResource("LabelSettings_wimi6")
 
 [node name="Answer2" type="LineEdit" parent="Page2"]
-offset_left = 860.0
+offset_left = 871.25
 offset_top = 436.25
-offset_right = 1033.0
+offset_right = 1044.25
 offset_bottom = 467.25
 scale = Vector2(1.5, 1.5)
 alignment = 1

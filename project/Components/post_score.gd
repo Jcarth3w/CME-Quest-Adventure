@@ -47,7 +47,7 @@ func make_get_request(scenario_num) -> String:
 	print(result)
 	var scores_dict: Dictionary = {}
 	for score in result:
-		if score['doc_fields']['scenario'] == scenario_num:
+		if score.get("doc_fields").get("scenario") == scenario_num:
 			print(score)
 			var username = score['doc_fields']['username']
 			var time = score['doc_fields']['time']

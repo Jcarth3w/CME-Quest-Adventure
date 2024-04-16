@@ -1,57 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://cll8mywp4rc6a"]
 
-[ext_resource type="Texture2D" uid="uid://dii31r7aeva4r" path="res://Assets/Sprites/Iteration 3 assets/Left Arrow.png" id="2_ivuis"]
-[ext_resource type="Texture2D" uid="uid://bifhg4u6s6aku" path="res://Assets/Sprites/Iteration 3 assets/Right Arrow.png" id="3_8xqe1"]
-
-[sub_resource type="GDScript" id="GDScript_hkrcm"]
-script/source = "extends Node2D
-
-var scenario_one = \"res://Scenes/scenarios/scenario_1.tscn\"
-var scenario_two = \"res://Scenes/scenarios/scenario_2.tscn\"
-var scenario_three = \"res://Scenes/main_menus/main_menu.tscn\"
-var current_scene = 1
- 
-
-func _on_room_one_button_pressed():
-	get_tree().change_scene_to_file(scenario_one)
-
-func _on_room_two_button_pressed():
-	get_tree().change_scene_to_file(scenario_two)
-
-func _on_room_three_button_pressed():
-	get_parent().get_node(\"Main\").visible = true
-	get_parent().get_node(\"Scenario_Select\").visible = false
-
-
-func scene_change():
-	$Scenario1.visible = false
-	$Scenario2.visible = false
-	$Scenario3.visible = false
-	match current_scene:
-		1:
-			$Scenario1.visible = true
-		2:
-			$Scenario2.visible = true
-		3:
-			$Scenario3.visible = true
-
-
-func _on_left_button_pressed():
-	if  current_scene >= 2:
-		current_scene -= 1
-		scene_change()
-	else:
-		current_scene = 3
-		scene_change()
-
-func _on_right_button_pressed():
-	if  current_scene <= 2:
-		current_scene += 1
-		scene_change()
-	else:
-		current_scene = 1
-		scene_change()
-"
+[ext_resource type="Script" path="res://Scenes/main_menus/scenario_select.gd" id="1_t1app"]
+[ext_resource type="Texture2D" uid="uid://bagapvd7n5fjh" path="res://Assets/Sprites/Iteration 3 assets/Left Arrow.png" id="2_ivuis"]
+[ext_resource type="Texture2D" uid="uid://cys4l1pqxmj57" path="res://Assets/Sprites/Iteration 3 assets/Right Arrow.png" id="3_8xqe1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jy4ff"]
 font_size = 140
@@ -81,7 +32,7 @@ outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D"]
-script = SubResource("GDScript_hkrcm")
+script = ExtResource("1_t1app")
 
 [node name="Background" type="ColorRect" parent="."]
 offset_right = 1918.0

@@ -88,6 +88,7 @@ func check_win():
 	if player_order == correct_order:
 		print("Congrats")
 		get_parent().final.emit()
+		await get_tree().create_timer(1).timeout
 		queue_free()
 	else:
 		reset()
