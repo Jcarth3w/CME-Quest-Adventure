@@ -20,7 +20,7 @@ func check_win_button_pressed():
 		queue_free()
 	else:
 		$Label.text = "Try again..."
-		$CheckWinButton.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Red button.png")
+		$CheckWinButton.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Red Button.png")
 		reset()
 		await get_tree().create_timer(1).timeout
 		$CheckWinButton.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Blue button.png")

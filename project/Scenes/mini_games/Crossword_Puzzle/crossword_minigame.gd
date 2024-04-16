@@ -47,7 +47,7 @@ func check_answer():
 		await get_tree().create_timer(1).timeout
 		$CheckButton.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Blue button.png")
 	else: 
-		$CheckButton.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Red button.png")
+		$CheckButton.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Red Button.png")
 		await get_tree().create_timer(1).timeout
 		$CheckButton.texture_normal = load("res://Assets/Sprites/Iteration 3 assets/Blue button.png")
 
