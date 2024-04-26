@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bdbogdf051mfk"]
 
 [ext_resource type="Script" path="res://Scenes/gui/menus/room_menu.gd" id="1_4pcej"]
-[ext_resource type="Texture2D" uid="uid://b6qjyxas5adgl" path="res://Assets/Sprites/Iteration 3 assets/Door.png" id="2_clled"]
+[ext_resource type="Texture2D" uid="uid://xxav5i66b2m1" path="res://Assets/Sprites/Iteration 3 assets/Door.png" id="2_clled"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6adl1"]
 font_size = 33
@@ -135,3 +135,8 @@ grow_vertical = 2
 text = "3
 "
 label_settings = SubResource("LabelSettings_nhn3r")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1088.0
+color = Color(1, 1, 1, 0)
