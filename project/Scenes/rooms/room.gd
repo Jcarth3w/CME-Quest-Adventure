@@ -51,13 +51,16 @@ func pause_room() -> void:
 			child.set_mouse_filter(2)
 
 
+
 func resume_room() -> void:
 	for child in get_children():
 		if child is Clickable:
 			child.disabled = false
 			child.set_mouse_filter(0)
 		if child is Drag:
-			child.set_mouse_filter(0)
+			child.set_mouse_filter(0)		
+		if child is StaticScene:
+			child.queue_free()
 	activate_menus.emit()
 
 
