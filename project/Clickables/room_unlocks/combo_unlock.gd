@@ -14,7 +14,6 @@ func _ready() ->void:
 func close():
 	get_parent().get_node("Room3Unlock").on_mouse_exited()
 	queue_free()
-	get_parent().resume_room()
 
 func on_button_press(button) -> void:
 	match button.text:
@@ -23,7 +22,7 @@ func on_button_press(button) -> void:
 		"CLEAR":
 			$Display.text = ""
 		"X":
-			close()
+			queue_free()
 		_:
 			if $Display.text == "incorrect":
 				$Display.text = button.text
