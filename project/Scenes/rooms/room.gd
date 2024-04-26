@@ -60,9 +60,11 @@ func resume_room() -> void:
 		if child is Drag:
 			child.set_mouse_filter(0)		
 		if child is StaticScene:
+			child._on_finished()
+		if child is MiniGame:
 			child.queue_free()
 		if child.name.contains("ComboUnlock"):
-			child.queue_free()
+			child.close()
 	activate_menus.emit()
 
 
