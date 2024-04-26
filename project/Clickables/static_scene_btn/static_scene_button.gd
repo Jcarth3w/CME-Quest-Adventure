@@ -17,7 +17,6 @@ func action():
 
 func _on_finished():
 	get_parent().resume_room()
-	on_mouse_exited()
 
 func _on_exited():
 	on_mouse_exited()
