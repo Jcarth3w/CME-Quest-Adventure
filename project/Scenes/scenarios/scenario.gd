@@ -67,7 +67,7 @@ func room_unlock(room_number):
 func on_open_screen_close() -> void:
 	current_room.resume_room()
 	$HUD/Timer.start()
-	$HUD.visible = false
+	$HUD.visible = true
 
 
 func _on_room_final() -> void:
