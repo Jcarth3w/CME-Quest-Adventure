@@ -22,7 +22,7 @@ func on_button_press(button) -> void:
 		"CLEAR":
 			$Display.text = ""
 		"X":
-			queue_free()
+			get_parent().resume_room()
 		_:
 			if $Display.text == "incorrect":
 				$Display.text = button.text
