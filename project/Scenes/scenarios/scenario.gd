@@ -41,6 +41,7 @@ func _ready():
 func enter_room(new_room):
 	for room in rooms:
 		if room != new_room:
+			room.resume_room()
 			room.pause_room()
 			room.visible = false
 		else:
