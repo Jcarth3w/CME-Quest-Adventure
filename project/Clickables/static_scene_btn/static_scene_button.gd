@@ -11,7 +11,8 @@ func action():
 	var scene_load = load(scene_path)
 	var scene = scene_load.instantiate()
 	scene.finished.connect(_on_finished)
-	scene.exited.connect(_on_exited)
+	if scene.has_signal("exited"):
+		scene.exited.connect(_on_exited)
 	get_parent().add_child(scene)
 	get_parent().pause_room()
 
