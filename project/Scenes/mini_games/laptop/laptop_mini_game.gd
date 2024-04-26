@@ -37,6 +37,8 @@ func change_file_reader(text_file) -> void:
 func on_power_button_pressed() -> void:
 	if file_printed:
 		get_parent().get_node("printed").visible = true
+	get_parent().resume_room()
+	get_parent().get_node("Laptop").on_mouse_exited()
 	queue_free()
 
 

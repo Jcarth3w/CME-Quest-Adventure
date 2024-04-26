@@ -61,6 +61,8 @@ func resume_room() -> void:
 			child.set_mouse_filter(0)		
 		if child is StaticScene:
 			child.queue_free()
+		if child.name.contains("ComboUnlock"):
+			child.queue_free()
 	activate_menus.emit()
 
 
