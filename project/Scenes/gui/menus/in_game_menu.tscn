@@ -8,6 +8,7 @@ outline_size = 8
 outline_color = Color(0, 0, 0, 1)
 
 [node name="InGameMenu" type="CanvasLayer"]
+layer = 10
 script = ExtResource("1_q08xi")
 
 [node name="ColorRect3" type="ColorRect" parent="."]
