@@ -22,6 +22,8 @@ func on_button_press(button) -> void:
 		"CLEAR":
 			$Display.text = ""
 		"X":
+			get_parent().get_node("Finale").on_mouse_exited()
+			queue_free()
 			get_parent().resume_room()
 		_:
 			if $Display.text == "incorrect":
