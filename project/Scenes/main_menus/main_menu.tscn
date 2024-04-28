@@ -44,9 +44,9 @@ offset_bottom = 1079.0
 [node name="CreditsButton" type="TextureButton" parent="Main/Background"]
 layout_mode = 0
 offset_left = 243.0
-offset_top = 573.0
+offset_top = 648.0
 offset_right = 2524.0
-offset_bottom = 3788.0
+offset_bottom = 3863.0
 rotation = -0.213579
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("7_c1dfy")
@@ -87,7 +87,7 @@ offset_bottom = 1083.0
 color = Color(0.796078, 0, 0.203922, 1)
 
 [node name="Custom-illustrations-stanford-monuments-assets-09" type="Sprite2D" parent="Main/Background"]
-position = Vector2(1536, 639)
+position = Vector2(1536, 750)
 rotation = 0.261799
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_uv7yu")
@@ -180,9 +180,9 @@ disabled = true
 
 [node name="StartDesign" type="ColorRect" parent="Main"]
 offset_left = 688.0
-offset_top = 721.0
+offset_top = 645.0
 offset_right = 1371.0
-offset_bottom = 945.0
+offset_bottom = 869.0
 scale = Vector2(0.8, 0.8)
 color = Color(0, 0, 0, 1)
 
