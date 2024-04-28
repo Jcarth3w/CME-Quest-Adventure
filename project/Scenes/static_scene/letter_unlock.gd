@@ -8,6 +8,9 @@ func _on_exit_pressed():
 	get_parent().resume_room()
 	queue_free()
 
+func close():
+	get_parent().get_node("Room2Unlock").on_mouse_exited()
+	queue_free()
 
 func _on_line_edit_text_submitted(new_text):
 	if new_text.to_lower() == answer.to_lower():

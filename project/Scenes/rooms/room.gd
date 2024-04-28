@@ -62,7 +62,7 @@ func resume_room() -> void:
 		if child is StaticScene:
 			child.exited.emit()
 			child.queue_free()
-		if child.name.contains("ComboUnlock"):
+		if child.name.contains("ComboUnlock") or child.name.contains("LetterUnlock"):
 			child.close()
 	activate_menus.emit()
 
