@@ -36,11 +36,13 @@ func _ready():
 		dir.remove("saved_puzzle.txt")
 	$HUD.scenario_menu_title = scenario_title
 	$HUD.scenario_menu_description = scenario_description
+	$HUD.visible = false
 
 
 func enter_room(new_room):
 	for room in rooms:
 		if room != new_room:
+			room.resume_room()
 			room.pause_room()
 			room.visible = false
 		else:
@@ -65,6 +67,7 @@ func room_unlock(room_number):
 func on_open_screen_close() -> void:
 	current_room.resume_room()
 	$HUD/Timer.start()
+	$HUD.visible = true
 
 
 func _on_room_final() -> void:

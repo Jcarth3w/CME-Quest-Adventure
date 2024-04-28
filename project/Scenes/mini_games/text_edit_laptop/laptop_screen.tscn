@@ -1,12 +1,12 @@
 [gd_scene load_steps=11 format=3 uid="uid://bgjtm147ljlnl"]
 
 [ext_resource type="Script" path="res://Scenes/mini_games/text_edit_laptop/laptop_screen.gd" id="1_i4fvo"]
-[ext_resource type="Texture2D" uid="uid://dcdrfyu2jfrdi" path="res://Assets/EasterEggs/Custom Illustrations - Stanford Monuments-39.png" id="2_am0og"]
-[ext_resource type="Texture2D" uid="uid://dlqni6gsj63by" path="res://Assets/AdjustedStandfordAssets/BlankFolder.png" id="2_uqheb"]
+[ext_resource type="Texture2D" uid="uid://ctvl1u2dfgne0" path="res://Assets/EasterEggs/Custom Illustrations - Stanford Monuments-39.png" id="2_am0og"]
+[ext_resource type="Texture2D" uid="uid://cnu5aa2hfql8t" path="res://Assets/AdjustedStandfordAssets/BlankFolder.png" id="2_uqheb"]
 [ext_resource type="Texture2D" uid="uid://cwis8k14rht7u" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-05.png" id="3_t2lm6"]
 [ext_resource type="PackedScene" uid="uid://c7jmyelp4t6u4" path="res://Scenes/mini_games/text_edit_laptop/text_edit_laptop.tscn" id="4_5je3t"]
-[ext_resource type="Texture2D" uid="uid://brx5xughfqkua" path="res://Assets/EasterEggs/Custom Illustrations - Stanford Monuments-49.png" id="5_uh583"]
-[ext_resource type="Texture2D" uid="uid://rx1i0lvc5bpy" path="res://Assets/AdjustedStandfordAssets/PowerButton.png" id="7_x3mdp"]
+[ext_resource type="Texture2D" uid="uid://cyd1gdg13gklw" path="res://Assets/EasterEggs/Custom Illustrations - Stanford Monuments-49.png" id="5_uh583"]
+[ext_resource type="Texture2D" uid="uid://7odn8r10of4g" path="res://Assets/AdjustedStandfordAssets/PowerButton.png" id="7_x3mdp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_x4462"]
 font_size = 24

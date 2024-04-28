@@ -47,6 +47,9 @@ func pause_room() -> void:
 		if child is Clickable:
 			child.disabled = true
 			child.set_mouse_filter(2)
+		if child is Drag:
+			child.set_mouse_filter(2)
+
 
 
 func resume_room() -> void:
@@ -54,6 +57,13 @@ func resume_room() -> void:
 		if child is Clickable:
 			child.disabled = false
 			child.set_mouse_filter(0)
+		if child is Drag:
+			child.set_mouse_filter(0)
+		if child is StaticScene:
+			child.exited.emit()
+			child.queue_free()
+		if child.name.contains("ComboUnlock") or child.name.contains("LetterUnlock"):
+			child.close()
 	activate_menus.emit()
 
 

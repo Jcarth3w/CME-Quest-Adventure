@@ -4,7 +4,6 @@ extends MiniGame
 var answers: Dictionary = {}
 var completed = []
 
-
 func _ready():
 	answers["Andragogy"] = $Andragogy
 	answers["Social Learning"] = $SocialLearning
@@ -26,7 +25,9 @@ func check_completed():
 
 func _on_exit_button_pressed():
 	save_state(completed)
-	get_tree().get_root().get_node("Scenario1").get_node("Room2").resume_room()
+	exited.emit()
+	get_parent().resume_room()
+	get_parent().get_node("Crossword_Button").on_mouse_exited()
 	visible = false
 
 

@@ -17,13 +17,18 @@ func action():
 		if scene != null:
 			var scene_inst = scene.instantiate()
 			get_parent().add_child(scene_inst)
+			scene_inst.exited.connect(_on_exited)
 			scene_inst.finished.connect(_on_finished)
-			scene_changed.emit("pause")
+			get_parent().pause_room()
 
 
 func _on_finished() -> void:
-	scene_changed.emit("resume")
+	get_parent().resume_room()
 	get_parent().send_sound(sound)
 	finished = true
+	on_mouse_exited()
 	if prize_texture != null:
 		get_parent().give_item(prize_name, prize_texture)
+
+func _on_exited():
+	on_mouse_exited()

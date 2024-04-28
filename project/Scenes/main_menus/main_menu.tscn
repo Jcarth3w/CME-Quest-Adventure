@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://boq7hqgj3oxtn"]
 
 [ext_resource type="Script" path="res://Scenes/main_menus/main_menu.gd" id="1_q4rsi"]
-[ext_resource type="PackedScene" uid="uid://cll8mywp4rc6a" path="res://Scenes/main_menus/Scenario_Select.tscn" id="2_acw4n"]
+[ext_resource type="PackedScene" uid="uid://cll8mywp4rc6a" path="res://Scenes/main_menus/scenario_select.tscn" id="2_acw4n"]
 [ext_resource type="Texture2D" uid="uid://w10bfogg4ojl" path="res://Assets/StanfordAssets/custom-illustrations-stanford-monuments-assets-09.png" id="2_uv7yu"]
 [ext_resource type="PackedScene" uid="uid://b0yb0aod8hxnd" path="res://Scenes/main_menus/Leader_Board.tscn" id="3_go8oe"]
 [ext_resource type="Script" path="res://Scenes/main_menus/leader_board.gd" id="3_prpgj"]
@@ -44,9 +44,9 @@ offset_bottom = 1079.0
 [node name="CreditsButton" type="TextureButton" parent="Main/Background"]
 layout_mode = 0
 offset_left = 243.0
-offset_top = 436.0
+offset_top = 648.0
 offset_right = 2524.0
-offset_bottom = 3651.0
+offset_bottom = 3863.0
 rotation = -0.213579
 scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("7_c1dfy")
@@ -63,9 +63,9 @@ label_settings = SubResource("LabelSettings_ixnf7")
 [node name="Label" type="Label" parent="Main/Background"]
 layout_mode = 0
 offset_left = 512.0
-offset_top = 24.0
+offset_top = 96.0
 offset_right = 1421.0
-offset_bottom = 414.0
+offset_bottom = 486.0
 text = "CME Quest Adventures"
 label_settings = SubResource("LabelSettings_xcyt8")
 horizontal_alignment = 1
@@ -87,12 +87,13 @@ offset_bottom = 1083.0
 color = Color(0.796078, 0, 0.203922, 1)
 
 [node name="Custom-illustrations-stanford-monuments-assets-09" type="Sprite2D" parent="Main/Background"]
-position = Vector2(1536, 531)
+position = Vector2(1536, 750)
 rotation = 0.261799
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_uv7yu")
 
 [node name="QuitDesign" type="ColorRect" parent="Main"]
+visible = false
 offset_left = 688.0
 offset_top = 864.0
 offset_right = 1371.0
@@ -132,8 +133,10 @@ offset_left = -8.0
 offset_top = -8.0
 offset_right = 673.0
 offset_bottom = 215.0
+disabled = true
 
 [node name="LeaderBoardDesign" type="ColorRect" parent="Main"]
+visible = false
 offset_left = 688.0
 offset_top = 644.0
 offset_right = 1371.0
@@ -173,12 +176,13 @@ offset_left = -1.50012
 offset_top = -11.5001
 offset_right = 679.5
 offset_bottom = 211.5
+disabled = true
 
 [node name="StartDesign" type="ColorRect" parent="Main"]
 offset_left = 688.0
-offset_top = 432.0
+offset_top = 645.0
 offset_right = 1371.0
-offset_bottom = 656.0
+offset_bottom = 869.0
 scale = Vector2(0.8, 0.8)
 color = Color(0, 0, 0, 1)
 
@@ -203,7 +207,7 @@ offset_left = -9.0
 offset_top = -9.0
 offset_right = 676.0
 offset_bottom = 216.0
-text = "Start a Scenario"
+text = "Choose Escape Room"
 label_settings = SubResource("LabelSettings_ixev0")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -214,10 +218,6 @@ offset_left = -8.0
 offset_top = -8.0
 offset_right = 673.0
 offset_bottom = 215.0
-
-[node name="QuitButton" type="TextureButton" parent="Main"]
-offset_right = 40.0
-offset_bottom = 40.0
 
 [node name="Scenario_Select" parent="." instance=ExtResource("2_acw4n")]
 visible = false
