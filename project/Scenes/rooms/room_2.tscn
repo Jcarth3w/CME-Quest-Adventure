@@ -120,3 +120,5 @@ texture_normal = ExtResource("15_nbiuo")
 
 [node name="Crossword" parent="." instance=ExtResource("19_e6mh1")]
 visible = false
+
+[connection signal="finished" from="Crossword" to="Crossword_Button" method="_on_finished"]

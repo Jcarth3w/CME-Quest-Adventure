@@ -1,6 +1,5 @@
 extends MiniGame
 
-
 var answers: Dictionary = {}
 var completed = []
 
