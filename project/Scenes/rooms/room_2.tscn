@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dxurrur4fkonu"]
+[gd_scene load_steps=19 format=3 uid="uid://dxurrur4fkonu"]
 
 [ext_resource type="Script" path="res://Scenes/rooms/room.gd" id="1_xmdg1"]
 [ext_resource type="Texture2D" uid="uid://cq2a802dag8bo" path="res://Assets/AdjustedStandfordAssets/ResizedPinBoard.png" id="2_4hu8h"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cv2dwu4k2w0op" path="res://Assets/AdjustedStandfordAssets/ResizedBookshelf.png" id="6_wkf6y"]
 [ext_resource type="Script" path="res://Scenes/mini_games/Crossword_Puzzle/xword_button.gd" id="7_6ejr1"]
 [ext_resource type="PackedScene" uid="uid://c7brg2hyybb7t" path="res://Clickables/static_scene_btn/static_scene_button.tscn" id="7_x8tk5"]
+[ext_resource type="Texture2D" uid="uid://cnl6nxdh7ewxt" path="res://Assets/StanfordAssets/resized_books.png" id="8_mkjhj"]
 [ext_resource type="Texture2D" uid="uid://dmm1o4xemcxfx" path="res://Assets/Sprites/Room2/Desk.png" id="9_huuy6"]
 [ext_resource type="Texture2D" uid="uid://bjngpdde7810p" path="res://Assets/Sprites/Room2/keypad.PNG" id="9_tgu88"]
 [ext_resource type="Texture2D" uid="uid://k7tyhsc5hvsx" path="res://Assets/Sprites/room_1_custom_placeholders/chair.png" id="10_dw2od"]
@@ -69,6 +70,8 @@ offset_bottom = 1535.0
 scale = Vector2(0.3, 0.261)
 texture_normal = ExtResource("2_4hu8h")
 script = ExtResource("7_6ejr1")
+prize_texture = ExtResource("8_mkjhj")
+prize_name = "books"
 
 [node name="Bookshelf" parent="." instance=ExtResource("7_x8tk5")]
 offset_left = 1328.0
